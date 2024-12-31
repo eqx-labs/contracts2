@@ -33,11 +33,13 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
     uint48 public START_TIMESTAMP;
 
     /// @notice Bolt Parameters contract.
-    Parameters public parameters;
-    
+    IParameters public parameters;
+
     /// @notice Validators registry, where validators are registered via their
     /// BLS pubkey and are assigned a sequence number.
-    IBoltValidatorsV2 public validators;
+    IValidators public validators;
+
+    IMiddleware public middleware;
 
     /// @notice Set of operator addresses that have opted in to Bolt Protocol.
     EnumerableMapV2.OperatorMap private operators;
@@ -73,7 +75,7 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
         __Ownable_init(_owner);
 
         parameters = Parameters(_parameters);
-        validators = IBoltValidatorsV2(_validators);
+        validators = IValidators(_validators);
 
         START_TIMESTAMP = Time.timestamp();
     }
@@ -82,7 +84,7 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
         __Ownable_init(_owner);
 
         parameters = Parameters(_parameters);
-        validators = IBoltValidatorsV2(_validators);
+        validators = IValidators(_validators);
 
         START_TIMESTAMP = Time.timestamp();
     }
@@ -161,7 +163,7 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
 
         uint48 epochStartTs = getEpochStartTs(getEpochAtTs(Time.timestamp()));
         // NOTE: this will revert when the proposer does not exist.
-        IBoltValidatorsV2.ValidatorInfo memory validator = validators.getValidatorByPubkeyHash(pubkeyHash);
+        IValidators.ValidatorInfo memory validator = validators.getValidatorByPubkeyHash(pubkeyHash);
 
         EnumerableMapV2.Operator memory operatorData = operators.get(validator.authorizedOperator);
 
@@ -175,7 +177,7 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
         }
 
         (status.collaterals, status.amounts) =
-            IBoltMiddlewareV1(operatorData.middleware).getOperatorCollaterals(validator.authorizedOperator);
+            IMiddleware(operatorData.middleware).getOperatorCollaterals(validator.authorizedOperator);
 
         // NOTE: check if the sum of the collaterals covers the minimum operator stake required.
 
@@ -197,7 +199,7 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
     function getOperatorStake(address operator, address collateral) public view returns (uint256) {
         EnumerableMapV2.Operator memory operatorData = operators.get(operator);
 
-        return IBoltMiddlewareV1(operatorData.middleware).getOperatorStake(operator, collateral);
+        return IMiddleware(operatorData.middleware).getOperatorStake(operator, collateral);
     }
 
     /// @notice Get the total amount staked of a given collateral asset.
@@ -207,7 +209,7 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
         // Loop over all of the operators, get their middleware, and retrieve their staked amount.
         for (uint256 i = 0; i < operators.length(); ++i) {
             (address operator, EnumerableMapV2.Operator memory operatorData) = operators.at(i);
-            amount += IBoltMiddlewareV1(operatorData.middleware).getOperatorStake(operator, collateral);
+            amount += IMiddleware(operatorData.middleware).getOperatorStake(operator, collateral);
         }
 
         return amount;
