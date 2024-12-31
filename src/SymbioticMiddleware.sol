@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
-import {EnumerableMap} from "@openzeppelin/contracts/utils/structs/EnumerableMap.sol";
-import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
-import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
-import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
+import {Time} from "node_modules/@openzeppelin/contracts/utils/types/Time.sol";
+import {EnumerableMap} from "node_modules/@openzeppelin/contracts/utils/structs/EnumerableMap.sol";
+import {EnumerableSet} from "node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
+import {IERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {OwnableUpgradeable} from "node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import {UUPSUpgradeable} from "node_modules/@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 
 import {IBaseDelegator} from "@symbiotic/interfaces/delegator/IBaseDelegator.sol";
 import {Subnetwork} from "@symbiotic/contracts/libraries/Subnetwork.sol";

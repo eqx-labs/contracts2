@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0",
     "@openzeppelin/contracts-upgradeable": "^5.1.0",
+    "eigenlayer": "^2.1.5",
     "install": "^0.13.0",
     "npm": "^10.9.2"
   }

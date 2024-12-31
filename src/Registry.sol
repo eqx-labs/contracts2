@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
-import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
-import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
-import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
-import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {OwnableUpgradeable} from "node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import {UUPSUpgradeable} from "node_modules/@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
+import {Time} from "node_modules/@openzeppelin/contracts/utils/types/Time.sol";
+import {EnumerableSet} from "node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
+import {IERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-import {OperatorMapWithTime} from "./lib/OperatorMapWithTime.sol"; // Ensure this path is correct and the file exists
+import {OperatorMapWithTime} from "./lib/OperatorMapWithTime.sol"; 
 import {EnumerableMap} from "./lib/EnumerableMap.sol";
 
 import {IParameters} from "./interfaces/IParameters.sol";
@@ -39,7 +39,7 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     /// BLS pubkey and are assigned a sequence number.
     IValidator public validators;
 
-    Middleware public middleware;
+    IMiddleware public middleware;
 
     /// @notice Set of operator addresses that have opted in to  Protocol.
     EnumerableMap.OperatorMap private operators;
