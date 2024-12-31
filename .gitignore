@@ -3,7 +3,10 @@ cache/
 out/
 
 node_modules
-/node_modules/
+lib
+eigenlayer-middleware
+eigenlayer
+symbiotic
 
 # Ignores development broadcast logs
 !/broadcast

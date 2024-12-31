@@ -8,21 +8,25 @@ import {IERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.so
 import {OwnableUpgradeable} from "node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {UUPSUpgradeable} from "node_modules/@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 
-import {IBaseDelegator} from "@symbiotic/interfaces/delegator/IBaseDelegator.sol";
-import {Subnetwork} from "@symbiotic/contracts/libraries/Subnetwork.sol";
-import {IVault} from "@symbiotic/interfaces/vault/IVault.sol";
-import {IRegistry} from "@symbiotic/interfaces/common/IRegistry.sol";
-import {IOptInService} from "@symbiotic/interfaces/service/IOptInService.sol";
-import {ISlasher} from "@symbiotic/interfaces/slasher/ISlasher.sol";
-import {IVetoSlasher} from "@symbiotic/interfaces/slasher/IVetoSlasher.sol";
-import {IEntity} from "@symbiotic/interfaces/common/IEntity.sol";
+import {IBaseDelegator} from "symbiotic/src/interfaces/delegator/IBaseDelegator.sol";
+import {Subnetwork} from "symbiotic/src/contracts/libraries/Subnetwork.sol";
+import {IVault} from "symbiotic/src/interfaces/vault/IVault.sol";
+import {IRegistry} from "symbiotic/src/interfaces/common/IRegistry.sol";
+import {IOptInService} from "symbiotic/src/interfaces/service/IOptInService.sol";
+import {ISlasher} from "symbiotic/src/interfaces/slasher/ISlasher.sol";
+import {IVetoSlasher} from "symbiotic/src/interfaces/slasher/IVetoSlasher.sol";
+import {IEntity} from "symbiotic/src/interfaces/common/IEntity.sol";
 
 import {MapWithTimeData} from "./lib/MapWithTimeData.sol";
 import {IParameters} from "./interfaces/IParameters.sol";
 import {IMiddleware} from "./interfaces/IMiddleware.sol";
 import {IManager} from "./interfaces/IManager.sol";
 
-contract SymbioticMiddleware is IMiddleware, OwnableUpgradeable, UUPSUpgradeable {
+contract SymbioticMiddleware is
+    IMiddleware,
+    OwnableUpgradeable,
+    UUPSUpgradeable
+{
     using EnumerableSet for EnumerableSet.AddressSet;
     using EnumerableMap for EnumerableMap.AddressToUintMap;
     using MapWithTimeData for EnumerableMap.AddressToUintMap;
@@ -51,9 +55,7 @@ contract SymbioticMiddleware is IMiddleware, OwnableUpgradeable, UUPSUpgradeable
     error ExcessiveSlashAmount();
     error UnsupportedSlasherType();
     error InvalidOperator();
-    error AlreadyRegistered();
-    error NotRegistered();
-    error OperatorNotOptedIn();
+
     error InvalidTimeQuery();
 
     function setupContract(
@@ -105,7 +107,9 @@ contract SymbioticMiddleware is IMiddleware, OwnableUpgradeable, UUPSUpgradeable
         return GENESIS_TIME + epoch * protocolParams.EPOCH_DURATION();
     }
 
-    function getEpochForTimestamp(uint48 timestamp) public view returns (uint48) {
+    function getEpochForTimestamp(
+        uint48 timestamp
+    ) public view returns (uint48) {
         return (timestamp - GENESIS_TIME) / protocolParams.EPOCH_DURATION();
     }
 
@@ -149,7 +153,12 @@ contract SymbioticMiddleware is IMiddleware, OwnableUpgradeable, UUPSUpgradeable
             revert InvalidOperator();
         }
 
-        if (!IOptInService(OPERATOR_OPTIN_ADDRESS).isOptedIn(msg.sender, NETWORK_ADDRESS)) {
+        if (
+            !IOptInService(OPERATOR_OPTIN_ADDRESS).isOptedIn(
+                msg.sender,
+                NETWORK_ADDRESS
+            )
+        ) {
             revert OperatorNotOptedIn();
         }
 
@@ -189,18 +198,28 @@ contract SymbioticMiddleware is IMiddleware, OwnableUpgradeable, UUPSUpgradeable
     }
 
     function checkVaultStatus(address vault) public view returns (bool) {
-        (uint48 enableTime, uint48 disableTime) = authorizedVaults.getTimes(vault);
+        (uint48 enableTime, uint48 disableTime) = authorizedVaults.getTimes(
+            vault
+        );
         return enableTime != 0 && disableTime == 0;
     }
 
-    function fetchOperatorCollateral(address operator) public view returns (address[] memory, uint256[] memory) {
+    function fetchOperatorCollateral(
+        address operator
+    ) public view returns (address[] memory, uint256[] memory) {
         address[] memory tokens = new address[](authorizedVaults.length());
         uint256[] memory amounts = new uint256[](authorizedVaults.length());
 
-        uint48 epochStart = calculateEpochStart(getEpochForTimestamp(Time.timestamp()));
+        uint48 epochStart = calculateEpochStart(
+            getEpochForTimestamp(Time.timestamp())
+        );
 
         for (uint256 i = 0; i < authorizedVaults.length(); ++i) {
-            (address vault, uint48 enableTime, uint48 disableTime) = authorizedVaults.atWithTimes(i);
+            (
+                address vault,
+                uint48 enableTime,
+                uint48 disableTime
+            ) = authorizedVaults.atWithTimes(i);
 
             if (!isActiveAtTimestamp(enableTime, disableTime, epochStart)) {
                 continue;
@@ -220,7 +239,10 @@ contract SymbioticMiddleware is IMiddleware, OwnableUpgradeable, UUPSUpgradeable
         return (tokens, amounts);
     }
 
-    function getOperatorStakeNow(address operator, address token) public view returns (uint256) {
+    function getOperatorStakeNow(
+        address operator,
+        address token
+    ) public view returns (uint256) {
         uint48 currentTime = Time.timestamp();
         return getOperatorStakeAtTime(operator, token, currentTime);
     }
@@ -234,10 +256,16 @@ contract SymbioticMiddleware is IMiddleware, OwnableUpgradeable, UUPSUpgradeable
             revert InvalidTimeQuery();
         }
 
-        uint48 epochStart = calculateEpochStart(getEpochForTimestamp(timestamp));
+        uint48 epochStart = calculateEpochStart(
+            getEpochForTimestamp(timestamp)
+        );
 
         for (uint256 i = 0; i < authorizedVaults.length(); ++i) {
-            (address vault, uint48 enableTime, uint48 disableTime) = authorizedVaults.atWithTimes(i);
+            (
+                address vault,
+                uint48 enableTime,
+                uint48 disableTime
+            ) = authorizedVaults.atWithTimes(i);
 
             if (token != IVault(vault).collateral()) {
                 continue;
@@ -264,10 +292,16 @@ contract SymbioticMiddleware is IMiddleware, OwnableUpgradeable, UUPSUpgradeable
         address token,
         uint256 amount
     ) public onlyOwner {
-        uint48 epochStart = calculateEpochStart(getEpochForTimestamp(timestamp));
+        uint48 epochStart = calculateEpochStart(
+            getEpochForTimestamp(timestamp)
+        );
 
         for (uint256 i = 0; i < authorizedVaults.length(); ++i) {
-            (address vault, uint48 enableTime, uint48 disableTime) = authorizedVaults.atWithTimes(i);
+            (
+                address vault,
+                uint48 enableTime,
+                uint48 disableTime
+            ) = authorizedVaults.atWithTimes(i);
 
             if (!isActiveAtTimestamp(enableTime, disableTime, epochStart)) {
                 continue;
@@ -277,20 +311,30 @@ contract SymbioticMiddleware is IMiddleware, OwnableUpgradeable, UUPSUpgradeable
                 continue;
             }
 
-            uint256 operatorStake = getOperatorStakeAtTime(operator, token, epochStart);
+            uint256 operatorStake = getOperatorStakeAtTime(
+                operator,
+                token,
+                epochStart
+            );
 
             if (amount > operatorStake) {
                 revert ExcessiveSlashAmount();
             }
 
-            uint256 vaultStake = IBaseDelegator(IVault(vault).delegator()).stakeAt(
-                NETWORK_ADDRESS.subnetwork(0),
-                operator,
-                epochStart,
-                new bytes(0)
-            );
+            uint256 vaultStake = IBaseDelegator(IVault(vault).delegator())
+                .stakeAt(
+                    NETWORK_ADDRESS.subnetwork(0),
+                    operator,
+                    epochStart,
+                    new bytes(0)
+                );
 
-            executeVaultPenalty(epochStart, vault, operator, (amount * vaultStake) / operatorStake);
+            executeVaultPenalty(
+                epochStart,
+                vault,
+                operator,
+                (amount * vaultStake) / operatorStake
+            );
         }
     }
 
@@ -299,7 +343,10 @@ contract SymbioticMiddleware is IMiddleware, OwnableUpgradeable, UUPSUpgradeable
         uint48 disableTime,
         uint48 timestamp
     ) private pure returns (bool) {
-        return enableTime != 0 && enableTime <= timestamp && (disableTime == 0 || disableTime >= timestamp);
+        return
+            enableTime != 0 &&
+            enableTime <= timestamp &&
+            (disableTime == 0 || disableTime >= timestamp);
     }
 
     function executeVaultPenalty(
@@ -331,4 +378,31 @@ contract SymbioticMiddleware is IMiddleware, OwnableUpgradeable, UUPSUpgradeable
             revert UnsupportedSlasherType();
         }
     }
+
+    function NAME_HASH() external view override returns (bytes32) {}
+
+    function getEpochStartTs(
+        uint48 epoch
+    ) external view override returns (uint48) {}
+
+    function getEpochAtTs(
+        uint48 timestamp
+    ) external view override returns (uint48) {}
+
+    function getCurrentEpoch() external view override returns (uint48) {}
+
+    function getOperatorStake(
+        address operator,
+        address collateral
+    ) external view override returns (uint256) {}
+
+    function getOperatorCollaterals(
+        address operator
+    ) external view override returns (address[] memory, uint256[] memory) {}
+
+    function getOperatorStakeAt(
+        address operator,
+        address collateral,
+        uint48 timestamp
+    ) external view override returns (uint256) {}
 }

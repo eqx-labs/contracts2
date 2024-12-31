@@ -13,15 +13,15 @@ import {IParameters} from "./interfaces/IParameters.sol";
 import {IMiddleware} from "./interfaces/IMiddleware.sol";
 import {IManager} from "./interfaces/IManager.sol";
 
-import {IServiceManager} from "@eigenlayer-middleware/src/interfaces/IServiceManager.sol";
-import {IStrategyManager} from "@eigenlayer/src/contracts/interfaces/IStrategyManager.sol";
-import {IAVSDirectory} from "@eigenlayer/src/contracts/interfaces/IAVSDirectory.sol";
-import {IDelegationManager} from "@eigenlayer/src/contracts/interfaces/IDelegationManager.sol";
-import {ISignatureUtils} from "@eigenlayer/src/contracts/interfaces/ISignatureUtils.sol";
-import {IStrategy} from "@eigenlayer/src/contracts/interfaces/IStrategy.sol";
-import {AVSDirectoryStorage} from "@eigenlayer/src/contracts/core/AVSDirectoryStorage.sol";
-import {DelegationManagerStorage} from "@eigenlayer/src/contracts/core/DelegationManagerStorage.sol";
-import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyManagerStorage.sol";
+import {IServiceManager} from "eigenlayer-middleware/src/interfaces/IServiceManager.sol";
+import {IStrategyManager} from "eigenlayer/src/contracts/interfaces/IStrategyManager.sol";
+import {IAVSDirectory} from "eigenlayer/src/contracts/interfaces/IAVSDirectory.sol";
+import {IDelegationManager} from "eigenlayer/src/contracts/interfaces/IDelegationManager.sol";
+import {ISignatureUtils} from "eigenlayer/src/contracts/interfaces/ISignatureUtils.sol";
+import {IStrategy} from "eigenlayer/src/contracts/interfaces/IStrategy.sol";
+import {AVSDirectoryStorage} from "eigenlayer/src/contracts/core/AVSDirectoryStorage.sol";
+import {DelegationManagerStorage} from "eigenlayer/src/contracts/core/DelegationManagerStorage.sol";
+import {StrategyManagerStorage} from "eigenlayer/src/contracts/core/StrategyManagerStorage.sol";
 
 contract Middleware is IMiddleware, IServiceManager, OwnableUpgradeable, UUPSUpgradeable {
     using EnumerableSet for EnumerableSet.AddressSet;
