@@ -3,7 +3,7 @@ pragma solidity 0.8.25;
 
 import {BLS12381} from "../lib/bls/BLS12381.sol";
 
-interface Middleware {
+interface IMiddleware {
     error InvalidQuery();
     error AlreadyRegistered();
     error NotRegistered();

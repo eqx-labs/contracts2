@@ -12,8 +12,8 @@ import {EnumerableMapV2} from "../lib/EnumerableMapV2.sol";
 
 import {Parameters} from "../interfaces/Parameters.sol";
 import {Middleware} from "../interfaces/Middleware.sol";
-import {Validators} from "../interfaces/Validators.sol";
-import {Registry} from "../interfaces/Registry.sol";
+import {IValidators} from "../interfaces/Validators.sol";
+import {IRegistry} from "../interfaces/Registry.sol";
 
 /// @title Bolt Manager
 /// @notice The Bolt Manager contract is responsible for managing operators & restaking middlewares, and is the
@@ -23,7 +23,7 @@ import {Registry} from "../interfaces/Registry.sol";
 /// See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
 /// To validate the storage layout, use the Openzeppelin Foundry Upgrades toolkit.
 /// You can also validate manually with forge: forge inspect <contract> storage-layout --pretty
-contract BoltManagerV2 is IBoltManagerV2, OwnableUpgradeable, UUPSUpgradeable {
+contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
     using EnumerableSet for EnumerableSet.AddressSet;
     using EnumerableMapV2 for EnumerableMapV2.OperatorMap;
     using OperatorMapWithTimeV2 for EnumerableMapV2.OperatorMap;
@@ -33,8 +33,8 @@ contract BoltManagerV2 is IBoltManagerV2, OwnableUpgradeable, UUPSUpgradeable {
     uint48 public START_TIMESTAMP;
 
     /// @notice Bolt Parameters contract.
-    IBoltParametersV1 public parameters;
-
+    Parameters public parameters;
+    
     /// @notice Validators registry, where validators are registered via their
     /// BLS pubkey and are assigned a sequence number.
     IBoltValidatorsV2 public validators;
@@ -72,7 +72,7 @@ contract BoltManagerV2 is IBoltManagerV2, OwnableUpgradeable, UUPSUpgradeable {
     function initialize(address _owner, address _parameters, address _validators) public initializer {
         __Ownable_init(_owner);
 
-        parameters = IBoltParametersV1(_parameters);
+        parameters = Parameters(_parameters);
         validators = IBoltValidatorsV2(_validators);
 
         START_TIMESTAMP = Time.timestamp();
@@ -81,7 +81,7 @@ contract BoltManagerV2 is IBoltManagerV2, OwnableUpgradeable, UUPSUpgradeable {
     function initializeV2(address _owner, address _parameters, address _validators) public reinitializer(2) {
         __Ownable_init(_owner);
 
-        parameters = IBoltParametersV1(_parameters);
+        parameters = Parameters(_parameters);
         validators = IBoltValidatorsV2(_validators);
 
         START_TIMESTAMP = Time.timestamp();
