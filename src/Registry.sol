@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.25;
+pragma solidity >=0.8.0 <0.9.0;
 
 import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
@@ -7,45 +7,45 @@ import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
 import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-import {OperatorMapWithTimeV2} from "../lib/OperatorMapWithTimeV2.sol";
-import {EnumerableMapV2} from "../lib/EnumerableMapV2.sol";
+import {OperatorMapWithTime} from "./lib/OperatorMapWithTime.sol"; // Ensure this path is correct and the file exists
+import {EnumerableMap} from "./lib/EnumerableMap.sol";
 
-import {Parameters} from "../interfaces/Parameters.sol";
-import {Middleware} from "../interfaces/Middleware.sol";
-import {IValidators} from "../interfaces/Validators.sol";
-import {IRegistry} from "../interfaces/Registry.sol";
+import {IParameters} from "./interfaces/IParameters.sol";
+import {IMiddleware} from "./interfaces/IMiddleware.sol";
+import {IValidator} from "./interfaces/IValidator.sol";
+import {IManager} from "./interfaces/IManager.sol";
 
-/// @title Bolt Manager
-/// @notice The Bolt Manager contract is responsible for managing operators & restaking middlewares, and is the
-/// entrypoint contract for all Bolt-related queries for off-chain consumers.
+/// @title  Manager
+/// @notice The  Manager contract is responsible for managing operators & restaking middlewares, and is the
+/// entrypoint contract for all related queries for off-chain consumers.
 /// @dev This contract is upgradeable using the UUPSProxy pattern. Storage layout remains fixed across upgrades
 /// with the use of storage gaps.
 /// See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
 /// To validate the storage layout, use the Openzeppelin Foundry Upgrades toolkit.
 /// You can also validate manually with forge: forge inspect <contract> storage-layout --pretty
-contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
+contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     using EnumerableSet for EnumerableSet.AddressSet;
-    using EnumerableMapV2 for EnumerableMapV2.OperatorMap;
-    using OperatorMapWithTimeV2 for EnumerableMapV2.OperatorMap;
+    using EnumerableMap for EnumerableMap.OperatorMap;
+    using OperatorMapWithTime for EnumerableMap.OperatorMap;
 
     // ========= STORAGE =========
     /// @notice Start timestamp of the first epoch.
     uint48 public START_TIMESTAMP;
 
-    /// @notice Bolt Parameters contract.
+    /// @notice  Parameters contract.
     IParameters public parameters;
 
     /// @notice Validators registry, where validators are registered via their
     /// BLS pubkey and are assigned a sequence number.
-    IValidators public validators;
+    IValidator public validators;
 
-    IMiddleware public middleware;
+    Middleware public middleware;
 
-    /// @notice Set of operator addresses that have opted in to Bolt Protocol.
-    EnumerableMapV2.OperatorMap private operators;
+    /// @notice Set of operator addresses that have opted in to  Protocol.
+    EnumerableMap.OperatorMap private operators;
 
     /// @notice Set of restaking protocols supported. Each address corresponds to the
-    /// associated Bolt Middleware contract.
+    /// associated  Middleware contract.
     EnumerableSet.AddressSet private restakingProtocols;
 
     // --> Storage layout marker: 7 slots
@@ -69,13 +69,13 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
 
     // ========= INITIALIZER & PROXY FUNCTIONALITY ========== //
 
-    /// @notice The initializer for the BoltManager contract.
+    /// @notice The initializer for the Manager contract.
     /// @param _validators The address of the validators registry.
     function initialize(address _owner, address _parameters, address _validators) public initializer {
         __Ownable_init(_owner);
 
-        parameters = Parameters(_parameters);
-        validators = IValidators(_validators);
+        parameters = IParameters(_parameters);
+        validators = IValidator(_validators);
 
         START_TIMESTAMP = Time.timestamp();
     }
@@ -83,8 +83,8 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
     function initializeV2(address _owner, address _parameters, address _validators) public reinitializer(2) {
         __Ownable_init(_owner);
 
-        parameters = Parameters(_parameters);
-        validators = IValidators(_validators);
+        parameters = IParameters(_parameters);
+        validators = IValidator(_validators);
 
         START_TIMESTAMP = Time.timestamp();
     }
@@ -127,12 +127,12 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
         return validators.getValidatorByPubkeyHash(pubkeyHash).authorizedOperator == operator;
     }
 
-    /// @notice Returns the addresses of the middleware contracts of restaking protocols supported by Bolt.
+    /// @notice Returns the addresses of the middleware contracts of restaking protocols supported.
     function getSupportedRestakingProtocols() public view returns (address[] memory middlewares) {
         return restakingProtocols.values();
     }
 
-    /// @notice Returns whether an operator is registered with Bolt.
+    /// @notice Returns whether an operator is registered.
     function isOperator(
         address operator
     ) public view returns (bool) {
@@ -163,9 +163,9 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
 
         uint48 epochStartTs = getEpochStartTs(getEpochAtTs(Time.timestamp()));
         // NOTE: this will revert when the proposer does not exist.
-        IValidators.ValidatorInfo memory validator = validators.getValidatorByPubkeyHash(pubkeyHash);
+        IValidator.ValidatorInfo memory validator = validators.getValidatorByPubkeyHash(pubkeyHash);
 
-        EnumerableMapV2.Operator memory operatorData = operators.get(validator.authorizedOperator);
+        EnumerableMap.Operator memory operatorData = operators.get(validator.authorizedOperator);
 
         status.pubkeyHash = pubkeyHash;
         status.operator = validator.authorizedOperator;
@@ -197,7 +197,7 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
 
     /// @notice Get the amount staked by an operator for a given collateral asset.
     function getOperatorStake(address operator, address collateral) public view returns (uint256) {
-        EnumerableMapV2.Operator memory operatorData = operators.get(operator);
+        EnumerableMap.Operator memory operatorData = operators.get(operator);
 
         return IMiddleware(operatorData.middleware).getOperatorStake(operator, collateral);
     }
@@ -208,7 +208,7 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
     ) public view returns (uint256 amount) {
         // Loop over all of the operators, get their middleware, and retrieve their staked amount.
         for (uint256 i = 0; i < operators.length(); ++i) {
-            (address operator, EnumerableMapV2.Operator memory operatorData) = operators.at(i);
+            (address operator, EnumerableMap.Operator memory operatorData) = operators.at(i);
             amount += IMiddleware(operatorData.middleware).getOperatorStake(operator, collateral);
         }
 
@@ -217,26 +217,26 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
 
     // ========= OPERATOR FUNCTIONS ====== //
 
-    /// @notice Registers an operator with Bolt. Only callable by a supported middleware contract.
+    /// @notice Registers an operator. Only callable by a supported middleware contract.
     function registerOperator(address operatorAddr, string calldata rpc) external onlyMiddleware {
         if (operators.contains(operatorAddr)) {
             revert OperatorAlreadyRegistered();
         }
 
         // Create an already enabled operator
-        EnumerableMapV2.Operator memory operator = EnumerableMapV2.Operator(rpc, msg.sender, Time.timestamp());
+        EnumerableMap.Operator memory operator = EnumerableMap.Operator(rpc, msg.sender, Time.timestamp());
 
         operators.set(operatorAddr, operator);
     }
 
-    /// @notice De-registers an operator from Bolt. Only callable by a supported middleware contract.
+    /// @notice De-registers an operator. Only callable by a supported middleware contract.
     function deregisterOperator(
         address operator
     ) public onlyMiddleware {
         operators.remove(operator);
     }
 
-    /// @notice Allow an operator to signal indefinite opt-out from Bolt Protocol.
+    /// @notice Allow an operator to signal indefinite opt-out fromx Protocol.
     /// @dev Pausing activity does not prevent the operator from being slashable for
     /// the current network epoch until the end of the slashing window.
     function pauseOperator(
@@ -246,7 +246,7 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
         operators.disable(operator);
     }
 
-    /// @notice Allow a disabled operator to signal opt-in to Bolt Protocol.
+    /// @notice Allow a disabled operator to signal opt-in to  Protocol.
     function unpauseOperator(
         address operator
     ) external onlyMiddleware {
@@ -254,7 +254,7 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
         operators.enable(operator);
     }
 
-    /// @notice Check if an operator is currently enabled to work in Bolt Protocol.
+    /// @notice Check if an operator is currently enabled to work in  Protocol.
     /// @param operator The operator address to check the enabled status for.
     /// @return True if the operator is enabled, false otherwise.
     function isOperatorEnabled(
@@ -270,16 +270,16 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
 
     // ========= ADMIN FUNCTIONS ========= //
 
-    /// @notice Add a restaking protocol into Bolt
-    /// @param protocolMiddleware The address of the restaking protocol Bolt middleware
+    /// @notice Add a restaking protocol 
+    /// @param protocolMiddleware The address of the restaking protocol  middleware
     function addRestakingProtocol(
         address protocolMiddleware
     ) public onlyOwner {
         restakingProtocols.add(protocolMiddleware);
     }
 
-    /// @notice Remove a restaking protocol from Bolt
-    /// @param protocolMiddleware The address of the restaking protocol Bolt middleware
+    /// @notice Remove a restaking protocol from 
+    /// @param protocolMiddleware The address of the restaking protocol  middleware
     function removeRestakingProtocol(
         address protocolMiddleware
     ) public onlyOwner {

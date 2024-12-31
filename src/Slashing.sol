@@ -1,20 +1,21 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.25;
+pragma solidity >=0.8.0 <0.9.0;
 
 import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
 import {ECDSA} from "@openzeppelin/contracts-upgradeable/utils/cryptography/ECDSAUpgradeable.sol";
 import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
-import {SecureMerkleTrie} from "../lib/trie/SecureMerkleTrie.sol";
-import {MerkleTrie} from "../lib/trie/MerkleTrie.sol";
-import {RLPReader} from "../lib/rlp/RLPReader.sol";
-import {RLPWriter} from "../lib/rlp/RLPWriter.sol";
-import {TransactionDecoder} from "../lib/TransactionDecoder.sol";
-import {Challenger} from "../interfaces/Challenger.sol";
-import {Parameters} from "../interfaces/Parameters.sol";
 
-contract ModifiedSlashing is Challenger, OwnableUpgradeable, UUPSUpgradeable {
+import {SecureMerkleTrie} from "./lib/trie/SecureMerkleTrie.sol";
+import {MerkleTrie} from "./lib/trie/MerkleTrie.sol";
+import {RLPReader} from "./lib/rlp/RLPReader.sol";
+import {RLPWriter} from "./lib/rlp/RLPWriter.sol";
+import {TransactionDecoder} from "./lib/TransactionDecoder.sol";
+import {IChallenger} from "./interfaces/IChallenger.sol";
+import {IParameters} from "./interfaces/IParameters.sol";
+
+contract ModifiedSlashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
     using RLPReader for bytes;
     using RLPReader for RLPReader.RLPItem;
     using TransactionDecoder for bytes;
@@ -22,7 +23,7 @@ contract ModifiedSlashing is Challenger, OwnableUpgradeable, UUPSUpgradeable {
     using EnumerableSet for EnumerableSet.Bytes32Set;
 
     // Storage variables
-    Parameters public params;
+    IParameters public params;
     EnumerableSet.Bytes32Set internal activeDisputes;
     mapping(bytes32 => Challenge) internal disputeDetails;
     uint256[46] private __gap;
@@ -30,7 +31,7 @@ contract ModifiedSlashing is Challenger, OwnableUpgradeable, UUPSUpgradeable {
     // Initialize contract
     function initializeContract(address _owner, address _params) public initializer {
         __Ownable_init(_owner);
-        params = Parameters(_params);
+        params = IParameters(_params);
     }
 
     function _authorizeUpgrade(address newImplementation) internal override onlyOwner {}
