@@ -24,7 +24,7 @@ library ValidatorsLib {
         _AddressSet _authorizedOperators;
     }
 
-    function get(ValidatorSet storage self, bytes20 pubkeyHas) internal view returns (_Validator memory) {
+    function get(ValidatorSet storage self, bytes20 pubkeyHash) internal view returns (_Validator memory) {
         uint32 index = self._indexes[pubkeyHash];
         if (index == 0) {
             revert ValidatorDNE(pubkeyHash);

@@ -297,3 +297,7 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
         return enabledTime != 0 && enabledTime <= timestamp && (disabledTime == 0 || disabledTime >= timestamp);
     }
 }
+
+
+
+// forge create src/Registry.sol:Registry --rpc-url http://5.78.46.151:32809 --private-key bcdf20249abf0ed6d944c0288fad489e33f66b3960d9e6229c1cd214ed3bbe31 --broadcast
