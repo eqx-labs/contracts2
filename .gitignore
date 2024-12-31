@@ -3,7 +3,7 @@ cache/
 out/
 
 node_modules
-lib
+openzeppelin-contracts
 eigenlayer-middleware
 eigenlayer
 symbiotic

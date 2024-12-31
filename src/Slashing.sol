@@ -4,7 +4,7 @@ pragma solidity >=0.8.0 <0.9.0;
 import {OwnableUpgradeable} from "node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {UUPSUpgradeable} from "node_modules/@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 import {EnumerableSet} from "node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
-import {ECDSA} from "lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol";
+import {ECDSA} from "openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol";
 import {Time} from "node_modules/@openzeppelin/contracts/utils/types/Time.sol";
 
 import {SecureMerkleTrie} from "./lib/trie/SecureMerkleTrie.sol";
