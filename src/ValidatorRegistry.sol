@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-contract Counter {
+import {BaseDSS} from "lib/karak-onchain-sdk/src/BaseDSS.sol";
+
+contract ValidatorRegistry {
     uint256 public number;
 
     function setNumber(uint256 newNumber) public {
