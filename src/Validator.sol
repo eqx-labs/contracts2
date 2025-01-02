@@ -10,7 +10,12 @@ import {ValidatorsLib} from "./lib/ValidatorsLib.sol";
 import {IValidator} from "./interfaces/IValidator.sol";
 import {IParameters} from "./interfaces/IParameters.sol";
 
-contract Validators is IValidator, BLSSignatureVerifier, OwnableUpgradeable, UUPSUpgradeable {
+contract Validators is
+    IValidator,
+    BLSSignatureVerifier,
+    OwnableUpgradeable,
+    UUPSUpgradeable
+{
     using BLS12381 for BLS12381.G1Point;
     using ValidatorsLib for ValidatorsLib.ValidatorSet;
 
@@ -38,23 +43,37 @@ contract Validators is IValidator, BLSSignatureVerifier, OwnableUpgradeable, UUP
     }
 
     // Initialization functions
-    function initializeSystem(address _owner, address _parameters) public initializer {
+    function initializeSystem(
+        address _owner,
+        address _parameters
+    ) public initializer {
         __Ownable_init(_owner);
         systemParameters = IParameters(_parameters);
     }
 
-    function upgradeSystemToV2(address _owner, address _parameters) public reinitializer(2) {
+    function upgradeSystemToV2(
+        address _owner,
+        address _parameters
+    ) public reinitializer(2) {
         __Ownable_init(_owner);
         systemParameters = IParameters(_parameters);
     }
 
-    function _authorizeUpgrade(address newImplementation) internal override onlyOwner {}
+    function _authorizeUpgrade(
+        address newImplementation
+    ) internal override onlyOwner {}
 
     // View functions
-    function retrieveAllValidators() public view returns (ValidatorDetails[] memory) {
+    function retrieveAllValidators()
+        public
+        view
+        returns (ValidatorDetails[] memory)
+    {
         ValidatorsLib._Validator[] memory _validators = VALIDATOR_SET.getAll();
-        ValidatorDetails[] memory validatorList = new ValidatorDetails[](_validators.length);
-        
+        ValidatorDetails[] memory validatorList = new ValidatorDetails[](
+            _validators.length
+        );
+
         for (uint256 i = 0; i < _validators.length; i++) {
             validatorList[i] = _getValidatorDetails(_validators[i]);
         }
@@ -70,7 +89,9 @@ contract Validators is IValidator, BLSSignatureVerifier, OwnableUpgradeable, UUP
     function findValidatorByHash(
         bytes20 pubkeyHash
     ) public view returns (ValidatorDetails memory) {
-        ValidatorsLib._Validator memory _validator = VALIDATOR_SET.get(pubkeyHash);
+        ValidatorsLib._Validator memory _validator = VALIDATOR_SET.get(
+            pubkeyHash
+        );
         return _getValidatorDetails(_validator);
     }
 
@@ -93,13 +114,21 @@ contract Validators is IValidator, BLSSignatureVerifier, OwnableUpgradeable, UUP
         address operatorAddress
     ) public {
         uint32 sequence = uint32(VALIDATOR_SET.length() + 1);
-        bytes memory messageData = abi.encodePacked(block.chainid, msg.sender, sequence);
-        
+        bytes memory messageData = abi.encodePacked(
+            block.chainid,
+            msg.sender,
+            sequence
+        );
+
         if (!_verifySignature(messageData, signature, pubkey)) {
             revert InvalidBLSSignatureProvided();
         }
 
-        _processValidatorRegistration(generatePublicKeyHash(pubkey), operatorAddress, gasLimitMax);
+        _processValidatorRegistration(
+            generatePublicKeyHash(pubkey),
+            operatorAddress,
+            gasLimitMax
+        );
     }
 
     function bulkRegisterValidators(
@@ -110,12 +139,16 @@ contract Validators is IValidator, BLSSignatureVerifier, OwnableUpgradeable, UUP
     ) public {
         uint32[] memory sequenceNumbers = new uint32[](pubkeys.length);
         uint32 startingSequence = uint32(VALIDATOR_SET.length() + 1);
-        
+
         for (uint32 i = 0; i < pubkeys.length; i++) {
             sequenceNumbers[i] = startingSequence + i;
         }
 
-        bytes memory messageData = abi.encodePacked(block.chainid, msg.sender, sequenceNumbers);
+        bytes memory messageData = abi.encodePacked(
+            block.chainid,
+            msg.sender,
+            sequenceNumbers
+        );
         BLS12381.G1Point memory aggregatedKey = _aggregatePubkeys(pubkeys);
 
         if (!_verifySignature(messageData, signature, aggregatedKey)) {
@@ -127,7 +160,11 @@ contract Validators is IValidator, BLSSignatureVerifier, OwnableUpgradeable, UUP
             hashedKeys[i] = generatePublicKeyHash(pubkeys[i]);
         }
 
-        _processBulkValidatorRegistration(hashedKeys, operatorAddress, gasLimitMax);
+        _processBulkValidatorRegistration(
+            hashedKeys,
+            operatorAddress,
+            gasLimitMax
+        );
     }
 
     function quickBulkRegisterValidators(
@@ -138,11 +175,18 @@ contract Validators is IValidator, BLSSignatureVerifier, OwnableUpgradeable, UUP
         if (!systemParameters.ALLOW_UNSAFE_REGISTRATION()) {
             revert UnsafeRegistrationDisabled();
         }
-        _processBulkValidatorRegistration(hashedKeys, operatorAddress, gasLimitMax);
+        _processBulkValidatorRegistration(
+            hashedKeys,
+            operatorAddress,
+            gasLimitMax
+        );
     }
 
     // Update functions
-    function updateValidatorGasLimit(bytes20 pubkeyHash, uint32 newGasLimit) public {
+    function updateValidatorGasLimit(
+        bytes20 pubkeyHash,
+        uint32 newGasLimit
+    ) public {
         address controller = VALIDATOR_SET.getController(pubkeyHash);
         if (msg.sender != controller) {
             revert UnauthorizedAccess();
@@ -181,15 +225,24 @@ contract Validators is IValidator, BLSSignatureVerifier, OwnableUpgradeable, UUP
             revert InvalidOperatorAddress();
         }
 
-        uint32 operatorIndex = VALIDATOR_SET.getOrInsertAuthorizedOperator(operatorAddress);
-        uint32 controllerIndex = VALIDATOR_SET.getOrInsertController(msg.sender);
+        uint32 operatorIndex = VALIDATOR_SET.getOrInsertAuthorizedOperator(
+            operatorAddress
+        );
+        uint32 controllerIndex = VALIDATOR_SET.getOrInsertController(
+            msg.sender
+        );
 
         for (uint32 i = 0; i < hashedKeys.length; i++) {
             if (hashedKeys[i] == bytes20(0)) {
                 revert InvalidPublicKey();
             }
 
-            VALIDATOR_SET.insert(hashedKeys[i], gasLimitMax, controllerIndex, operatorIndex);
+            VALIDATOR_SET.insert(
+                hashedKeys[i],
+                gasLimitMax,
+                controllerIndex,
+                operatorIndex
+            );
             emit NewValidatorRegistered(hashedKeys[i]);
         }
     }
@@ -197,12 +250,17 @@ contract Validators is IValidator, BLSSignatureVerifier, OwnableUpgradeable, UUP
     function _getValidatorDetails(
         ValidatorsLib._Validator memory _validator
     ) internal view returns (ValidatorDetails memory) {
-        return ValidatorDetails({
-            pubkeyHash: _validator.pubkeyHash,
-            gasLimitMax: _validator.maxCommittedGasLimit,
-            operatorAddress: VALIDATOR_SET.getAuthorizedOperator(_validator.pubkeyHash),
-            controllerAddress: VALIDATOR_SET.getController(_validator.pubkeyHash)
-        });
+        return
+            ValidatorDetails({
+                pubkeyHash: _validator.pubkeyHash,
+                gasLimitMax: _validator.maxCommittedGasLimit,
+                operatorAddress: VALIDATOR_SET.getAuthorizedOperator(
+                    _validator.pubkeyHash
+                ),
+                controllerAddress: VALIDATOR_SET.getController(
+                    _validator.pubkeyHash
+                )
+            });
     }
 
     function generatePublicKeyHash(
@@ -212,4 +270,54 @@ contract Validators is IValidator, BLSSignatureVerifier, OwnableUpgradeable, UUP
         bytes32 hash = keccak256(abi.encodePacked(compressed));
         return bytes20(uint160(uint256(hash)));
     }
+
+    function getAllValidators()
+        external
+        view
+        override
+        returns (ValidatorInfo[] memory)
+    {}
+
+    function getValidatorByPubkey(
+        BLS12381.G1Point calldata pubkey
+    ) external view override returns (ValidatorInfo memory) {}
+
+    function getValidatorByPubkeyHash(
+        bytes20 pubkeyHash
+    ) external view override returns (ValidatorInfo memory) {}
+
+    function registerValidatorUnsafe(
+        bytes20 pubkeyHash,
+        uint32 maxCommittedGasLimit,
+        address authorizedOperator
+    ) external override {}
+
+    function registerValidator(
+        BLS12381.G1Point calldata pubkey,
+        BLS12381.G2Point calldata signature,
+        uint32 maxCommittedGasLimit,
+        address authorizedOperator
+    ) external override {}
+
+    function batchRegisterValidators(
+        BLS12381.G1Point[] calldata pubkeys,
+        BLS12381.G2Point calldata signature,
+        uint32 maxCommittedGasLimit,
+        address authorizedOperator
+    ) external override {}
+
+    function batchRegisterValidatorsUnsafe(
+        bytes20[] calldata pubkeyHashes,
+        uint32 maxCommittedGasLimit,
+        address authorizedOperator
+    ) external override {}
+
+    function updateMaxCommittedGasLimit(
+        bytes20 pubkeyHash,
+        uint32 maxCommittedGasLimit
+    ) external override {}
+
+    function hashPubkey(
+        BLS12381.G1Point calldata pubkey
+    ) external pure override returns (bytes20) {}
 }

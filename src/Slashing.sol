@@ -15,7 +15,7 @@ import {TransactionDecoder} from "./lib/TransactionDecoder.sol";
 import {IChallenger} from "./interfaces/IChallenger.sol";
 import {IParameters} from "./interfaces/IParameters.sol";
 
-contract ModifiedSlashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
+contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
     using RLPReader for bytes;
     using RLPReader for RLPReader.RLPItem;
     using TransactionDecoder for bytes;
