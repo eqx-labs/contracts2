@@ -15,8 +15,8 @@ import {IMiddleware} from "./interfaces/IEigenlayerRestaking.sol";
 import {IManager} from "./interfaces/IRegistry.sol";
 import {IKarakCore} from "./interfaces/IKarakCore.sol";
 
-import {BaseDSS} from "./path/to/karak-onchain-sdk/BaseDSS.sol";
-import {IKarakBaseVault} from "karak-onchain-sdk/interfaces/IKarakBaseVault.sol";
+import {BaseDSS} from "src/lib/karak-onchain-sdk/src/BaseDSS.sol";
+import {IKarakBaseVault} from "src/lib/karak-onchain-sdk/src/interfaces/IKarakBaseVault.sol";
 
 /// @title Bolt Karak Middleware contract.
 /// @notice This contract is responsible for interfacing with the Karak restaking protocol.

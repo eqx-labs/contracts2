@@ -10,8 +10,8 @@ import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeab
 
 import {MapWithTimeData} from "./lib/MapWithTimeData.sol";
 import {IParameters} from "./interfaces/IParameters.sol";
-import {IMiddleware} from "./interfaces/IMiddleware.sol";
-import {IManager} from "./interfaces/IManager.sol";
+import {IMiddleware} from "./interfaces/IEigenlayerRestaking.sol";
+import {IManager} from "./interfaces/IRegistry.sol";
 
 import {IServiceManager} from "@eigenlayer-middleware/src/interfaces/IServiceManager.sol";
 import {IStrategyManager} from "@eigenlayer/src/contracts/interfaces/IStrategyManager.sol";
