@@ -1,21 +1,21 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import {Time} from "node_modules/@openzeppelin/contracts/utils/types/Time.sol";
-import {EnumerableMap} from "node_modules/@openzeppelin/contracts/utils/structs/EnumerableMap.sol";
-import {EnumerableSet} from "node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
-import {IERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import {OwnableUpgradeable} from "node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
-import {UUPSUpgradeable} from "node_modules/@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
+import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
+import {EnumerableMap} from "@openzeppelin/contracts/utils/structs/EnumerableMap.sol";
+import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 
-import {IBaseDelegator} from "symbiotic/src/interfaces/delegator/IBaseDelegator.sol";
-import {Subnetwork} from "symbiotic/src/contracts/libraries/Subnetwork.sol";
-import {IVault} from "symbiotic/src/interfaces/vault/IVault.sol";
-import {IRegistry} from "symbiotic/src/interfaces/common/IRegistry.sol";
-import {IOptInService} from "symbiotic/src/interfaces/service/IOptInService.sol";
-import {ISlasher} from "symbiotic/src/interfaces/slasher/ISlasher.sol";
-import {IVetoSlasher} from "symbiotic/src/interfaces/slasher/IVetoSlasher.sol";
-import {IEntity} from "symbiotic/src/interfaces/common/IEntity.sol";
+import {IBaseDelegator} from "@symbiotic/interfaces/delegator/IBaseDelegator.sol";
+import {Subnetwork} from "@symbiotic/contracts/libraries/Subnetwork.sol";
+import {IVault} from "@symbiotic/interfaces/vault/IVault.sol";
+import {IRegistry} from "@symbiotic/interfaces/common/IRegistry.sol";
+import {IOptInService} from "@symbiotic/interfaces/service/IOptInService.sol";
+import {ISlasher} from "@symbiotic/interfaces/slasher/ISlasher.sol";
+import {IVetoSlasher} from "@symbiotic/interfaces/slasher/IVetoSlasher.sol";
+import {IEntity} from "@symbiotic/interfaces/common/IEntity.sol";
 
 import {MapWithTimeData} from "./lib/MapWithTimeData.sol";
 import {IParameters} from "./interfaces/IParameters.sol";
@@ -76,7 +76,7 @@ contract SymbioticMiddleware is
         OPERATOR_REGISTRY_ADDRESS = operatorRegistry;
         OPERATOR_OPTIN_ADDRESS = operatorOptIn;
         VAULT_FACTORY_ADDRESS = vaultFactory;
-        PROTOCOL_ID = keccak256("SYMBIOTIC");
+        PROTOCOL_ID = keccak256("@symbiotic");
     }
 
     function upgradeContractV2(
@@ -97,7 +97,7 @@ contract SymbioticMiddleware is
         OPERATOR_REGISTRY_ADDRESS = operatorRegistry;
         OPERATOR_OPTIN_ADDRESS = operatorOptIn;
         VAULT_FACTORY_ADDRESS = vaultFactory;
-        PROTOCOL_ID = keccak256("SYMBIOTIC");
+        PROTOCOL_ID = keccak256("@symbiotic");
     }
 
     function _authorizeUpgrade(address newImpl) internal override onlyOwner {}

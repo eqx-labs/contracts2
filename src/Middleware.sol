@@ -1,27 +1,27 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import {Time} from "node_modules/@openzeppelin/contracts/utils/types/Time.sol";
-import {EnumerableMap} from "node_modules/@openzeppelin/contracts/utils/structs/EnumerableMap.sol";
-import {EnumerableSet} from "node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
-import {IERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import {OwnableUpgradeable} from "node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
-import {UUPSUpgradeable} from "node_modules/@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
+import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
+import {EnumerableMap} from "@openzeppelin/contracts/utils/structs/EnumerableMap.sol";
+import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 
 import {MapWithTimeData} from "./lib/MapWithTimeData.sol";
 import {IParameters} from "./interfaces/IParameters.sol";
 import {IMiddleware} from "./interfaces/IMiddleware.sol";
 import {IManager} from "./interfaces/IManager.sol";
 
-import {IServiceManager} from "eigenlayer-middleware/src/interfaces/IServiceManager.sol";
-import {IStrategyManager} from "eigenlayer/src/contracts/interfaces/IStrategyManager.sol";
-import {IAVSDirectory} from "eigenlayer/src/contracts/interfaces/IAVSDirectory.sol";
-import {IDelegationManager} from "eigenlayer/src/contracts/interfaces/IDelegationManager.sol";
-import {ISignatureUtils} from "eigenlayer/src/contracts/interfaces/ISignatureUtils.sol";
-import {IStrategy} from "eigenlayer/src/contracts/interfaces/IStrategy.sol";
-import {AVSDirectoryStorage} from "eigenlayer/src/contracts/core/AVSDirectoryStorage.sol";
-import {DelegationManagerStorage} from "eigenlayer/src/contracts/core/DelegationManagerStorage.sol";
-import {StrategyManagerStorage} from "eigenlayer/src/contracts/core/StrategyManagerStorage.sol";
+import {IServiceManager} from "@eigenlayer-middleware/src/interfaces/IServiceManager.sol";
+import {IStrategyManager} from "@eigenlayer/src/contracts/interfaces/IStrategyManager.sol";
+import {IAVSDirectory} from "@eigenlayer/src/contracts/interfaces/IAVSDirectory.sol";
+import {IDelegationManager} from "@eigenlayer/src/contracts/interfaces/IDelegationManager.sol";
+import {ISignatureUtils} from "@eigenlayer/src/contracts/interfaces/ISignatureUtils.sol";
+import {IStrategy} from "@eigenlayer/src/contracts/interfaces/IStrategy.sol";
+import {AVSDirectoryStorage} from "@eigenlayer/src/contracts/core/AVSDirectoryStorage.sol";
+import {DelegationManagerStorage} from "@eigenlayer/src/contracts/core/DelegationManagerStorage.sol";
+import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyManagerStorage.sol";
 
 contract Middleware is IMiddleware, IServiceManager, OwnableUpgradeable, UUPSUpgradeable {
     using EnumerableSet for EnumerableSet.AddressSet;

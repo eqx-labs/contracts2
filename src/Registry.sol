@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import {OwnableUpgradeable} from "node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
-import {UUPSUpgradeable} from "node_modules/@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
-import {Time} from "node_modules/@openzeppelin/contracts/utils/types/Time.sol";
-import {EnumerableSet} from "node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
-import {IERC20} from "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
+import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
+import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 import {OperatorMapWithTime} from "./lib/OperatorMapWithTime.sol"; 
 import {EnumerableMap} from "./lib/EnumerableMap.sol";
