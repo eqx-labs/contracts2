@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import {ECDSA} from "node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
+import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 
 import {RLPReader} from "./rlp/RLPReader.sol";
 import {RLPWriter} from "./rlp/RLPWriter.sol";
