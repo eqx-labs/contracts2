@@ -19,11 +19,11 @@ import {IEntity} from "@symbiotic/interfaces/common/IEntity.sol";
 
 import {MapWithTimeData} from "./lib/MapWithTimeData.sol";
 import {IParameters} from "./interfaces/IParameters.sol";
-import {IMiddleware} from "./interfaces/IMiddleware.sol";
+import {IEigenlayerMiddleware} from "./interfaces/IMiddleware.sol";
 import {IManager} from "./interfaces/IManager.sol";
 
 contract SymbioticMiddleware is
-    IMiddleware,
+IEigenlayerMiddleware,
     OwnableUpgradeable,
     UUPSUpgradeable
 {
