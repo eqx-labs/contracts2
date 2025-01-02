@@ -23,7 +23,7 @@ import {AVSDirectoryStorage} from "@eigenlayer/src/contracts/core/AVSDirectorySt
 import {DelegationManagerStorage} from "@eigenlayer/src/contracts/core/DelegationManagerStorage.sol";
 import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyManagerStorage.sol";
 
-contract Middleware is IMiddleware, IServiceManager, OwnableUpgradeable, UUPSUpgradeable {
+abstract contract Middleware is IMiddleware, IServiceManager, OwnableUpgradeable, UUPSUpgradeable {
     using EnumerableSet for EnumerableSet.AddressSet;
     using EnumerableMap for EnumerableMap.AddressToUintMap;
     using MapWithTimeData for EnumerableMap.AddressToUintMap;
@@ -79,8 +79,8 @@ contract Middleware is IMiddleware, IServiceManager, OwnableUpgradeable, UUPSUpg
         address strategyManager
     ) public reinitializer(2) {
         __Ownable_init(owner);
-        systemParams = Parameters(params);
-        systemManager = Manager(manager);
+        systemParams = IParameters(params);
+        systemManager = IManager(manager);
         GENESIS_TIME = Time.timestamp();
 
         DIRECTORY = IAVSDirectory(avsDirectory);
