@@ -11,9 +11,9 @@ import {OperatorMapWithTime} from "./lib/OperatorMapWithTime.sol";
 import {EnumerableMap} from "./lib/EnumerableMap.sol";
 
 import {IParameters} from "./interfaces/IParameters.sol";
-import {IMiddleware} from "./interfaces/IMiddleware.sol";
+import {IMiddleware} from "./interfaces/IEigenlayerRestaking.sol";
 import {IValidator} from "./interfaces/IValidator.sol";
-import {IManager} from "./interfaces/IManager.sol";
+import {IManager} from "./interfaces/IRegistry.sol";
 
 /// @title  Manager
 /// @notice The  Manager contract is responsible for managing operators & restaking middlewares, and is the
