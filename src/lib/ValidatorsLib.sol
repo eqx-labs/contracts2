@@ -1,8 +1,8 @@
 pragma solidity 0.8.25;
 
 library ValidatorsLib {
-    error ValidatorExists(bytes20 pubkeyHash);
-    error ValidatorDNE(bytes20 pubkeyHash);
+    error ValidatorExists(bytes20 addressHash);
+    error ValidatorDNE(bytes20 addressHash);
 
     struct _AddressSet {
         address[] _values;
@@ -10,7 +10,7 @@ library ValidatorsLib {
     }
 
     struct _Validator {
-        bytes20 pubkeyHash;
+        bytes20 addressHash;
         uint32 maxCommittedGasLimit;
         uint32 controllerIndex;
         uint32 authorizedOperatorIndex;
@@ -24,9 +24,9 @@ library ValidatorsLib {
     }
 
     function get(ValidatorSet storage self, bytes20 pubkeyHas) internal view returns (_Validator memory) {
-        uint32 index = self._indexes[pubkeyHash];
+        uint32 index = self._indexes[addressHash];
         if (index == 0) {
-            revert ValidatorDNE(pubkeyHash);
+            revert ValidatorDNE(addressHash);
         }
 
         return self._values[index - 1];
@@ -39,8 +39,8 @@ library ValidatorsLib {
         return self._values;
     }
 
-    function contains(ValidatorSet storage self, bytes20 pubkeyHash) internal view returns (bool) {
-        return self._indexes[pubkeyHash] != 0;
+    function contains(ValidatorSet storage self, bytes20 addressHash) internal view returns (bool) {
+        return self._indexes[addressHash] != 0;
     }
 
     function length(
@@ -52,38 +52,38 @@ library ValidatorsLib {
 
     function insert(
         ValidatorSet storage self,
-        bytes20 pubkeyHash,
+        bytes20 addressHash,
         uint32 maxCommittedGasLimit,
         uint32 controllerIndex,
         uint32 authorizedOperatorIndex
     ) internal {
-        if (self._indexes[pubkeyHash] != 0) {
-            revert ValidatorExists(pubkeyHash);
+        if (self._indexes[addressHash] != 0) {
+            revert ValidatorExists(addressHash);
         }
 
-        self._values.push(_Validator(pubkeyHash, maxCommittedGasLimit, controllerIndex, authorizedOperatorIndex));
-        self._indexes[pubkeyHash] = uint32(self._values.length);
+        self._values.push(_Validator(addressHash, maxCommittedGasLimit, controllerIndex, authorizedOperatorIndex));
+        self._indexes[addressHash] = uint32(self._values.length);
     }
 
     function updateMaxCommittedGasLimit(
         ValidatorSet storage self,
-        bytes20 pubkeyHash,
+        bytes20 addressHash,
         uint32 maxCommittedGasLimit
     ) internal {
-        uint32 index = self._indexes[pubkeyHash];
+        uint32 index = self._indexes[addressHash];
         if (index == 0) {
-            revert ValidatorDNE(pubkeyHash);
+            revert ValidatorDNE(addressHash);
         }
 
         self._values[index - 1].maxCommittedGasLimit = maxCommittedGasLimit;
     }
 
-    function getController(ValidatorSet storage self, bytes20 pubkeyHash) internal view returns (address) {
-        return at(self._controllers, get(self, pubkeyHash).controllerIndex);
+    function getController(ValidatorSet storage self, bytes20 addressHash) internal view returns (address) {
+        return at(self._controllers, get(self, addressHash).controllerIndex);
     }
 
-    function getAuthorizedOperator(ValidatorSet storage self, bytes20 pubkeyHash) internal view returns (address) {
-        return at(self._authorizedOperators, get(self, pubkeyHash).authorizedOperatorIndex);
+    function getAuthorizedOperator(ValidatorSet storage self, bytes20 addressHash) internal view returns (address) {
+        return at(self._authorizedOperators, get(self, addressHash).authorizedOperatorIndex);
     }
 
     function getOrInsertController(ValidatorSet storage self, address controller) internal returns (uint32) {
