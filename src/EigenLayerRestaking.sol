@@ -23,7 +23,12 @@ import {AVSDirectoryStorage} from "@eigenlayer/src/contracts/core/AVSDirectorySt
 import {DelegationManagerStorage} from "@eigenlayer/src/contracts/core/DelegationManagerStorage.sol";
 import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyManagerStorage.sol";
 
-abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableUpgradeable, UUPSUpgradeable {
+ contract EigenLayerMiddleware is
+    IMiddleware,
+    IServiceManager,
+    OwnableUpgradeable,
+    UUPSUpgradeable
+{
     using EnumerableSet for EnumerableSet.AddressSet;
     using EnumerableMap for EnumerableMap.AddressToUintMap;
     using MapWithTimeData for EnumerableMap.AddressToUintMap;
@@ -36,7 +41,9 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
     IAVSDirectory public DIRECTORY;
     DelegationManagerStorage public DELEGATION;
     StrategyManagerStorage public STRATEGY;
-    bytes32 public PROTOCOL_ID;
+        bytes32 public NAME_HASH;
+
+
     uint256[41] private __gap;
 
     // Custom errors
@@ -67,7 +74,7 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
         DIRECTORY = IAVSDirectory(avsDirectory);
         DELEGATION = DelegationManagerStorage(delegationManager);
         STRATEGY = StrategyManagerStorage(strategyManager);
-        PROTOCOL_ID = keccak256("CUSTOM_PROTOCOL");
+         NAME_HASH = keccak256("EIGENLAYER");
     }
 
     function upgradeSystemToV2(
@@ -86,21 +93,25 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
         DIRECTORY = IAVSDirectory(avsDirectory);
         DELEGATION = DelegationManagerStorage(delegationManager);
         STRATEGY = StrategyManagerStorage(strategyManager);
-        PROTOCOL_ID = keccak256("CUSTOM_PROTOCOL");
+          NAME_HASH = keccak256("EIGENLAYER");
     }
 
-    function _authorizeUpgrade(address newImplementation) internal override onlyOwner {}
+    function _authorizeUpgrade(
+        address newImplementation
+    ) internal override onlyOwner {}
 
     // Time-related functions
     function calculateEpochStart(uint48 epoch) public view returns (uint48) {
         return GENESIS_TIME + epoch * systemParams.getEpochDuration();
     }
 
-    function getEpochForTimestamp(uint48 timestamp) public view returns (uint48) {
+    function getEpochForTimestamp(
+        uint48 timestamp
+    ) public view returns (uint48) {
         return (timestamp - GENESIS_TIME) / systemParams.getEpochDuration();
     }
 
-    function getCurrentEpochNumber() public view returns (uint48) {
+    function getCurrentEpoch() public view returns (uint48) {
         return getEpochForTimestamp(Time.timestamp());
     }
 
@@ -178,7 +189,9 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
     }
 
     function checkStrategyStatus(address strategy) public view returns (bool) {
-        (uint48 enableTime, uint48 disableTime) = activeStrategies.getTimes(strategy);
+        (uint48 enableTime, uint48 disableTime) = activeStrategies.getTimes(
+            strategy
+        );
         return enableTime != 0 && disableTime == 0;
     }
 
@@ -187,12 +200,20 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
         address operator
     ) public view returns (address[] memory, uint256[] memory) {
         address[] memory tokens = new address[](activeStrategies.length());
-        uint256[] memory stakeAmounts = new uint256[](activeStrategies.length());
+        uint256[] memory stakeAmounts = new uint256[](
+            activeStrategies.length()
+        );
 
-        uint48 epochStart = calculateEpochStart(getEpochForTimestamp(Time.timestamp()));
+        uint48 epochStart = calculateEpochStart(
+            getEpochForTimestamp(Time.timestamp())
+        );
 
         for (uint256 i = 0; i < activeStrategies.length(); ++i) {
-            (address strategy, uint48 enableTime, uint48 disableTime) = activeStrategies.atWithTimes(i);
+            (
+                address strategy,
+                uint48 enableTime,
+                uint48 disableTime
+            ) = activeStrategies.atWithTimes(i);
 
             if (!_isActiveAtTimestamp(enableTime, disableTime, epochStart)) {
                 continue;
@@ -200,7 +221,10 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
 
             IStrategy strategyContract = IStrategy(strategy);
             tokens[i] = address(strategyContract.underlyingToken());
-            uint256 shares = DELEGATION.operatorShares(operator, strategyContract);
+            uint256 shares = DELEGATION.operatorShares(
+                operator,
+                strategyContract
+            );
             stakeAmounts[i] = strategyContract.sharesToUnderlyingView(shares);
         }
 
@@ -208,7 +232,7 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
     }
 
     function getOperatorTokenBalance(
-        address operator, 
+        address operator,
         address token
     ) public view returns (uint256) {
         return getOperatorTokenBalanceAt(operator, token, Time.timestamp());
@@ -223,10 +247,16 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
             revert QueryError();
         }
 
-        uint48 epochStart = calculateEpochStart(getEpochForTimestamp(timestamp));
+        uint48 epochStart = calculateEpochStart(
+            getEpochForTimestamp(timestamp)
+        );
 
         for (uint256 i = 0; i < activeStrategies.length(); i++) {
-            (address strategy, uint48 enableTime, uint48 disableTime) = activeStrategies.atWithTimes(i);
+            (
+                address strategy,
+                uint48 enableTime,
+                uint48 disableTime
+            ) = activeStrategies.atWithTimes(i);
 
             if (token != address(IStrategy(strategy).underlyingToken())) {
                 continue;
@@ -236,7 +266,10 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
                 continue;
             }
 
-            uint256 shares = DELEGATION.operatorShares(operator, IStrategy(strategy));
+            uint256 shares = DELEGATION.operatorShares(
+                operator,
+                IStrategy(strategy)
+            );
             totalBalance += IStrategy(strategy).sharesToUnderlyingView(shares);
         }
 
@@ -254,7 +287,10 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
         uint48 disableTime,
         uint48 timestamp
     ) private pure returns (bool) {
-        return enableTime != 0 && enableTime <= timestamp && (disableTime == 0 || disableTime >= timestamp);
+        return
+            enableTime != 0 &&
+            enableTime <= timestamp &&
+            (disableTime == 0 || disableTime >= timestamp);
     }
 
     // EigenLayer Service Manager interface implementations
@@ -275,11 +311,19 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
     function getOperatorRestakedStrategies(
         address operator
     ) external view override returns (address[] memory) {
-        address[] memory restakedStrategies = new address[](activeStrategies.length());
-        uint48 epochStart = calculateEpochStart(getEpochForTimestamp(Time.timestamp()));
+        address[] memory restakedStrategies = new address[](
+            activeStrategies.length()
+        );
+        uint48 epochStart = calculateEpochStart(
+            getEpochForTimestamp(Time.timestamp())
+        );
 
         for (uint256 i = 0; i < activeStrategies.length(); ++i) {
-            (address strategy, uint48 enableTime, uint48 disableTime) = activeStrategies.atWithTimes(i);
+            (
+                address strategy,
+                uint48 enableTime,
+                uint48 disableTime
+            ) = activeStrategies.atWithTimes(i);
 
             if (!_isActiveAtTimestamp(enableTime, disableTime, epochStart)) {
                 continue;
@@ -293,11 +337,140 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
         return restakedStrategies;
     }
 
-    function getRestakeableStrategies() external view override returns (address[] memory) {
+    function getRestakeableStrategies()
+        external
+        view
+        override
+        returns (address[] memory)
+    {
         return activeStrategies.keys();
     }
 
     function avsDirectory() external view override returns (address) {
         return address(DIRECTORY);
     }
+
+    function getEpochStartTs(
+        uint48 epoch
+    ) public view returns (uint48 timestamp) {
+        return GENESIS_TIME + epoch * systemParams.getEpochDuration();
+    }
+
+    function getEpochAtTs(uint48 timestamp) public view returns (uint48 epoch) {
+        return (timestamp - GENESIS_TIME) / systemParams.getEpochDuration();
+    }
+
+    function getOperatorCollaterals(
+        address operator
+    ) public view returns (address[] memory, uint256[] memory) {
+        address[] memory collateralTokens = new address[](
+            activeStrategies.length()
+        );
+        uint256[] memory amounts = new uint256[](activeStrategies.length());
+
+        uint48 epochStartTs = getEpochStartTs(getEpochAtTs(Time.timestamp()));
+
+        IStrategy[] memory strategyImpls = new IStrategy[](
+            activeStrategies.length()
+        );
+
+        for (uint256 i = 0; i < activeStrategies.length(); ++i) {
+            (
+                address strategy,
+                uint48 enabledTime,
+                uint48 disabledTime
+            ) = activeStrategies.atWithTimes(i);
+
+            if (!_wasEnabledAt(enabledTime, disabledTime, epochStartTs)) {
+                continue;
+            }
+
+            IStrategy strategyImpl = IStrategy(strategy);
+
+            address collateral = address(strategyImpl.underlyingToken());
+            collateralTokens[i] = collateral;
+
+            strategyImpls[i] = strategyImpl;
+        }
+
+        // NOTE: order is preserved, which is why we can use the same index for both arrays below
+        uint256[] memory shares = DELEGATION.getOperatorShares(
+            operator,
+            strategyImpls
+        );
+
+        for (uint256 i = 0; i < strategyImpls.length; ++i) {
+            amounts[i] = strategyImpls[i].sharesToUnderlyingView(shares[i]);
+        }
+
+        return (collateralTokens, amounts);
+    }
+
+    function getOperatorStakeAt(
+        address operator,
+        address collateral,
+        uint48 timestamp
+    ) public view returns (uint256 amount) {
+        if (timestamp > Time.timestamp() || timestamp < GENESIS_TIME) {
+            revert InvalidQuery();
+        }
+
+        uint48 epochStartTs = getEpochStartTs(getEpochAtTs(timestamp));
+
+        // NOTE: Can this be done more gas-efficiently?
+        IStrategy[] memory strategyMem = new IStrategy[](1);
+
+        for (uint256 i = 0; i < activeStrategies.length(); i++) {
+            (
+                address strategy,
+                uint48 enabledTime,
+                uint48 disabledTime
+            ) = activeStrategies.atWithTimes(i);
+
+            if (collateral != address(IStrategy(strategy).underlyingToken())) {
+                continue;
+            }
+
+            if (!_wasEnabledAt(enabledTime, disabledTime, epochStartTs)) {
+                continue;
+            }
+
+            strategyMem[0] = IStrategy(strategy);
+            // NOTE: order is preserved i.e., shares[i] corresponds to strategies[i]
+            uint256[] memory shares = DELEGATION.getOperatorShares(
+                operator,
+                strategyMem
+            );
+            amount += IStrategy(strategy).sharesToUnderlyingView(shares[0]);
+        }
+
+        return amount;
+    }
+
+    function getOperatorStake(
+        address operator,
+        address collateral
+    ) public view returns (uint256 amount) {
+        uint48 timestamp = Time.timestamp();
+        return getOperatorStakeAt(operator, collateral, timestamp);
+    }
+
+    function updateAVSMetadataURI(
+        string calldata metadataURI
+    ) public onlyOwner {
+        DIRECTORY.updateAVSMetadataURI(metadataURI);
+    }
+
+    function _wasEnabledAt(
+        uint48 enabledTime,
+        uint48 disabledTime,
+        uint48 timestamp
+    ) private pure returns (bool) {
+        return
+            enabledTime != 0 &&
+            enabledTime <= timestamp &&
+            (disabledTime == 0 || disabledTime >= timestamp);
+    }
+
+
 }
