@@ -145,7 +145,7 @@ IMiddleware,
 
     // Operator management
     function onboardOperator(string calldata rpcEndpoint) public {
-        if (protocolManager.isOperator(msg.sender)) {
+        if (protocolManager.isOperatorRegistered(msg.sender)) {
             revert AlreadyRegistered();
         }
 
@@ -162,23 +162,23 @@ IMiddleware,
             revert OperatorNotOptedIn();
         }
 
-        protocolManager.registerOperator(msg.sender, rpcEndpoint);
+        protocolManager.registerNewOperator(msg.sender, rpcEndpoint);
     }
 
     function offboardOperator() public {
-        if (!protocolManager.isOperator(msg.sender)) {
+        if (!protocolManager.isOperatorRegistered(msg.sender)) {
             revert NotRegistered();
         }
 
-        protocolManager.deregisterOperator(msg.sender);
+        protocolManager.removeOperator(msg.sender);
     }
 
     function suspendOperatorActivity() public {
-        protocolManager.pauseOperator(msg.sender);
+        protocolManager.resumeOperator(msg.sender);
     }
 
     function resumeOperatorActivity() public {
-        protocolManager.unpauseOperator(msg.sender);
+        protocolManager.resumeOperator(msg.sender);
     }
 
     function suspendVaultActivity() public {

@@ -28,10 +28,10 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     using EnumerableMap for EnumerableMap.OperatorMap;
     using OperatorMapWithTime for EnumerableMap.OperatorMap;
 
-
-      // =========== CONSTANTS ========= //
+    // =========== CONSTANTS ========= //
     /// @dev See EIP-4788 for more info
-    address internal constant BEACON_ROOTS_CONTRACT = 0x000F3df6D732807Ef1319fB7B8bB8522d0Beac02;
+    address internal constant BEACON_ROOTS_CONTRACT =
+        0x000F3df6D732807Ef1319fB7B8bB8522d0Beac02;
 
     /// @notice The EIP-4788 time window in slots
     uint256 internal constant EIP4788_WINDOW = 8191;
@@ -73,7 +73,7 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     uint256 public MINIMUM_OPERATOR_STAKE;
     // --> Storage layout marker: 7 words
 
-     uint256[43] private __gap;
+    uint256[43] private __gap;
 
     // ========= STORAGE =========
     /// @notice Start timestamp of the first epoch.
@@ -106,7 +106,6 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
      * Total storage slots: 50
      */
 
-
     modifier onlyMiddleware() {
         if (!restakingProtocols.contains(msg.sender)) {
             revert UnauthorizedMiddleware();
@@ -118,7 +117,11 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
 
     /// @notice The initializer for the Manager contract.
     /// @param _validators The address of the validators registry.
-    function initialize(address _owner, address _parameters, address _validators,    uint48 _epochDuration,
+    function initialize(
+        address _owner,
+        address _parameters,
+        address _validators,
+        uint48 _epochDuration,
         uint48 _slashingWindow,
         uint48 _maxChallengeDuration,
         bool _allowUnsafeRegistration,
@@ -127,14 +130,15 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
         uint256 _justificationDelay,
         uint256 _eth2GenesisTimestamp,
         uint256 _slotTime,
-        uint256 _minimumOperatorStake) public initializer {
+        uint256 _minimumOperatorStake
+    ) public initializer {
         __Ownable_init(_owner);
 
         parameters = ISystemParameters(_parameters);
         validators = IValidator(_validators);
 
         START_TIMESTAMP = Time.timestamp();
-          EPOCH_DURATION = _epochDuration;
+        EPOCH_DURATION = _epochDuration;
         SLASHING_WINDOW = _slashingWindow;
         ALLOW_UNSAFE_REGISTRATION = _allowUnsafeRegistration;
         MAX_CHALLENGE_DURATION = _maxChallengeDuration;
@@ -146,7 +150,11 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
         MINIMUM_OPERATOR_STAKE = _minimumOperatorStake;
     }
 
-    function initializeV2(address _owner, address _parameters, address _validators) public reinitializer(2) {
+    function initializeV2(
+        address _owner,
+        address _parameters,
+        address _validators
+    ) public reinitializer(2) {
         __Ownable_init(_owner);
 
         parameters = ISystemParameters(_parameters);
@@ -168,9 +176,7 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     }
 
     /// @notice Get the epoch at a given timestamp.
-    function getEpochAtTs(
-        uint48 timestamp
-    ) public view returns (uint48 epoch) {
+    function getEpochAtTs(uint48 timestamp) public view returns (uint48 epoch) {
         return (timestamp - START_TIMESTAMP) / parameters.getEpochDuration();
     }
 
@@ -185,23 +191,31 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     /// @param operator The operator address to check the authorization for.
     /// @param pubkeyHash The pubkey hash of the validator to check the authorization for.
     /// @return True if the operator is authorized, false otherwise.
-    function isOperatorAuthorizedForValidator(address operator, bytes20 pubkeyHash) public view returns (bool) {
+    function isOperatorAuthorizedForValidator(
+        address operator,
+        bytes20 pubkeyHash
+    ) public view returns (bool) {
         if (operator == address(0) || pubkeyHash == bytes20(0)) {
             revert InvalidQuery();
         }
 
-        return validators.getValidatorByPubkeyHash(pubkeyHash).authorizedOperator == operator;
+        return
+            validators
+                .getValidatorByPubkeyHash(pubkeyHash)
+                .authorizedOperator == operator;
     }
 
     /// @notice Returns the addresses of the middleware contracts of restaking protocols supported.
-    function getSupportedRestakingProtocols() public view returns (address[] memory middlewares) {
+    function getSupportedRestakingProtocols()
+        public
+        view
+        returns (address[] memory middlewares)
+    {
         return restakingProtocols.values();
     }
 
     /// @notice Returns whether an operator is registered.
-    function isOperator(
-        address operator
-    ) public view returns (bool) {
+    function isOperator(address operator) public view returns (bool) {
         return operators.contains(operator);
     }
 
@@ -210,8 +224,8 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     /// @return statuses The statuses of the proposers, including their operator and active stake.
     function getProposerStatuses(
         bytes20[] calldata pubkeyHashes
-    ) public view returns (ProposerStatus[] memory statuses) {
-        statuses = new ProposerStatus[](pubkeyHashes.length);
+    ) public view returns (ValidatorProposerStatus[] memory statuses) {
+        statuses = new ValidatorProposerStatus[](pubkeyHashes.length);
         for (uint256 i = 0; i < pubkeyHashes.length; ++i) {
             statuses[i] = getProposerStatus(pubkeyHashes[i]);
         }
@@ -222,50 +236,63 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     /// @return status The status of the proposer, including their operator and active stake.
     function getProposerStatus(
         bytes20 pubkeyHash
-    ) public view returns (ProposerStatus memory status) {
+    ) public view returns (ValidatorProposerStatus memory status) {
         if (pubkeyHash == bytes20(0)) {
             revert InvalidQuery();
         }
 
         uint48 epochStartTs = getEpochStartTs(getEpochAtTs(Time.timestamp()));
         // NOTE: this will revert when the proposer does not exist.
-        IValidator.ValidatorInfo memory validator = validators.getValidatorByPubkeyHash(pubkeyHash);
+        IValidator.ValidatorInfo memory validator = validators
+            .getValidatorByPubkeyHash(pubkeyHash);
 
-        EnumerableMap.Operator memory operatorData = operators.get(validator.authorizedOperator);
+        EnumerableMap.Operator memory operatorData = operators.get(
+            validator.authorizedOperator
+        );
 
-        status.pubkeyHash = pubkeyHash;
-        status.operator = validator.authorizedOperator;
-        status.operatorRPC = operatorData.rpc;
+        status.validatorPubkeyHash = pubkeyHash;
+        status.operatorAddress = validator.authorizedOperator;
+        status.operatorRpcUrl = operatorData.rpc;
 
-        (uint48 enabledTime, uint48 disabledTime) = operators.getTimes(validator.authorizedOperator);
+        (uint48 enabledTime, uint48 disabledTime) = operators.getTimes(
+            validator.authorizedOperator
+        );
         if (!_wasEnabledAt(enabledTime, disabledTime, epochStartTs)) {
             return status;
         }
 
-        (status.collaterals, status.amounts) =
-            IMiddleware(operatorData.middleware).getOperatorCollaterals(validator.authorizedOperator);
+        (status.collateralTokens, status.collateralAmounts) = IMiddleware(
+            operatorData.middleware
+        ).getOperatorCollaterals(validator.authorizedOperator);
 
         // NOTE: check if the sum of the collaterals covers the minimum operator stake required.
 
         uint256 totalOperatorStake = 0;
-        for (uint256 i = 0; i < status.amounts.length; ++i) {
-            totalOperatorStake += status.amounts[i];
+        for (uint256 i = 0; i < status.collateralAmounts.length; ++i) {
+            totalOperatorStake += status.collateralAmounts[i];
         }
 
         if (totalOperatorStake < parameters.getMinimumOperatorStake()) {
-            status.active = false;
+            status.isActive = false;
         } else {
-            status.active = true;
+            status.isActive = true;
         }
 
         return status;
     }
 
     /// @notice Get the amount staked by an operator for a given collateral asset.
-    function getOperatorStake(address operator, address collateral) public view returns (uint256) {
+    function getOperatorStake(
+        address operator,
+        address collateral
+    ) public view returns (uint256) {
         EnumerableMap.Operator memory operatorData = operators.get(operator);
 
-        return IMiddleware(operatorData.middleware).getOperatorStake(operator, collateral);
+        return
+            IMiddleware(operatorData.middleware).getOperatorStake(
+                operator,
+                collateral
+            );
     }
 
     /// @notice Get the total amount staked of a given collateral asset.
@@ -274,8 +301,14 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     ) public view returns (uint256 amount) {
         // Loop over all of the operators, get their middleware, and retrieve their staked amount.
         for (uint256 i = 0; i < operators.length(); ++i) {
-            (address operator, EnumerableMap.Operator memory operatorData) = operators.at(i);
-            amount += IMiddleware(operatorData.middleware).getOperatorStake(operator, collateral);
+            (
+                address operator,
+                EnumerableMap.Operator memory operatorData
+            ) = operators.at(i);
+            amount += IMiddleware(operatorData.middleware).getOperatorStake(
+                operator,
+                collateral
+            );
         }
 
         return amount;
@@ -284,38 +317,39 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     // ========= OPERATOR FUNCTIONS ====== //
 
     /// @notice Registers an operator. Only callable by a supported middleware contract.
-    function registerOperator(address operatorAddr, string calldata rpc) external onlyMiddleware {
+    function registerOperator(
+        address operatorAddr,
+        string calldata rpc
+    ) external onlyMiddleware {
         if (operators.contains(operatorAddr)) {
             revert OperatorAlreadyRegistered();
         }
 
         // Create an already enabled operator
-        EnumerableMap.Operator memory operator = EnumerableMap.Operator(rpc, msg.sender, Time.timestamp());
+        EnumerableMap.Operator memory operator = EnumerableMap.Operator(
+            rpc,
+            msg.sender,
+            Time.timestamp()
+        );
 
         operators.set(operatorAddr, operator);
     }
 
     /// @notice De-registers an operator. Only callable by a supported middleware contract.
-    function deregisterOperator(
-        address operator
-    ) public onlyMiddleware {
+    function deregisterOperator(address operator) public onlyMiddleware {
         operators.remove(operator);
     }
 
     /// @notice Allow an operator to signal indefinite opt-out fromx Protocol.
     /// @dev Pausing activity does not prevent the operator from being slashable for
     /// the current network epoch until the end of the slashing window.
-    function pauseOperator(
-        address operator
-    ) external onlyMiddleware {
+    function pauseOperator(address operator) external onlyMiddleware {
         // SAFETY: This will revert if the operator key is not present.
         operators.disable(operator);
     }
 
     /// @notice Allow a disabled operator to signal opt-in to  Protocol.
-    function unpauseOperator(
-        address operator
-    ) external onlyMiddleware {
+    function unpauseOperator(address operator) external onlyMiddleware {
         // SAFETY: This will revert if the operator key is not present.
         operators.enable(operator);
     }
@@ -323,28 +357,26 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     /// @notice Check if an operator is currently enabled to work in  Protocol.
     /// @param operator The operator address to check the enabled status for.
     /// @return True if the operator is enabled, false otherwise.
-    function isOperatorEnabled(
-        address operator
-    ) public view returns (bool) {
+    function isOperatorEnabled(address operator) public view returns (bool) {
         if (!operators.contains(operator)) {
             revert OperatorNotRegistered();
         }
 
-        (uint48 enabledTime, uint48 disabledTime) = operators.getTimes(operator);
+        (uint48 enabledTime, uint48 disabledTime) = operators.getTimes(
+            operator
+        );
         return enabledTime != 0 && disabledTime == 0;
     }
 
     // ========= ADMIN FUNCTIONS ========= //
 
-    /// @notice Add a restaking protocol 
+    /// @notice Add a restaking protocol
     /// @param protocolMiddleware The address of the restaking protocol  middleware
-    function addRestakingProtocol(
-        address protocolMiddleware
-    ) public onlyOwner {
+    function addRestakingProtocol(address protocolMiddleware) public onlyOwner {
         restakingProtocols.add(protocolMiddleware);
     }
 
-    /// @notice Remove a restaking protocol from 
+    /// @notice Remove a restaking protocol from
     /// @param protocolMiddleware The address of the restaking protocol  middleware
     function removeRestakingProtocol(
         address protocolMiddleware
@@ -359,12 +391,18 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     /// @param disabledTime The disabled time of the map entry.
     /// @param timestamp The timestamp to check the map entry status at.
     /// @return True if the map entry was active at the given timestamp, false otherwise.
-    function _wasEnabledAt(uint48 enabledTime, uint48 disabledTime, uint48 timestamp) private pure returns (bool) {
-        return enabledTime != 0 && enabledTime <= timestamp && (disabledTime == 0 || disabledTime >= timestamp);
+    function _wasEnabledAt(
+        uint48 enabledTime,
+        uint48 disabledTime,
+        uint48 timestamp
+    ) private pure returns (bool) {
+        return
+            enabledTime != 0 &&
+            enabledTime <= timestamp &&
+            (disabledTime == 0 || disabledTime >= timestamp);
     }
 
-
-     // ========= ADMIN METHODS ========= //
+    // ========= ADMIN METHODS ========= //
 
     /// @notice Enable or disable the use of the BLS precompile
     /// @param allowUnsafeRegistration Whether to allow unsafe registration of validators
@@ -384,9 +422,7 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
 
     /// @notice Set the required challenge bond.
     /// @param challengeBond The challenge bond required to open a challenge.
-    function setChallengeBond(
-        uint256 challengeBond
-    ) public onlyOwner {
+    function setChallengeBond(uint256 challengeBond) public onlyOwner {
         CHALLENGE_BOND = challengeBond;
     }
 
@@ -405,6 +441,46 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     ) public onlyOwner {
         JUSTIFICATION_DELAY = justificationDelay;
     }
+
+    function registerNewOperator(
+        address operatorAddress,
+        string calldata rpcUrl
+    ) external override {}
+
+    function removeOperator(address operatorAddress) external override {}
+
+    function suspendOperator(address operatorAddress) external override {}
+
+    function resumeOperator(address operatorAddress) external override {}
+
+    function isOperatorRegistered(
+        address operatorAddress
+    ) external view override returns (bool) {}
+
+    function getValidatorProposerStatus(
+        bytes20 validatorPubkeyHash
+    )
+        external
+        view
+        override
+        returns (ValidatorProposerStatus memory proposerStatus)
+    {}
+
+    function getValidatorProposerStatuses(
+        bytes20[] calldata validatorPubkeyHashes
+    )
+        external
+        view
+        override
+        returns (ValidatorProposerStatus[] memory proposerStatuses)
+    {}
+
+    function getRestakingMiddlewareProtocols()
+        external
+        view
+        override
+        returns (address[] memory middlewareAddresses)
+    {}
 }
 
 

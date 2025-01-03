@@ -134,7 +134,7 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
         string calldata rpcEndpoint,
         ISignatureUtils.SignatureWithSaltAndExpiry calldata signature
     ) public {
-        if (systemManager.isOperator(msg.sender)) {
+        if (systemManager.isOperatorRegistered(msg.sender)) {
             revert OperatorExists();
         }
 
@@ -143,24 +143,24 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
         }
 
         registerOperatorToAVS(msg.sender, signature);
-        systemManager.registerOperator(msg.sender, rpcEndpoint);
+        systemManager.registerNewOperator(msg.sender, rpcEndpoint);
     }
 
     function offboardOperator() public {
-        if (!systemManager.isOperator(msg.sender)) {
+        if (!systemManager.isOperatorRegistered(msg.sender)) {
             revert OperatorNotFound();
         }
 
         deregisterOperatorFromAVS(msg.sender);
-        systemManager.deregisterOperator(msg.sender);
+        systemManager.isOperatorRegistered(msg.sender);
     }
 
     function suspendOperator() public {
-        systemManager.pauseOperator(msg.sender);
+        systemManager.suspendOperator(msg.sender);
     }
 
     function resumeOperator() public {
-        systemManager.unpauseOperator(msg.sender);
+        systemManager.resumeOperator(msg.sender);
     }
 
     function disableStrategy() public {
