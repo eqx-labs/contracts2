@@ -447,40 +447,88 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
         string calldata rpcUrl
     ) external override {}
 
-    function removeOperator(address operatorAddress) external override {}
+     function removeOperator(
+        address operator
+    ) public onlyMiddleware {
+        operators.remove(operator);
+    }
+    function suspendOperator(
+        address operator
+    ) external onlyMiddleware {
+        // SAFETY: This will revert if the operator key is not present.
+        operators.disable(operator);
+    }
+    function resumeOperator(
+        address operator
+    ) external onlyMiddleware {
+        // SAFETY: This will revert if the operator key is not present.
+        operators.enable(operator);
+    }
 
-    function suspendOperator(address operatorAddress) external override {}
+     function isOperatorRegistered(
+        address operator
+    ) public view returns (bool) {
+        if (!operators.contains(operator)) {
+            revert OperatorNotRegistered();
+        }
 
-    function resumeOperator(address operatorAddress) external override {}
+        (uint48 enabledTime, uint48 disabledTime) = operators.getTimes(operator);
+        return enabledTime != 0 && disabledTime == 0;
+    }
 
-    function isOperatorRegistered(
-        address operatorAddress
-    ) external view override returns (bool) {}
+  function getValidatorProposerStatuses(
+        bytes20[] calldata pubkeyHashes
+    ) public view returns (ValidatorProposerStatus[] memory statuses) {
+        statuses = new ValidatorProposerStatus[](pubkeyHashes.length);
+        for (uint256 i = 0; i < pubkeyHashes.length; ++i) {
+            statuses[i] = getProposerStatus(pubkeyHashes[i]);
+        }
+    }
 
     function getValidatorProposerStatus(
-        bytes20 validatorPubkeyHash
-    )
-        external
-        view
-        override
-        returns (ValidatorProposerStatus memory proposerStatus)
-    {}
+        bytes20 pubkeyHash
+    ) public view returns (ValidatorProposerStatus memory status) {
+        if (pubkeyHash == bytes20(0)) {
+            revert InvalidQuery();
+        }
 
-    function getValidatorProposerStatuses(
-        bytes20[] calldata validatorPubkeyHashes
-    )
-        external
-        view
-        override
-        returns (ValidatorProposerStatus[] memory proposerStatuses)
-    {}
+        uint48 epochStartTs = getEpochStartTs(getEpochAtTs(Time.timestamp()));
+        // NOTE: this will revert when the proposer does not exist.
+        IValidator.ValidatorInfo memory validator = validators.getValidatorByPubkeyHash(pubkeyHash);
 
-    function getRestakingMiddlewareProtocols()
-        external
-        view
-        override
-        returns (address[] memory middlewareAddresses)
-    {}
+        EnumerableMap.Operator memory operatorData = operators.get(validator.authorizedOperator);
+
+        status.validatorPubkeyHash = pubkeyHash;
+        status.operatorAddress = validator.authorizedOperator;
+        status.operatorRpcUrl = operatorData.rpc;
+
+        (uint48 enabledTime, uint48 disabledTime) = operators.getTimes(validator.authorizedOperator);
+        if (!_wasEnabledAt(enabledTime, disabledTime, epochStartTs)) {
+            return status;
+        }
+
+        (status.collateralTokens, status.collateralAmounts) =
+            IMiddleware(operatorData.middleware).getOperatorCollaterals(validator.authorizedOperator);
+
+        // NOTE: check if the sum of the collaterals covers the minimum operator stake required.
+
+        uint256 totalOperatorStake = 0;
+        for (uint256 i = 0; i < status.collateralAmounts.length; ++i) {
+            totalOperatorStake += status.collateralAmounts[i];
+        }
+
+        if (totalOperatorStake < parameters.getMinimumOperatorStake()) {
+            status.isActive = false;
+        } else {
+            status.isActive = true;
+        }
+
+        return status;
+    }
+   function getRestakingMiddlewareProtocols() public view returns (address[] memory middlewares) {
+        return restakingProtocols.values();
+    }
+
 }
 
 

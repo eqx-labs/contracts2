@@ -25,7 +25,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
     // Storage variables
     ISystemParameters public params;
     EnumerableSet.Bytes32Set internal activeDisputes;
-    mapping(bytes32 => Challenge) internal disputeDetails;
+    mapping(bytes32 => Dispute) internal disputeDetails;
     uint256[46] private __gap;
 
     // Initialize contract
@@ -42,30 +42,30 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
     ) internal override onlyOwner {}
 
     // View functions
-    function listAllDisputes() public view returns (Challenge[] memory) {
-        Challenge[] memory disputes = new Challenge[](activeDisputes.length());
+    function fetchAllDisputes() public view returns (Dispute[] memory) {
+        Dispute[] memory disputes = new Dispute[](activeDisputes.length());
         for (uint256 i = 0; i < activeDisputes.length(); i++) {
             disputes[i] = disputeDetails[activeDisputes.at(i)];
         }
         return disputes;
     }
 
-    function listActiveDisputes() public view returns (Challenge[] memory) {
+    function fetchActiveDisputes() public view returns (Dispute[] memory) {
         uint256 activeCount = 0;
         for (uint256 i = 0; i < activeDisputes.length(); i++) {
             if (
-                disputeDetails[activeDisputes.at(i)].status ==
-                ChallengeStatus.Open
+                disputeDetails[activeDisputes.at(i)].currentState ==
+                ChallengeState.Active
             ) {
                 activeCount++;
             }
         }
 
-        Challenge[] memory active = new Challenge[](activeCount);
+        Dispute[] memory active = new Dispute[](activeCount);
         uint256 j = 0;
         for (uint256 i = 0; i < activeDisputes.length(); i++) {
-            Challenge memory dispute = disputeDetails[activeDisputes.at(i)];
-            if (dispute.status == ChallengeStatus.Open) {
+            Dispute memory dispute = disputeDetails[activeDisputes.at(i)];
+            if (dispute.currentState == ChallengeState.Active) {
                 active[j] = dispute;
                 j++;
             }
@@ -73,45 +73,45 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
         return active;
     }
 
-    function getDisputeById(
+    function fetchDisputeById(
         bytes32 disputeId
-    ) public view returns (Challenge memory) {
+    ) public view returns (Dispute memory) {
         if (!activeDisputes.contains(disputeId)) {
-            revert ChallengeDoesNotExist();
+            revert NonexistentDispute();
         }
         return disputeDetails[disputeId];
     }
 
     // Challenge creation
     function initiateDispute(
-        SignedCommitment[] calldata commitments
+        Commitment[] calldata commitments
     ) public payable {
         if (commitments.length == 0) {
-            revert EmptyCommitments();
+            revert EmptyCommitmentList();
         }
 
         if (msg.value != params.getChallengeBond()) {
-            revert IncorrectChallengeBond();
+            revert InvalidBondAmount();
         }
 
         bytes32 disputeId = generateDisputeId(commitments);
 
         if (activeDisputes.contains(disputeId)) {
-            revert ChallengeAlreadyExists();
+            revert ExistingDispute();
         }
 
-        uint256 targetSlot = commitments[0].slot;
+        uint256 targetSlot = commitments[0].slotNumber;
         if (targetSlot > getCurrentSlot() - params.getJustificationDelay()) {
-            revert BlockIsNotFinalized();
+            revert UnfinalizedBlock();
         }
 
-        TransactionData[] memory txData = new TransactionData[](
+        TransactionDetail[] memory txData = new TransactionDetail[](
             commitments.length
         );
         (
             address sender,
             address signer,
-            TransactionData memory firstTx
+            TransactionDetail memory firstTx
         ) = extractCommitmentData(commitments[0]);
         txData[0] = firstTx;
 
@@ -119,244 +119,244 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
             (
                 address otherSender,
                 address otherSigner,
-                TransactionData memory otherTx
+                TransactionDetail memory otherTx
             ) = extractCommitmentData(commitments[i]);
 
             txData[i] = otherTx;
 
-            if (commitments[i].slot != targetSlot) {
-                revert UnexpectedMixedSlots();
+            if (commitments[i].slotNumber != targetSlot) {
+                revert MixedSlotError();
             }
             if (otherSender != sender) {
-                revert UnexpectedMixedSenders();
+                revert MixedSignerError();
             }
             if (otherSigner != signer) {
-                revert UnexpectedMixedSigners();
+                revert MixedSenderError();
             }
-            if (otherTx.nonce != txData[i - 1].nonce + 1) {
-                revert UnexpectedNonceOrder();
+            if (otherTx.transactionNonce != txData[i - 1].transactionNonce + 1) {
+                revert NonSequentialNonce();
             }
         }
 
         activeDisputes.add(disputeId);
-        disputeDetails[disputeId] = Challenge({
-            id: disputeId,
-            openedAt: Time.timestamp(),
-            status: ChallengeStatus.Open,
-            targetSlot: targetSlot,
-            challenger: msg.sender,
-            commitmentSigner: signer,
-            commitmentReceiver: sender,
-            committedTxs: txData
+        disputeDetails[disputeId] = Dispute({
+            disputeId: disputeId,
+            initiatedAt: Time.timestamp(),
+            currentState: ChallengeState.Active,
+            associatedSlot: targetSlot,
+            initiator: msg.sender,
+            signer: signer,
+            recipient: sender,
+            transactions: txData
         });
-        emit ChallengeOpened(disputeId, msg.sender, signer);
+        emit DisputeOpened(disputeId, msg.sender, signer);
     }
 
     // Challenge resolution
     function resolveActiveDispute(
         bytes32 disputeId,
-        Proof calldata proof
+        VerificationProof calldata proof
     ) public {
         if (!activeDisputes.contains(disputeId)) {
-            revert ChallengeDoesNotExist();
+            revert NonexistentDispute();
         }
 
         if (
-            disputeDetails[disputeId].targetSlot <
+            disputeDetails[disputeId].associatedSlot <
             getCurrentSlot() - params.getBlockhashEvmLookback()
         ) {
-            revert BlockIsTooOld();
+            revert ObsoleteBlock();
         }
 
-        uint256 prevBlockNum = proof.inclusionBlockNumber - 1;
+        uint256 prevBlockNum = proof.inclusionBlockHeight - 1;
         if (
             prevBlockNum > block.number ||
             prevBlockNum < block.number - params.getBlockhashEvmLookback()
         ) {
-            revert InvalidBlockNumber();
+            revert InvalidHeight();
         }
 
-        bytes32 trustedPrevBlockHash = blockhash(proof.inclusionBlockNumber);
+        bytes32 trustedPrevBlockHash = blockhash(proof.inclusionBlockHeight);
         processResolution(disputeId, trustedPrevBlockHash, proof);
     }
 
-    function resolveTimedOutDispute(bytes32 disputeId) public {
+    function resolveExpiredDispute(bytes32 disputeId) public {
         if (!activeDisputes.contains(disputeId)) {
-            revert ChallengeDoesNotExist();
+            revert NonexistentDispute();
         }
 
-        Challenge storage dispute = disputeDetails[disputeId];
+        Dispute storage dispute = disputeDetails[disputeId];
 
-        if (dispute.status != ChallengeStatus.Open) {
-            revert ChallengeAlreadyResolved();
+        if (dispute.currentState != ChallengeState.Active) {
+            revert ResolvedDispute();
         }
 
         if (
-            dispute.openedAt + params.getMaxChallengeDuration() >=
+            dispute.initiatedAt + params.getMaxChallengeDuration() >=
             Time.timestamp()
         ) {
-            revert ChallengeNotExpired();
+            revert ExistingDispute();
         }
 
-        finalizeDisputeResolution(ChallengeStatus.Breached, dispute);
+        finalizeDisputeResolution(ChallengeState.Violation, dispute);
     }
 
     // Internal functions
     function processResolution(
         bytes32 disputeId,
         bytes32 trustedPrevBlockHash,
-        Proof calldata proof
+        VerificationProof calldata proof
     ) internal {
         if (!activeDisputes.contains(disputeId)) {
-            revert ChallengeDoesNotExist();
+            revert NonexistentDispute();
         }
 
-        Challenge storage dispute = disputeDetails[disputeId];
+        Dispute storage dispute = disputeDetails[disputeId];
 
-        if (dispute.status != ChallengeStatus.Open) {
-            revert ChallengeAlreadyResolved();
+        if (dispute.currentState != ChallengeState.Active) {
+            revert ResolvedDispute();
         }
 
         if (
-            dispute.openedAt + params.getMaxChallengeDuration() <
+            dispute.initiatedAt + params.getMaxChallengeDuration() <
             Time.timestamp()
         ) {
-            revert ChallengeExpired();
+            revert ExpiredDispute();
         }
 
-        uint256 txCount = dispute.committedTxs.length;
+        uint256 txCount = dispute.transactions.length;
         if (
-            proof.txMerkleProofs.length != txCount ||
-            proof.txIndexesInBlock.length != txCount
+            proof.transactionMerkleProofs.length != txCount ||
+            proof.transactionIndexes.length != txCount
         ) {
-            revert InvalidProofsLength();
+            revert InvalidProofLength();
         }
 
-        bytes32 prevBlockHash = keccak256(proof.previousBlockHeaderRLP);
+        bytes32 prevBlockHash = keccak256(proof.previousBlockHeaderData);
         if (prevBlockHash != trustedPrevBlockHash) {
-            revert InvalidBlockHash();
+            revert MismatchedBlockHash();
         }
 
-        BlockHeaderData memory prevHeader = parseBlockHeader(
-            proof.previousBlockHeaderRLP
+        BlockHeader memory prevHeader = parseBlockHeader(
+            proof.previousBlockHeaderData
         );
-        BlockHeaderData memory inclHeader = parseBlockHeader(
-            proof.inclusionBlockHeaderRLP
+        BlockHeader memory inclHeader = parseBlockHeader(
+            proof.inclusionBlockHeaderData
         );
 
-        if (inclHeader.parentHash != prevBlockHash) {
-            revert InvalidParentBlockHash();
+        if (inclHeader.parentBlockHash != prevBlockHash) {
+            revert MismatchedParentHash();
         }
 
         (bool exists, bytes memory accRLP) = SecureMerkleTrie.get(
-            abi.encodePacked(dispute.commitmentReceiver),
-            proof.accountMerkleProof,
-            prevHeader.stateRoot
+            abi.encodePacked(dispute.recipient),
+            proof.stateMerkleProof,
+            prevHeader.globalStateRoot
         );
 
         if (!exists) {
-            revert AccountDoesNotExist();
+            revert MissingAccount();
         }
 
-        AccountData memory account = parseAccount(accRLP);
+        AccountDetails memory account = parseAccount(accRLP);
 
         for (uint256 i = 0; i < txCount; i++) {
-            TransactionData memory committedTx = dispute.committedTxs[i];
+            TransactionDetail memory committedTx = dispute.transactions[i];
 
-            if (account.nonce > committedTx.nonce) {
-                finalizeDisputeResolution(ChallengeStatus.Defended, dispute);
+            if (account.accountNonce > committedTx.transactionNonce) {
+                finalizeDisputeResolution(ChallengeState.SuccessfullyDefended, dispute);
                 return;
             }
 
-            if (account.balance < inclHeader.baseFee * committedTx.gasLimit) {
-                finalizeDisputeResolution(ChallengeStatus.Defended, dispute);
+            if (account.accountBalance < inclHeader.gasBaseFee * committedTx.gas) {
+                finalizeDisputeResolution(ChallengeState.SuccessfullyDefended, dispute);
                 return;
             }
 
-            account.balance -= inclHeader.baseFee * committedTx.gasLimit;
-            account.nonce++;
+            account.accountBalance -= inclHeader.gasBaseFee * committedTx.gas;
+            account.accountNonce++;
 
             bytes memory txLeaf = RLPWriter.writeUint(
-                proof.txIndexesInBlock[i]
+                proof.transactionIndexes[i]
             );
             (bool txExists, bytes memory txRLP) = MerkleTrie.get(
                 txLeaf,
-                proof.txMerkleProofs[i],
-                inclHeader.txRoot
+                proof.transactionMerkleProofs[i],
+                inclHeader.transactionRoot
             );
 
             if (!txExists) {
-                revert TransactionNotIncluded();
+                revert MissingTransaction();
             }
 
-            if (committedTx.txHash != keccak256(txRLP)) {
-                revert WrongTransactionHashProof();
+            if (committedTx.transactionHash != keccak256(txRLP)) {
+                revert InvalidTransactionHashProof();
             }
         }
 
-        finalizeDisputeResolution(ChallengeStatus.Defended, dispute);
+        finalizeDisputeResolution(ChallengeState.SuccessfullyDefended, dispute);
     }
 
     function finalizeDisputeResolution(
-        ChallengeStatus outcome,
-        Challenge storage dispute
+        ChallengeState outcome,
+        Dispute storage dispute
     ) internal {
-        if (outcome == ChallengeStatus.Defended) {
-            dispute.status = ChallengeStatus.Defended;
+        if (outcome == ChallengeState.SuccessfullyDefended) {
+            dispute.currentState = ChallengeState.SuccessfullyDefended;
             distributeBondHalf(msg.sender);
-            distributeBondHalf(dispute.commitmentSigner);
-            emit ChallengeDefended(dispute.id);
-        } else if (outcome == ChallengeStatus.Breached) {
-            dispute.status = ChallengeStatus.Breached;
-            distributeBondFull(dispute.challenger);
-            emit ChallengeBreached(dispute.id);
+            distributeBondHalf(dispute.signer);
+            emit DisputeDefended(dispute.disputeId);
+        } else if (outcome == ChallengeState.Violation) {
+            dispute.currentState = ChallengeState.Violation;
+            distributeBondFull(dispute.initiator);
+            emit DisputeViolation(dispute.disputeId);
         }
 
-        delete disputeDetails[dispute.id];
-        activeDisputes.remove(dispute.id);
+        delete disputeDetails[dispute.disputeId];
+        activeDisputes.remove(dispute.disputeId);
     }
 
     // Helper functions
     function extractCommitmentData(
-        SignedCommitment calldata commitment
+        Commitment calldata commitment
     )
         internal
         pure
-        returns (address sender, address signer, TransactionData memory txData)
+        returns (address sender, address signer, TransactionDetail memory txData)
     {
         signer = ECDSA.recover(
             computeCommitmentId(commitment),
-            commitment.signature
+            commitment.signatureData
         );
         TransactionDecoder.Transaction memory decodedTx = commitment
-            .signedTx
+            .transaction
             .decodeEnveloped();
         sender = decodedTx.recoverSender();
-        txData = TransactionData({
-            txHash: keccak256(commitment.signedTx),
-            nonce: decodedTx.nonce,
-            gasLimit: decodedTx.gasLimit
+        txData = TransactionDetail({
+            transactionHash: keccak256(commitment.transaction),
+            transactionNonce: decodedTx.nonce,
+            gas: decodedTx.gasLimit
         });
     }
 
     function generateDisputeId(
-        SignedCommitment[] calldata commitments
+        Commitment[] calldata commitments
     ) internal pure returns (bytes32) {
         bytes32[] memory sigs = new bytes32[](commitments.length);
         for (uint256 i = 0; i < commitments.length; i++) {
-            sigs[i] = keccak256(commitments[i].signature);
+            sigs[i] = keccak256(commitments[i].signatureData);
         }
         return keccak256(abi.encodePacked(sigs));
     }
 
     function computeCommitmentId(
-        SignedCommitment calldata commitment
+        Commitment calldata commitment
     ) internal pure returns (bytes32) {
         return
             keccak256(
                 abi.encodePacked(
-                    keccak256(commitment.signedTx),
-                    toLittleEndian(commitment.slot)
+                    keccak256(commitment.transaction),
+                    toLittleEndian(commitment.slotNumber)
                 )
             );
     }
@@ -371,22 +371,22 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
 
     function parseBlockHeader(
         bytes calldata headerRLP
-    ) internal pure returns (BlockHeaderData memory header) {
+    ) internal pure returns (BlockHeader memory header) {
         RLPReader.RLPItem[] memory fields = headerRLP.toRLPItem().readList();
-        header.parentHash = fields[0].readBytes32();
-        header.stateRoot = fields[3].readBytes32();
-        header.txRoot = fields[4].readBytes32();
-        header.blockNumber = fields[8].readUint256();
-        header.timestamp = fields[11].readUint256();
-        header.baseFee = fields[15].readUint256();
+        header.parentBlockHash = fields[0].readBytes32();
+        header.globalStateRoot = fields[3].readBytes32();
+        header.transactionRoot = fields[4].readBytes32();
+        header.height = fields[8].readUint256();
+        header.blockTimestamp = fields[11].readUint256();
+        header.gasBaseFee = fields[15].readUint256();
     }
 
     function parseAccount(
         bytes memory accountRLP
-    ) internal pure returns (AccountData memory account) {
+    ) internal pure returns (AccountDetails memory account) {
         RLPReader.RLPItem[] memory fields = accountRLP.toRLPItem().readList();
-        account.nonce = fields[0].readUint256();
-        account.balance = fields[1].readUint256();
+        account.accountNonce = fields[0].readUint256();
+        account.accountBalance = fields[1].readUint256();
     }
 
     function distributeBondFull(address recipient) internal {
@@ -394,7 +394,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
             value: params.getChallengeBond()
         }("");
         if (!success) {
-            revert BondTransferFailed();
+            revert BondTransferError();
         }
     }
 
@@ -403,7 +403,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
             value: params.getChallengeBond() / 2
         }("");
         if (!success) {
-            revert BondTransferFailed();
+            revert BondTransferError();
         }
     }
 
@@ -438,7 +438,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
             .getBeaconRootsContract()
             .staticcall(abi.encode(timestamp));
         if (!success || data.length == 0) {
-            revert BeaconRootNotFound();
+            revert MissingBeaconRoot();
         }
         return abi.decode(data, (bytes32));
     }
@@ -458,7 +458,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
             .staticcall(abi.encode(_timestamp));
 
         if (!success || data.length == 0) {
-            revert BeaconRootNotFound();
+            revert MissingBeaconRoot();
         }
 
         return abi.decode(data, (bytes32));
@@ -489,32 +489,5 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
             getCurrentSlot() + params.getEip4788Window();
     }
 
-    function getAllChallenges()
-        external
-        view
-        override
-        returns (Challenge[] memory)
-    {}
-
-    function getOpenChallenges()
-        external
-        view
-        override
-        returns (Challenge[] memory)
-    {}
-
-    function getChallengeByID(
-        bytes32 challengeID
-    ) external view override returns (Challenge memory) {}
-
-    function openChallenge(
-        SignedCommitment[] calldata commitments
-    ) external payable override {}
-
-    function resolveExpiredChallenge(bytes32 challengeID) external override {}
-
-    function resolveOpenChallenge(
-        bytes32 challengeID,
-        Proof calldata proof
-    ) external override {}
+ 
 }
