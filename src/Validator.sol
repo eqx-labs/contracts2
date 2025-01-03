@@ -8,7 +8,7 @@ import {BLS12381} from "./lib/bls/BLS12381.sol";
 import {BLSSignatureVerifier} from "./lib/bls/BLSSignatureVerifier.sol";
 import {ValidatorsLib} from "./lib/ValidatorsLib.sol";
 import {IValidator} from "./interfaces/IValidator.sol";
-import {IParameters} from "./interfaces/IParameters.sol";
+import {ISystemParameters} from "./interfaces/IParameters.sol";
 
 contract Validators is
     IValidator,
@@ -20,7 +20,7 @@ contract Validators is
     using ValidatorsLib for ValidatorsLib.ValidatorSet;
 
     // Storage variables
-    IParameters public systemParameters;
+    ISystemParameters public systemParameters;
     ValidatorsLib.ValidatorSet internal VALIDATOR_SET;
     uint256[43] private __gap;
 
@@ -48,7 +48,7 @@ contract Validators is
         address _parameters
     ) public initializer {
         __Ownable_init(_owner);
-        systemParameters = IParameters(_parameters);
+        systemParameters = ISystemParameters(_parameters);
     }
 
     function upgradeSystemToV2(
@@ -56,7 +56,7 @@ contract Validators is
         address _parameters
     ) public reinitializer(2) {
         __Ownable_init(_owner);
-        systemParameters = IParameters(_parameters);
+        systemParameters = ISystemParameters(_parameters);
     }
 
     function _authorizeUpgrade(
@@ -101,7 +101,7 @@ contract Validators is
         uint32 gasLimitMax,
         address operatorAddress
     ) public {
-        if (!systemParameters.ALLOW_UNSAFE_REGISTRATION()) {
+        if (!systemParameters.isUnsafeRegistrationAllowed()) {
             revert UnsafeRegistrationDisabled();
         }
         _processValidatorRegistration(pubkeyHash, operatorAddress, gasLimitMax);
@@ -172,7 +172,7 @@ contract Validators is
         uint32 gasLimitMax,
         address operatorAddress
     ) public {
-        if (!systemParameters.ALLOW_UNSAFE_REGISTRATION()) {
+        if (!systemParameters.isUnsafeRegistrationAllowed()) {
             revert UnsafeRegistrationDisabled();
         }
         _processBulkValidatorRegistration(

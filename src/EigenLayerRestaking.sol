@@ -9,7 +9,7 @@ import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/Own
 import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 
 import {MapWithTimeData} from "./lib/MapWithTimeData.sol";
-import {IParameters} from "./interfaces/IParameters.sol";
+import {ISystemParameters} from "./interfaces/IParameters.sol";
 import {IMiddleware} from "./interfaces/IEigenlayerRestaking.sol";
 import {IManager} from "./interfaces/IRegistry.sol";
 
@@ -30,7 +30,7 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
 
     // Storage variables
     uint48 public GENESIS_TIME;
-    IParameters public systemParams;
+    ISystemParameters public systemParams;
     IManager public systemManager;
     EnumerableMap.AddressToUintMap private activeStrategies;
     IAVSDirectory public DIRECTORY;
@@ -60,7 +60,7 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
         address strategyManager
     ) public initializer {
         __Ownable_init(owner);
-        systemParams = IParameters(params);
+        systemParams = ISystemParameters(params);
         systemManager = IManager(manager);
         GENESIS_TIME = Time.timestamp();
 
@@ -79,7 +79,7 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
         address strategyManager
     ) public reinitializer(2) {
         __Ownable_init(owner);
-        systemParams = IParameters(params);
+        systemParams = ISystemParameters(params);
         systemManager = IManager(manager);
         GENESIS_TIME = Time.timestamp();
 
@@ -93,11 +93,11 @@ abstract contract EigenLayerMiddleware is IMiddleware, IServiceManager, OwnableU
 
     // Time-related functions
     function calculateEpochStart(uint48 epoch) public view returns (uint48) {
-        return GENESIS_TIME + epoch * systemParams.EPOCH_DURATION();
+        return GENESIS_TIME + epoch * systemParams.getEpochDuration();
     }
 
     function getEpochForTimestamp(uint48 timestamp) public view returns (uint48) {
-        return (timestamp - GENESIS_TIME) / systemParams.EPOCH_DURATION();
+        return (timestamp - GENESIS_TIME) / systemParams.getEpochDuration();
     }
 
     function getCurrentEpochNumber() public view returns (uint48) {

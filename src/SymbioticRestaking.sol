@@ -18,7 +18,7 @@ import {IVetoSlasher} from "@symbiotic/interfaces/slasher/IVetoSlasher.sol";
 import {IEntity} from "@symbiotic/interfaces/common/IEntity.sol";
 
 import {MapWithTimeData} from "./lib/MapWithTimeData.sol";
-import {IParameters} from "./interfaces/IParameters.sol";
+import {ISystemParameters} from "./interfaces/IParameters.sol";
 import {IMiddleware} from "./interfaces/IEigenlayerRestaking.sol";
 import {IManager} from "./interfaces/IRegistry.sol";
 
@@ -38,7 +38,7 @@ IMiddleware,
 
     // State Variables
     uint48 public GENESIS_TIME;
-    IParameters public protocolParams;
+    ISystemParameters public protocolParams;
     IManager public protocolManager;
     EnumerableMap.AddressToUintMap private authorizedVaults;
     address public NETWORK_ADDRESS;
@@ -68,7 +68,7 @@ IMiddleware,
         address vaultFactory
     ) public initializer {
         __Ownable_init(owner);
-        protocolParams = IParameters(params);
+        protocolParams = ISystemParameters(params);
         protocolManager = IManager(manager);
         GENESIS_TIME = Time.timestamp();
 
@@ -89,7 +89,7 @@ IMiddleware,
         address vaultFactory
     ) public reinitializer(2) {
         __Ownable_init(owner);
-        protocolParams = IParameters(params);
+        protocolParams = ISystemParameters(params);
         protocolManager = IManager(manager);
         GENESIS_TIME = Time.timestamp();
 
@@ -104,13 +104,13 @@ IMiddleware,
 
     // Time-related functions
     function calculateEpochStart(uint48 epoch) public view returns (uint48) {
-        return GENESIS_TIME + epoch * protocolParams.EPOCH_DURATION();
+        return GENESIS_TIME + epoch * protocolParams.getEpochDuration();
     }
 
     function getEpochForTimestamp(
         uint48 timestamp
     ) public view returns (uint48) {
-        return (timestamp - GENESIS_TIME) / protocolParams.EPOCH_DURATION();
+        return (timestamp - GENESIS_TIME) / protocolParams.getEpochDuration();
     }
 
     function getCurrentEpochNumber() public view returns (uint48) {

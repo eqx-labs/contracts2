@@ -13,7 +13,7 @@ import {RLPReader} from "./lib/rlp/RLPReader.sol";
 import {RLPWriter} from "./lib/rlp/RLPWriter.sol";
 import {TransactionDecoder} from "./lib/TransactionDecoder.sol";
 import {IChallenger} from "./interfaces/IChallenger.sol";
-import {IParameters} from "./interfaces/IParameters.sol";
+import {ISystemParameters} from "./interfaces/IParameters.sol";
 
 contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
     using RLPReader for bytes;
@@ -23,7 +23,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
     using EnumerableSet for EnumerableSet.Bytes32Set;
 
     // Storage variables
-    IParameters public params;
+    ISystemParameters public params;
     EnumerableSet.Bytes32Set internal activeDisputes;
     mapping(bytes32 => Challenge) internal disputeDetails;
     uint256[46] private __gap;
@@ -34,7 +34,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
         address _params
     ) public initializer {
         __Ownable_init(_owner);
-        params = IParameters(_params);
+        params = ISystemParameters(_params);
     }
 
     function _authorizeUpgrade(
@@ -90,7 +90,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
             revert EmptyCommitments();
         }
 
-        if (msg.value != params.CHALLENGE_BOND()) {
+        if (msg.value != params.getChallengeBond()) {
             revert IncorrectChallengeBond();
         }
 
@@ -101,7 +101,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
         }
 
         uint256 targetSlot = commitments[0].slot;
-        if (targetSlot > getCurrentSlot() - params.JUSTIFICATION_DELAY()) {
+        if (targetSlot > getCurrentSlot() - params.getJustificationDelay()) {
             revert BlockIsNotFinalized();
         }
 
@@ -163,7 +163,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
 
         if (
             disputeDetails[disputeId].targetSlot <
-            getCurrentSlot() - params.BLOCKHASH_EVM_LOOKBACK()
+            getCurrentSlot() - params.getBlockhashEvmLookback()
         ) {
             revert BlockIsTooOld();
         }
@@ -171,7 +171,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
         uint256 prevBlockNum = proof.inclusionBlockNumber - 1;
         if (
             prevBlockNum > block.number ||
-            prevBlockNum < block.number - params.BLOCKHASH_EVM_LOOKBACK()
+            prevBlockNum < block.number - params.getBlockhashEvmLookback()
         ) {
             revert InvalidBlockNumber();
         }
@@ -192,7 +192,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
         }
 
         if (
-            dispute.openedAt + params.MAX_CHALLENGE_DURATION() >=
+            dispute.openedAt + params.getMaxChallengeDuration() >=
             Time.timestamp()
         ) {
             revert ChallengeNotExpired();
@@ -218,7 +218,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
         }
 
         if (
-            dispute.openedAt + params.MAX_CHALLENGE_DURATION() <
+            dispute.openedAt + params.getMaxChallengeDuration() <
             Time.timestamp()
         ) {
             revert ChallengeExpired();
@@ -391,7 +391,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
 
     function distributeBondFull(address recipient) internal {
         (bool success, ) = payable(recipient).call{
-            value: params.CHALLENGE_BOND()
+            value: params.getChallengeBond()
         }("");
         if (!success) {
             revert BondTransferFailed();
@@ -400,7 +400,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
 
     function distributeBondHalf(address recipient) internal {
         (bool success, ) = payable(recipient).call{
-            value: params.CHALLENGE_BOND() / 2
+            value: params.getChallengeBond() / 2
         }("");
         if (!success) {
             revert BondTransferFailed();
@@ -415,19 +415,19 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
         uint256 timestamp
     ) internal view returns (uint256) {
         return
-            (timestamp - params.ETH2_GENESIS_TIMESTAMP()) / params.SLOT_TIME();
+            (timestamp - params.getEth2GenesisTimestamp()) / params.getSlotTime();
     }
 
     function getTimeFromSlot(uint256 slot) internal view returns (uint256) {
-        return params.ETH2_GENESIS_TIMESTAMP() + slot * params.SLOT_TIME();
+        return params.getEth2GenesisTimestamp() + slot * params.getSlotTime();
     }
 
     function getBeaconRootForSlot(
         uint256 slot
     ) internal view returns (bytes32) {
-        uint256 slotTime = params.ETH2_GENESIS_TIMESTAMP() +
+        uint256 slotTime = params.getEth2GenesisTimestamp() +
             slot *
-            params.SLOT_TIME();
+            params.getSlotTime();
         return getBeaconRootForTime(slotTime);
     }
 
@@ -435,7 +435,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
         uint256 timestamp
     ) internal view returns (bytes32) {
         (bool success, bytes memory data) = params
-            .BEACON_ROOTS_CONTRACT()
+            .getBeaconRootsContract()
             .staticcall(abi.encode(timestamp));
         if (!success || data.length == 0) {
             revert BeaconRootNotFound();
@@ -447,14 +447,14 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
         uint256 _timestamp
     ) internal view returns (uint256) {
         return
-            (_timestamp - params.ETH2_GENESIS_TIMESTAMP()) / params.SLOT_TIME();
+            (_timestamp - params.getEth2GenesisTimestamp()) / params.getSlotTime();
     }
 
     function _getBeaconBlockRootAtTimestamp(
         uint256 _timestamp
     ) internal view returns (bytes32) {
         (bool success, bytes memory data) = params
-            .BEACON_ROOTS_CONTRACT()
+            .getBeaconRootsContract()
             .staticcall(abi.encode(_timestamp));
 
         if (!success || data.length == 0) {
@@ -467,9 +467,9 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
     function _getBeaconBlockRootAtSlot(
         uint256 _slot
     ) internal view returns (bytes32) {
-        uint256 slotTimestamp = params.ETH2_GENESIS_TIMESTAMP() +
+        uint256 slotTimestamp = params.getEth2GenesisTimestamp() +
             _slot *
-            params.SLOT_TIME();
+            params.getSlotTime();
         return _getBeaconBlockRootAtTimestamp(slotTimestamp);
     }
 
@@ -486,7 +486,7 @@ contract Slashing is IChallenger, OwnableUpgradeable, UUPSUpgradeable {
     ) internal view returns (bool) {
         return
             _getSlotFromTimestamp(_timestamp) <=
-            getCurrentSlot() + params.EIP4788_WINDOW();
+            getCurrentSlot() + params.getEip4788Window();
     }
 
     function getAllChallenges()

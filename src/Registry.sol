@@ -10,7 +10,7 @@ import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {OperatorMapWithTime} from "./lib/OperatorMapWithTime.sol"; 
 import {EnumerableMap} from "./lib/EnumerableMap.sol";
 
-import {IParameters} from "./interfaces/IParameters.sol";
+import {ISystemParameters} from "./interfaces/IParameters.sol";
 import {IMiddleware} from "./interfaces/IEigenlayerRestaking.sol";
 import {IValidator} from "./interfaces/IValidator.sol";
 import {IManager} from "./interfaces/IRegistry.sol";
@@ -80,7 +80,7 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     uint48 public START_TIMESTAMP;
 
     /// @notice  Parameters contract.
-    IParameters public parameters;
+    ISystemParameters public parameters;
 
     /// @notice Validators registry, where validators are registered via their
     /// BLS pubkey and are assigned a sequence number.
@@ -130,7 +130,7 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
         uint256 _minimumOperatorStake) public initializer {
         __Ownable_init(_owner);
 
-        parameters = IParameters(_parameters);
+        parameters = ISystemParameters(_parameters);
         validators = IValidator(_validators);
 
         START_TIMESTAMP = Time.timestamp();
@@ -149,7 +149,7 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     function initializeV2(address _owner, address _parameters, address _validators) public reinitializer(2) {
         __Ownable_init(_owner);
 
-        parameters = IParameters(_parameters);
+        parameters = ISystemParameters(_parameters);
         validators = IValidator(_validators);
 
         START_TIMESTAMP = Time.timestamp();
@@ -164,14 +164,14 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     function getEpochStartTs(
         uint48 epoch
     ) public view returns (uint48 timestamp) {
-        return START_TIMESTAMP + epoch * parameters.EPOCH_DURATION();
+        return START_TIMESTAMP + epoch * parameters.getEpochDuration();
     }
 
     /// @notice Get the epoch at a given timestamp.
     function getEpochAtTs(
         uint48 timestamp
     ) public view returns (uint48 epoch) {
-        return (timestamp - START_TIMESTAMP) / parameters.EPOCH_DURATION();
+        return (timestamp - START_TIMESTAMP) / parameters.getEpochDuration();
     }
 
     /// @notice Get the current epoch.
@@ -252,7 +252,7 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
             totalOperatorStake += status.amounts[i];
         }
 
-        if (totalOperatorStake < parameters.MINIMUM_OPERATOR_STAKE()) {
+        if (totalOperatorStake < parameters.getMinimumOperatorStake()) {
             status.active = false;
         } else {
             status.active = true;

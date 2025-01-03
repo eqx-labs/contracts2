@@ -10,7 +10,7 @@ import {IERC20Metadata} from "@openzeppelin/contracts/token/ERC20/extensions/IER
 import {IERC4626} from "@openzeppelin/contracts/interfaces/IERC4626.sol";
 
 import {MapWithTimeData} from "./lib/MapWithTimeData.sol";
-import {IParameters} from "./interfaces/IParameters.sol";
+import {ISystemParameters} from "./interfaces/IParameters.sol";
 import {IMiddleware} from "./interfaces/IEigenlayerRestaking.sol";
 import {IManager} from "./interfaces/IRegistry.sol";
 import {IKarakCore} from "./interfaces/IKarakCore.sol";
@@ -36,7 +36,7 @@ contract BoltDSSMiddlewareV1 is BaseDSS, IMiddleware, OwnableUpgradeable, UUPSUp
     uint48 public START_TIMESTAMP;
 
     /// @notice Bolt Parameters contract.
-    IParameters public parameters;
+    ISystemParameters public parameters;
 
     /// @notice Set of vault's assets that are used in Bolt Protocol.
     EnumerableMap.AddressToUintMap private assets;
