@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import {BLS12381} from "../lib/bls/BLS12381.sol";
+import {BLS} from "../lib/bls/BLS.sol";
 
 interface IMiddleware {
     error InvalidQuery();
