@@ -12,7 +12,7 @@ interface IRegistry {
     /// @notice Proposer status info.
     struct ProposerStatus {
         // The pubkey hash of the validator.
-        bytes20 pubkeyHash;
+        bytes20 addressHash;
         // Whether the corresponding operator is active based on collateral requirements.
         bool active;
         // The operator address that is authorized to make & sign commitments on behalf of the validator.
@@ -44,14 +44,14 @@ interface IRegistry {
     ) external view returns (bool);
 
     function getProposerStatus(
-        bytes20 pubkeyHash
+        bytes20 addressHash
     ) external view returns (ProposerStatus memory status);
 
     function getProposerStatuses(
-        bytes20[] calldata pubkeyHashes
+        bytes20[] calldata addressHashes
     ) external view returns (ProposerStatus[] memory statuses);
 
-    function isOperatorAuthorizedForValidator(address operator, bytes20 pubkeyHash) external view returns (bool);
+    function isOperatorAuthorizedForValidator(address operator, bytes20 addressHash) external view returns (bool);
 
     function getSupportedRestakingProtocols() external view returns (address[] memory middlewares);
 }

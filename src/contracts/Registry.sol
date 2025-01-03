@@ -117,14 +117,14 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
     /// given the validator's pubkey hash. This function performs a lookup in the
     /// validators registry to check if they explicitly authorized the operator.
     /// @param operator The operator address to check the authorization for.
-    /// @param pubkeyHash The pubkey hash of the validator to check the authorization for.
+    /// @param addressHash The pubkey hash of the validator to check the authorization for.
     /// @return True if the operator is authorized, false otherwise.
-    function isOperatorAuthorizedForValidator(address operator, bytes20 pubkeyHash) public view returns (bool) {
-        if (operator == address(0) || pubkeyHash == bytes20(0)) {
+    function isOperatorAuthorizedForValidator(address operator, bytes20 addressHash) public view returns (bool) {
+        if (operator == address(0) || addressHash == bytes20(0)) {
             revert InvalidQuery();
         }
 
-        return validators.getValidatorByPubkeyHash(pubkeyHash).authorizedOperator == operator;
+        return validators.getValidatorByaddressHash(addressHash).authorizedOperator == operator;
     }
 
     /// @notice Returns the addresses of the middleware contracts of restaking protocols supported by Bolt.
@@ -140,34 +140,34 @@ contract Registry is IRegistry, OwnableUpgradeable, UUPSUpgradeable {
     }
 
     /// @notice Get the status of multiple proposers, given their pubkey hashes.
-    /// @param pubkeyHashes The pubkey hashes of the proposers to get the status for.
+    /// @param addressHashes The pubkey hashes of the proposers to get the status for.
     /// @return statuses The statuses of the proposers, including their operator and active stake.
     function getProposerStatuses(
-        bytes20[] calldata pubkeyHashes
+        bytes20[] calldata addressHashes
     ) public view returns (ProposerStatus[] memory statuses) {
-        statuses = new ProposerStatus[](pubkeyHashes.length);
-        for (uint256 i = 0; i < pubkeyHashes.length; ++i) {
-            statuses[i] = getProposerStatus(pubkeyHashes[i]);
+        statuses = new ProposerStatus[](addressHashes.length);
+        for (uint256 i = 0; i < addressHashes.length; ++i) {
+            statuses[i] = getProposerStatus(addressHashes[i]);
         }
     }
 
     /// @notice Get the status of a proposer, given their pubkey hash.
-    /// @param pubkeyHash The pubkey hash of the proposer to get the status for.
+    /// @param addressHash The pubkey hash of the proposer to get the status for.
     /// @return status The status of the proposer, including their operator and active stake.
     function getProposerStatus(
-        bytes20 pubkeyHash
+        bytes20 addressHash
     ) public view returns (ProposerStatus memory status) {
-        if (pubkeyHash == bytes20(0)) {
+        if (addressHash == bytes20(0)) {
             revert InvalidQuery();
         }
 
         uint48 epochStartTs = getEpochStartTs(getEpochAtTs(Time.timestamp()));
         // NOTE: this will revert when the proposer does not exist.
-        IValidators.ValidatorInfo memory validator = validators.getValidatorByPubkeyHash(pubkeyHash);
+        IValidators.ValidatorState memory validator = validators.getValidatorByaddressHash(addressHash);
 
         EnumerableMapV2.Operator memory operatorData = operators.get(validator.authorizedOperator);
 
-        status.pubkeyHash = pubkeyHash;
+        status.addressHash = addressHash;
         status.operator = validator.authorizedOperator;
         status.operatorRPC = operatorData.rpc;
 
