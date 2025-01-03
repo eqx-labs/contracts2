@@ -7,8 +7,8 @@ import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
 import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-import {OperatorMapWithTime} from "./lib/OperatorMapWithTime.sol"; 
-import {EnumerableMap} from "./lib/EnumerableMap.sol";
+import {OperatorMapWithTime} from "./lib/utils/OperatorMapWithTime.sol"; 
+import {EnumerableMap} from "./lib/utils/EnumerableMap.sol";
 
 import {IParameters} from "./interfaces/IParameters.sol";
 import {IMiddleware} from "./interfaces/IEigenlayerRestaking.sol";

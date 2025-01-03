@@ -4,8 +4,8 @@ pragma solidity >=0.8.0 <0.9.0;
 import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 
-import {BLS12381} from "./lib/bls/BLS12381.sol";
-import {BLSSignatureVerifier} from "./lib/bls/BLSSignatureVerifier.sol";
+import {BLS} from "./lib/BLS.sol";
+import {BLSSignatureVerifier} from "./utils/BLSSignatureVerifier.sol";
 import {ValidatorsLib} from "./lib/ValidatorsLib.sol";
 import {IValidator} from "./interfaces/IValidator.sol";
 import {IParameters} from "./interfaces/IParameters.sol";
@@ -16,7 +16,7 @@ contract Validators is
     OwnableUpgradeable,
     UUPSUpgradeable
 {
-    using BLS12381 for BLS12381.G1Point;
+    using BLS for BLS.G1Point;
     using ValidatorsLib for ValidatorsLib.ValidatorSet;
 
     // Storage variables
@@ -81,7 +81,7 @@ contract Validators is
     }
 
     function findValidatorByPublicKey(
-        BLS12381.G1Point calldata pubkey
+        BLS.G1Point calldata pubkey
     ) public view returns (ValidatorDetails memory) {
         return findValidatorByHash(generatePublicKeyHash(pubkey));
     }
@@ -108,8 +108,8 @@ contract Validators is
     }
 
     function secureRegisterValidator(
-        BLS12381.G1Point calldata pubkey,
-        BLS12381.G2Point calldata signature,
+        BLS.G1Point calldata pubkey,
+        BLS.G2Point calldata signature,
         uint32 gasLimitMax,
         address operatorAddress
     ) public {
@@ -132,8 +132,8 @@ contract Validators is
     }
 
     function bulkRegisterValidators(
-        BLS12381.G1Point[] calldata pubkeys,
-        BLS12381.G2Point calldata signature,
+        BLS.G1Point[] calldata pubkeys,
+        BLS.G2Point calldata signature,
         uint32 gasLimitMax,
         address operatorAddress
     ) public {
@@ -149,7 +149,7 @@ contract Validators is
             msg.sender,
             sequenceNumbers
         );
-        BLS12381.G1Point memory aggregatedKey = _aggregatePubkeys(pubkeys);
+        BLS.G1Point memory aggregatedKey = _aggregatePubkeys(pubkeys);
 
         if (!_verifySignature(messageData, signature, aggregatedKey)) {
             revert InvalidBLSSignatureProvided();
@@ -264,7 +264,7 @@ contract Validators is
     }
 
     function generatePublicKeyHash(
-        BLS12381.G1Point memory pubkey
+        BLS.G1Point memory pubkey
     ) public pure returns (bytes20) {
         uint256[2] memory compressed = pubkey.compress();
         bytes32 hash = keccak256(abi.encodePacked(compressed));
@@ -279,7 +279,7 @@ contract Validators is
     {}
 
     function getValidatorByPubkey(
-        BLS12381.G1Point calldata pubkey
+        BLS.G1Point calldata pubkey
     ) external view override returns (ValidatorInfo memory) {}
 
     function getValidatorByPubkeyHash(
@@ -293,15 +293,15 @@ contract Validators is
     ) external override {}
 
     function registerValidator(
-        BLS12381.G1Point calldata pubkey,
-        BLS12381.G2Point calldata signature,
+        BLS.G1Point calldata pubkey,
+        BLS.G2Point calldata signature,
         uint32 maxCommittedGasLimit,
         address authorizedOperator
     ) external override {}
 
     function batchRegisterValidators(
-        BLS12381.G1Point[] calldata pubkeys,
-        BLS12381.G2Point calldata signature,
+        BLS.G1Point[] calldata pubkeys,
+        BLS.G2Point calldata signature,
         uint32 maxCommittedGasLimit,
         address authorizedOperator
     ) external override {}
@@ -318,6 +318,6 @@ contract Validators is
     ) external override {}
 
     function hashPubkey(
-        BLS12381.G1Point calldata pubkey
+        BLS.G1Point calldata pubkey
     ) external pure override returns (bytes20) {}
 }

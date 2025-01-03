@@ -4,10 +4,10 @@
 // (If/when a license will be added to the original library, it will be added here as well)
 pragma solidity >=0.8.0 <0.9.0;
 
-import {BLS12381} from "./BLS12381.sol";
+import {BLS} from "../lib/BLS.sol";
 
 contract BLSSignatureVerifier {
-    using BLS12381 for *;
+    using BLS for *;
 
     /// @dev The domain separation tag for the BLS signature
     function dst() internal pure returns (bytes memory) {
@@ -23,14 +23,14 @@ contract BLSSignatureVerifier {
      */
     function _verifySignature(
         bytes memory message,
-        BLS12381.G2Point memory sig,
-        BLS12381.G1Point memory pubkey
+        BLS.G2Point memory sig,
+        BLS.G1Point memory pubkey
     ) internal view returns (bool) {
         // Hash the message bytes into a G2 point
-        BLS12381.G2Point memory msgG2 = message.hashToCurveG2(dst());
+        BLS.G2Point memory msgG2 = message.hashToCurveG2(dst());
 
         // Return the pairing check result
-        return BLS12381.pairing(BLS12381.generatorG1().negate(), sig, pubkey, msgG2);
+        return BLS.pairing(BLS.generatorG1().negate(), sig, pubkey, msgG2);
     }
 
     /**
@@ -39,8 +39,8 @@ contract BLSSignatureVerifier {
      * @return The aggregated BLS public key
      */
     function _aggregatePubkeys(
-        BLS12381.G1Point[] calldata pubkeys
-    ) internal pure returns (BLS12381.G1Point memory) {
+        BLS.G1Point[] calldata pubkeys
+    ) internal pure returns (BLS.G1Point memory) {
         // TODO: implement + test.
 
         // Simply adding pubkeys will result in a rogue key vulnerability.
@@ -49,7 +49,7 @@ contract BLSSignatureVerifier {
         // https://github.com/chronicleprotocol/scribe/blob/main/docs/Schnorr.md#key-aggregation-for-multisignatures
 
         uint256[2] memory aggPubkeyZero = [uint256(0), uint256(0)];
-        BLS12381.G1Point memory aggPubkey = BLS12381.G1Point(aggPubkeyZero, aggPubkeyZero);
+        BLS.G1Point memory aggPubkey = BLS.G1Point(aggPubkeyZero, aggPubkeyZero);
 
         // unimplemented!()
         // silence compiler warnings

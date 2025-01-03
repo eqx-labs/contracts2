@@ -8,7 +8,7 @@ import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 
-import {MapWithTimeData} from "./lib/MapWithTimeData.sol";
+import {MapWithTimeData} from "./lib/utils/MapWithTimeData.sol";
 import {IParameters} from "./interfaces/IParameters.sol";
 import {IMiddleware} from "./interfaces/IEigenlayerRestaking.sol";
 import {IManager} from "./interfaces/IRegistry.sol";

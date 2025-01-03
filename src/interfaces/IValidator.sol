@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import {BLS12381} from "../lib/bls/BLS12381.sol";
+import {BLS} from "../lib/bls/BLS.sol";
 
 /// @title IValidator
 /// @notice Interface for managing validator registrations and related functionalities.
@@ -28,7 +28,7 @@ interface IValidator {
     /// @notice Retrieves information about a validator using its BLS public key.
     /// @param pubkey The BLS public key of the validator.
     /// @return A `ValidatorInfo` struct containing the validator's details.
-    function getValidatorByPubkey(BLS12381.G1Point calldata pubkey) external view returns (ValidatorInfo memory);
+    function getValidatorByPubkey(BLS.G1Point calldata pubkey) external view returns (ValidatorInfo memory);
 
     /// @notice Retrieves information about a validator using its public key hash.
     /// @param pubkeyHash The hash of the validator's public key.
@@ -51,8 +51,8 @@ interface IValidator {
     /// @param maxCommittedGasLimit The maximum gas limit the validator can commit.
     /// @param authorizedOperator The address authorized to manage the validator.
     function registerValidator(
-        BLS12381.G1Point calldata pubkey,
-        BLS12381.G2Point calldata signature,
+        BLS.G1Point calldata pubkey,
+        BLS.G2Point calldata signature,
         uint32 maxCommittedGasLimit,
         address authorizedOperator
     ) external;
@@ -63,8 +63,8 @@ interface IValidator {
     /// @param maxCommittedGasLimit The maximum gas limit each validator can commit.
     /// @param authorizedOperator The address authorized to manage the validators.
     function batchRegisterValidators(
-        BLS12381.G1Point[] calldata pubkeys,
-        BLS12381.G2Point calldata signature,
+        BLS.G1Point[] calldata pubkeys,
+        BLS.G2Point calldata signature,
         uint32 maxCommittedGasLimit,
         address authorizedOperator
     ) external;
@@ -87,5 +87,5 @@ interface IValidator {
     /// @notice Computes the hash of a BLS public key.
     /// @param pubkey The BLS public key to hash.
     /// @return The hash of the given public key as `bytes20`.
-    function hashPubkey(BLS12381.G1Point calldata pubkey) external pure returns (bytes20);
+    function hashPubkey(BLS.G1Point calldata pubkey) external pure returns (bytes20);
 }
