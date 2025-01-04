@@ -1,0 +1,9 @@
+strict digraph {
+subgraph cluster_29914_ICore {
+label = "ICore"
+"29914_fetchVaultsStakedInDSS" [label="fetchVaultsStakedInDSS"]
+"29914_registerDSS" [label="registerDSS"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}
+}

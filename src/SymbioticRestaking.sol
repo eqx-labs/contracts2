@@ -46,6 +46,8 @@ IMiddleware,
     address public VAULT_FACTORY_ADDRESS;
     address public OPERATOR_OPTIN_ADDRESS;
     bytes32 public PROTOCOL_ID;
+    bytes32 public NAME_HASH;
+
 
     // Storage gap for upgrades
     uint256[38] private __gap;
@@ -379,30 +381,101 @@ IMiddleware,
         }
     }
 
-    function NAME_HASH() external view override returns (bytes32) {}
+
+
+        function _wasEnabledAt(uint48 enabledTime, uint48 disabledTime, uint48 timestamp) private pure returns (bool) {
+        return enabledTime != 0 && enabledTime <= timestamp && (disabledTime == 0 || disabledTime >= timestamp);
+    }
 
     function getEpochStartTs(
         uint48 epoch
-    ) external view override returns (uint48) {}
+    ) public view returns (uint48 timestamp) {
+        return GENESIS_TIME + epoch * protocolParams.getEpochDuration();
+    }
 
-    function getEpochAtTs(
+     function getEpochAtTs(
         uint48 timestamp
-    ) external view override returns (uint48) {}
+    ) public view returns (uint48 epoch) {
+        return (timestamp - GENESIS_TIME) / protocolParams.getEpochDuration();
+    }
+    function getCurrentEpoch() public view returns (uint48 epoch) {
+        return getEpochAtTs(Time.timestamp());
+    }
 
-    function getCurrentEpoch() external view override returns (uint48) {}
-
-    function getOperatorStake(
-        address operator,
-        address collateral
-    ) external view override returns (uint256) {}
+    function getOperatorStake(address operator, address collateral) public view returns (uint256 amount) {
+        uint48 timestamp = Time.timestamp();
+        return getOperatorStakeAt(operator, collateral, timestamp);
+    }
 
     function getOperatorCollaterals(
         address operator
-    ) external view override returns (address[] memory, uint256[] memory) {}
+    ) public view returns (address[] memory, uint256[] memory) {
+        address[] memory collateralTokens = new address[](authorizedVaults.length());
+        uint256[] memory amounts = new uint256[](authorizedVaults.length());
 
-    function getOperatorStakeAt(
+        uint48 epochStartTs = getEpochStartTs(getEpochAtTs(Time.timestamp()));
+
+        for (uint256 i = 0; i < authorizedVaults.length(); ++i) {
+            (address vault, uint48 enabledTime, uint48 disabledTime) = authorizedVaults.atWithTimes(i);
+
+            if (!_wasEnabledAt(enabledTime, disabledTime, epochStartTs)) {
+                continue;
+            }
+
+            address collateral = IVault(vault).collateral();
+            collateralTokens[i] = collateral;
+
+            // in order to have stake in a network, the operator needs to be opted in to that vault.
+            // this authorization is fully handled in the Vault, we just need to read the stake.
+            amounts[i] = IBaseDelegator(IVault(vault).delegator()).stakeAt(
+                // The stake for each subnetwork is stored in the vault's delegator contract.
+                // stakeAt returns the stake of "operator" at "timestamp" for "network" (or subnetwork)
+                // bytes(0) is for hints, which we don't currently use.
+                NETWORK_ADDRESS.subnetwork(0),
+                operator,
+                epochStartTs,
+                new bytes(0)
+            );
+        }
+
+        return (collateralTokens, amounts);
+    }
+
+     function getOperatorStakeAt(
         address operator,
         address collateral,
         uint48 timestamp
-    ) external view override returns (uint256) {}
+    ) public view returns (uint256 amount) {
+        if (timestamp > Time.timestamp() || timestamp < GENESIS_TIME) {
+            revert InvalidQuery();
+        }
+
+        uint48 epochStartTs = getEpochStartTs(getEpochAtTs(timestamp));
+
+        for (uint256 i = 0; i < authorizedVaults.length(); ++i) {
+            (address vault, uint48 enabledTime, uint48 disabledTime) = authorizedVaults.atWithTimes(i);
+
+            if (collateral != IVault(vault).collateral()) {
+                continue;
+            }
+
+            if (!_wasEnabledAt(enabledTime, disabledTime, epochStartTs)) {
+                continue;
+            }
+
+            // in order to have stake in a network, the operator needs to be opted in to that vault.
+            // this authorization is fully handled in the Vault, we just need to read the stake.
+            amount += IBaseDelegator(IVault(vault).delegator()).stakeAt(
+                // The stake for each subnetwork is stored in the vault's delegator contract.
+                // stakeAt returns the stake of "operator" at "timestamp" for "network" (or subnetwork)
+                // bytes(0) is for hints, which we don't currently use.
+                NETWORK_ADDRESS.subnetwork(0),
+                operator,
+                epochStartTs,
+                new bytes(0)
+            );
+        }
+
+        return amount;
+    }
 }

@@ -1,0 +1,8 @@
+strict digraph {
+subgraph cluster_22055_IKarakCore {
+label = "IKarakCore"
+"22055_isAssetAllowlisted" [label="isAssetAllowlisted"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}
+}

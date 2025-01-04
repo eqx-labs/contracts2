@@ -1,0 +1,89 @@
+strict digraph {
+subgraph cluster_33291_MerkleTrie {
+label = "MerkleTrie"
+"33291__editBranchIndex" [label="_editBranchIndex"]
+"33291__getSharedNibbleLength" [label="_getSharedNibbleLength"]
+"33291__walkNodePath" [label="_walkNodePath"]
+"33291__makeNode" [label="_makeNode"]
+"33291__getNodeValue" [label="_getNodeValue"]
+"33291__getNewPath" [label="_getNewPath"]
+"33291_verifyInclusionProof" [label="verifyInclusionProof"]
+"33291_update" [label="update"]
+"33291__makeExtensionNode" [label="_makeExtensionNode"]
+"33291__getNodePath" [label="_getNodePath"]
+"33291__getUpdatedTrieRoot" [label="_getUpdatedTrieRoot"]
+"33291__editBranchValue" [label="_editBranchValue"]
+"33291__getNodeType" [label="_getNodeType"]
+"33291__addHexPrefix" [label="_addHexPrefix"]
+"33291__getNodeKey" [label="_getNodeKey"]
+"33291__makeEmptyBranchNode" [label="_makeEmptyBranchNode"]
+"33291_verifyExclusionProof" [label="verifyExclusionProof"]
+"33291__parseProof" [label="_parseProof"]
+"33291__getNodeID" [label="_getNodeID"]
+"33291__removeHexPrefix" [label="_removeHexPrefix"]
+"33291__getNodeHash" [label="_getNodeHash"]
+"33291_get" [label="get"]
+"33291_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"33291__joinNodeArrays" [label="_joinNodeArrays"]
+"33291_getSingleNodeRootHash" [label="getSingleNodeRootHash"]
+"33291__makeLeafNode" [label="_makeLeafNode"]
+"33291__getNodeType" -> "33291__getNodePath"
+"33291_verifyExclusionProof" -> "33291_get"
+"33291__editBranchValue" -> "33291__makeNode"
+"33291__editBranchIndex" -> "33291__makeNode"
+"33291_update" -> "33291_getSingleNodeRootHash"
+"33291__makeLeafNode" -> "33291__makeNode"
+"33291_update" -> "33291__getUpdatedTrieRoot"
+"33291_verifyInclusionProof" -> "33291_get"
+"33291__makeEmptyBranchNode" -> "33291__makeNode"
+"33291__walkNodePath" -> "33291__getNodeID"
+"33291__getNewPath" -> "33291__joinNodeArrays"
+"33291__getNewPath" -> "33291__getNodeValue"
+"33291_get" -> "33291__parseProof"
+"33291_getSingleNodeRootHash" -> "33291__makeLeafNode"
+"33291__getUpdatedTrieRoot" -> "33291__getNodeType"
+"33291__makeExtensionNode" -> "33291__makeNode"
+"33291__getNewPath" -> "33291__editBranchIndex"
+"33291__getNewPath" -> "33291__getSharedNibbleLength"
+"33291__makeExtensionNode" -> "33291__addHexPrefix"
+"33291__getUpdatedTrieRoot" -> "33291__getNodeHash"
+"33291_update" -> "33291__parseProof"
+"33291_get" -> "33291__getNodeValue"
+"33291__walkNodePath" -> "33291__getSharedNibbleLength"
+"33291__getUpdatedTrieRoot" -> "33291__makeExtensionNode"
+"33291__getUpdatedTrieRoot" -> "33291__getNodeKey"
+"33291__getUpdatedTrieRoot" -> "33291__editBranchIndex"
+"33291__getNodeKey" -> "33291__getNodePath"
+"33291_get" -> "33291__walkNodePath"
+"33291__walkNodePath" -> "33291__getNodePath"
+"33291__makeNode" -> "33291__makeNode"
+"33291__getNewPath" -> "33291__makeExtensionNode"
+"33291__getNewPath" -> "33291__makeLeafNode"
+"33291__getNewPath" -> "33291__getNodeType"
+"33291_update" -> "33291__getNewPath"
+"33291_update" -> "33291__walkNodePath"
+"33291__getNewPath" -> "33291__makeEmptyBranchNode"
+"33291__makeLeafNode" -> "33291__addHexPrefix"
+"33291__getNewPath" -> "33291__getNodeHash"
+"33291__getNewPath" -> "33291__getNodeKey"
+"33291__getNewPath" -> "33291__editBranchValue"
+"33291__getNodeKey" -> "33291__removeHexPrefix"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"require(bool,string)" 
+"abi.encodePacked()" 
+"keccak256(bytes)" 
+"revert(string)" 
+"33291__addHexPrefix" -> "abi.encodePacked()"
+"33291__walkNodePath" -> "revert(string)"
+"33291__getNodeHash" -> "abi.encodePacked()"
+"33291__getNodeHash" -> "keccak256(bytes)"
+"33291_getSingleNodeRootHash" -> "keccak256(bytes)"
+"33291_slitherConstructorConstantVariables" -> "keccak256(bytes)"
+"33291_get" -> "require(bool,string)"
+"33291__walkNodePath" -> "require(bool,string)"
+"33291__getNodeType" -> "revert(string)"
+"33291__walkNodePath" -> "keccak256(bytes)"
+"33291__getUpdatedTrieRoot" -> "keccak256(bytes)"
+}
+}

@@ -1,0 +1,37 @@
+strict digraph {
+subgraph cluster_22738_BytesUtils {
+label = "BytesUtils"
+"22738_toBytes32PadLeft" [label="toBytes32PadLeft"]
+"22738_fromNibbles" [label="fromNibbles"]
+"22738_toUint24" [label="toUint24"]
+"22738_toUint8" [label="toUint8"]
+"22738_toAddress" [label="toAddress"]
+"22738_toNibbles" [label="toNibbles"]
+"22738_equal" [label="equal"]
+"22738_toUint256" [label="toUint256"]
+"22738_toBytes32" [label="toBytes32"]
+"22738_slice" [label="slice"]
+"22738_toUint256" -> "22738_toBytes32"
+"22738_slice" -> "22738_slice"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"mload(uint256)" 
+"require(bool,string)" 
+"keccak256(bytes)" 
+"abi.decode()" 
+"mstore(uint256,uint256)" 
+"22738_toBytes32" -> "abi.decode()"
+"22738_toUint8" -> "require(bool,string)"
+"22738_slice" -> "mload(uint256)"
+"22738_toUint24" -> "require(bool,string)"
+"22738_slice" -> "mstore(uint256,uint256)"
+"22738_toAddress" -> "require(bool,string)"
+"22738_toAddress" -> "mload(uint256)"
+"22738_equal" -> "keccak256(bytes)"
+"22738_toBytes32PadLeft" -> "mload(uint256)"
+"22738_toUint8" -> "mload(uint256)"
+"22738_slice" -> "require(bool,string)"
+"22738_toBytes32" -> "mload(uint256)"
+"22738_toUint24" -> "mload(uint256)"
+}
+}

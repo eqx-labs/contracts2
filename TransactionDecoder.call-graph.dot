@@ -1,0 +1,54 @@
+strict digraph {
+subgraph cluster_25503_TransactionDecoder {
+label = "TransactionDecoder"
+"25503__decodeEip1559" [label="_decodeEip1559"]
+"25503__decodeEip2930" [label="_decodeEip2930"]
+"25503__unsignedEip2930" [label="_unsignedEip2930"]
+"25503__unsignedEip1559" [label="_unsignedEip1559"]
+"25503__decodeEip4844" [label="_decodeEip4844"]
+"25503_recoverSender" [label="recoverSender"]
+"25503_preimage" [label="preimage"]
+"25503__unsignedEip4844" [label="_unsignedEip4844"]
+"25503_unsigned" [label="unsigned"]
+"25503_decodeEnveloped" [label="decodeEnveloped"]
+"25503__decodeLegacy" [label="_decodeLegacy"]
+"25503__unsignedLegacy" [label="_unsignedLegacy"]
+"25503_signature" [label="signature"]
+"25503_unsigned" -> "25503__unsignedLegacy"
+"25503_preimage" -> "25503_unsigned"
+"25503_recoverSender" -> "25503_preimage"
+"25503_decodeEnveloped" -> "25503__decodeLegacy"
+"25503_unsigned" -> "25503__unsignedEip2930"
+"25503_unsigned" -> "25503__unsignedEip4844"
+"25503_decodeEnveloped" -> "25503__decodeEip4844"
+"25503_decodeEnveloped" -> "25503__decodeEip1559"
+"25503_unsigned" -> "25503__unsignedEip1559"
+"25503_recoverSender" -> "25503_signature"
+"25503_decodeEnveloped" -> "25503__decodeEip2930"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert InvalidSignatureLength()" 
+"revert NoSignature()" 
+"abi.encodePacked()" 
+"revert InvalidFieldCount()" 
+"keccak256(bytes)" 
+"revert UnsupportedTxType()" 
+"25503_signature" -> "revert InvalidSignatureLength()"
+"25503_signature" -> "revert NoSignature()"
+"25503_preimage" -> "keccak256(bytes)"
+"25503__decodeEip2930" -> "revert InvalidFieldCount()"
+"25503__decodeLegacy" -> "revert InvalidFieldCount()"
+"25503__decodeEip4844" -> "abi.encodePacked()"
+"25503__unsignedEip1559" -> "abi.encodePacked()"
+"25503__decodeEip1559" -> "revert InvalidFieldCount()"
+"25503__unsignedEip4844" -> "abi.encodePacked()"
+"25503_unsigned" -> "revert UnsupportedTxType()"
+"25503_decodeEnveloped" -> "revert UnsupportedTxType()"
+"25503__unsignedEip2930" -> "abi.encodePacked()"
+"25503__decodeLegacy" -> "abi.encodePacked()"
+"25503__decodeEip4844" -> "revert InvalidFieldCount()"
+"25503__decodeEip2930" -> "abi.encodePacked()"
+"25503__decodeEip1559" -> "abi.encodePacked()"
+"25503__unsignedLegacy" -> "abi.encodePacked()"
+}
+}

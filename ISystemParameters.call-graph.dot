@@ -1,0 +1,19 @@
+strict digraph {
+subgraph cluster_22118_ISystemParameters {
+label = "ISystemParameters"
+"22118_getChallengeBond" [label="getChallengeBond"]
+"22118_getBeaconRootsContract" [label="getBeaconRootsContract"]
+"22118_getSlotTime" [label="getSlotTime"]
+"22118_getSlashingWindow" [label="getSlashingWindow"]
+"22118_isUnsafeRegistrationAllowed" [label="isUnsafeRegistrationAllowed"]
+"22118_getEpochDuration" [label="getEpochDuration"]
+"22118_getJustificationDelay" [label="getJustificationDelay"]
+"22118_getMinimumOperatorStake" [label="getMinimumOperatorStake"]
+"22118_getMaxChallengeDuration" [label="getMaxChallengeDuration"]
+"22118_getEth2GenesisTimestamp" [label="getEth2GenesisTimestamp"]
+"22118_getBlockhashEvmLookback" [label="getBlockhashEvmLookback"]
+"22118_getEip4788Window" [label="getEip4788Window"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}
+}

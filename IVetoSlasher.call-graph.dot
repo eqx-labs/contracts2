@@ -1,0 +1,35 @@
+strict digraph {
+subgraph cluster_620_IBaseSlasher {
+label = "IBaseSlasher"
+"620_cumulativeSlash" [label="cumulativeSlash"]
+"620_latestSlashedCaptureTimestamp" [label="latestSlashedCaptureTimestamp"]
+"620_cumulativeSlashAt" [label="cumulativeSlashAt"]
+"620_BURNER_GAS_LIMIT" [label="BURNER_GAS_LIMIT"]
+"620_isBurnerHook" [label="isBurnerHook"]
+"620_BURNER_RESERVE" [label="BURNER_RESERVE"]
+"620_slashableStake" [label="slashableStake"]
+"620_NETWORK_MIDDLEWARE_SERVICE" [label="NETWORK_MIDDLEWARE_SERVICE"]
+"620_vault" [label="vault"]
+"620_VAULT_FACTORY" [label="VAULT_FACTORY"]
+}subgraph cluster_134_IEntity {
+label = "IEntity"
+"134_TYPE" [label="TYPE"]
+"134_initialize" [label="initialize"]
+"134_FACTORY" [label="FACTORY"]
+}subgraph cluster_903_IVetoSlasher {
+label = "IVetoSlasher"
+"903_setResolver" [label="setResolver"]
+"903_resolverSetEpochsDelay" [label="resolverSetEpochsDelay"]
+"903_vetoDuration" [label="vetoDuration"]
+"903_resolverAt" [label="resolverAt"]
+"903_resolver" [label="resolver"]
+"903_slashRequestsLength" [label="slashRequestsLength"]
+"903_requestSlash" [label="requestSlash"]
+"903_NETWORK_REGISTRY" [label="NETWORK_REGISTRY"]
+"903_slashRequests" [label="slashRequests"]
+"903_executeSlash" [label="executeSlash"]
+"903_vetoSlash" [label="vetoSlash"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}
+}

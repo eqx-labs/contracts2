@@ -1,0 +1,60 @@
+strict digraph {
+subgraph cluster_30874_RLPReader {
+label = "RLPReader"
+"30874_readList" [label="readList"]
+"30874_readBytes" [label="readBytes"]
+"30874_toRLPItem" [label="toRLPItem"]
+"30874_readString" [label="readString"]
+"30874_readRawBytes" [label="readRawBytes"]
+"30874__copy" [label="_copy"]
+"30874_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"30874_readUint256" [label="readUint256"]
+"30874__decodeLength" [label="_decodeLength"]
+"30874_readBytes32" [label="readBytes32"]
+"30874_readAddress" [label="readAddress"]
+"30874_readBool" [label="readBool"]
+"30874_readUint256" -> "30874_readBytes32"
+"30874_readUint256" -> "30874_toRLPItem"
+"30874__copy" -> "30874__copy"
+"30874_readRawBytes" -> "30874__copy"
+"30874_readList" -> "30874_toRLPItem"
+"30874_readList" -> "30874__decodeLength"
+"30874_readBool" -> "30874_toRLPItem"
+"30874_readList" -> "30874_readList"
+"30874_readBytes32" -> "30874_readBytes32"
+"30874_readString" -> "30874_readString"
+"30874_readBytes" -> "30874__copy"
+"30874_readAddress" -> "30874_readUint256"
+"30874_readBytes" -> "30874_readBytes"
+"30874_readString" -> "30874_toRLPItem"
+"30874_readAddress" -> "30874_readAddress"
+"30874_readString" -> "30874_readBytes"
+"30874_readBytes" -> "30874_toRLPItem"
+"30874_readBytes32" -> "30874_toRLPItem"
+"30874_readBool" -> "30874_readBool"
+"30874_readAddress" -> "30874_toRLPItem"
+"30874_readUint256" -> "30874_readUint256"
+"30874_readBytes" -> "30874__decodeLength"
+"30874_readBytes32" -> "30874__decodeLength"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"require(bool,string)" 
+"mload(uint256)" 
+"mstore(uint256,uint256)" 
+"byte(uint256,uint256)" 
+"30874_readBool" -> "mload(uint256)"
+"30874_readBytes32" -> "mload(uint256)"
+"30874_readBytes" -> "require(bool,string)"
+"30874_readList" -> "mstore(uint256,uint256)"
+"30874_readBool" -> "require(bool,string)"
+"30874_readBytes32" -> "require(bool,string)"
+"30874__decodeLength" -> "byte(uint256,uint256)"
+"30874__decodeLength" -> "mload(uint256)"
+"30874__copy" -> "mstore(uint256,uint256)"
+"30874_readAddress" -> "require(bool,string)"
+"30874__copy" -> "mload(uint256)"
+"30874__decodeLength" -> "require(bool,string)"
+"30874_readList" -> "require(bool,string)"
+"30874_readBool" -> "byte(uint256,uint256)"
+}
+}

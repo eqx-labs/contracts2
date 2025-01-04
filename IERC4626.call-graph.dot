@@ -1,0 +1,36 @@
+strict digraph {
+subgraph cluster_5730_IERC20 {
+label = "IERC20"
+"5730_allowance" [label="allowance"]
+"5730_totalSupply" [label="totalSupply"]
+"5730_transferFrom" [label="transferFrom"]
+"5730_transfer" [label="transfer"]
+"5730_balanceOf" [label="balanceOf"]
+"5730_approve" [label="approve"]
+}subgraph cluster_5756_IERC20Metadata {
+label = "IERC20Metadata"
+"5756_name" [label="name"]
+"5756_decimals" [label="decimals"]
+"5756_symbol" [label="symbol"]
+}subgraph cluster_5172_IERC4626 {
+label = "IERC4626"
+"5172_previewMint" [label="previewMint"]
+"5172_totalAssets" [label="totalAssets"]
+"5172_maxMint" [label="maxMint"]
+"5172_previewWithdraw" [label="previewWithdraw"]
+"5172_convertToShares" [label="convertToShares"]
+"5172_withdraw" [label="withdraw"]
+"5172_maxRedeem" [label="maxRedeem"]
+"5172_redeem" [label="redeem"]
+"5172_deposit" [label="deposit"]
+"5172_mint" [label="mint"]
+"5172_convertToAssets" [label="convertToAssets"]
+"5172_maxWithdraw" [label="maxWithdraw"]
+"5172_previewDeposit" [label="previewDeposit"]
+"5172_previewRedeem" [label="previewRedeem"]
+"5172_maxDeposit" [label="maxDeposit"]
+"5172_asset" [label="asset"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}
+}

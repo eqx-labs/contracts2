@@ -1,0 +1,30 @@
+strict digraph {
+subgraph cluster_25865_ValidatorsLib {
+label = "ValidatorsLib"
+"25865_updateMaxCommittedGasLimit" [label="updateMaxCommittedGasLimit"]
+"25865_at" [label="at"]
+"25865_getOrInsertAuthorizedOperator" [label="getOrInsertAuthorizedOperator"]
+"25865_getAuthorizedOperator" [label="getAuthorizedOperator"]
+"25865_insert" [label="insert"]
+"25865_length" [label="length"]
+"25865_getController" [label="getController"]
+"25865_contains" [label="contains"]
+"25865_getAll" [label="getAll"]
+"25865_getOrInsertController" [label="getOrInsertController"]
+"25865_getOrInsert" [label="getOrInsert"]
+"25865_get" [label="get"]
+"25865_getController" -> "25865_at"
+"25865_getOrInsertAuthorizedOperator" -> "25865_getOrInsert"
+"25865_getOrInsertController" -> "25865_getOrInsert"
+"25865_getAuthorizedOperator" -> "25865_get"
+"25865_getController" -> "25865_get"
+"25865_getAuthorizedOperator" -> "25865_at"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert ValidatorExists(bytes20)" 
+"revert ValidatorDNE(bytes20)" 
+"25865_get" -> "revert ValidatorDNE(bytes20)"
+"25865_insert" -> "revert ValidatorExists(bytes20)"
+"25865_updateMaxCommittedGasLimit" -> "revert ValidatorDNE(bytes20)"
+}
+}

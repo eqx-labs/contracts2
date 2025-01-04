@@ -442,10 +442,17 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
         JUSTIFICATION_DELAY = justificationDelay;
     }
 
-    function registerNewOperator(
-        address operatorAddress,
-        string calldata rpcUrl
-    ) external override {}
+
+    function registerNewOperator(address operatorAddress, string calldata rpcUrl) external onlyMiddleware {
+        if (operators.contains(operatorAddress)) {
+            revert OperatorAlreadyRegistered();
+        }
+
+        // Create an already enabled operator
+        EnumerableMap.Operator memory operator = EnumerableMap.Operator(rpcUrl, msg.sender, Time.timestamp());
+
+        operators.set(operatorAddress, operator);
+    }
 
      function removeOperator(
         address operator

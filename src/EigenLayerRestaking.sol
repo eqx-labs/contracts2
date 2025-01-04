@@ -96,9 +96,10 @@ import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyMan
           NAME_HASH = keccak256("EIGENLAYER");
     }
 
-    function _authorizeUpgrade(
+   function _authorizeUpgrade(
         address newImplementation
     ) internal override onlyOwner {}
+
 
     // Time-related functions
     function calculateEpochStart(uint48 epoch) public view returns (uint48) {
@@ -297,11 +298,11 @@ import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyMan
     function registerOperatorToAVS(
         address operator,
         ISignatureUtils.SignatureWithSaltAndExpiry memory signature
-    ) public override {
+    ) public  {
         DIRECTORY.registerOperatorToAVS(operator, signature);
     }
 
-    function deregisterOperatorFromAVS(address operator) public override {
+    function deregisterOperatorFromAVS(address operator) public  {
         if (msg.sender != operator) {
             revert Unauthorized();
         }
@@ -310,7 +311,7 @@ import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyMan
 
     function getOperatorRestakedStrategies(
         address operator
-    ) external view override returns (address[] memory) {
+    ) external view  returns (address[] memory) {
         address[] memory restakedStrategies = new address[](
             activeStrategies.length()
         );
@@ -340,13 +341,13 @@ import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyMan
     function getRestakeableStrategies()
         external
         view
-        override
+        
         returns (address[] memory)
     {
         return activeStrategies.keys();
     }
 
-    function avsDirectory() external view override returns (address) {
+    function avsDirectory() external view  returns (address) {
         return address(DIRECTORY);
     }
 

@@ -1,0 +1,38 @@
+strict digraph {
+subgraph cluster_6015_Address {
+label = "Address"
+"6015_functionStaticCall" [label="functionStaticCall"]
+"6015_verifyCallResultFromTarget" [label="verifyCallResultFromTarget"]
+"6015_sendValue" [label="sendValue"]
+"6015_functionDelegateCall" [label="functionDelegateCall"]
+"6015_verifyCallResult" [label="verifyCallResult"]
+"6015__revert" [label="_revert"]
+"6015_functionCall" [label="functionCall"]
+"6015_functionCallWithValue" [label="functionCallWithValue"]
+"6015_functionDelegateCall" -> "6015_verifyCallResultFromTarget"
+"6015_functionCall" -> "6015_functionCallWithValue"
+"6015_verifyCallResultFromTarget" -> "6015__revert"
+"6015_verifyCallResult" -> "6015__revert"
+"6015_functionStaticCall" -> "6015_verifyCallResultFromTarget"
+"6015_functionCallWithValue" -> "6015_verifyCallResultFromTarget"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"mload(uint256)" 
+"code(address)" 
+"revert InsufficientBalance(uint256,uint256)" 
+"revert FailedCall()" 
+"revert AddressEmptyCode(address)" 
+"balance(address)" 
+"revert(uint256,uint256)" 
+"6015_sendValue" -> "revert InsufficientBalance(uint256,uint256)"
+"6015__revert" -> "mload(uint256)"
+"6015__revert" -> "revert FailedCall()"
+"6015_functionCallWithValue" -> "balance(address)"
+"6015_verifyCallResultFromTarget" -> "code(address)"
+"6015_sendValue" -> "revert FailedCall()"
+"6015__revert" -> "revert(uint256,uint256)"
+"6015_sendValue" -> "balance(address)"
+"6015_functionCallWithValue" -> "revert InsufficientBalance(uint256,uint256)"
+"6015_verifyCallResultFromTarget" -> "revert AddressEmptyCode(address)"
+}
+}

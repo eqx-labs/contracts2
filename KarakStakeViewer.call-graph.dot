@@ -1,0 +1,84 @@
+strict digraph {
+subgraph cluster_4931_Initializable {
+label = "Initializable"
+"4931__getInitializedVersion" [label="_getInitializedVersion"]
+"4931__isInitializing" [label="_isInitializing"]
+"4931__checkInitializing" [label="_checkInitializing"]
+"4931__disableInitializers" [label="_disableInitializers"]
+"4931__getInitializableStorage" [label="_getInitializableStorage"]
+"4931__getInitializedVersion" -> "4931__getInitializableStorage"
+"4931__disableInitializers" -> "4931__getInitializableStorage"
+"4931__checkInitializing" -> "4931__isInitializing"
+"4931__isInitializing" -> "4931__getInitializableStorage"
+}subgraph cluster_4677_OwnableUpgradeable {
+label = "OwnableUpgradeable"
+"4677__transferOwnership" [label="_transferOwnership"]
+"4677___Ownable_init_unchained" [label="__Ownable_init_unchained"]
+"4677__checkOwner" [label="_checkOwner"]
+"4677_transferOwnership" [label="transferOwnership"]
+"4677_owner" [label="owner"]
+"4677_renounceOwnership" [label="renounceOwnership"]
+"4677___Ownable_init" [label="__Ownable_init"]
+"4677__getOwnableStorage" [label="_getOwnableStorage"]
+"4677_transferOwnership" -> "4677_onlyOwner"
+"4677_owner" -> "4677__getOwnableStorage"
+"4677_transferOwnership" -> "4677__transferOwnership"
+"4677__transferOwnership" -> "4677__getOwnableStorage"
+"4677_renounceOwnership" -> "4677_onlyOwner"
+"4677___Ownable_init" -> "4677_onlyInitializing"
+"4677___Ownable_init_unchained" -> "4677__transferOwnership"
+"4677_renounceOwnership" -> "4677__transferOwnership"
+"4677__checkOwner" -> "4677__msgSender"
+"4677___Ownable_init_unchained" -> "4677_onlyInitializing"
+"4677___Ownable_init" -> "4677___Ownable_init_unchained"
+"4677__checkOwner" -> "4677_owner"
+}subgraph cluster_28202_KarakStakeViewer {
+label = "KarakStakeViewer"
+"28202_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"28202_getUSDValue" [label="getUSDValue"]
+"28202__state" [label="_state"]
+"28202_setOracle" [label="setOracle"]
+"28202_constructor" [label="constructor"]
+"28202_getStakeDistributionUSDForOperators" [label="getStakeDistributionUSDForOperators"]
+"28202_initialize" [label="initialize"]
+"28202_setOracle" -> "28202__state"
+"28202_initialize" -> "28202___Ownable_init"
+"28202_setOracle" -> "28202_onlyOwner"
+"28202_initialize" -> "28202__state"
+"28202_initialize" -> "28202_initializer"
+"28202_getStakeDistributionUSDForOperators" -> "28202_getUSDValue"
+"28202_constructor" -> "28202__disableInitializers"
+"28202_getUSDValue" -> "28202__state"
+}subgraph cluster_4977_ContextUpgradeable {
+label = "ContextUpgradeable"
+"4977__msgData" [label="_msgData"]
+"4977__contextSuffixLength" [label="_contextSuffixLength"]
+"4977__msgSender" [label="_msgSender"]
+"4977___Context_init" [label="__Context_init"]
+"4977___Context_init_unchained" [label="__Context_init_unchained"]
+"4977___Context_init_unchained" -> "4977_onlyInitializing"
+"4977___Context_init" -> "4977_onlyInitializing"
+}subgraph cluster_30041_IStakeViewer {
+label = "IStakeViewer"
+"30041_getStakeDistributionUSDForOperators" [label="getStakeDistributionUSDForOperators"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert StaleAssetPrice(address,uint256,uint256)" 
+"revert OwnableInvalidOwner(address)" 
+"revert NotInitializing()" 
+"revert UnsupportedOracleType()" 
+"revert InvalidInitialization()" 
+"revert InvalidAssetPrice(address,uint80)" 
+"revert OwnableUnauthorizedAccount(address)" 
+"abi.decode()" 
+"4677__checkOwner" -> "revert OwnableUnauthorizedAccount(address)"
+"4677_transferOwnership" -> "revert OwnableInvalidOwner(address)"
+"28202_getUSDValue" -> "revert UnsupportedOracleType()"
+"28202_getUSDValue" -> "revert InvalidAssetPrice(address,uint80)"
+"4931__checkInitializing" -> "revert NotInitializing()"
+"28202_getUSDValue" -> "abi.decode()"
+"4677___Ownable_init_unchained" -> "revert OwnableInvalidOwner(address)"
+"4931__disableInitializers" -> "revert InvalidInitialization()"
+"28202_getUSDValue" -> "revert StaleAssetPrice(address,uint256,uint256)"
+}
+}

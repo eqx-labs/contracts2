@@ -1,0 +1,183 @@
+strict digraph {
+subgraph cluster_4482_IServiceManager {
+label = "IServiceManager"
+"4482_deregisterOperatorFromAVS" [label="deregisterOperatorFromAVS"]
+"4482_updateAVSMetadataURI" [label="updateAVSMetadataURI"]
+"4482_getRestakeableStrategies" [label="getRestakeableStrategies"]
+"4482_getOperatorRestakedStrategies" [label="getOperatorRestakedStrategies"]
+"4482_avsDirectory" [label="avsDirectory"]
+"4482_registerOperatorToAVS" [label="registerOperatorToAVS"]
+}subgraph cluster_4931_Initializable {
+label = "Initializable"
+"4931__getInitializedVersion" [label="_getInitializedVersion"]
+"4931__isInitializing" [label="_isInitializing"]
+"4931__checkInitializing" [label="_checkInitializing"]
+"4931__disableInitializers" [label="_disableInitializers"]
+"4931__getInitializableStorage" [label="_getInitializableStorage"]
+"4931__getInitializedVersion" -> "4931__getInitializableStorage"
+"4931__disableInitializers" -> "4931__getInitializableStorage"
+"4931__checkInitializing" -> "4931__isInitializing"
+"4931__isInitializing" -> "4931__getInitializableStorage"
+}subgraph cluster_4677_OwnableUpgradeable {
+label = "OwnableUpgradeable"
+"4677__transferOwnership" [label="_transferOwnership"]
+"4677___Ownable_init_unchained" [label="__Ownable_init_unchained"]
+"4677__checkOwner" [label="_checkOwner"]
+"4677_transferOwnership" [label="transferOwnership"]
+"4677_owner" [label="owner"]
+"4677_renounceOwnership" [label="renounceOwnership"]
+"4677___Ownable_init" [label="__Ownable_init"]
+"4677__getOwnableStorage" [label="_getOwnableStorage"]
+"4677_transferOwnership" -> "4677_onlyOwner"
+"4677_owner" -> "4677__getOwnableStorage"
+"4677_transferOwnership" -> "4677__transferOwnership"
+"4677__transferOwnership" -> "4677__getOwnableStorage"
+"4677_renounceOwnership" -> "4677_onlyOwner"
+"4677___Ownable_init" -> "4677_onlyInitializing"
+"4677___Ownable_init_unchained" -> "4677__transferOwnership"
+"4677_renounceOwnership" -> "4677__transferOwnership"
+"4677__checkOwner" -> "4677__msgSender"
+"4677___Ownable_init_unchained" -> "4677_onlyInitializing"
+"4677___Ownable_init" -> "4677___Ownable_init_unchained"
+"4677__checkOwner" -> "4677_owner"
+}subgraph cluster_15788_EigenLayerMiddleware {
+label = "EigenLayerMiddleware"
+"15788_getEpochForTimestamp" [label="getEpochForTimestamp"]
+"15788_suspendOperator" [label="suspendOperator"]
+"15788_deregisterOperatorFromAVS" [label="deregisterOperatorFromAVS"]
+"15788_avsDirectory" [label="avsDirectory"]
+"15788_getOperatorCollaterals" [label="getOperatorCollaterals"]
+"15788_calculateEpochStart" [label="calculateEpochStart"]
+"15788_getEpochAtTs" [label="getEpochAtTs"]
+"15788__isActiveAtTimestamp" [label="_isActiveAtTimestamp"]
+"15788_updateMetadataURI" [label="updateMetadataURI"]
+"15788_getEpochStartTs" [label="getEpochStartTs"]
+"15788__wasEnabledAt" [label="_wasEnabledAt"]
+"15788_offboardOperator" [label="offboardOperator"]
+"15788_upgradeSystemToV2" [label="upgradeSystemToV2"]
+"15788_checkStrategyStatus" [label="checkStrategyStatus"]
+"15788_getCurrentEpoch" [label="getCurrentEpoch"]
+"15788_getOperatorTokenBalance" [label="getOperatorTokenBalance"]
+"15788_initializeSystem" [label="initializeSystem"]
+"15788_updateAVSMetadataURI" [label="updateAVSMetadataURI"]
+"15788_addNewStrategy" [label="addNewStrategy"]
+"15788_removeStrategy" [label="removeStrategy"]
+"15788_resumeOperator" [label="resumeOperator"]
+"15788_disableStrategy" [label="disableStrategy"]
+"15788__authorizeUpgrade" [label="_authorizeUpgrade"]
+"15788_getOperatorStakeAt" [label="getOperatorStakeAt"]
+"15788_registerOperatorToAVS" [label="registerOperatorToAVS"]
+"15788_getOperatorRestakedStrategies" [label="getOperatorRestakedStrategies"]
+"15788_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"15788_getOperatorStakeInfo" [label="getOperatorStakeInfo"]
+"15788_enableStrategy" [label="enableStrategy"]
+"15788_getOperatorStake" [label="getOperatorStake"]
+"15788_getOperatorTokenBalanceAt" [label="getOperatorTokenBalanceAt"]
+"15788_onboardOperator" [label="onboardOperator"]
+"15788_getRegisteredStrategies" [label="getRegisteredStrategies"]
+"15788_getRestakeableStrategies" [label="getRestakeableStrategies"]
+"15788_upgradeSystemToV2" -> "15788___Ownable_init"
+"15788_onboardOperator" -> "15788_registerOperatorToAVS"
+"15788_updateAVSMetadataURI" -> "15788_onlyOwner"
+"15788_addNewStrategy" -> "15788_onlyOwner"
+"15788_getOperatorCollaterals" -> "15788__wasEnabledAt"
+"15788_getOperatorStakeInfo" -> "15788__isActiveAtTimestamp"
+"15788_initializeSystem" -> "15788_initializer"
+"15788_initializeSystem" -> "15788___Ownable_init"
+"15788_getOperatorTokenBalanceAt" -> "15788_calculateEpochStart"
+"15788_getOperatorRestakedStrategies" -> "15788__isActiveAtTimestamp"
+"15788_getOperatorStakeInfo" -> "15788_calculateEpochStart"
+"15788_getOperatorCollaterals" -> "15788_getEpochStartTs"
+"15788_getOperatorStakeAt" -> "15788_getEpochStartTs"
+"15788_getOperatorTokenBalance" -> "15788_getOperatorTokenBalanceAt"
+"15788_removeStrategy" -> "15788_onlyOwner"
+"15788_upgradeSystemToV2" -> "15788_reinitializer"
+"15788_getOperatorStake" -> "15788_getOperatorStakeAt"
+"15788_getCurrentEpoch" -> "15788_getEpochForTimestamp"
+"15788_getOperatorRestakedStrategies" -> "15788_getEpochForTimestamp"
+"15788_getOperatorRestakedStrategies" -> "15788_calculateEpochStart"
+"15788_getOperatorStakeAt" -> "15788_getEpochAtTs"
+"15788_getOperatorStakeInfo" -> "15788_getEpochForTimestamp"
+"15788__authorizeUpgrade" -> "15788_onlyOwner"
+"15788_getOperatorCollaterals" -> "15788_getEpochAtTs"
+"15788_updateMetadataURI" -> "15788_onlyOwner"
+"15788_getOperatorTokenBalanceAt" -> "15788__isActiveAtTimestamp"
+"15788_getOperatorTokenBalanceAt" -> "15788_getEpochForTimestamp"
+"15788_offboardOperator" -> "15788_deregisterOperatorFromAVS"
+"15788_getOperatorStakeAt" -> "15788__wasEnabledAt"
+}subgraph cluster_4977_ContextUpgradeable {
+label = "ContextUpgradeable"
+"4977__msgData" [label="_msgData"]
+"4977__contextSuffixLength" [label="_contextSuffixLength"]
+"4977__msgSender" [label="_msgSender"]
+"4977___Context_init" [label="__Context_init"]
+"4977___Context_init_unchained" [label="__Context_init_unchained"]
+"4977___Context_init_unchained" -> "4977_onlyInitializing"
+"4977___Context_init" -> "4977_onlyInitializing"
+}subgraph cluster_5652_UUPSUpgradeable {
+label = "UUPSUpgradeable"
+"5652__authorizeUpgrade" [label="_authorizeUpgrade"]
+"5652__checkNotDelegated" [label="_checkNotDelegated"]
+"5652__checkProxy" [label="_checkProxy"]
+"5652_proxiableUUID" [label="proxiableUUID"]
+"5652_upgradeToAndCall" [label="upgradeToAndCall"]
+"5652__upgradeToAndCallUUPS" [label="_upgradeToAndCallUUPS"]
+"5652_upgradeToAndCall" -> "5652__authorizeUpgrade"
+"5652_upgradeToAndCall" -> "5652__upgradeToAndCallUUPS"
+"5652_upgradeToAndCall" -> "5652_onlyProxy"
+"5652_proxiableUUID" -> "5652_notDelegated"
+}subgraph cluster_22044_IMiddleware {
+label = "IMiddleware"
+"22044_getOperatorStakeAt" [label="getOperatorStakeAt"]
+"22044_getEpochAtTs" [label="getEpochAtTs"]
+"22044_getOperatorCollaterals" [label="getOperatorCollaterals"]
+"22044_getCurrentEpoch" [label="getCurrentEpoch"]
+"22044_getEpochStartTs" [label="getEpochStartTs"]
+"22044_NAME_HASH" [label="NAME_HASH"]
+"22044_getOperatorStake" [label="getOperatorStake"]
+}subgraph cluster_5182_IERC1822Proxiable {
+label = "IERC1822Proxiable"
+"5182_proxiableUUID" [label="proxiableUUID"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert StrategyAlreadyExists()" 
+"revert Unauthorized()" 
+"revert InvalidQuery()" 
+"revert OwnableInvalidOwner(address)" 
+"revert ERC1967InvalidImplementation(address)" 
+"revert NotInitializing()" 
+"revert InvalidStrategy()" 
+"revert OperatorExists()" 
+"revert UUPSUnsupportedProxiableUUID(bytes32)" 
+"revert InvalidOperator()" 
+"revert InvalidInitialization()" 
+"keccak256(bytes)" 
+"revert StrategyNotFound()" 
+"revert OwnableUnauthorizedAccount(address)" 
+"revert QueryError()" 
+"revert UUPSUnauthorizedCallContext()" 
+"revert OperatorNotFound()" 
+"15788_onboardOperator" -> "revert OperatorExists()"
+"5652__checkNotDelegated" -> "revert UUPSUnauthorizedCallContext()"
+"4931__checkInitializing" -> "revert NotInitializing()"
+"15788_deregisterOperatorFromAVS" -> "revert Unauthorized()"
+"15788_enableStrategy" -> "revert StrategyNotFound()"
+"15788_addNewStrategy" -> "revert InvalidStrategy()"
+"5652__upgradeToAndCallUUPS" -> "revert ERC1967InvalidImplementation(address)"
+"5652__checkProxy" -> "revert UUPSUnauthorizedCallContext()"
+"4677__checkOwner" -> "revert OwnableUnauthorizedAccount(address)"
+"4677_transferOwnership" -> "revert OwnableInvalidOwner(address)"
+"5652__upgradeToAndCallUUPS" -> "revert UUPSUnsupportedProxiableUUID(bytes32)"
+"15788_removeStrategy" -> "revert StrategyNotFound()"
+"15788_upgradeSystemToV2" -> "keccak256(bytes)"
+"15788_getOperatorTokenBalanceAt" -> "revert QueryError()"
+"4931__disableInitializers" -> "revert InvalidInitialization()"
+"15788_getOperatorStakeAt" -> "revert InvalidQuery()"
+"15788_addNewStrategy" -> "revert StrategyAlreadyExists()"
+"4677___Ownable_init_unchained" -> "revert OwnableInvalidOwner(address)"
+"15788_disableStrategy" -> "revert StrategyNotFound()"
+"15788_initializeSystem" -> "keccak256(bytes)"
+"15788_offboardOperator" -> "revert OperatorNotFound()"
+"15788_onboardOperator" -> "revert InvalidOperator()"
+}"5652__upgradeToAndCallUUPS" -> "5182_proxiableUUID"
+}

@@ -1,0 +1,206 @@
+strict digraph {
+subgraph cluster_19233_Slashing {
+label = "Slashing"
+"19233_resolveActiveDispute" [label="resolveActiveDispute"]
+"19233__getBeaconBlockRootAtTimestamp" [label="_getBeaconBlockRootAtTimestamp"]
+"19233_fetchAllDisputes" [label="fetchAllDisputes"]
+"19233_finalizeDisputeResolution" [label="finalizeDisputeResolution"]
+"19233_fetchDisputeById" [label="fetchDisputeById"]
+"19233_parseBlockHeader" [label="parseBlockHeader"]
+"19233_initiateDispute" [label="initiateDispute"]
+"19233__isWithinEIP4788Window" [label="_isWithinEIP4788Window"]
+"19233__authorizeUpgrade" [label="_authorizeUpgrade"]
+"19233_computeCommitmentId" [label="computeCommitmentId"]
+"19233_resolveExpiredDispute" [label="resolveExpiredDispute"]
+"19233_distributeBondHalf" [label="distributeBondHalf"]
+"19233_distributeBondFull" [label="distributeBondFull"]
+"19233_getBeaconRootForTime" [label="getBeaconRootForTime"]
+"19233_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"19233_getLatestBeaconRoot" [label="getLatestBeaconRoot"]
+"19233_generateDisputeId" [label="generateDisputeId"]
+"19233__getBeaconBlockRootAtSlot" [label="_getBeaconBlockRootAtSlot"]
+"19233_getSlotFromTime" [label="getSlotFromTime"]
+"19233_toLittleEndian" [label="toLittleEndian"]
+"19233_getCurrentSlot" [label="getCurrentSlot"]
+"19233_initializeContract" [label="initializeContract"]
+"19233_fetchActiveDisputes" [label="fetchActiveDisputes"]
+"19233__getSlotFromTimestamp" [label="_getSlotFromTimestamp"]
+"19233_processResolution" [label="processResolution"]
+"19233_getTimeFromSlot" [label="getTimeFromSlot"]
+"19233_getBeaconRootForSlot" [label="getBeaconRootForSlot"]
+"19233_extractCommitmentData" [label="extractCommitmentData"]
+"19233_parseAccount" [label="parseAccount"]
+"19233_processResolution" -> "19233_parseBlockHeader"
+"19233_computeCommitmentId" -> "19233_toLittleEndian"
+"19233_finalizeDisputeResolution" -> "19233_distributeBondHalf"
+"19233_resolveActiveDispute" -> "19233_processResolution"
+"19233_getCurrentSlot" -> "19233_getSlotFromTime"
+"19233_initializeContract" -> "19233___Ownable_init"
+"19233_processResolution" -> "19233_parseAccount"
+"19233__isWithinEIP4788Window" -> "19233_getCurrentSlot"
+"19233_initiateDispute" -> "19233_getCurrentSlot"
+"19233__isWithinEIP4788Window" -> "19233__getSlotFromTimestamp"
+"19233__authorizeUpgrade" -> "19233_onlyOwner"
+"19233_extractCommitmentData" -> "19233_computeCommitmentId"
+"19233_getLatestBeaconRoot" -> "19233__getSlotFromTimestamp"
+"19233_initiateDispute" -> "19233_extractCommitmentData"
+"19233_initializeContract" -> "19233_initializer"
+"19233_resolveActiveDispute" -> "19233_getCurrentSlot"
+"19233_getBeaconRootForSlot" -> "19233_getBeaconRootForTime"
+"19233_initiateDispute" -> "19233_generateDisputeId"
+"19233__getBeaconBlockRootAtSlot" -> "19233__getBeaconBlockRootAtTimestamp"
+"19233_resolveExpiredDispute" -> "19233_finalizeDisputeResolution"
+"19233_processResolution" -> "19233_finalizeDisputeResolution"
+"19233_finalizeDisputeResolution" -> "19233_distributeBondFull"
+"19233_getLatestBeaconRoot" -> "19233__getBeaconBlockRootAtSlot"
+}subgraph cluster_4931_Initializable {
+label = "Initializable"
+"4931__getInitializedVersion" [label="_getInitializedVersion"]
+"4931__isInitializing" [label="_isInitializing"]
+"4931__checkInitializing" [label="_checkInitializing"]
+"4931__disableInitializers" [label="_disableInitializers"]
+"4931__getInitializableStorage" [label="_getInitializableStorage"]
+"4931__getInitializedVersion" -> "4931__getInitializableStorage"
+"4931__disableInitializers" -> "4931__getInitializableStorage"
+"4931__checkInitializing" -> "4931__isInitializing"
+"4931__isInitializing" -> "4931__getInitializableStorage"
+}subgraph cluster_4677_OwnableUpgradeable {
+label = "OwnableUpgradeable"
+"4677__transferOwnership" [label="_transferOwnership"]
+"4677___Ownable_init_unchained" [label="__Ownable_init_unchained"]
+"4677__checkOwner" [label="_checkOwner"]
+"4677_transferOwnership" [label="transferOwnership"]
+"4677_owner" [label="owner"]
+"4677_renounceOwnership" [label="renounceOwnership"]
+"4677___Ownable_init" [label="__Ownable_init"]
+"4677__getOwnableStorage" [label="_getOwnableStorage"]
+"4677_transferOwnership" -> "4677_onlyOwner"
+"4677_owner" -> "4677__getOwnableStorage"
+"4677_transferOwnership" -> "4677__transferOwnership"
+"4677__transferOwnership" -> "4677__getOwnableStorage"
+"4677_renounceOwnership" -> "4677_onlyOwner"
+"4677___Ownable_init" -> "4677_onlyInitializing"
+"4677___Ownable_init_unchained" -> "4677__transferOwnership"
+"4677_renounceOwnership" -> "4677__transferOwnership"
+"4677__checkOwner" -> "4677__msgSender"
+"4677___Ownable_init_unchained" -> "4677_onlyInitializing"
+"4677___Ownable_init" -> "4677___Ownable_init_unchained"
+"4677__checkOwner" -> "4677_owner"
+}subgraph cluster_4977_ContextUpgradeable {
+label = "ContextUpgradeable"
+"4977__msgData" [label="_msgData"]
+"4977__contextSuffixLength" [label="_contextSuffixLength"]
+"4977__msgSender" [label="_msgSender"]
+"4977___Context_init" [label="__Context_init"]
+"4977___Context_init_unchained" [label="__Context_init_unchained"]
+"4977___Context_init_unchained" -> "4977_onlyInitializing"
+"4977___Context_init" -> "4977_onlyInitializing"
+}subgraph cluster_5652_UUPSUpgradeable {
+label = "UUPSUpgradeable"
+"5652__authorizeUpgrade" [label="_authorizeUpgrade"]
+"5652__checkNotDelegated" [label="_checkNotDelegated"]
+"5652__checkProxy" [label="_checkProxy"]
+"5652_proxiableUUID" [label="proxiableUUID"]
+"5652_upgradeToAndCall" [label="upgradeToAndCall"]
+"5652__upgradeToAndCallUUPS" [label="_upgradeToAndCallUUPS"]
+"5652_upgradeToAndCall" -> "5652__authorizeUpgrade"
+"5652_upgradeToAndCall" -> "5652_onlyProxy"
+"5652_proxiableUUID" -> "5652_notDelegated"
+"5652_upgradeToAndCall" -> "5652__upgradeToAndCallUUPS"
+}subgraph cluster_21972_IChallenger {
+label = "IChallenger"
+"21972_resolveExpiredDispute" [label="resolveExpiredDispute"]
+"21972_fetchAllDisputes" [label="fetchAllDisputes"]
+"21972_fetchDisputeById" [label="fetchDisputeById"]
+"21972_initiateDispute" [label="initiateDispute"]
+"21972_fetchActiveDisputes" [label="fetchActiveDisputes"]
+"21972_resolveActiveDispute" [label="resolveActiveDispute"]
+}subgraph cluster_5182_IERC1822Proxiable {
+label = "IERC1822Proxiable"
+"5182_proxiableUUID" [label="proxiableUUID"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert MissingBeaconRoot()" 
+"revert ExpiredDispute()" 
+"abi.encode()" 
+"revert InvalidInitialization()" 
+"revert OwnableUnauthorizedAccount(address)" 
+"revert MixedSenderError()" 
+"revert UUPSUnauthorizedCallContext()" 
+"revert EmptyCommitmentList()" 
+"revert InvalidHeight()" 
+"revert MixedSlotError()" 
+"revert MixedSignerError()" 
+"revert OwnableInvalidOwner(address)" 
+"revert ERC1967InvalidImplementation(address)" 
+"revert UnfinalizedBlock()" 
+"revert ResolvedDispute()" 
+"revert ObsoleteBlock()" 
+"revert ExistingDispute()" 
+"revert MissingAccount()" 
+"abi.encodePacked()" 
+"revert InvalidBondAmount()" 
+"revert MissingTransaction()" 
+"revert NonSequentialNonce()" 
+"revert InvalidProofLength()" 
+"revert NotInitializing()" 
+"revert NonexistentDispute()" 
+"revert BondTransferError()" 
+"revert MismatchedBlockHash()" 
+"revert UUPSUnsupportedProxiableUUID(bytes32)" 
+"revert MismatchedParentHash()" 
+"keccak256(bytes)" 
+"revert InvalidTransactionHashProof()" 
+"abi.decode()" 
+"blockhash(uint256)" 
+"19233_generateDisputeId" -> "abi.encodePacked()"
+"19233_initiateDispute" -> "revert ExistingDispute()"
+"19233_fetchDisputeById" -> "revert NonexistentDispute()"
+"19233_processResolution" -> "keccak256(bytes)"
+"19233_resolveActiveDispute" -> "revert ObsoleteBlock()"
+"5652__checkNotDelegated" -> "revert UUPSUnauthorizedCallContext()"
+"19233_processResolution" -> "revert MismatchedBlockHash()"
+"19233_computeCommitmentId" -> "abi.encodePacked()"
+"19233__getBeaconBlockRootAtTimestamp" -> "abi.decode()"
+"4931__checkInitializing" -> "revert NotInitializing()"
+"19233_initiateDispute" -> "revert MixedSignerError()"
+"19233_resolveActiveDispute" -> "revert NonexistentDispute()"
+"19233_processResolution" -> "revert MismatchedParentHash()"
+"19233__getBeaconBlockRootAtTimestamp" -> "abi.encode()"
+"19233_processResolution" -> "revert ResolvedDispute()"
+"19233_initiateDispute" -> "revert UnfinalizedBlock()"
+"19233_initiateDispute" -> "revert NonSequentialNonce()"
+"19233_initiateDispute" -> "revert EmptyCommitmentList()"
+"19233_initiateDispute" -> "revert MixedSlotError()"
+"19233_processResolution" -> "revert ExpiredDispute()"
+"19233_processResolution" -> "revert MissingTransaction()"
+"19233_computeCommitmentId" -> "keccak256(bytes)"
+"19233_initiateDispute" -> "revert MixedSenderError()"
+"19233_distributeBondFull" -> "revert BondTransferError()"
+"19233_resolveExpiredDispute" -> "revert NonexistentDispute()"
+"19233_processResolution" -> "revert NonexistentDispute()"
+"19233_resolveExpiredDispute" -> "revert ExistingDispute()"
+"5652__upgradeToAndCallUUPS" -> "revert ERC1967InvalidImplementation(address)"
+"5652__checkProxy" -> "revert UUPSUnauthorizedCallContext()"
+"4677__checkOwner" -> "revert OwnableUnauthorizedAccount(address)"
+"4677_transferOwnership" -> "revert OwnableInvalidOwner(address)"
+"5652__upgradeToAndCallUUPS" -> "revert UUPSUnsupportedProxiableUUID(bytes32)"
+"19233_resolveActiveDispute" -> "revert InvalidHeight()"
+"19233_getBeaconRootForTime" -> "revert MissingBeaconRoot()"
+"4931__disableInitializers" -> "revert InvalidInitialization()"
+"19233_resolveActiveDispute" -> "blockhash(uint256)"
+"19233_generateDisputeId" -> "keccak256(bytes)"
+"19233_getBeaconRootForTime" -> "abi.decode()"
+"19233_initiateDispute" -> "revert InvalidBondAmount()"
+"19233_distributeBondHalf" -> "revert BondTransferError()"
+"19233_extractCommitmentData" -> "keccak256(bytes)"
+"19233_getBeaconRootForTime" -> "abi.encode()"
+"19233_processResolution" -> "revert InvalidTransactionHashProof()"
+"19233_resolveExpiredDispute" -> "revert ResolvedDispute()"
+"4677___Ownable_init_unchained" -> "revert OwnableInvalidOwner(address)"
+"19233_processResolution" -> "revert InvalidProofLength()"
+"19233_processResolution" -> "abi.encodePacked()"
+"19233__getBeaconBlockRootAtTimestamp" -> "revert MissingBeaconRoot()"
+"19233_processResolution" -> "revert MissingAccount()"
+}"5652__upgradeToAndCallUUPS" -> "5182_proxiableUUID"
+}

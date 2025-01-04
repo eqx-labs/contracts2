@@ -1,0 +1,31 @@
+strict digraph {
+subgraph cluster_29806_BlsBaseDSSLib {
+label = "BlsBaseDSSLib"
+"29806_isOperatorRegistered" [label="isOperatorRegistered"]
+"29806_allOperatorsG1" [label="allOperatorsG1"]
+"29806_removeOperator" [label="removeOperator"]
+"29806_verifySignature" [label="verifySignature"]
+"29806_getOperators" [label="getOperators"]
+"29806_addOperator" [label="addOperator"]
+"29806_init" [label="init"]
+"29806_addOperator" -> "29806_verifySignature"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert OperatorAlreadyRegistered()" 
+"revert OperatorAndIndexDontMatch()" 
+"revert SignatureVerificationFailed()" 
+"abi.encode()" 
+"keccak256(bytes)" 
+"abi.decode()" 
+"revert PairingNotSuccessful()" 
+"revert OperatorIsNotRegistered()" 
+"29806_verifySignature" -> "revert SignatureVerificationFailed()"
+"29806_addOperator" -> "revert OperatorAlreadyRegistered()"
+"29806_verifySignature" -> "keccak256(bytes)"
+"29806_addOperator" -> "abi.decode()"
+"29806_removeOperator" -> "revert OperatorIsNotRegistered()"
+"29806_verifySignature" -> "revert PairingNotSuccessful()"
+"29806_verifySignature" -> "abi.encode()"
+"29806_removeOperator" -> "revert OperatorAndIndexDontMatch()"
+}
+}

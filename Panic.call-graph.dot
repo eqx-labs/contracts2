@@ -1,0 +1,13 @@
+strict digraph {
+subgraph cluster_6089_Panic {
+label = "Panic"
+"6089_panic" [label="panic"]
+"6089_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"mstore(uint256,uint256)" 
+"revert(uint256,uint256)" 
+"6089_panic" -> "mstore(uint256,uint256)"
+"6089_panic" -> "revert(uint256,uint256)"
+}
+}

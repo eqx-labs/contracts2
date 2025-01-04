@@ -1,0 +1,37 @@
+strict digraph {
+subgraph cluster_11525_Checkpoints {
+label = "Checkpoints"
+"11525_upperLookup" [label="upperLookup"]
+"11525_at" [label="at"]
+"11525__insert" [label="_insert"]
+"11525_latest" [label="latest"]
+"11525__lowerBinaryLookup" [label="_lowerBinaryLookup"]
+"11525_upperLookupRecent" [label="upperLookupRecent"]
+"11525_lowerLookup" [label="lowerLookup"]
+"11525_latestCheckpoint" [label="latestCheckpoint"]
+"11525__unsafeAccess" [label="_unsafeAccess"]
+"11525_push" [label="push"]
+"11525__upperBinaryLookup" [label="_upperBinaryLookup"]
+"11525_length" [label="length"]
+"11525_upperLookup" -> "11525__upperBinaryLookup"
+"11525_latestCheckpoint" -> "11525__unsafeAccess"
+"11525_upperLookupRecent" -> "11525__unsafeAccess"
+"11525__insert" -> "11525__unsafeAccess"
+"11525_upperLookupRecent" -> "11525__upperBinaryLookup"
+"11525__upperBinaryLookup" -> "11525__unsafeAccess"
+"11525_push" -> "11525__insert"
+"11525_lowerLookup" -> "11525__unsafeAccess"
+"11525_latest" -> "11525__unsafeAccess"
+"11525_upperLookup" -> "11525__unsafeAccess"
+"11525_lowerLookup" -> "11525__lowerBinaryLookup"
+"11525__lowerBinaryLookup" -> "11525__unsafeAccess"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"keccak256(uint256,uint256)" 
+"mstore(uint256,uint256)" 
+"revert CheckpointUnorderedInsertion()" 
+"11525__insert" -> "revert CheckpointUnorderedInsertion()"
+"11525__unsafeAccess" -> "mstore(uint256,uint256)"
+"11525__unsafeAccess" -> "keccak256(uint256,uint256)"
+}
+}

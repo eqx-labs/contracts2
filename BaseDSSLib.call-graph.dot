@@ -1,0 +1,12 @@
+strict digraph {
+subgraph cluster_29201_BaseDSSLib {
+label = "BaseDSSLib"
+"29201_getOperators" [label="getOperators"]
+"29201_removeOperator" [label="removeOperator"]
+"29201_init" [label="init"]
+"29201_isOperatorRegistered" [label="isOperatorRegistered"]
+"29201_addOperator" [label="addOperator"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}
+}

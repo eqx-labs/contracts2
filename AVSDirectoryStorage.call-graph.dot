@@ -1,0 +1,21 @@
+strict digraph {
+subgraph cluster_1535_AVSDirectoryStorage {
+label = "AVSDirectoryStorage"
+"1535_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"1535_constructor" [label="constructor"]
+}subgraph cluster_1871_IAVSDirectory {
+label = "IAVSDirectory"
+"1871_deregisterOperatorFromAVS" [label="deregisterOperatorFromAVS"]
+"1871_domainSeparator" [label="domainSeparator"]
+"1871_registerOperatorToAVS" [label="registerOperatorToAVS"]
+"1871_updateAVSMetadataURI" [label="updateAVSMetadataURI"]
+"1871_operatorSaltIsSpent" [label="operatorSaltIsSpent"]
+"1871_calculateOperatorAVSRegistrationDigestHash" [label="calculateOperatorAVSRegistrationDigestHash"]
+"1871_cancelSalt" [label="cancelSalt"]
+"1871_OPERATOR_AVS_REGISTRATION_TYPEHASH" [label="OPERATOR_AVS_REGISTRATION_TYPEHASH"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"keccak256(bytes)" 
+"1535_slitherConstructorConstantVariables" -> "keccak256(bytes)"
+}
+}

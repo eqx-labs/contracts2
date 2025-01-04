@@ -1,0 +1,120 @@
+strict digraph {
+subgraph cluster_4931_Initializable {
+label = "Initializable"
+"4931__getInitializedVersion" [label="_getInitializedVersion"]
+"4931__isInitializing" [label="_isInitializing"]
+"4931__checkInitializing" [label="_checkInitializing"]
+"4931__disableInitializers" [label="_disableInitializers"]
+"4931__getInitializableStorage" [label="_getInitializableStorage"]
+"4931__getInitializedVersion" -> "4931__getInitializableStorage"
+"4931__disableInitializers" -> "4931__getInitializableStorage"
+"4931__checkInitializing" -> "4931__isInitializing"
+"4931__isInitializing" -> "4931__getInitializableStorage"
+}subgraph cluster_27684_BlsBaseDSS {
+label = "BlsBaseDSS"
+"27684_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"27684_finishUpdateStakeHook" [label="finishUpdateStakeHook"]
+"27684_blsBaseDssStatePtr" [label="blsBaseDssStatePtr"]
+"27684_registrationMessageHash" [label="registrationMessageHash"]
+"27684_verifySignature" [label="verifySignature"]
+"27684_baseDssOpStatePtr" [label="baseDssOpStatePtr"]
+"27684_getActiveVaults" [label="getActiveVaults"]
+"27684_isOperatorRegistered" [label="isOperatorRegistered"]
+"27684__unjailOperator" [label="_unjailOperator"]
+"27684_operatorG1" [label="operatorG1"]
+"27684_isThresholdReached" [label="isThresholdReached"]
+"27684_isOperatorJailed" [label="isOperatorJailed"]
+"27684_registrationHook" [label="registrationHook"]
+"27684_requestUpdateStakeHook" [label="requestUpdateStakeHook"]
+"27684_getRegisteredOperators" [label="getRegisteredOperators"]
+"27684__jailOperator" [label="_jailOperator"]
+"27684_allOperatorsG1" [label="allOperatorsG1"]
+"27684_supportsInterface" [label="supportsInterface"]
+"27684__kickOperator" [label="_kickOperator"]
+"27684_unregistrationHook" [label="unregistrationHook"]
+"27684___BlsBaseDSS_init" [label="__BlsBaseDSS_init"]
+"27684_kickOperator" [label="kickOperator"]
+"27684_requestUpdateStakeHook" -> "27684_baseDssOpStatePtr"
+"27684___BlsBaseDSS_init" -> "27684_blsBaseDssStatePtr"
+"27684_allOperatorsG1" -> "27684_blsBaseDssStatePtr"
+"27684_getRegisteredOperators" -> "27684_blsBaseDssStatePtr"
+"27684_registrationMessageHash" -> "27684_blsBaseDssStatePtr"
+"27684_isOperatorJailed" -> "27684_baseDssOpStatePtr"
+"27684_finishUpdateStakeHook" -> "27684_baseDssOpStatePtr"
+"27684_registrationHook" -> "27684_onlyCore"
+"27684_unregistrationHook" -> "27684_onlyCore"
+"27684_getActiveVaults" -> "27684_baseDssOpStatePtr"
+"27684_isOperatorRegistered" -> "27684_blsBaseDssStatePtr"
+"27684__unjailOperator" -> "27684_baseDssOpStatePtr"
+"27684_kickOperator" -> "27684__kickOperator"
+"27684_registrationHook" -> "27684_blsBaseDssStatePtr"
+"27684__kickOperator" -> "27684_blsBaseDssStatePtr"
+"27684___BlsBaseDSS_init" -> "27684_onlyInitializing"
+"27684_requestUpdateStakeHook" -> "27684_onlyCore"
+"27684_unregistrationHook" -> "27684_blsBaseDssStatePtr"
+"27684_kickOperator" -> "27684_onlyOwner"
+"27684_operatorG1" -> "27684_blsBaseDssStatePtr"
+"27684_finishUpdateStakeHook" -> "27684_onlyCore"
+"27684__jailOperator" -> "27684_baseDssOpStatePtr"
+}subgraph cluster_4677_OwnableUpgradeable {
+label = "OwnableUpgradeable"
+"4677__transferOwnership" [label="_transferOwnership"]
+"4677___Ownable_init_unchained" [label="__Ownable_init_unchained"]
+"4677__checkOwner" [label="_checkOwner"]
+"4677_transferOwnership" [label="transferOwnership"]
+"4677_owner" [label="owner"]
+"4677_renounceOwnership" [label="renounceOwnership"]
+"4677___Ownable_init" [label="__Ownable_init"]
+"4677__getOwnableStorage" [label="_getOwnableStorage"]
+"4677_transferOwnership" -> "4677_onlyOwner"
+"4677_owner" -> "4677__getOwnableStorage"
+"4677_transferOwnership" -> "4677__transferOwnership"
+"4677__transferOwnership" -> "4677__getOwnableStorage"
+"4677_renounceOwnership" -> "4677_onlyOwner"
+"4677___Ownable_init" -> "4677_onlyInitializing"
+"4677___Ownable_init_unchained" -> "4677__transferOwnership"
+"4677_renounceOwnership" -> "4677__transferOwnership"
+"4677__checkOwner" -> "4677__msgSender"
+"4677___Ownable_init_unchained" -> "4677_onlyInitializing"
+"4677___Ownable_init" -> "4677___Ownable_init_unchained"
+"4677__checkOwner" -> "4677_owner"
+}subgraph cluster_29894_IBaseDSS {
+label = "IBaseDSS"
+"29894_registrationHook" [label="registrationHook"]
+"29894_isOperatorRegistered" [label="isOperatorRegistered"]
+"29894_requestUpdateStakeHook" [label="requestUpdateStakeHook"]
+"29894_getRegisteredOperators" [label="getRegisteredOperators"]
+"29894_getActiveVaults" [label="getActiveVaults"]
+"29894_finishUpdateStakeHook" [label="finishUpdateStakeHook"]
+"29894_unregistrationHook" [label="unregistrationHook"]
+"29894_isOperatorJailed" [label="isOperatorJailed"]
+}subgraph cluster_6573_IERC165 {
+label = "IERC165"
+"6573_supportsInterface" [label="supportsInterface"]
+}subgraph cluster_4977_ContextUpgradeable {
+label = "ContextUpgradeable"
+"4977__msgData" [label="_msgData"]
+"4977__contextSuffixLength" [label="_contextSuffixLength"]
+"4977__msgSender" [label="_msgSender"]
+"4977___Context_init" [label="__Context_init"]
+"4977___Context_init_unchained" [label="__Context_init_unchained"]
+"4977___Context_init_unchained" -> "4977_onlyInitializing"
+"4977___Context_init" -> "4977_onlyInitializing"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert OwnableInvalidOwner(address)" 
+"revert NotInitializing()" 
+"abi.encode()" 
+"revert InvalidInitialization()" 
+"keccak256(bytes)" 
+"revert OwnableUnauthorizedAccount(address)" 
+"27684_isThresholdReached" -> "abi.encode()"
+"4677__checkOwner" -> "revert OwnableUnauthorizedAccount(address)"
+"4677_transferOwnership" -> "revert OwnableInvalidOwner(address)"
+"27684_baseDssOpStatePtr" -> "keccak256(bytes)"
+"4931__checkInitializing" -> "revert NotInitializing()"
+"4677___Ownable_init_unchained" -> "revert OwnableInvalidOwner(address)"
+"27684_baseDssOpStatePtr" -> "abi.encode()"
+"4931__disableInitializers" -> "revert InvalidInitialization()"
+}
+}

@@ -271,53 +271,170 @@ contract Validators is
         return bytes20(uint160(uint256(hash)));
     }
 
-    function getAllValidators()
-        external
-        view
-        override
-        returns (ValidatorInfo[] memory)
-    {}
+    function getAllValidators() public view returns (ValidatorInfo[] memory) {
+        ValidatorsLib._Validator[] memory _vals = VALIDATOR_SET.getAll();
+        ValidatorInfo[] memory vals = new ValidatorInfo[](_vals.length);
+        for (uint256 i = 0; i < _vals.length; i++) {
+            vals[i] = _getValidatorInfo(_vals[i]);
+        }
+        return vals;
+    }
+
+        function _getValidatorInfo(
+        ValidatorsLib._Validator memory _val
+    ) internal view returns (ValidatorInfo memory) {
+        return ValidatorInfo({
+            pubkeyHash: _val.pubkeyHash,
+            maxCommittedGasLimit: _val.maxCommittedGasLimit,
+            authorizedOperator: VALIDATOR_SET.getAuthorizedOperator(_val.pubkeyHash),
+            controller: VALIDATOR_SET.getController(_val.pubkeyHash)
+        });
+    }
 
     function getValidatorByPubkey(
         BLS12381.G1Point calldata pubkey
-    ) external view override returns (ValidatorInfo memory) {}
+    ) public view returns (ValidatorInfo memory) {
+        return getValidatorByPubkeyHash(hashPubkey(pubkey));
+    }
 
     function getValidatorByPubkeyHash(
         bytes20 pubkeyHash
-    ) external view override returns (ValidatorInfo memory) {}
+    ) public view returns (ValidatorInfo memory) {
+        ValidatorsLib._Validator memory _val = VALIDATOR_SET.get(pubkeyHash);
+        return _getValidatorInfo(_val);
+    }
 
     function registerValidatorUnsafe(
         bytes20 pubkeyHash,
         uint32 maxCommittedGasLimit,
         address authorizedOperator
-    ) external override {}
+    ) public {
+        if (!systemParameters.isUnsafeRegistrationAllowed()) {
+            revert UnsafeRegistrationNotAllowed();
+        }
+
+        _registerValidator(pubkeyHash, authorizedOperator, maxCommittedGasLimit);
+    }
+
+
+    function _registerValidator(bytes20 pubkeyHash, address authorizedOperator, uint32 maxCommittedGasLimit) internal {
+        if (authorizedOperator == address(0)) {
+            revert InvalidAuthorizedOperator();
+        }
+        if (pubkeyHash == bytes20(0)) {
+            revert InvalidPubkey();
+        }
+
+        VALIDATOR_SET.insert(
+            pubkeyHash,
+            maxCommittedGasLimit,
+            VALIDATOR_SET.getOrInsertController(msg.sender),
+            VALIDATOR_SET.getOrInsertAuthorizedOperator(authorizedOperator)
+        );
+        emit NewValidatorRegistered(pubkeyHash);(pubkeyHash);
+    }
 
     function registerValidator(
         BLS12381.G1Point calldata pubkey,
         BLS12381.G2Point calldata signature,
         uint32 maxCommittedGasLimit,
         address authorizedOperator
-    ) external override {}
+    ) public {
+        uint32 sequenceNumber = uint32(VALIDATOR_SET.length() + 1);
+        bytes memory message = abi.encodePacked(block.chainid, msg.sender, sequenceNumber);
+        if (!_verifySignature(message, signature, pubkey)) {
+            revert InvalidBLSSignature();
+        }
+
+        _registerValidator(hashPubkey(pubkey), authorizedOperator, maxCommittedGasLimit);
+    }
 
     function batchRegisterValidators(
         BLS12381.G1Point[] calldata pubkeys,
         BLS12381.G2Point calldata signature,
         uint32 maxCommittedGasLimit,
         address authorizedOperator
-    ) external override {}
+    ) public {
+        uint32[] memory expectedValidatorSequenceNumbers = new uint32[](pubkeys.length);
+        uint32 nextValidatorSequenceNumber = uint32(VALIDATOR_SET.length() + 1);
+        for (uint32 i = 0; i < pubkeys.length; i++) {
+            expectedValidatorSequenceNumbers[i] = nextValidatorSequenceNumber + i;
+        }
+
+        // Reconstruct the unique message for which we expect an aggregated signature.
+        // We need the msg.sender to prevent a front-running attack by an EOA that may
+        // try to register the same validators
+        bytes memory message = abi.encodePacked(block.chainid, msg.sender, expectedValidatorSequenceNumbers);
+
+        // Aggregate the pubkeys into a single pubkey to verify the aggregated signature once
+        BLS12381.G1Point memory aggPubkey = _aggregatePubkeys(pubkeys);
+
+        if (!_verifySignature(message, signature, aggPubkey)) {
+            revert InvalidBLSSignature();
+        }
+
+        bytes20[] memory pubkeyHashes = new bytes20[](pubkeys.length);
+        for (uint256 i = 0; i < pubkeys.length; i++) {
+            pubkeyHashes[i] = hashPubkey(pubkeys[i]);
+        }
+
+        _batchRegisterValidators(pubkeyHashes, authorizedOperator, maxCommittedGasLimit);
+    }
 
     function batchRegisterValidatorsUnsafe(
         bytes20[] calldata pubkeyHashes,
         uint32 maxCommittedGasLimit,
         address authorizedOperator
-    ) external override {}
+    ) public {
+        if (!systemParameters.isUnsafeRegistrationAllowed()) {
+            revert UnsafeRegistrationNotAllowed();
+        }
 
-    function updateMaxCommittedGasLimit(
-        bytes20 pubkeyHash,
+        _batchRegisterValidators(pubkeyHashes, authorizedOperator, maxCommittedGasLimit);
+    }
+
+
+    function _batchRegisterValidators(
+        bytes20[] memory pubkeyHashes,
+        address authorizedOperator,
         uint32 maxCommittedGasLimit
-    ) external override {}
+    ) internal {
+        if (authorizedOperator == address(0)) {
+            revert InvalidAuthorizedOperator();
+        }
+
+        uint32 authorizedOperatorIndex = VALIDATOR_SET.getOrInsertAuthorizedOperator(authorizedOperator);
+        uint32 controllerIndex = VALIDATOR_SET.getOrInsertController(msg.sender);
+        uint256 pubkeysLength = pubkeyHashes.length;
+
+        for (uint32 i; i < pubkeysLength; i++) {
+            bytes20 pubkeyHash = pubkeyHashes[i];
+
+            if (pubkeyHash == bytes20(0)) {
+                revert InvalidPubkey();
+            }
+
+            VALIDATOR_SET.insert(pubkeyHash, maxCommittedGasLimit, controllerIndex, authorizedOperatorIndex);
+            emit NewValidatorRegistered(pubkeyHash);
+        }
+    }
+
+    function updateMaxCommittedGasLimit(bytes20 pubkeyHash, uint32 maxCommittedGasLimit) public {
+        address controller = VALIDATOR_SET.getController(pubkeyHash);
+        if (msg.sender != controller) {
+            revert UnauthorizedCaller();
+        }
+
+        VALIDATOR_SET.updateMaxCommittedGasLimit(pubkeyHash, maxCommittedGasLimit);
+    }
+
 
     function hashPubkey(
-        BLS12381.G1Point calldata pubkey
-    ) external pure override returns (bytes20) {}
+        BLS12381.G1Point memory pubkey
+    ) public pure returns (bytes20) {
+        uint256[2] memory compressedPubKey = pubkey.compress();
+        bytes32 fullHash = keccak256(abi.encodePacked(compressedPubKey));
+        // take the leftmost 20 bytes of the keccak256 hash
+        return bytes20(uint160(uint256(fullHash)));
+    }
 }

@@ -1,0 +1,19 @@
+strict digraph {
+subgraph cluster_23554_OperatorMapWithTime {
+label = "OperatorMapWithTime"
+"23554_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+"23554_disable" [label="disable"]
+"23554_add" [label="add"]
+"23554_getTimes" [label="getTimes"]
+"23554_atWithTimes" [label="atWithTimes"]
+"23554_enable" [label="enable"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert AlreadyAdded()" 
+"revert AlreadyEnabled()" 
+"revert NotEnabled()" 
+"23554_enable" -> "revert AlreadyEnabled()"
+"23554_add" -> "revert AlreadyAdded()"
+"23554_disable" -> "revert NotEnabled()"
+}
+}

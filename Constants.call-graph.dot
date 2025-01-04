@@ -1,0 +1,8 @@
+strict digraph {
+subgraph cluster_29812_Constants {
+label = "Constants"
+"29812_slitherConstructorConstantVariables" [label="slitherConstructorConstantVariables"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}
+}

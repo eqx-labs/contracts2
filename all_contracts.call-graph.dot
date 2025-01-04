@@ -1,0 +1,2478 @@
+strict digraph {
+subgraph cluster_23554_OperatorMapWithTime {
+label = "OperatorMapWithTime"
+"23554_disable" [label="disable"]
+"23554_add" [label="add"]
+"23554_getTimes" [label="getTimes"]
+"23554_atWithTimes" [label="atWithTimes"]
+"23554_enable" [label="enable"]
+}subgraph cluster_33291_MerkleTrie {
+label = "MerkleTrie"
+"33291__editBranchIndex" [label="_editBranchIndex"]
+"33291__getSharedNibbleLength" [label="_getSharedNibbleLength"]
+"33291__walkNodePath" [label="_walkNodePath"]
+"33291__makeNode" [label="_makeNode"]
+"33291__getNodeValue" [label="_getNodeValue"]
+"33291__getNewPath" [label="_getNewPath"]
+"33291_verifyInclusionProof" [label="verifyInclusionProof"]
+"33291_update" [label="update"]
+"33291__makeExtensionNode" [label="_makeExtensionNode"]
+"33291__getNodePath" [label="_getNodePath"]
+"33291__makeLeafNode" [label="_makeLeafNode"]
+"33291__getUpdatedTrieRoot" [label="_getUpdatedTrieRoot"]
+"33291__editBranchValue" [label="_editBranchValue"]
+"33291__addHexPrefix" [label="_addHexPrefix"]
+"33291__getNodeType" [label="_getNodeType"]
+"33291__getNodeKey" [label="_getNodeKey"]
+"33291__makeEmptyBranchNode" [label="_makeEmptyBranchNode"]
+"33291_verifyExclusionProof" [label="verifyExclusionProof"]
+"33291__getNodeID" [label="_getNodeID"]
+"33291__removeHexPrefix" [label="_removeHexPrefix"]
+"33291__getNodeHash" [label="_getNodeHash"]
+"33291_get" [label="get"]
+"33291__joinNodeArrays" [label="_joinNodeArrays"]
+"33291_getSingleNodeRootHash" [label="getSingleNodeRootHash"]
+"33291__parseProof" [label="_parseProof"]
+"33291__getNodeType" -> "33291__getNodePath"
+"33291_verifyExclusionProof" -> "33291_get"
+"33291__editBranchIndex" -> "33291__makeNode"
+"33291__editBranchValue" -> "33291__makeNode"
+"33291_update" -> "33291_getSingleNodeRootHash"
+"33291__makeLeafNode" -> "33291__makeNode"
+"33291_update" -> "33291__getUpdatedTrieRoot"
+"33291_verifyInclusionProof" -> "33291_get"
+"33291__makeEmptyBranchNode" -> "33291__makeNode"
+"33291__walkNodePath" -> "33291__getNodeID"
+"33291__getNewPath" -> "33291__joinNodeArrays"
+"33291__getNewPath" -> "33291__getNodeValue"
+"33291_get" -> "33291__parseProof"
+"33291_getSingleNodeRootHash" -> "33291__makeLeafNode"
+"33291__getUpdatedTrieRoot" -> "33291__getNodeType"
+"33291__makeExtensionNode" -> "33291__makeNode"
+"33291__getNewPath" -> "33291__editBranchIndex"
+"33291__getNewPath" -> "33291__getSharedNibbleLength"
+"33291__makeExtensionNode" -> "33291__addHexPrefix"
+"33291__getUpdatedTrieRoot" -> "33291__getNodeHash"
+"33291_update" -> "33291__parseProof"
+"33291_get" -> "33291__getNodeValue"
+"33291__walkNodePath" -> "33291__getSharedNibbleLength"
+"33291__getUpdatedTrieRoot" -> "33291__makeExtensionNode"
+"33291__getUpdatedTrieRoot" -> "33291__getNodeKey"
+"33291__getUpdatedTrieRoot" -> "33291__editBranchIndex"
+"33291__getNodeKey" -> "33291__getNodePath"
+"33291_get" -> "33291__walkNodePath"
+"33291__walkNodePath" -> "33291__getNodePath"
+"33291__makeNode" -> "33291__makeNode"
+"33291__getNewPath" -> "33291__makeExtensionNode"
+"33291__getNewPath" -> "33291__makeLeafNode"
+"33291__getNewPath" -> "33291__getNodeType"
+"33291_update" -> "33291__getNewPath"
+"33291_update" -> "33291__walkNodePath"
+"33291__getNewPath" -> "33291__makeEmptyBranchNode"
+"33291__makeLeafNode" -> "33291__addHexPrefix"
+"33291__getNewPath" -> "33291__getNodeHash"
+"33291__getNewPath" -> "33291__getNodeKey"
+"33291__getNewPath" -> "33291__editBranchValue"
+"33291__getNodeKey" -> "33291__removeHexPrefix"
+}subgraph cluster_29201_BaseDSSLib {
+label = "BaseDSSLib"
+"29201_getOperators" [label="getOperators"]
+"29201_removeOperator" [label="removeOperator"]
+"29201_init" [label="init"]
+"29201_isOperatorRegistered" [label="isOperatorRegistered"]
+"29201_addOperator" [label="addOperator"]
+}subgraph cluster_5652_UUPSUpgradeable {
+label = "UUPSUpgradeable"
+"5652__authorizeUpgrade" [label="_authorizeUpgrade"]
+"5652__checkNotDelegated" [label="_checkNotDelegated"]
+"5652__checkProxy" [label="_checkProxy"]
+"5652_proxiableUUID" [label="proxiableUUID"]
+"5652_upgradeToAndCall" [label="upgradeToAndCall"]
+"5652__upgradeToAndCallUUPS" [label="_upgradeToAndCallUUPS"]
+"5652_upgradeToAndCall" -> "5652__authorizeUpgrade"
+"5652_upgradeToAndCall" -> "5652_onlyProxy"
+"5652_proxiableUUID" -> "5652_notDelegated"
+"5652_upgradeToAndCall" -> "5652__upgradeToAndCallUUPS"
+}subgraph cluster_15894_GatewayRegistry {
+label = "GatewayRegistry"
+"15894_constructor" [label="constructor"]
+"15894_removeGatewayIPByValue" [label="removeGatewayIPByValue"]
+"15894_addGatewayIP" [label="addGatewayIP"]
+"15894_getGatewayIPs" [label="getGatewayIPs"]
+"15894_removeGatewayIPByValue" -> "15894_onlyOwner"
+"15894_addGatewayIP" -> "15894_onlyOwner"
+}subgraph cluster_22044_IMiddleware {
+label = "IMiddleware"
+"22044_getOperatorStakeAt" [label="getOperatorStakeAt"]
+"22044_getEpochAtTs" [label="getEpochAtTs"]
+"22044_getOperatorCollaterals" [label="getOperatorCollaterals"]
+"22044_getCurrentEpoch" [label="getCurrentEpoch"]
+"22044_getEpochStartTs" [label="getEpochStartTs"]
+"22044_NAME_HASH" [label="NAME_HASH"]
+"22044_getOperatorStake" [label="getOperatorStake"]
+}subgraph cluster_27684_BlsBaseDSS {
+label = "BlsBaseDSS"
+"27684_finishUpdateStakeHook" [label="finishUpdateStakeHook"]
+"27684_blsBaseDssStatePtr" [label="blsBaseDssStatePtr"]
+"27684_registrationMessageHash" [label="registrationMessageHash"]
+"27684_verifySignature" [label="verifySignature"]
+"27684_baseDssOpStatePtr" [label="baseDssOpStatePtr"]
+"27684_getActiveVaults" [label="getActiveVaults"]
+"27684_isOperatorRegistered" [label="isOperatorRegistered"]
+"27684__unjailOperator" [label="_unjailOperator"]
+"27684_operatorG1" [label="operatorG1"]
+"27684_isThresholdReached" [label="isThresholdReached"]
+"27684_isOperatorJailed" [label="isOperatorJailed"]
+"27684_registrationHook" [label="registrationHook"]
+"27684_requestUpdateStakeHook" [label="requestUpdateStakeHook"]
+"27684_getRegisteredOperators" [label="getRegisteredOperators"]
+"27684__jailOperator" [label="_jailOperator"]
+"27684_allOperatorsG1" [label="allOperatorsG1"]
+"27684_supportsInterface" [label="supportsInterface"]
+"27684__kickOperator" [label="_kickOperator"]
+"27684_unregistrationHook" [label="unregistrationHook"]
+"27684___BlsBaseDSS_init" [label="__BlsBaseDSS_init"]
+"27684_kickOperator" [label="kickOperator"]
+"27684_requestUpdateStakeHook" -> "27684_baseDssOpStatePtr"
+"27684___BlsBaseDSS_init" -> "27684_blsBaseDssStatePtr"
+"27684_allOperatorsG1" -> "27684_blsBaseDssStatePtr"
+"27684_getRegisteredOperators" -> "27684_blsBaseDssStatePtr"
+"27684_registrationMessageHash" -> "27684_blsBaseDssStatePtr"
+"27684_isOperatorJailed" -> "27684_baseDssOpStatePtr"
+"27684_finishUpdateStakeHook" -> "27684_baseDssOpStatePtr"
+"27684_registrationHook" -> "27684_onlyCore"
+"27684_unregistrationHook" -> "27684_onlyCore"
+"27684_getActiveVaults" -> "27684_baseDssOpStatePtr"
+"27684_isOperatorRegistered" -> "27684_blsBaseDssStatePtr"
+"27684__unjailOperator" -> "27684_baseDssOpStatePtr"
+"27684_kickOperator" -> "27684__kickOperator"
+"27684__kickOperator" -> "27684_blsBaseDssStatePtr"
+"27684_registrationHook" -> "27684_blsBaseDssStatePtr"
+"27684___BlsBaseDSS_init" -> "27684_onlyInitializing"
+"27684_requestUpdateStakeHook" -> "27684_onlyCore"
+"27684_unregistrationHook" -> "27684_blsBaseDssStatePtr"
+"27684_operatorG1" -> "27684_blsBaseDssStatePtr"
+"27684_kickOperator" -> "27684_onlyOwner"
+"27684_finishUpdateStakeHook" -> "27684_onlyCore"
+"27684__jailOperator" -> "27684_baseDssOpStatePtr"
+}subgraph cluster_3622_IStrategyManager {
+label = "IStrategyManager"
+"3622_addStrategiesToDepositWhitelist" [label="addStrategiesToDepositWhitelist"]
+"3622_withdrawSharesAsTokens" [label="withdrawSharesAsTokens"]
+"3622_depositIntoStrategyWithSignature" [label="depositIntoStrategyWithSignature"]
+"3622_stakerStrategyShares" [label="stakerStrategyShares"]
+"3622_delegation" [label="delegation"]
+"3622_stakerStrategyListLength" [label="stakerStrategyListLength"]
+"3622_strategyIsWhitelistedForDeposit" [label="strategyIsWhitelistedForDeposit"]
+"3622_depositIntoStrategy" [label="depositIntoStrategy"]
+"3622_setStrategyWhitelister" [label="setStrategyWhitelister"]
+"3622_removeStrategiesFromDepositWhitelist" [label="removeStrategiesFromDepositWhitelist"]
+"3622_getDeposits" [label="getDeposits"]
+"3622_domainSeparator" [label="domainSeparator"]
+"3622_removeShares" [label="removeShares"]
+"3622_strategyWhitelister" [label="strategyWhitelister"]
+"3622_addShares" [label="addShares"]
+"3622_thirdPartyTransfersForbidden" [label="thirdPartyTransfersForbidden"]
+"3622_setThirdPartyTransfersForbidden" [label="setThirdPartyTransfersForbidden"]
+"3622_slasher" [label="slasher"]
+"3622_eigenPodManager" [label="eigenPodManager"]
+}subgraph cluster_22055_IKarakCore {
+label = "IKarakCore"
+"22055_isAssetAllowlisted" [label="isAssetAllowlisted"]
+}subgraph cluster_28202_KarakStakeViewer {
+label = "KarakStakeViewer"
+"28202_getUSDValue" [label="getUSDValue"]
+"28202__state" [label="_state"]
+"28202_setOracle" [label="setOracle"]
+"28202_constructor" [label="constructor"]
+"28202_getStakeDistributionUSDForOperators" [label="getStakeDistributionUSDForOperators"]
+"28202_initialize" [label="initialize"]
+"28202_setOracle" -> "28202__state"
+"28202_initialize" -> "28202___Ownable_init"
+"28202_setOracle" -> "28202_onlyOwner"
+"28202_initialize" -> "28202__state"
+"28202_initialize" -> "28202_initializer"
+"28202_getStakeDistributionUSDForOperators" -> "28202_getUSDValue"
+"28202_constructor" -> "28202__disableInitializers"
+"28202_getUSDValue" -> "28202__state"
+}subgraph cluster_45_AggregatorV3Interface {
+label = "AggregatorV3Interface"
+"45_getRoundData" [label="getRoundData"]
+"45_description" [label="description"]
+"45_latestRoundData" [label="latestRoundData"]
+"45_decimals" [label="decimals"]
+"45_version" [label="version"]
+}subgraph cluster_5172_IERC4626 {
+label = "IERC4626"
+"5172_previewMint" [label="previewMint"]
+"5172_totalAssets" [label="totalAssets"]
+"5172_maxMint" [label="maxMint"]
+"5172_previewWithdraw" [label="previewWithdraw"]
+"5172_convertToShares" [label="convertToShares"]
+"5172_withdraw" [label="withdraw"]
+"5172_maxRedeem" [label="maxRedeem"]
+"5172_redeem" [label="redeem"]
+"5172_deposit" [label="deposit"]
+"5172_mint" [label="mint"]
+"5172_convertToAssets" [label="convertToAssets"]
+"5172_maxWithdraw" [label="maxWithdraw"]
+"5172_previewDeposit" [label="previewDeposit"]
+"5172_previewRedeem" [label="previewRedeem"]
+"5172_maxDeposit" [label="maxDeposit"]
+"5172_asset" [label="asset"]
+}subgraph cluster_4150_Endian {
+label = "Endian"
+"4150_fromLittleEndianUint64" [label="fromLittleEndianUint64"]
+}subgraph cluster_5182_IERC1822Proxiable {
+label = "IERC1822Proxiable"
+"5182_proxiableUUID" [label="proxiableUUID"]
+}subgraph cluster_27199_BaseDSS {
+label = "BaseDSS"
+"27199__jailOperator" [label="_jailOperator"]
+"27199_baseDssStatePtr" [label="baseDssStatePtr"]
+"27199__unjailOperator" [label="_unjailOperator"]
+"27199_isOperatorRegistered" [label="isOperatorRegistered"]
+"27199_getActiveVaults" [label="getActiveVaults"]
+"27199_core" [label="core"]
+"27199_supportsInterface" [label="supportsInterface"]
+"27199_isOperatorJailed" [label="isOperatorJailed"]
+"27199_baseDssOpStatePtr" [label="baseDssOpStatePtr"]
+"27199_registrationHook" [label="registrationHook"]
+"27199_getRegisteredOperators" [label="getRegisteredOperators"]
+"27199_finishUpdateStakeHook" [label="finishUpdateStakeHook"]
+"27199_unregistrationHook" [label="unregistrationHook"]
+"27199_requestUpdateStakeHook" [label="requestUpdateStakeHook"]
+"27199__init" [label="_init"]
+"27199_unregistrationHook" -> "27199_baseDssStatePtr"
+"27199__init" -> "27199_baseDssStatePtr"
+"27199_isOperatorRegistered" -> "27199_baseDssStatePtr"
+"27199__jailOperator" -> "27199_baseDssOpStatePtr"
+"27199_requestUpdateStakeHook" -> "27199_baseDssOpStatePtr"
+"27199_getActiveVaults" -> "27199_baseDssOpStatePtr"
+"27199_registrationHook" -> "27199_baseDssStatePtr"
+"27199_core" -> "27199_baseDssStatePtr"
+"27199_isOperatorJailed" -> "27199_baseDssOpStatePtr"
+"27199_requestUpdateStakeHook" -> "27199_onlyCore"
+"27199_finishUpdateStakeHook" -> "27199_onlyCore"
+"27199_getRegisteredOperators" -> "27199_baseDssStatePtr"
+"27199_unregistrationHook" -> "27199_onlyCore"
+"27199_registrationHook" -> "27199_onlyCore"
+"27199__unjailOperator" -> "27199_baseDssOpStatePtr"
+"27199_finishUpdateStakeHook" -> "27199_baseDssOpStatePtr"
+}subgraph cluster_4677_OwnableUpgradeable {
+label = "OwnableUpgradeable"
+"4677__transferOwnership" [label="_transferOwnership"]
+"4677___Ownable_init_unchained" [label="__Ownable_init_unchained"]
+"4677__checkOwner" [label="_checkOwner"]
+"4677_transferOwnership" [label="transferOwnership"]
+"4677_owner" [label="owner"]
+"4677_renounceOwnership" [label="renounceOwnership"]
+"4677___Ownable_init" [label="__Ownable_init"]
+"4677__getOwnableStorage" [label="_getOwnableStorage"]
+"4677_transferOwnership" -> "4677__transferOwnership"
+"4677__transferOwnership" -> "4677__getOwnableStorage"
+"4677_owner" -> "4677__getOwnableStorage"
+"4677_renounceOwnership" -> "4677_onlyOwner"
+"4677_renounceOwnership" -> "4677__transferOwnership"
+"4677___Ownable_init" -> "4677_onlyInitializing"
+"4677___Ownable_init_unchained" -> "4677__transferOwnership"
+"4677__checkOwner" -> "4677_owner"
+"4677__checkOwner" -> "4677__msgSender"
+"4677___Ownable_init_unchained" -> "4677_onlyInitializing"
+"4677___Ownable_init" -> "4677___Ownable_init_unchained"
+"4677_transferOwnership" -> "4677_onlyOwner"
+}subgraph cluster_20550_SymbioticMiddleware {
+label = "SymbioticMiddleware"
+"20550_getOperatorStake" [label="getOperatorStake"]
+"20550_fetchOperatorCollateral" [label="fetchOperatorCollateral"]
+"20550_setupContract" [label="setupContract"]
+"20550_resumeOperatorActivity" [label="resumeOperatorActivity"]
+"20550_getEpochForTimestamp" [label="getEpochForTimestamp"]
+"20550_executeVaultPenalty" [label="executeVaultPenalty"]
+"20550_getOperatorStakeNow" [label="getOperatorStakeNow"]
+"20550_getOperatorStakeAtTime" [label="getOperatorStakeAtTime"]
+"20550_offboardOperator" [label="offboardOperator"]
+"20550_penalizeOperator" [label="penalizeOperator"]
+"20550_getCurrentEpochNumber" [label="getCurrentEpochNumber"]
+"20550_getCurrentEpoch" [label="getCurrentEpoch"]
+"20550_calculateEpochStart" [label="calculateEpochStart"]
+"20550_upgradeContractV2" [label="upgradeContractV2"]
+"20550_onboardOperator" [label="onboardOperator"]
+"20550_checkVaultStatus" [label="checkVaultStatus"]
+"20550_addVault" [label="addVault"]
+"20550_removeVault" [label="removeVault"]
+"20550__wasEnabledAt" [label="_wasEnabledAt"]
+"20550_getOperatorStakeAt" [label="getOperatorStakeAt"]
+"20550_getOperatorCollaterals" [label="getOperatorCollaterals"]
+"20550_getEpochStartTs" [label="getEpochStartTs"]
+"20550_listAuthorizedVaults" [label="listAuthorizedVaults"]
+"20550_resumeVaultActivity" [label="resumeVaultActivity"]
+"20550__authorizeUpgrade" [label="_authorizeUpgrade"]
+"20550_suspendOperatorActivity" [label="suspendOperatorActivity"]
+"20550_suspendVaultActivity" [label="suspendVaultActivity"]
+"20550_isActiveAtTimestamp" [label="isActiveAtTimestamp"]
+"20550_getEpochAtTs" [label="getEpochAtTs"]
+"20550_fetchOperatorCollateral" -> "20550_calculateEpochStart"
+"20550_getOperatorStakeAt" -> "20550_getEpochAtTs"
+"20550_penalizeOperator" -> "20550_onlyOwner"
+"20550_getOperatorCollaterals" -> "20550_getEpochStartTs"
+"20550_getOperatorStakeAtTime" -> "20550_calculateEpochStart"
+"20550__authorizeUpgrade" -> "20550_onlyOwner"
+"20550_getOperatorStakeAt" -> "20550_getEpochStartTs"
+"20550_penalizeOperator" -> "20550_getOperatorStakeAtTime"
+"20550_upgradeContractV2" -> "20550_reinitializer"
+"20550_getCurrentEpochNumber" -> "20550_getEpochForTimestamp"
+"20550_getOperatorStakeAtTime" -> "20550_isActiveAtTimestamp"
+"20550_fetchOperatorCollateral" -> "20550_isActiveAtTimestamp"
+"20550_removeVault" -> "20550_onlyOwner"
+"20550_penalizeOperator" -> "20550_calculateEpochStart"
+"20550_getOperatorCollaterals" -> "20550__wasEnabledAt"
+"20550_penalizeOperator" -> "20550_getEpochForTimestamp"
+"20550_penalizeOperator" -> "20550_isActiveAtTimestamp"
+"20550_getOperatorStakeAtTime" -> "20550_getEpochForTimestamp"
+"20550_getOperatorStakeAt" -> "20550__wasEnabledAt"
+"20550_fetchOperatorCollateral" -> "20550_getEpochForTimestamp"
+"20550_getOperatorCollaterals" -> "20550_getEpochAtTs"
+"20550_setupContract" -> "20550___Ownable_init"
+"20550_getCurrentEpoch" -> "20550_getEpochAtTs"
+"20550_addVault" -> "20550_onlyOwner"
+"20550_upgradeContractV2" -> "20550___Ownable_init"
+"20550_setupContract" -> "20550_initializer"
+"20550_penalizeOperator" -> "20550_executeVaultPenalty"
+"20550_getOperatorStake" -> "20550_getOperatorStakeAt"
+"20550_getOperatorStakeNow" -> "20550_getOperatorStakeAtTime"
+}subgraph cluster_6213_StorageSlot {
+label = "StorageSlot"
+"6213_getUint256Slot" [label="getUint256Slot"]
+"6213_getAddressSlot" [label="getAddressSlot"]
+"6213_getInt256Slot" [label="getInt256Slot"]
+"6213_getBytes32Slot" [label="getBytes32Slot"]
+"6213_getBooleanSlot" [label="getBooleanSlot"]
+"6213_getStringSlot" [label="getStringSlot"]
+"6213_getBytesSlot" [label="getBytesSlot"]
+}subgraph cluster_5730_IERC20 {
+label = "IERC20"
+"5730_allowance" [label="allowance"]
+"5730_totalSupply" [label="totalSupply"]
+"5730_transferFrom" [label="transferFrom"]
+"5730_transfer" [label="transfer"]
+"5730_balanceOf" [label="balanceOf"]
+"5730_approve" [label="approve"]
+}subgraph cluster_22118_ISystemParameters {
+label = "ISystemParameters"
+"22118_getChallengeBond" [label="getChallengeBond"]
+"22118_getBeaconRootsContract" [label="getBeaconRootsContract"]
+"22118_getSlotTime" [label="getSlotTime"]
+"22118_getSlashingWindow" [label="getSlashingWindow"]
+"22118_isUnsafeRegistrationAllowed" [label="isUnsafeRegistrationAllowed"]
+"22118_getEpochDuration" [label="getEpochDuration"]
+"22118_getJustificationDelay" [label="getJustificationDelay"]
+"22118_getMinimumOperatorStake" [label="getMinimumOperatorStake"]
+"22118_getMaxChallengeDuration" [label="getMaxChallengeDuration"]
+"22118_getEth2GenesisTimestamp" [label="getEth2GenesisTimestamp"]
+"22118_getBlockhashEvmLookback" [label="getBlockhashEvmLookback"]
+"22118_getEip4788Window" [label="getEip4788Window"]
+}subgraph cluster_16489_BoltDSSMiddlewareV1 {
+label = "BoltDSSMiddlewareV1"
+"16489__authorizeUpgrade" [label="_authorizeUpgrade"]
+"16489_initialize" [label="initialize"]
+"16489_deregisterAsset" [label="deregisterAsset"]
+"16489_registerAsset" [label="registerAsset"]
+"16489_constructor" [label="constructor"]
+"16489_isAssetEnabled" [label="isAssetEnabled"]
+"16489_getEpochStartTs" [label="getEpochStartTs"]
+"16489_getOperatorStakeAt" [label="getOperatorStakeAt"]
+"16489_getOperatorCollaterals" [label="getOperatorCollaterals"]
+"16489_getOperatorStake" [label="getOperatorStake"]
+"16489_getWhitelistedAssets" [label="getWhitelistedAssets"]
+"16489__wasEnabledAt" [label="_wasEnabledAt"]
+"16489_getCurrentEpoch" [label="getCurrentEpoch"]
+"16489__getVaultActiveBalance" [label="_getVaultActiveBalance"]
+"16489_getEpochAtTs" [label="getEpochAtTs"]
+"16489_registerAsset" -> "16489_core"
+"16489__authorizeUpgrade" -> "16489_onlyOwner"
+"16489_getOperatorStakeAt" -> "16489_getEpochAtTs"
+"16489_getOperatorStakeAt" -> "16489_getEpochStartTs"
+"16489_initialize" -> "16489__init"
+"16489_getOperatorCollaterals" -> "16489_getEpochAtTs"
+"16489_constructor" -> "16489__disableInitializers"
+"16489_getOperatorStakeAt" -> "16489_getActiveVaults"
+"16489_getOperatorCollaterals" -> "16489_getActiveVaults"
+"16489_getCurrentEpoch" -> "16489_getEpochAtTs"
+"16489_getOperatorStakeAt" -> "16489__wasEnabledAt"
+"16489_getOperatorStake" -> "16489_getOperatorStakeAt"
+"16489_getOperatorCollaterals" -> "16489_getEpochStartTs"
+"16489_initialize" -> "16489_initializer"
+"16489_getOperatorCollaterals" -> "16489__wasEnabledAt"
+"16489_getOperatorCollaterals" -> "16489__getVaultActiveBalance"
+"16489_getOperatorStakeAt" -> "16489__getVaultActiveBalance"
+"16489_registerAsset" -> "16489_onlyOwner"
+"16489_deregisterAsset" -> "16489_onlyOwner"
+"16489_initialize" -> "16489___Ownable_init"
+}subgraph cluster_620_IBaseSlasher {
+label = "IBaseSlasher"
+"620_cumulativeSlashAt" [label="cumulativeSlashAt"]
+"620_latestSlashedCaptureTimestamp" [label="latestSlashedCaptureTimestamp"]
+"620_isBurnerHook" [label="isBurnerHook"]
+"620_BURNER_GAS_LIMIT" [label="BURNER_GAS_LIMIT"]
+"620_vault" [label="vault"]
+"620_slashableStake" [label="slashableStake"]
+"620_BURNER_RESERVE" [label="BURNER_RESERVE"]
+"620_NETWORK_MIDDLEWARE_SERVICE" [label="NETWORK_MIDDLEWARE_SERVICE"]
+"620_cumulativeSlash" [label="cumulativeSlash"]
+"620_VAULT_FACTORY" [label="VAULT_FACTORY"]
+}subgraph cluster_14445_Time {
+label = "Time"
+"14445_unpack" [label="unpack"]
+"14445_toDelay" [label="toDelay"]
+"14445_timestamp" [label="timestamp"]
+"14445_getFull" [label="getFull"]
+"14445_get" [label="get"]
+"14445_withUpdate" [label="withUpdate"]
+"14445_pack" [label="pack"]
+"14445_blockNumber" [label="blockNumber"]
+"14445__getFullAt" [label="_getFullAt"]
+"14445_withUpdate" -> "14445_pack"
+"14445_getFull" -> "14445_timestamp"
+"14445_withUpdate" -> "14445_timestamp"
+"14445_getFull" -> "14445__getFullAt"
+}subgraph cluster_29806_BlsBaseDSSLib {
+label = "BlsBaseDSSLib"
+"29806_isOperatorRegistered" [label="isOperatorRegistered"]
+"29806_allOperatorsG1" [label="allOperatorsG1"]
+"29806_removeOperator" [label="removeOperator"]
+"29806_verifySignature" [label="verifySignature"]
+"29806_getOperators" [label="getOperators"]
+"29806_addOperator" [label="addOperator"]
+"29806_init" [label="init"]
+"29806_addOperator" -> "29806_verifySignature"
+}subgraph cluster_111_Subnetwork {
+label = "Subnetwork"
+"111_identifier" [label="identifier"]
+"111_network" [label="network"]
+"111_subnetwork" [label="subnetwork"]
+}subgraph cluster_5756_IERC20Metadata {
+label = "IERC20Metadata"
+"5756_name" [label="name"]
+"5756_decimals" [label="decimals"]
+"5756_symbol" [label="symbol"]
+}subgraph cluster_29310_BaseDSSOperatorLib {
+label = "BaseDSSOperatorLib"
+"29310_removeVault" [label="removeVault"]
+"29310_addVault" [label="addVault"]
+"29310_unjailOperator" [label="unjailOperator"]
+"29310_jailOperator" [label="jailOperator"]
+"29310_isOperatorJailed" [label="isOperatorJailed"]
+"29310_fetchVaultsNotQueuedForWithdrawal" [label="fetchVaultsNotQueuedForWithdrawal"]
+}subgraph cluster_1664_DelegationManagerStorage {
+label = "DelegationManagerStorage"
+"1664_constructor" [label="constructor"]
+}subgraph cluster_134_IEntity {
+label = "IEntity"
+"134_TYPE" [label="TYPE"]
+"134_initialize" [label="initialize"]
+"134_FACTORY" [label="FACTORY"]
+}subgraph cluster_31378_RLPWriter {
+label = "RLPWriter"
+"31378_writeBytes" [label="writeBytes"]
+"31378_writeBool" [label="writeBool"]
+"31378__flatten" [label="_flatten"]
+"31378_writeUint" [label="writeUint"]
+"31378_writeList" [label="writeList"]
+"31378_writeString" [label="writeString"]
+"31378__writeLength" [label="_writeLength"]
+"31378_writeAddress" [label="writeAddress"]
+"31378__memcpy" [label="_memcpy"]
+"31378__toBinary" [label="_toBinary"]
+"31378_writeString" -> "31378_writeBytes"
+"31378_writeBytes" -> "31378__writeLength"
+"31378_writeUint" -> "31378_writeBytes"
+"31378_writeList" -> "31378__writeLength"
+"31378__flatten" -> "31378__memcpy"
+"31378_writeList" -> "31378__flatten"
+"31378_writeUint" -> "31378__toBinary"
+"31378_writeAddress" -> "31378_writeBytes"
+}subgraph cluster_30874_RLPReader {
+label = "RLPReader"
+"30874_readList" [label="readList"]
+"30874_toRLPItem" [label="toRLPItem"]
+"30874_readBytes" [label="readBytes"]
+"30874_readRawBytes" [label="readRawBytes"]
+"30874_readString" [label="readString"]
+"30874__copy" [label="_copy"]
+"30874_readUint256" [label="readUint256"]
+"30874__decodeLength" [label="_decodeLength"]
+"30874_readBytes32" [label="readBytes32"]
+"30874_readAddress" [label="readAddress"]
+"30874_readBool" [label="readBool"]
+"30874_readUint256" -> "30874_readBytes32"
+"30874_readUint256" -> "30874_toRLPItem"
+"30874__copy" -> "30874__copy"
+"30874_readRawBytes" -> "30874__copy"
+"30874_readList" -> "30874_toRLPItem"
+"30874_readList" -> "30874__decodeLength"
+"30874_readBool" -> "30874_toRLPItem"
+"30874_readList" -> "30874_readList"
+"30874_readBytes32" -> "30874_readBytes32"
+"30874_readString" -> "30874_readString"
+"30874_readBytes" -> "30874__copy"
+"30874_readAddress" -> "30874_readUint256"
+"30874_readBytes" -> "30874_readBytes"
+"30874_readAddress" -> "30874_readAddress"
+"30874_readString" -> "30874_toRLPItem"
+"30874_readString" -> "30874_readBytes"
+"30874_readBytes" -> "30874_toRLPItem"
+"30874_readBytes32" -> "30874_toRLPItem"
+"30874_readBool" -> "30874_readBool"
+"30874_readAddress" -> "30874_toRLPItem"
+"30874_readUint256" -> "30874_readUint256"
+"30874_readBytes" -> "30874__decodeLength"
+"30874_readBytes32" -> "30874__decodeLength"
+}subgraph cluster_673_ISlasher {
+label = "ISlasher"
+"673_slash" [label="slash"]
+}subgraph cluster_2729_IEigenPod {
+label = "IEigenPod"
+"2729_verifyWithdrawalCredentials" [label="verifyWithdrawalCredentials"]
+"2729_eigenPodManager" [label="eigenPodManager"]
+"2729_validatorStatus" [label="validatorStatus"]
+"2729_validatorPubkeyHashToInfo" [label="validatorPubkeyHashToInfo"]
+"2729_proofSubmitter" [label="proofSubmitter"]
+"2729_verifyStaleBalance" [label="verifyStaleBalance"]
+"2729_setProofSubmitter" [label="setProofSubmitter"]
+"2729_currentCheckpointTimestamp" [label="currentCheckpointTimestamp"]
+"2729_podOwner" [label="podOwner"]
+"2729_validatorPubkeyToInfo" [label="validatorPubkeyToInfo"]
+"2729_lastCheckpointTimestamp" [label="lastCheckpointTimestamp"]
+"2729_withdrawableRestakedExecutionLayerGwei" [label="withdrawableRestakedExecutionLayerGwei"]
+"2729_withdrawRestakedBeaconChainETH" [label="withdrawRestakedBeaconChainETH"]
+"2729_getParentBlockRoot" [label="getParentBlockRoot"]
+"2729_verifyCheckpointProofs" [label="verifyCheckpointProofs"]
+"2729_startCheckpoint" [label="startCheckpoint"]
+"2729_currentCheckpoint" [label="currentCheckpoint"]
+"2729_initialize" [label="initialize"]
+"2729_stake" [label="stake"]
+"2729_activeValidatorCount" [label="activeValidatorCount"]
+"2729_recoverTokens" [label="recoverTokens"]
+"2729_checkpointBalanceExitedGwei" [label="checkpointBalanceExitedGwei"]
+}subgraph cluster_33449_SecureMerkleTrie {
+label = "SecureMerkleTrie"
+"33449_update" [label="update"]
+"33449_get" [label="get"]
+"33449__getSecureKey" [label="_getSecureKey"]
+"33449_verifyInclusionProof" [label="verifyInclusionProof"]
+"33449_verifyExclusionProof" [label="verifyExclusionProof"]
+"33449_getSingleNodeRootHash" [label="getSingleNodeRootHash"]
+"33449_getSingleNodeRootHash" -> "33449__getSecureKey"
+"33449_update" -> "33449__getSecureKey"
+"33449_verifyExclusionProof" -> "33449__getSecureKey"
+"33449_verifyInclusionProof" -> "33449__getSecureKey"
+"33449_get" -> "33449__getSecureKey"
+}subgraph cluster_26793_BLS12381 {
+label = "BLS12381"
+"26793_mapToG2" [label="mapToG2"]
+"26793__modfield" [label="_modfield"]
+"26793_compress" [label="compress"]
+"26793__expandMsgXmd" [label="_expandMsgXmd"]
+"26793_baseFieldModulus" [label="baseFieldModulus"]
+"26793_pairing" [label="pairing"]
+"26793_plus" [label="plus"]
+"26793__greaterThan" [label="_greaterThan"]
+"26793_negate" [label="negate"]
+"26793_generatorG1" [label="generatorG1"]
+"26793_hashToCurveG2" [label="hashToCurveG2"]
+"26793_hashToFieldFp2" [label="hashToFieldFp2"]
+"26793_hashToCurveG2" -> "26793_hashToFieldFp2"
+"26793_negate" -> "26793_baseFieldModulus"
+"26793_hashToFieldFp2" -> "26793__expandMsgXmd"
+"26793_compress" -> "26793__greaterThan"
+"26793_hashToFieldFp2" -> "26793__modfield"
+}subgraph cluster_173_IMigratableEntity {
+label = "IMigratableEntity"
+"173_initialize" [label="initialize"]
+"173_FACTORY" [label="FACTORY"]
+"173_migrate" [label="migrate"]
+"173_version" [label="version"]
+}subgraph cluster_3269_ISlasher {
+label = "ISlasher"
+"3269_resetFrozenStatus" [label="resetFrozenStatus"]
+"3269_strategyManager" [label="strategyManager"]
+"3269_getCorrectValueForInsertAfter" [label="getCorrectValueForInsertAfter"]
+"3269_recordLastStakeUpdateAndRevokeSlashingAbility" [label="recordLastStakeUpdateAndRevokeSlashingAbility"]
+"3269_operatorWhitelistedContractsLinkedListEntry" [label="operatorWhitelistedContractsLinkedListEntry"]
+"3269_canWithdraw" [label="canWithdraw"]
+"3269_freezeOperator" [label="freezeOperator"]
+"3269_contractCanSlashOperatorUntilBlock" [label="contractCanSlashOperatorUntilBlock"]
+"3269_canSlash" [label="canSlash"]
+"3269_delegation" [label="delegation"]
+"3269_recordFirstStakeUpdate" [label="recordFirstStakeUpdate"]
+"3269_middlewareTimesLength" [label="middlewareTimesLength"]
+"3269_latestUpdateBlock" [label="latestUpdateBlock"]
+"3269_optIntoSlashing" [label="optIntoSlashing"]
+"3269_getMiddlewareTimesIndexStalestUpdateBlock" [label="getMiddlewareTimesIndexStalestUpdateBlock"]
+"3269_operatorWhitelistedContractsLinkedListSize" [label="operatorWhitelistedContractsLinkedListSize"]
+"3269_recordStakeUpdate" [label="recordStakeUpdate"]
+"3269_operatorToMiddlewareTimes" [label="operatorToMiddlewareTimes"]
+"3269_isFrozen" [label="isFrozen"]
+"3269_getMiddlewareTimesIndexServeUntilBlock" [label="getMiddlewareTimesIndexServeUntilBlock"]
+}subgraph cluster_29894_IBaseDSS {
+label = "IBaseDSS"
+"29894_registrationHook" [label="registrationHook"]
+"29894_isOperatorRegistered" [label="isOperatorRegistered"]
+"29894_requestUpdateStakeHook" [label="requestUpdateStakeHook"]
+"29894_getRegisteredOperators" [label="getRegisteredOperators"]
+"29894_getActiveVaults" [label="getActiveVaults"]
+"29894_finishUpdateStakeHook" [label="finishUpdateStakeHook"]
+"29894_unregistrationHook" [label="unregistrationHook"]
+"29894_isOperatorJailed" [label="isOperatorJailed"]
+}subgraph cluster_22218_IManager {
+label = "IManager"
+"22218_isOperatorRegistered" [label="isOperatorRegistered"]
+"22218_resumeOperator" [label="resumeOperator"]
+"22218_getValidatorProposerStatus" [label="getValidatorProposerStatus"]
+"22218_suspendOperator" [label="suspendOperator"]
+"22218_isOperatorAuthorizedForValidator" [label="isOperatorAuthorizedForValidator"]
+"22218_getRestakingMiddlewareProtocols" [label="getRestakingMiddlewareProtocols"]
+"22218_getValidatorProposerStatuses" [label="getValidatorProposerStatuses"]
+"22218_registerNewOperator" [label="registerNewOperator"]
+"22218_removeOperator" [label="removeOperator"]
+}subgraph cluster_205_IRegistry {
+label = "IRegistry"
+"205_entity" [label="entity"]
+"205_isEntity" [label="isEntity"]
+"205_totalEntities" [label="totalEntities"]
+}subgraph cluster_22738_BytesUtils {
+label = "BytesUtils"
+"22738_toBytes32PadLeft" [label="toBytes32PadLeft"]
+"22738_fromNibbles" [label="fromNibbles"]
+"22738_toUint24" [label="toUint24"]
+"22738_slice" [label="slice"]
+"22738_toAddress" [label="toAddress"]
+"22738_toNibbles" [label="toNibbles"]
+"22738_equal" [label="equal"]
+"22738_toUint256" [label="toUint256"]
+"22738_toBytes32" [label="toBytes32"]
+"22738_toUint8" [label="toUint8"]
+"22738_toUint256" -> "22738_toBytes32"
+"22738_slice" -> "22738_slice"
+}subgraph cluster_9944_SafeCast {
+label = "SafeCast"
+"9944_toInt144" [label="toInt144"]
+"9944_toUint112" [label="toUint112"]
+"9944_toInt136" [label="toInt136"]
+"9944_toUint232" [label="toUint232"]
+"9944_toInt72" [label="toInt72"]
+"9944_toUint48" [label="toUint48"]
+"9944_toUint200" [label="toUint200"]
+"9944_toInt40" [label="toInt40"]
+"9944_toUint" [label="toUint"]
+"9944_toUint248" [label="toUint248"]
+"9944_toInt80" [label="toInt80"]
+"9944_toUint208" [label="toUint208"]
+"9944_toUint56" [label="toUint56"]
+"9944_toInt232" [label="toInt232"]
+"9944_toInt192" [label="toInt192"]
+"9944_toInt48" [label="toInt48"]
+"9944_toInt128" [label="toInt128"]
+"9944_toInt112" [label="toInt112"]
+"9944_toInt88" [label="toInt88"]
+"9944_toUint192" [label="toUint192"]
+"9944_toInt184" [label="toInt184"]
+"9944_toInt200" [label="toInt200"]
+"9944_toUint168" [label="toUint168"]
+"9944_toUint176" [label="toUint176"]
+"9944_toInt24" [label="toInt24"]
+"9944_toInt32" [label="toInt32"]
+"9944_toUint24" [label="toUint24"]
+"9944_toInt96" [label="toInt96"]
+"9944_toUint224" [label="toUint224"]
+"9944_toUint144" [label="toUint144"]
+"9944_toUint32" [label="toUint32"]
+"9944_toUint136" [label="toUint136"]
+"9944_toUint216" [label="toUint216"]
+"9944_toInt168" [label="toInt168"]
+"9944_toUint8" [label="toUint8"]
+"9944_toUint240" [label="toUint240"]
+"9944_toUint256" [label="toUint256"]
+"9944_toInt8" [label="toInt8"]
+"9944_toUint128" [label="toUint128"]
+"9944_toInt16" [label="toInt16"]
+"9944_toUint40" [label="toUint40"]
+"9944_toInt176" [label="toInt176"]
+"9944_toInt224" [label="toInt224"]
+"9944_toInt120" [label="toInt120"]
+"9944_toUint152" [label="toUint152"]
+"9944_toInt104" [label="toInt104"]
+"9944_toUint80" [label="toUint80"]
+"9944_toInt64" [label="toInt64"]
+"9944_toUint96" [label="toUint96"]
+"9944_toInt248" [label="toInt248"]
+"9944_toInt240" [label="toInt240"]
+"9944_toInt208" [label="toInt208"]
+"9944_toUint120" [label="toUint120"]
+"9944_toUint16" [label="toUint16"]
+"9944_toUint104" [label="toUint104"]
+"9944_toUint64" [label="toUint64"]
+"9944_toUint160" [label="toUint160"]
+"9944_toUint72" [label="toUint72"]
+"9944_toInt152" [label="toInt152"]
+"9944_toInt56" [label="toInt56"]
+"9944_toUint184" [label="toUint184"]
+"9944_toInt256" [label="toInt256"]
+"9944_toInt160" [label="toInt160"]
+"9944_toUint88" [label="toUint88"]
+"9944_toInt216" [label="toInt216"]
+}subgraph cluster_1241_IVault {
+label = "IVault"
+"1241_setIsDepositLimit" [label="setIsDepositLimit"]
+"1241_isInitialized" [label="isInitialized"]
+"1241_activeBalanceOfAt" [label="activeBalanceOfAt"]
+"1241_deposit" [label="deposit"]
+"1241_redeem" [label="redeem"]
+"1241_setDepositWhitelist" [label="setDepositWhitelist"]
+"1241_setDepositorWhitelistStatus" [label="setDepositorWhitelistStatus"]
+"1241_setDepositLimit" [label="setDepositLimit"]
+"1241_claimBatch" [label="claimBatch"]
+"1241_slashableBalanceOf" [label="slashableBalanceOf"]
+"1241_activeBalanceOf" [label="activeBalanceOf"]
+"1241_withdraw" [label="withdraw"]
+"1241_setDelegator" [label="setDelegator"]
+"1241_claim" [label="claim"]
+"1241_onSlash" [label="onSlash"]
+"1241_totalStake" [label="totalStake"]
+"1241_withdrawalsOf" [label="withdrawalsOf"]
+"1241_setSlasher" [label="setSlasher"]
+}subgraph cluster_29914_ICore {
+label = "ICore"
+"29914_fetchVaultsStakedInDSS" [label="fetchVaultsStakedInDSS"]
+"29914_registerDSS" [label="registerDSS"]
+}subgraph cluster_23273_MapWithTimeData {
+label = "MapWithTimeData"
+"23273_add" [label="add"]
+"23273_atWithTimes" [label="atWithTimes"]
+"23273_enable" [label="enable"]
+"23273_disable" [label="disable"]
+"23273_getTimes" [label="getTimes"]
+}subgraph cluster_1781_StrategyManagerStorage {
+label = "StrategyManagerStorage"
+"1781_constructor" [label="constructor"]
+}subgraph cluster_13558_EnumerableMap {
+label = "EnumerableMap"
+"13558_contains" [label="contains"]
+"13558_tryGet" [label="tryGet"]
+"13558_remove" [label="remove"]
+"13558_get" [label="get"]
+"13558_length" [label="length"]
+"13558_set" [label="set"]
+"13558_keys" [label="keys"]
+"13558_at" [label="at"]
+"13558_contains" -> "13558_contains"
+"13558_length" -> "13558_length"
+"13558_remove" -> "13558_remove"
+"13558_keys" -> "13558_keys"
+"13558_set" -> "13558_set"
+"13558_get" -> "13558_get"
+"13558_at" -> "13558_at"
+"13558_tryGet" -> "13558_contains"
+"13558_tryGet" -> "13558_tryGet"
+"13558_get" -> "13558_contains"
+}subgraph cluster_11525_Checkpoints {
+label = "Checkpoints"
+"11525_upperLookup" [label="upperLookup"]
+"11525_at" [label="at"]
+"11525__insert" [label="_insert"]
+"11525_latest" [label="latest"]
+"11525__lowerBinaryLookup" [label="_lowerBinaryLookup"]
+"11525_upperLookupRecent" [label="upperLookupRecent"]
+"11525_lowerLookup" [label="lowerLookup"]
+"11525_latestCheckpoint" [label="latestCheckpoint"]
+"11525__unsafeAccess" [label="_unsafeAccess"]
+"11525_push" [label="push"]
+"11525__upperBinaryLookup" [label="_upperBinaryLookup"]
+"11525_length" [label="length"]
+"11525_upperLookup" -> "11525__upperBinaryLookup"
+"11525_latestCheckpoint" -> "11525__unsafeAccess"
+"11525_upperLookupRecent" -> "11525__unsafeAccess"
+"11525__insert" -> "11525__unsafeAccess"
+"11525_upperLookupRecent" -> "11525__upperBinaryLookup"
+"11525__upperBinaryLookup" -> "11525__unsafeAccess"
+"11525_push" -> "11525__insert"
+"11525_lowerLookup" -> "11525__unsafeAccess"
+"11525_latest" -> "11525__unsafeAccess"
+"11525_upperLookup" -> "11525__unsafeAccess"
+"11525_lowerLookup" -> "11525__lowerBinaryLookup"
+"11525__lowerBinaryLookup" -> "11525__unsafeAccess"
+}subgraph cluster_25865_ValidatorsLib {
+label = "ValidatorsLib"
+"25865_updateMaxCommittedGasLimit" [label="updateMaxCommittedGasLimit"]
+"25865_at" [label="at"]
+"25865_getOrInsertAuthorizedOperator" [label="getOrInsertAuthorizedOperator"]
+"25865_getAuthorizedOperator" [label="getAuthorizedOperator"]
+"25865_insert" [label="insert"]
+"25865_length" [label="length"]
+"25865_getController" [label="getController"]
+"25865_contains" [label="contains"]
+"25865_getAll" [label="getAll"]
+"25865_getOrInsertController" [label="getOrInsertController"]
+"25865_getOrInsert" [label="getOrInsert"]
+"25865_get" [label="get"]
+"25865_getController" -> "25865_at"
+"25865_getOrInsertAuthorizedOperator" -> "25865_getOrInsert"
+"25865_getOrInsertController" -> "25865_getOrInsert"
+"25865_getAuthorizedOperator" -> "25865_get"
+"25865_getController" -> "25865_get"
+"25865_getAuthorizedOperator" -> "25865_at"
+}subgraph cluster_26890_BLSSignatureVerifier {
+label = "BLSSignatureVerifier"
+"26890__aggregatePubkeys" [label="_aggregatePubkeys"]
+"26890_dst" [label="dst"]
+"26890__verifySignature" [label="_verifySignature"]
+"26890__verifySignature" -> "26890_dst"
+}subgraph cluster_19233_Slashing {
+label = "Slashing"
+"19233_resolveActiveDispute" [label="resolveActiveDispute"]
+"19233__getBeaconBlockRootAtTimestamp" [label="_getBeaconBlockRootAtTimestamp"]
+"19233_finalizeDisputeResolution" [label="finalizeDisputeResolution"]
+"19233_fetchAllDisputes" [label="fetchAllDisputes"]
+"19233_fetchDisputeById" [label="fetchDisputeById"]
+"19233_parseBlockHeader" [label="parseBlockHeader"]
+"19233_initiateDispute" [label="initiateDispute"]
+"19233__isWithinEIP4788Window" [label="_isWithinEIP4788Window"]
+"19233__authorizeUpgrade" [label="_authorizeUpgrade"]
+"19233_computeCommitmentId" [label="computeCommitmentId"]
+"19233_resolveExpiredDispute" [label="resolveExpiredDispute"]
+"19233_distributeBondHalf" [label="distributeBondHalf"]
+"19233_distributeBondFull" [label="distributeBondFull"]
+"19233_getBeaconRootForTime" [label="getBeaconRootForTime"]
+"19233_getLatestBeaconRoot" [label="getLatestBeaconRoot"]
+"19233__getBeaconBlockRootAtSlot" [label="_getBeaconBlockRootAtSlot"]
+"19233_generateDisputeId" [label="generateDisputeId"]
+"19233_getSlotFromTime" [label="getSlotFromTime"]
+"19233_toLittleEndian" [label="toLittleEndian"]
+"19233_getCurrentSlot" [label="getCurrentSlot"]
+"19233_initializeContract" [label="initializeContract"]
+"19233_fetchActiveDisputes" [label="fetchActiveDisputes"]
+"19233__getSlotFromTimestamp" [label="_getSlotFromTimestamp"]
+"19233_processResolution" [label="processResolution"]
+"19233_getTimeFromSlot" [label="getTimeFromSlot"]
+"19233_getBeaconRootForSlot" [label="getBeaconRootForSlot"]
+"19233_extractCommitmentData" [label="extractCommitmentData"]
+"19233_parseAccount" [label="parseAccount"]
+"19233_computeCommitmentId" -> "19233_toLittleEndian"
+"19233_processResolution" -> "19233_parseBlockHeader"
+"19233_finalizeDisputeResolution" -> "19233_distributeBondHalf"
+"19233_getCurrentSlot" -> "19233_getSlotFromTime"
+"19233_resolveActiveDispute" -> "19233_processResolution"
+"19233__isWithinEIP4788Window" -> "19233_getCurrentSlot"
+"19233_initializeContract" -> "19233___Ownable_init"
+"19233_processResolution" -> "19233_parseAccount"
+"19233_initiateDispute" -> "19233_getCurrentSlot"
+"19233__isWithinEIP4788Window" -> "19233__getSlotFromTimestamp"
+"19233__authorizeUpgrade" -> "19233_onlyOwner"
+"19233_extractCommitmentData" -> "19233_computeCommitmentId"
+"19233_getLatestBeaconRoot" -> "19233__getSlotFromTimestamp"
+"19233_initiateDispute" -> "19233_extractCommitmentData"
+"19233_initializeContract" -> "19233_initializer"
+"19233_resolveActiveDispute" -> "19233_getCurrentSlot"
+"19233_getBeaconRootForSlot" -> "19233_getBeaconRootForTime"
+"19233__getBeaconBlockRootAtSlot" -> "19233__getBeaconBlockRootAtTimestamp"
+"19233_initiateDispute" -> "19233_generateDisputeId"
+"19233_resolveExpiredDispute" -> "19233_finalizeDisputeResolution"
+"19233_processResolution" -> "19233_finalizeDisputeResolution"
+"19233_finalizeDisputeResolution" -> "19233_distributeBondFull"
+"19233_getLatestBeaconRoot" -> "19233__getBeaconBlockRootAtSlot"
+}subgraph cluster_21794_Validators {
+label = "Validators"
+"21794_getAllValidators" [label="getAllValidators"]
+"21794_findValidatorByHash" [label="findValidatorByHash"]
+"21794_batchRegisterValidators" [label="batchRegisterValidators"]
+"21794_getValidatorByPubkeyHash" [label="getValidatorByPubkeyHash"]
+"21794_upgradeSystemToV2" [label="upgradeSystemToV2"]
+"21794__processBulkValidatorRegistration" [label="_processBulkValidatorRegistration"]
+"21794_findValidatorByPublicKey" [label="findValidatorByPublicKey"]
+"21794__getValidatorDetails" [label="_getValidatorDetails"]
+"21794__authorizeUpgrade" [label="_authorizeUpgrade"]
+"21794__getValidatorInfo" [label="_getValidatorInfo"]
+"21794_generatePublicKeyHash" [label="generatePublicKeyHash"]
+"21794_hashPubkey" [label="hashPubkey"]
+"21794__registerValidator" [label="_registerValidator"]
+"21794__processValidatorRegistration" [label="_processValidatorRegistration"]
+"21794_getValidatorByPubkey" [label="getValidatorByPubkey"]
+"21794_updateValidatorGasLimit" [label="updateValidatorGasLimit"]
+"21794_quickRegisterValidator" [label="quickRegisterValidator"]
+"21794_initializeSystem" [label="initializeSystem"]
+"21794_registerValidatorUnsafe" [label="registerValidatorUnsafe"]
+"21794_quickBulkRegisterValidators" [label="quickBulkRegisterValidators"]
+"21794_secureRegisterValidator" [label="secureRegisterValidator"]
+"21794_bulkRegisterValidators" [label="bulkRegisterValidators"]
+"21794_retrieveAllValidators" [label="retrieveAllValidators"]
+"21794_updateMaxCommittedGasLimit" [label="updateMaxCommittedGasLimit"]
+"21794__batchRegisterValidators" [label="_batchRegisterValidators"]
+"21794_batchRegisterValidatorsUnsafe" [label="batchRegisterValidatorsUnsafe"]
+"21794_registerValidator" [label="registerValidator"]
+"21794_getValidatorByPubkey" -> "21794_getValidatorByPubkeyHash"
+"21794_bulkRegisterValidators" -> "21794_generatePublicKeyHash"
+"21794_registerValidator" -> "21794__verifySignature"
+"21794_registerValidator" -> "21794_hashPubkey"
+"21794_bulkRegisterValidators" -> "21794__processBulkValidatorRegistration"
+"21794_upgradeSystemToV2" -> "21794_reinitializer"
+"21794_getAllValidators" -> "21794__getValidatorInfo"
+"21794_batchRegisterValidators" -> "21794_hashPubkey"
+"21794_bulkRegisterValidators" -> "21794__aggregatePubkeys"
+"21794_registerValidator" -> "21794__registerValidator"
+"21794_secureRegisterValidator" -> "21794__processValidatorRegistration"
+"21794_secureRegisterValidator" -> "21794_generatePublicKeyHash"
+"21794_initializeSystem" -> "21794___Ownable_init"
+"21794_registerValidatorUnsafe" -> "21794__registerValidator"
+"21794_getValidatorByPubkey" -> "21794_hashPubkey"
+"21794_findValidatorByHash" -> "21794__getValidatorDetails"
+"21794_batchRegisterValidators" -> "21794__verifySignature"
+"21794_findValidatorByPublicKey" -> "21794_findValidatorByHash"
+"21794_batchRegisterValidatorsUnsafe" -> "21794__batchRegisterValidators"
+"21794_secureRegisterValidator" -> "21794__verifySignature"
+"21794_initializeSystem" -> "21794_initializer"
+"21794_quickRegisterValidator" -> "21794__processValidatorRegistration"
+"21794_upgradeSystemToV2" -> "21794___Ownable_init"
+"21794_getValidatorByPubkeyHash" -> "21794__getValidatorInfo"
+"21794_quickBulkRegisterValidators" -> "21794__processBulkValidatorRegistration"
+"21794_batchRegisterValidators" -> "21794__batchRegisterValidators"
+"21794_batchRegisterValidators" -> "21794__aggregatePubkeys"
+"21794__authorizeUpgrade" -> "21794_onlyOwner"
+"21794_bulkRegisterValidators" -> "21794__verifySignature"
+"21794_findValidatorByPublicKey" -> "21794_generatePublicKeyHash"
+"21794_retrieveAllValidators" -> "21794__getValidatorDetails"
+}subgraph cluster_30000_IKarakBaseVault {
+label = "IKarakBaseVault"
+"30000_symbol" [label="symbol"]
+"30000_name" [label="name"]
+"30000_totalAssets" [label="totalAssets"]
+"30000_pause" [label="pause"]
+"30000_decimals" [label="decimals"]
+"30000_asset" [label="asset"]
+"30000_totalSupply" [label="totalSupply"]
+"30000_vaultConfig" [label="vaultConfig"]
+"30000_slashAssets" [label="slashAssets"]
+"30000_initialize" [label="initialize"]
+"30000_unpause" [label="unpause"]
+}subgraph cluster_17713_Registry {
+label = "Registry"
+"17713_setMinimumOperatorStake" [label="setMinimumOperatorStake"]
+"17713_removeOperator" [label="removeOperator"]
+"17713_setAllowUnsafeRegistration" [label="setAllowUnsafeRegistration"]
+"17713_initializeV2" [label="initializeV2"]
+"17713_getTotalStake" [label="getTotalStake"]
+"17713_isOperator" [label="isOperator"]
+"17713_resumeOperator" [label="resumeOperator"]
+"17713_getEpochAtTs" [label="getEpochAtTs"]
+"17713_getProposerStatuses" [label="getProposerStatuses"]
+"17713_getRestakingMiddlewareProtocols" [label="getRestakingMiddlewareProtocols"]
+"17713_removeRestakingProtocol" [label="removeRestakingProtocol"]
+"17713_registerNewOperator" [label="registerNewOperator"]
+"17713_setJustificationDelay" [label="setJustificationDelay"]
+"17713_getOperatorStake" [label="getOperatorStake"]
+"17713_deregisterOperator" [label="deregisterOperator"]
+"17713_setChallengeBond" [label="setChallengeBond"]
+"17713_pauseOperator" [label="pauseOperator"]
+"17713_addRestakingProtocol" [label="addRestakingProtocol"]
+"17713_isOperatorRegistered" [label="isOperatorRegistered"]
+"17713_unpauseOperator" [label="unpauseOperator"]
+"17713_getCurrentEpoch" [label="getCurrentEpoch"]
+"17713_getEpochStartTs" [label="getEpochStartTs"]
+"17713_getSupportedRestakingProtocols" [label="getSupportedRestakingProtocols"]
+"17713_getValidatorProposerStatus" [label="getValidatorProposerStatus"]
+"17713__authorizeUpgrade" [label="_authorizeUpgrade"]
+"17713_suspendOperator" [label="suspendOperator"]
+"17713_registerOperator" [label="registerOperator"]
+"17713__wasEnabledAt" [label="_wasEnabledAt"]
+"17713_getValidatorProposerStatuses" [label="getValidatorProposerStatuses"]
+"17713_getProposerStatus" [label="getProposerStatus"]
+"17713_isOperatorAuthorizedForValidator" [label="isOperatorAuthorizedForValidator"]
+"17713_isOperatorEnabled" [label="isOperatorEnabled"]
+"17713_initialize" [label="initialize"]
+"17713_setMaxChallengeDuration" [label="setMaxChallengeDuration"]
+"17713_initializeV2" -> "17713_reinitializer"
+"17713_setAllowUnsafeRegistration" -> "17713_onlyOwner"
+"17713_addRestakingProtocol" -> "17713_onlyOwner"
+"17713_suspendOperator" -> "17713_onlyMiddleware"
+"17713_initializeV2" -> "17713___Ownable_init"
+"17713_setJustificationDelay" -> "17713_onlyOwner"
+"17713_getProposerStatus" -> "17713_getEpochAtTs"
+"17713_setMinimumOperatorStake" -> "17713_onlyOwner"
+"17713_getValidatorProposerStatuses" -> "17713_getProposerStatus"
+"17713_getProposerStatus" -> "17713_getEpochStartTs"
+"17713_getProposerStatus" -> "17713__wasEnabledAt"
+"17713_deregisterOperator" -> "17713_onlyMiddleware"
+"17713_setChallengeBond" -> "17713_onlyOwner"
+"17713_initialize" -> "17713___Ownable_init"
+"17713_resumeOperator" -> "17713_onlyMiddleware"
+"17713_registerNewOperator" -> "17713_onlyMiddleware"
+"17713_pauseOperator" -> "17713_onlyMiddleware"
+"17713_unpauseOperator" -> "17713_onlyMiddleware"
+"17713_getProposerStatuses" -> "17713_getProposerStatus"
+"17713__authorizeUpgrade" -> "17713_onlyOwner"
+"17713_registerOperator" -> "17713_onlyMiddleware"
+"17713_removeRestakingProtocol" -> "17713_onlyOwner"
+"17713_getCurrentEpoch" -> "17713_getEpochAtTs"
+"17713_setMaxChallengeDuration" -> "17713_onlyOwner"
+"17713_getValidatorProposerStatus" -> "17713_getEpochStartTs"
+"17713_getValidatorProposerStatus" -> "17713_getEpochAtTs"
+"17713_getValidatorProposerStatus" -> "17713__wasEnabledAt"
+"17713_removeOperator" -> "17713_onlyMiddleware"
+"17713_initialize" -> "17713_initializer"
+}subgraph cluster_3384_IStrategy {
+label = "IStrategy"
+"3384_explanation" [label="explanation"]
+"3384_totalShares" [label="totalShares"]
+"3384_underlyingToShares" [label="underlyingToShares"]
+"3384_underlyingToSharesView" [label="underlyingToSharesView"]
+"3384_shares" [label="shares"]
+"3384_sharesToUnderlying" [label="sharesToUnderlying"]
+"3384_deposit" [label="deposit"]
+"3384_underlyingToken" [label="underlyingToken"]
+"3384_userUnderlyingView" [label="userUnderlyingView"]
+"3384_withdraw" [label="withdraw"]
+"3384_userUnderlying" [label="userUnderlying"]
+"3384_sharesToUnderlyingView" [label="sharesToUnderlyingView"]
+}subgraph cluster_22338_IValidator {
+label = "IValidator"
+"22338_hashPubkey" [label="hashPubkey"]
+"22338_registerValidatorUnsafe" [label="registerValidatorUnsafe"]
+"22338_updateMaxCommittedGasLimit" [label="updateMaxCommittedGasLimit"]
+"22338_batchRegisterValidators" [label="batchRegisterValidators"]
+"22338_getAllValidators" [label="getAllValidators"]
+"22338_registerValidator" [label="registerValidator"]
+"22338_batchRegisterValidatorsUnsafe" [label="batchRegisterValidatorsUnsafe"]
+"22338_getValidatorByPubkeyHash" [label="getValidatorByPubkeyHash"]
+"22338_getValidatorByPubkey" [label="getValidatorByPubkey"]
+}subgraph cluster_4931_Initializable {
+label = "Initializable"
+"4931__getInitializedVersion" [label="_getInitializedVersion"]
+"4931__isInitializing" [label="_isInitializing"]
+"4931__checkInitializing" [label="_checkInitializing"]
+"4931__disableInitializers" [label="_disableInitializers"]
+"4931__getInitializableStorage" [label="_getInitializableStorage"]
+"4931__getInitializedVersion" -> "4931__getInitializableStorage"
+"4931__disableInitializers" -> "4931__getInitializableStorage"
+"4931__checkInitializing" -> "4931__isInitializing"
+"4931__isInitializing" -> "4931__getInitializableStorage"
+}subgraph cluster_4431_Merkle {
+label = "Merkle"
+"4431_verifyInclusionKeccak" [label="verifyInclusionKeccak"]
+"4431_merkleizeSha256" [label="merkleizeSha256"]
+"4431_verifyInclusionSha256" [label="verifyInclusionSha256"]
+"4431_processInclusionProofKeccak" [label="processInclusionProofKeccak"]
+"4431_processInclusionProofSha256" [label="processInclusionProofSha256"]
+"4431_verifyInclusionKeccak" -> "4431_processInclusionProofKeccak"
+"4431_verifyInclusionSha256" -> "4431_processInclusionProofSha256"
+}subgraph cluster_1871_IAVSDirectory {
+label = "IAVSDirectory"
+"1871_deregisterOperatorFromAVS" [label="deregisterOperatorFromAVS"]
+"1871_domainSeparator" [label="domainSeparator"]
+"1871_registerOperatorToAVS" [label="registerOperatorToAVS"]
+"1871_updateAVSMetadataURI" [label="updateAVSMetadataURI"]
+"1871_cancelSalt" [label="cancelSalt"]
+"1871_operatorSaltIsSpent" [label="operatorSaltIsSpent"]
+"1871_calculateOperatorAVSRegistrationDigestHash" [label="calculateOperatorAVSRegistrationDigestHash"]
+"1871_OPERATOR_AVS_REGISTRATION_TYPEHASH" [label="OPERATOR_AVS_REGISTRATION_TYPEHASH"]
+}subgraph cluster_30041_IStakeViewer {
+label = "IStakeViewer"
+"30041_getStakeDistributionUSDForOperators" [label="getStakeDistributionUSDForOperators"]
+}subgraph cluster_14171_EnumerableSet {
+label = "EnumerableSet"
+"14171__contains" [label="_contains"]
+"14171_contains" [label="contains"]
+"14171__length" [label="_length"]
+"14171_at" [label="at"]
+"14171__values" [label="_values"]
+"14171_values" [label="values"]
+"14171_remove" [label="remove"]
+"14171__add" [label="_add"]
+"14171__remove" [label="_remove"]
+"14171__at" [label="_at"]
+"14171_add" [label="add"]
+"14171_length" [label="length"]
+"14171_add" -> "14171__add"
+"14171_length" -> "14171__length"
+"14171__add" -> "14171__contains"
+"14171_values" -> "14171__values"
+"14171_contains" -> "14171__contains"
+"14171_at" -> "14171__at"
+"14171_remove" -> "14171__remove"
+}subgraph cluster_2396_IDelegationManager {
+label = "IDelegationManager"
+"2396_operatorShares" [label="operatorShares"]
+"2396_minWithdrawalDelayBlocks" [label="minWithdrawalDelayBlocks"]
+"2396_beaconChainETHStrategy" [label="beaconChainETHStrategy"]
+"2396_domainSeparator" [label="domainSeparator"]
+"2396_getDelegatableShares" [label="getDelegatableShares"]
+"2396_completeQueuedWithdrawals" [label="completeQueuedWithdrawals"]
+"2396_stakerNonce" [label="stakerNonce"]
+"2396_calculateWithdrawalRoot" [label="calculateWithdrawalRoot"]
+"2396_STAKER_DELEGATION_TYPEHASH" [label="STAKER_DELEGATION_TYPEHASH"]
+"2396_DELEGATION_APPROVAL_TYPEHASH" [label="DELEGATION_APPROVAL_TYPEHASH"]
+"2396_delegateTo" [label="delegateTo"]
+"2396_operatorDetails" [label="operatorDetails"]
+"2396_getOperatorShares" [label="getOperatorShares"]
+"2396_isOperator" [label="isOperator"]
+"2396_getWithdrawalDelay" [label="getWithdrawalDelay"]
+"2396_strategyWithdrawalDelayBlocks" [label="strategyWithdrawalDelayBlocks"]
+"2396_completeQueuedWithdrawal" [label="completeQueuedWithdrawal"]
+"2396_registerAsOperator" [label="registerAsOperator"]
+"2396_delegationApprover" [label="delegationApprover"]
+"2396_updateOperatorMetadataURI" [label="updateOperatorMetadataURI"]
+"2396_delegateToBySignature" [label="delegateToBySignature"]
+"2396_modifyOperatorDetails" [label="modifyOperatorDetails"]
+"2396_setStrategyWithdrawalDelayBlocks" [label="setStrategyWithdrawalDelayBlocks"]
+"2396_decreaseDelegatedShares" [label="decreaseDelegatedShares"]
+"2396_cumulativeWithdrawalsQueued" [label="cumulativeWithdrawalsQueued"]
+"2396_stakerOptOutWindowBlocks" [label="stakerOptOutWindowBlocks"]
+"2396_delegatedTo" [label="delegatedTo"]
+"2396_calculateStakerDelegationDigestHash" [label="calculateStakerDelegationDigestHash"]
+"2396_undelegate" [label="undelegate"]
+"2396_setMinWithdrawalDelayBlocks" [label="setMinWithdrawalDelayBlocks"]
+"2396_increaseDelegatedShares" [label="increaseDelegatedShares"]
+"2396_calculateCurrentStakerDelegationDigestHash" [label="calculateCurrentStakerDelegationDigestHash"]
+"2396_delegationApproverSaltIsSpent" [label="delegationApproverSaltIsSpent"]
+"2396_calculateDelegationApprovalDigestHash" [label="calculateDelegationApprovalDigestHash"]
+"2396_DOMAIN_TYPEHASH" [label="DOMAIN_TYPEHASH"]
+"2396_isDelegated" [label="isDelegated"]
+"2396_queueWithdrawals" [label="queueWithdrawals"]
+}subgraph cluster_2912_IEigenPodManager {
+label = "IEigenPodManager"
+"2912_stake" [label="stake"]
+"2912_slasher" [label="slasher"]
+"2912_numPods" [label="numPods"]
+"2912_ownerToPod" [label="ownerToPod"]
+"2912_beaconChainETHStrategy" [label="beaconChainETHStrategy"]
+"2912_createPod" [label="createPod"]
+"2912_podOwnerShares" [label="podOwnerShares"]
+"2912_removeShares" [label="removeShares"]
+"2912_recordBeaconChainETHBalanceUpdate" [label="recordBeaconChainETHBalanceUpdate"]
+"2912_withdrawSharesAsTokens" [label="withdrawSharesAsTokens"]
+"2912_getPod" [label="getPod"]
+"2912_hasPod" [label="hasPod"]
+"2912_ethPOS" [label="ethPOS"]
+"2912_eigenPodBeacon" [label="eigenPodBeacon"]
+"2912_strategyManager" [label="strategyManager"]
+"2912_addShares" [label="addShares"]
+}subgraph cluster_5476_ERC1967Utils {
+label = "ERC1967Utils"
+"5476__checkNonPayable" [label="_checkNonPayable"]
+"5476_getBeacon" [label="getBeacon"]
+"5476__setAdmin" [label="_setAdmin"]
+"5476__setBeacon" [label="_setBeacon"]
+"5476_upgradeToAndCall" [label="upgradeToAndCall"]
+"5476_changeAdmin" [label="changeAdmin"]
+"5476_getAdmin" [label="getAdmin"]
+"5476_upgradeBeaconToAndCall" [label="upgradeBeaconToAndCall"]
+"5476_getImplementation" [label="getImplementation"]
+"5476__setImplementation" [label="_setImplementation"]
+"5476_upgradeBeaconToAndCall" -> "5476__setBeacon"
+"5476_upgradeToAndCall" -> "5476__setImplementation"
+"5476_upgradeToAndCall" -> "5476__checkNonPayable"
+"5476_changeAdmin" -> "5476__setAdmin"
+"5476_changeAdmin" -> "5476_getAdmin"
+"5476_upgradeBeaconToAndCall" -> "5476__checkNonPayable"
+}subgraph cluster_5486_IBeacon {
+label = "IBeacon"
+"5486_implementation" [label="implementation"]
+}subgraph cluster_4977_ContextUpgradeable {
+label = "ContextUpgradeable"
+"4977__msgData" [label="_msgData"]
+"4977__contextSuffixLength" [label="_contextSuffixLength"]
+"4977__msgSender" [label="_msgSender"]
+"4977___Context_init" [label="__Context_init"]
+"4977___Context_init_unchained" [label="__Context_init_unchained"]
+"4977___Context_init_unchained" -> "4977_onlyInitializing"
+"4977___Context_init" -> "4977_onlyInitializing"
+}subgraph cluster_379_IBaseDelegator {
+label = "IBaseDelegator"
+"379_setHook" [label="setHook"]
+"379_NETWORK_REGISTRY" [label="NETWORK_REGISTRY"]
+"379_maxNetworkLimit" [label="maxNetworkLimit"]
+"379_stake" [label="stake"]
+"379_VAULT_FACTORY" [label="VAULT_FACTORY"]
+"379_VERSION" [label="VERSION"]
+"379_HOOK_SET_ROLE" [label="HOOK_SET_ROLE"]
+"379_vault" [label="vault"]
+"379_HOOK_RESERVE" [label="HOOK_RESERVE"]
+"379_setMaxNetworkLimit" [label="setMaxNetworkLimit"]
+"379_onSlash" [label="onSlash"]
+"379_hook" [label="hook"]
+"379_OPERATOR_VAULT_OPT_IN_SERVICE" [label="OPERATOR_VAULT_OPT_IN_SERVICE"]
+"379_stakeAt" [label="stakeAt"]
+"379_HOOK_GAS_LIMIT" [label="HOOK_GAS_LIMIT"]
+"379_OPERATOR_NETWORK_OPT_IN_SERVICE" [label="OPERATOR_NETWORK_OPT_IN_SERVICE"]
+}subgraph cluster_6015_Address {
+label = "Address"
+"6015_functionStaticCall" [label="functionStaticCall"]
+"6015_verifyCallResultFromTarget" [label="verifyCallResultFromTarget"]
+"6015_functionDelegateCall" [label="functionDelegateCall"]
+"6015_functionCall" [label="functionCall"]
+"6015_verifyCallResult" [label="verifyCallResult"]
+"6015__revert" [label="_revert"]
+"6015_sendValue" [label="sendValue"]
+"6015_functionCallWithValue" [label="functionCallWithValue"]
+"6015_functionDelegateCall" -> "6015_verifyCallResultFromTarget"
+"6015_verifyCallResultFromTarget" -> "6015__revert"
+"6015_functionCall" -> "6015_functionCallWithValue"
+"6015_verifyCallResult" -> "6015__revert"
+"6015_functionStaticCall" -> "6015_verifyCallResultFromTarget"
+"6015_functionCallWithValue" -> "6015_verifyCallResultFromTarget"
+}subgraph cluster_4482_IServiceManager {
+label = "IServiceManager"
+"4482_deregisterOperatorFromAVS" [label="deregisterOperatorFromAVS"]
+"4482_updateAVSMetadataURI" [label="updateAVSMetadataURI"]
+"4482_getRestakeableStrategies" [label="getRestakeableStrategies"]
+"4482_getOperatorRestakedStrategies" [label="getOperatorRestakedStrategies"]
+"4482_avsDirectory" [label="avsDirectory"]
+"4482_registerOperatorToAVS" [label="registerOperatorToAVS"]
+}subgraph cluster_2437_IETHPOSDeposit {
+label = "IETHPOSDeposit"
+"2437_get_deposit_root" [label="get_deposit_root"]
+"2437_get_deposit_count" [label="get_deposit_count"]
+"2437_deposit" [label="deposit"]
+}subgraph cluster_903_IVetoSlasher {
+label = "IVetoSlasher"
+"903_setResolver" [label="setResolver"]
+"903_resolverSetEpochsDelay" [label="resolverSetEpochsDelay"]
+"903_vetoDuration" [label="vetoDuration"]
+"903_resolverAt" [label="resolverAt"]
+"903_resolver" [label="resolver"]
+"903_slashRequestsLength" [label="slashRequestsLength"]
+"903_requestSlash" [label="requestSlash"]
+"903_NETWORK_REGISTRY" [label="NETWORK_REGISTRY"]
+"903_slashRequests" [label="slashRequests"]
+"903_executeSlash" [label="executeSlash"]
+"903_vetoSlash" [label="vetoSlash"]
+}subgraph cluster_29083_BN254 {
+label = "BN254"
+"29083_hashToG1" [label="hashToG1"]
+"29083_plus" [label="plus"]
+"29083_generatorG2" [label="generatorG2"]
+"29083_hashG1Point" [label="hashG1Point"]
+"29083_generatorG1" [label="generatorG1"]
+"29083_scalar_mul_tiny" [label="scalar_mul_tiny"]
+"29083_negGeneratorG2" [label="negGeneratorG2"]
+"29083_scalar_mul" [label="scalar_mul"]
+"29083_hashG2Point" [label="hashG2Point"]
+"29083_findYFromX" [label="findYFromX"]
+"29083_pairing" [label="pairing"]
+"29083_expMod" [label="expMod"]
+"29083_safePairing" [label="safePairing"]
+"29083_negate" [label="negate"]
+"29083_findYFromX" -> "29083_expMod"
+"29083_scalar_mul_tiny" -> "29083_plus"
+"29083_hashToG1" -> "29083_findYFromX"
+}subgraph cluster_25503_TransactionDecoder {
+label = "TransactionDecoder"
+"25503__decodeEip1559" [label="_decodeEip1559"]
+"25503__decodeEip2930" [label="_decodeEip2930"]
+"25503__unsignedEip2930" [label="_unsignedEip2930"]
+"25503__unsignedEip1559" [label="_unsignedEip1559"]
+"25503__decodeEip4844" [label="_decodeEip4844"]
+"25503_recoverSender" [label="recoverSender"]
+"25503_preimage" [label="preimage"]
+"25503__unsignedEip4844" [label="_unsignedEip4844"]
+"25503_unsigned" [label="unsigned"]
+"25503_decodeEnveloped" [label="decodeEnveloped"]
+"25503__decodeLegacy" [label="_decodeLegacy"]
+"25503__unsignedLegacy" [label="_unsignedLegacy"]
+"25503_signature" [label="signature"]
+"25503_unsigned" -> "25503__unsignedLegacy"
+"25503_preimage" -> "25503_unsigned"
+"25503_recoverSender" -> "25503_preimage"
+"25503_decodeEnveloped" -> "25503__decodeLegacy"
+"25503_unsigned" -> "25503__unsignedEip2930"
+"25503_unsigned" -> "25503__unsignedEip4844"
+"25503_decodeEnveloped" -> "25503__decodeEip4844"
+"25503_decodeEnveloped" -> "25503__decodeEip1559"
+"25503_unsigned" -> "25503__unsignedEip1559"
+"25503_recoverSender" -> "25503_signature"
+"25503_decodeEnveloped" -> "25503__decodeEip2930"
+}subgraph cluster_6561_ECDSA {
+label = "ECDSA"
+"6561_tryRecover" [label="tryRecover"]
+"6561_recover" [label="recover"]
+"6561__throwError" [label="_throwError"]
+"6561_tryRecover" -> "6561_tryRecover"
+"6561_recover" -> "6561__throwError"
+"6561_recover" -> "6561_tryRecover"
+}subgraph cluster_2984_IPausable {
+label = "IPausable"
+"2984_pause" [label="pause"]
+"2984_unpause" [label="unpause"]
+"2984_paused" [label="paused"]
+"2984_setPauserRegistry" [label="setPauserRegistry"]
+"2984_pauseAll" [label="pauseAll"]
+"2984_pauserRegistry" [label="pauserRegistry"]
+}subgraph cluster_15788_EigenLayerMiddleware {
+label = "EigenLayerMiddleware"
+"15788_getEpochForTimestamp" [label="getEpochForTimestamp"]
+"15788_suspendOperator" [label="suspendOperator"]
+"15788_deregisterOperatorFromAVS" [label="deregisterOperatorFromAVS"]
+"15788_avsDirectory" [label="avsDirectory"]
+"15788_getOperatorCollaterals" [label="getOperatorCollaterals"]
+"15788_getEpochAtTs" [label="getEpochAtTs"]
+"15788_calculateEpochStart" [label="calculateEpochStart"]
+"15788__isActiveAtTimestamp" [label="_isActiveAtTimestamp"]
+"15788_updateMetadataURI" [label="updateMetadataURI"]
+"15788_getEpochStartTs" [label="getEpochStartTs"]
+"15788__wasEnabledAt" [label="_wasEnabledAt"]
+"15788_offboardOperator" [label="offboardOperator"]
+"15788_upgradeSystemToV2" [label="upgradeSystemToV2"]
+"15788_checkStrategyStatus" [label="checkStrategyStatus"]
+"15788_getCurrentEpoch" [label="getCurrentEpoch"]
+"15788_getOperatorTokenBalance" [label="getOperatorTokenBalance"]
+"15788_initializeSystem" [label="initializeSystem"]
+"15788_updateAVSMetadataURI" [label="updateAVSMetadataURI"]
+"15788_addNewStrategy" [label="addNewStrategy"]
+"15788_removeStrategy" [label="removeStrategy"]
+"15788_disableStrategy" [label="disableStrategy"]
+"15788_resumeOperator" [label="resumeOperator"]
+"15788__authorizeUpgrade" [label="_authorizeUpgrade"]
+"15788_getOperatorStakeAt" [label="getOperatorStakeAt"]
+"15788_registerOperatorToAVS" [label="registerOperatorToAVS"]
+"15788_getOperatorRestakedStrategies" [label="getOperatorRestakedStrategies"]
+"15788_getOperatorStakeInfo" [label="getOperatorStakeInfo"]
+"15788_enableStrategy" [label="enableStrategy"]
+"15788_getOperatorStake" [label="getOperatorStake"]
+"15788_getOperatorTokenBalanceAt" [label="getOperatorTokenBalanceAt"]
+"15788_onboardOperator" [label="onboardOperator"]
+"15788_getRegisteredStrategies" [label="getRegisteredStrategies"]
+"15788_getRestakeableStrategies" [label="getRestakeableStrategies"]
+"15788_upgradeSystemToV2" -> "15788___Ownable_init"
+"15788_onboardOperator" -> "15788_registerOperatorToAVS"
+"15788_updateAVSMetadataURI" -> "15788_onlyOwner"
+"15788_addNewStrategy" -> "15788_onlyOwner"
+"15788_getOperatorCollaterals" -> "15788__wasEnabledAt"
+"15788_getOperatorStakeInfo" -> "15788__isActiveAtTimestamp"
+"15788_initializeSystem" -> "15788_initializer"
+"15788_initializeSystem" -> "15788___Ownable_init"
+"15788_getOperatorTokenBalanceAt" -> "15788_calculateEpochStart"
+"15788_getOperatorRestakedStrategies" -> "15788__isActiveAtTimestamp"
+"15788_getOperatorStakeInfo" -> "15788_calculateEpochStart"
+"15788_getOperatorCollaterals" -> "15788_getEpochStartTs"
+"15788_getOperatorStakeAt" -> "15788_getEpochStartTs"
+"15788_getOperatorTokenBalance" -> "15788_getOperatorTokenBalanceAt"
+"15788_removeStrategy" -> "15788_onlyOwner"
+"15788_upgradeSystemToV2" -> "15788_reinitializer"
+"15788_getOperatorStake" -> "15788_getOperatorStakeAt"
+"15788_getCurrentEpoch" -> "15788_getEpochForTimestamp"
+"15788_getOperatorRestakedStrategies" -> "15788_getEpochForTimestamp"
+"15788_getOperatorRestakedStrategies" -> "15788_calculateEpochStart"
+"15788_getOperatorStakeAt" -> "15788_getEpochAtTs"
+"15788_getOperatorStakeInfo" -> "15788_getEpochForTimestamp"
+"15788__authorizeUpgrade" -> "15788_onlyOwner"
+"15788_getOperatorCollaterals" -> "15788_getEpochAtTs"
+"15788_updateMetadataURI" -> "15788_onlyOwner"
+"15788_getOperatorTokenBalanceAt" -> "15788__isActiveAtTimestamp"
+"15788_getOperatorTokenBalanceAt" -> "15788_getEpochForTimestamp"
+"15788_offboardOperator" -> "15788_deregisterOperatorFromAVS"
+"15788_getOperatorStakeAt" -> "15788__wasEnabledAt"
+}subgraph cluster_6573_IERC165 {
+label = "IERC165"
+"6573_supportsInterface" [label="supportsInterface"]
+}subgraph cluster_30140_IVault {
+label = "IVault"
+"30140_mint" [label="mint"]
+"30140_getNextWithdrawNonce" [label="getNextWithdrawNonce"]
+"30140_owner" [label="owner"]
+"30140_startRedeem" [label="startRedeem"]
+"30140_finishRedeem" [label="finishRedeem"]
+"30140_extSloads" [label="extSloads"]
+"30140_getQueuedWithdrawal" [label="getQueuedWithdrawal"]
+"30140_isWithdrawalPending" [label="isWithdrawalPending"]
+"30140_deposit" [label="deposit"]
+}subgraph cluster_1478_IVaultStorage {
+label = "IVaultStorage"
+"1478_epochDuration" [label="epochDuration"]
+"1478_activeSharesOfAt" [label="activeSharesOfAt"]
+"1478_SLASHER_FACTORY" [label="SLASHER_FACTORY"]
+"1478_activeSharesAt" [label="activeSharesAt"]
+"1478_currentEpochStart" [label="currentEpochStart"]
+"1478_withdrawalSharesOf" [label="withdrawalSharesOf"]
+"1478_epochDurationInit" [label="epochDurationInit"]
+"1478_isSlasherInitialized" [label="isSlasherInitialized"]
+"1478_previousEpochStart" [label="previousEpochStart"]
+"1478_nextEpochStart" [label="nextEpochStart"]
+"1478_activeStakeAt" [label="activeStakeAt"]
+"1478_isDelegatorInitialized" [label="isDelegatorInitialized"]
+"1478_DELEGATOR_FACTORY" [label="DELEGATOR_FACTORY"]
+"1478_withdrawals" [label="withdrawals"]
+"1478_DEPOSITOR_WHITELIST_ROLE" [label="DEPOSITOR_WHITELIST_ROLE"]
+"1478_activeStake" [label="activeStake"]
+"1478_isWithdrawalsClaimed" [label="isWithdrawalsClaimed"]
+"1478_currentEpoch" [label="currentEpoch"]
+"1478_collateral" [label="collateral"]
+"1478_IS_DEPOSIT_LIMIT_SET_ROLE" [label="IS_DEPOSIT_LIMIT_SET_ROLE"]
+"1478_isDepositorWhitelisted" [label="isDepositorWhitelisted"]
+"1478_DEPOSIT_WHITELIST_SET_ROLE" [label="DEPOSIT_WHITELIST_SET_ROLE"]
+"1478_DEPOSIT_LIMIT_SET_ROLE" [label="DEPOSIT_LIMIT_SET_ROLE"]
+"1478_isDepositLimit" [label="isDepositLimit"]
+"1478_depositLimit" [label="depositLimit"]
+"1478_slasher" [label="slasher"]
+"1478_burner" [label="burner"]
+"1478_activeShares" [label="activeShares"]
+"1478_activeSharesOf" [label="activeSharesOf"]
+"1478_depositWhitelist" [label="depositWhitelist"]
+"1478_delegator" [label="delegator"]
+"1478_epochAt" [label="epochAt"]
+"1478_withdrawalShares" [label="withdrawalShares"]
+}subgraph cluster_3014_IPauserRegistry {
+label = "IPauserRegistry"
+"3014_isPauser" [label="isPauser"]
+"3014_unpauser" [label="unpauser"]
+}subgraph cluster_6089_Panic {
+label = "Panic"
+"6089_panic" [label="panic"]
+}subgraph cluster_21972_IChallenger {
+label = "IChallenger"
+"21972_resolveExpiredDispute" [label="resolveExpiredDispute"]
+"21972_fetchAllDisputes" [label="fetchAllDisputes"]
+"21972_fetchDisputeById" [label="fetchDisputeById"]
+"21972_initiateDispute" [label="initiateDispute"]
+"21972_fetchActiveDisputes" [label="fetchActiveDisputes"]
+"21972_resolveActiveDispute" [label="resolveActiveDispute"]
+}subgraph cluster_4065_BeaconChainProofs {
+label = "BeaconChainProofs"
+"4065_verifyStateRoot" [label="verifyStateRoot"]
+"4065_isValidatorSlashed" [label="isValidatorSlashed"]
+"4065_verifyBalanceContainer" [label="verifyBalanceContainer"]
+"4065_getWithdrawalCredentials" [label="getWithdrawalCredentials"]
+"4065_getBalanceAtIndex" [label="getBalanceAtIndex"]
+"4065_getExitEpoch" [label="getExitEpoch"]
+"4065_getActivationEpoch" [label="getActivationEpoch"]
+"4065_verifyValidatorFields" [label="verifyValidatorFields"]
+"4065_verifyValidatorBalance" [label="verifyValidatorBalance"]
+"4065_getPubkeyHash" [label="getPubkeyHash"]
+"4065_getEffectiveBalanceGwei" [label="getEffectiveBalanceGwei"]
+"4065_verifyValidatorBalance" -> "4065_getBalanceAtIndex"
+}subgraph cluster_23027_EnumerableMap {
+label = "EnumerableMap"
+"23027_length" [label="length"]
+"23027_set" [label="set"]
+"23027_keys" [label="keys"]
+"23027_contains" [label="contains"]
+"23027_at" [label="at"]
+"23027_get" [label="get"]
+"23027_remove" [label="remove"]
+"23027_get" -> "23027_contains"
+}subgraph cluster_8179_Math {
+label = "Math"
+"8179__zeroBytes" [label="_zeroBytes"]
+"8179_tryDiv" [label="tryDiv"]
+"8179_tryAdd" [label="tryAdd"]
+"8179_ternary" [label="ternary"]
+"8179_log256" [label="log256"]
+"8179_max" [label="max"]
+"8179_ceilDiv" [label="ceilDiv"]
+"8179_modExp" [label="modExp"]
+"8179_unsignedRoundsUp" [label="unsignedRoundsUp"]
+"8179_mulDiv" [label="mulDiv"]
+"8179_invMod" [label="invMod"]
+"8179_min" [label="min"]
+"8179_log10" [label="log10"]
+"8179_invModPrime" [label="invModPrime"]
+"8179_tryMod" [label="tryMod"]
+"8179_average" [label="average"]
+"8179_log2" [label="log2"]
+"8179_tryMul" [label="tryMul"]
+"8179_tryModExp" [label="tryModExp"]
+"8179_trySub" [label="trySub"]
+"8179_sqrt" [label="sqrt"]
+"8179_log10" -> "8179_unsignedRoundsUp"
+"8179_min" -> "8179_ternary"
+"8179_log256" -> "8179_unsignedRoundsUp"
+"8179_log2" -> "8179_log2"
+"8179_mulDiv" -> "8179_unsignedRoundsUp"
+"8179_invModPrime" -> "8179_modExp"
+"8179_mulDiv" -> "8179_mulDiv"
+"8179_modExp" -> "8179_tryModExp"
+"8179_invMod" -> "8179_ternary"
+"8179_sqrt" -> "8179_unsignedRoundsUp"
+"8179_max" -> "8179_ternary"
+"8179_sqrt" -> "8179_sqrt"
+"8179_tryModExp" -> "8179__zeroBytes"
+"8179_log256" -> "8179_log256"
+"8179_log10" -> "8179_log10"
+"8179_mulDiv" -> "8179_ternary"
+"8179_log2" -> "8179_unsignedRoundsUp"
+}subgraph cluster_505_IOptInService {
+label = "IOptInService"
+"505_WHO_REGISTRY" [label="WHO_REGISTRY"]
+"505_WHERE_REGISTRY" [label="WHERE_REGISTRY"]
+"505_isOptedIn" [label="isOptedIn"]
+"505_increaseNonce" [label="increaseNonce"]
+"505_optOut" [label="optOut"]
+"505_isOptedInAt" [label="isOptedInAt"]
+"505_optIn" [label="optIn"]
+"505_nonces" [label="nonces"]
+}subgraph cluster_1535_AVSDirectoryStorage {
+label = "AVSDirectoryStorage"
+"1535_constructor" [label="constructor"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert MissingBeaconRoot()" 
+"revert UnsafeRegistrationDisabled()" 
+"sha256(bytes)" 
+"revert InvalidInitialization()" 
+"bytes.concat()" 
+"revert StrategyNotFound()" 
+"revert ECDSAInvalidSignature()" 
+"revert SafeCastOverflowedIntDowncast(uint8,int256)" 
+"revert AlreadyEnabled()" 
+"revert ECDSAInvalidSignatureS(bytes32)" 
+"revert MixedSlotError()" 
+"revert ERC1967InvalidImplementation(address)" 
+"revert ValidatorDNE(bytes20)" 
+"revert SignatureVerificationFailed()" 
+"revert InvalidOperator()" 
+"revert UnfinalizedBlock()" 
+"invalid()" 
+"revert InsufficientBalance(uint256,uint256)" 
+"revert AlreadyRegistered()" 
+"revert UnsupportedSlasherType()" 
+"revert EnumerableMapNonexistentKey(bytes32)" 
+"revert ERC1967NonPayable()" 
+"revert NoSignature()" 
+"require(bool,string)" 
+"revert InvalidFieldCount()" 
+"revert SafeCastOverflowedUintToInt(uint256)" 
+"revert SafeCastOverflowedUintDowncast(uint8,uint256)" 
+"revert MissingTransaction()" 
+"revert InvalidPublicKey()" 
+"revert InvalidBLSSignature()" 
+"revert InvalidProofLength()" 
+"revert StaleAssetPrice(address,uint256,uint256)" 
+"revert NotEnabled()" 
+"revert OperatorExists()" 
+"revert UUPSUnsupportedProxiableUUID(bytes32)" 
+"revert InvalidBondAmount()" 
+"revert SafeCastOverflowedIntToUint(int256)" 
+"balance(address)" 
+"staticcall(uint256,uint256,uint256,uint256,uint256,uint256)" 
+"revert InvalidBLSSignatureProvided()" 
+"revert ERC1967InvalidAdmin(address)" 
+"abi.encode()" 
+"revert InvalidAssetPrice(address,uint80)" 
+"revert FailedCall()" 
+"mulmod(uint256,uint256,uint256)" 
+"revert MixedSenderError()" 
+"revert AlreadyAdded()" 
+"revert OperatorNotFound()" 
+"ecrecover(bytes32,uint8,bytes32,bytes32)" 
+"byte(uint256,uint256)" 
+"revert NotRegistered()" 
+"revert ObsoleteBlock()" 
+"mload(uint256)" 
+"revert(uint256,uint256)" 
+"revert InvalidAuthorizedOperator()" 
+"revert NonexistentDispute()" 
+"gas()" 
+"revert ERC1967InvalidBeacon(address)" 
+"revert PairingNotSuccessful()" 
+"revert OperatorIsNotRegistered()" 
+"revert Unauthorized()" 
+"revert UnauthorizedAccess()" 
+"revert InvalidVaultAddress()" 
+"revert InvalidPubkey()" 
+"revert OwnableUnauthorizedAccount(address)" 
+"revert UUPSUnauthorizedCallContext()" 
+"revert CheckpointUnorderedInsertion()" 
+"revert UnsafeRegistrationNotAllowed()" 
+"revert InvalidStrategy()" 
+"revert AssetNotAllowed()" 
+"addmod(uint256,uint256,uint256)" 
+"mstore(uint256,uint256)" 
+"revert BondTransferError()" 
+"revert MismatchedParentHash()" 
+"revert AddressEmptyCode(address)" 
+"revert(string)" 
+"revert ExpiredDispute()" 
+"code(address)" 
+"revert OperatorNotOptedIn()" 
+"revert EmptyCommitmentList()" 
+"revert UnsupportedTxType()" 
+"revert InvalidOperatorAddress()" 
+"revert InvalidHeight()" 
+"revert MixedSignerError()" 
+"revert ExcessiveSlashAmount()" 
+"revert OwnableInvalidOwner(address)" 
+"revert ValidatorExists(bytes20)" 
+"revert OperatorAndIndexDontMatch()" 
+"revert ResolvedDispute()" 
+"revert InvalidTimeQuery()" 
+"revert ExistingDispute()" 
+"revert InvalidQuery()" 
+"revert MissingAccount()" 
+"keccak256(uint256,uint256)" 
+"revert UnsupportedOracleType()" 
+"abi.encodePacked()" 
+"revert QueryError()" 
+"revert KeyNotFound()" 
+"revert UnauthorizedCaller()" 
+"revert NonSequentialNonce()" 
+"revert StrategyAlreadyExists()" 
+"revert NotInitializing()" 
+"revert InvalidSignatureLength()" 
+"revert MismatchedBlockHash()" 
+"revert OperatorAlreadyRegistered()" 
+"revert ECDSAInvalidSignatureLength(uint256)" 
+"keccak256(bytes)" 
+"revert OperatorNotRegistered()" 
+"revert InvalidTransactionHashProof()" 
+"abi.decode()" 
+"blockhash(uint256)" 
+"6561__throwError" -> "revert ECDSAInvalidSignature()"
+"19233_fetchDisputeById" -> "revert NonexistentDispute()"
+"6561__throwError" -> "revert ECDSAInvalidSignatureS(bytes32)"
+"29083_hashG2Point" -> "abi.encodePacked()"
+"21794_hashPubkey" -> "keccak256(bytes)"
+"5476__checkNonPayable" -> "revert ERC1967NonPayable()"
+"6089_panic" -> "revert(uint256,uint256)"
+"9944_toInt64" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"9944_toInt104" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"19233_initiateDispute" -> "revert EmptyCommitmentList()"
+"29083_scalar_mul_tiny" -> "require(bool,string)"
+"22738_toUint8" -> "mload(uint256)"
+"33291__walkNodePath" -> "require(bool,string)"
+"25503__decodeEip2930" -> "abi.encodePacked()"
+"19233_resolveExpiredDispute" -> "revert NonexistentDispute()"
+"4431_merkleizeSha256" -> "sha256(bytes)"
+"20550_getOperatorStakeAt" -> "revert InvalidQuery()"
+"21794_generatePublicKeyHash" -> "abi.encodePacked()"
+"5476__setBeacon" -> "revert ERC1967InvalidBeacon(address)"
+"5652__upgradeToAndCallUUPS" -> "revert ERC1967InvalidImplementation(address)"
+"16489_getOperatorStakeAt" -> "revert InvalidQuery()"
+"11525__unsafeAccess" -> "keccak256(uint256,uint256)"
+"9944_toInt168" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"9944_toUint112" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"19233_resolveActiveDispute" -> "blockhash(uint256)"
+"21794_registerValidator" -> "revert InvalidBLSSignature()"
+"15788_addNewStrategy" -> "revert StrategyAlreadyExists()"
+"19233_initiateDispute" -> "revert InvalidBondAmount()"
+"9944_toInt16" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"15788_onboardOperator" -> "revert InvalidOperator()"
+"9944_toInt112" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4431_processInclusionProofSha256" -> "staticcall(uint256,uint256,uint256,uint256,uint256,uint256)"
+"17713_registerOperator" -> "revert OperatorAlreadyRegistered()"
+"8179_tryModExp" -> "gas()"
+"29806_addOperator" -> "abi.decode()"
+"4065_verifyValidatorBalance" -> "require(bool,string)"
+"4677__checkOwner" -> "revert OwnableUnauthorizedAccount(address)"
+"26793__expandMsgXmd" -> "require(bool,string)"
+"26793_plus" -> "revert(uint256,uint256)"
+"15788_getOperatorStakeAt" -> "revert InvalidQuery()"
+"29083_plus" -> "invalid()"
+"19233_processResolution" -> "revert InvalidTransactionHashProof()"
+"19233_processResolution" -> "abi.encodePacked()"
+"17713_isOperatorEnabled" -> "revert OperatorNotRegistered()"
+"26793_pairing" -> "staticcall(uint256,uint256,uint256,uint256,uint256,uint256)"
+"9944_toUint80" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"21794_quickRegisterValidator" -> "revert UnsafeRegistrationDisabled()"
+"30874__decodeLength" -> "byte(uint256,uint256)"
+"9944_toInt200" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"20550_addVault" -> "revert AlreadyRegistered()"
+"15788_deregisterOperatorFromAVS" -> "revert Unauthorized()"
+"21794_secureRegisterValidator" -> "abi.encodePacked()"
+"20550_resumeVaultActivity" -> "revert NotRegistered()"
+"8179_mulDiv" -> "mulmod(uint256,uint256,uint256)"
+"9944_toInt8" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"8179_tryModExp" -> "staticcall(uint256,uint256,uint256,uint256,uint256,uint256)"
+"31378__memcpy" -> "mload(uint256)"
+"21794_bulkRegisterValidators" -> "revert InvalidBLSSignatureProvided()"
+"22738_toUint8" -> "require(bool,string)"
+"31378__toBinary" -> "abi.encodePacked()"
+"4677_transferOwnership" -> "revert OwnableInvalidOwner(address)"
+"5652__checkProxy" -> "revert UUPSUnauthorizedCallContext()"
+"29083_plus" -> "staticcall(uint256,uint256,uint256,uint256,uint256,uint256)"
+"9944_toInt40" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"33291__getUpdatedTrieRoot" -> "keccak256(bytes)"
+"4931__disableInitializers" -> "revert InvalidInitialization()"
+"9944_toUint232" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"9944_toInt136" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"16489_registerAsset" -> "revert AssetNotAllowed()"
+"31378_writeList" -> "abi.encodePacked()"
+"29083_findYFromX" -> "mulmod(uint256,uint256,uint256)"
+"9944_toUint144" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"25503_decodeEnveloped" -> "revert UnsupportedTxType()"
+"19233_generateDisputeId" -> "abi.encodePacked()"
+"9944_toUint184" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"6015_sendValue" -> "revert InsufficientBalance(uint256,uint256)"
+"30874_readList" -> "mstore(uint256,uint256)"
+"29806_verifySignature" -> "keccak256(bytes)"
+"26793__modfield" -> "staticcall(uint256,uint256,uint256,uint256,uint256,uint256)"
+"30874__copy" -> "mstore(uint256,uint256)"
+"21794__processBulkValidatorRegistration" -> "revert InvalidPublicKey()"
+"26793_mapToG2" -> "staticcall(uint256,uint256,uint256,uint256,uint256,uint256)"
+"9944_toInt48" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"9944_toUint72" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"9944_toUint256" -> "revert SafeCastOverflowedIntToUint(int256)"
+"9944_toUint208" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"5476__setBeacon" -> "code(address)"
+"20550_removeVault" -> "revert NotRegistered()"
+"19233_distributeBondHalf" -> "revert BondTransferError()"
+"29083_scalar_mul" -> "require(bool,string)"
+"9944_toInt224" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"33449__getSecureKey" -> "keccak256(bytes)"
+"9944_toUint176" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"31378_writeBytes" -> "abi.encodePacked()"
+"25503__unsignedEip1559" -> "abi.encodePacked()"
+"9944_toUint168" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"26793_pairing" -> "revert(uint256,uint256)"
+"33291__addHexPrefix" -> "abi.encodePacked()"
+"19233_initiateDispute" -> "revert NonSequentialNonce()"
+"26793_plus" -> "gas()"
+"9944_toInt96" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"20550_penalizeOperator" -> "revert ExcessiveSlashAmount()"
+"20550_onboardOperator" -> "revert AlreadyRegistered()"
+"9944_toInt120" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"21794_batchRegisterValidators" -> "revert InvalidBLSSignature()"
+"22738_toBytes32" -> "abi.decode()"
+"4431_processInclusionProofSha256" -> "require(bool,string)"
+"23273_add" -> "revert AlreadyAdded()"
+"29806_verifySignature" -> "revert PairingNotSuccessful()"
+"23027_get" -> "revert KeyNotFound()"
+"30874__decodeLength" -> "require(bool,string)"
+"9944_toUint216" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"26793_pairing" -> "gas()"
+"5476__setImplementation" -> "code(address)"
+"4931__checkInitializing" -> "revert NotInitializing()"
+"21794__batchRegisterValidators" -> "revert InvalidPubkey()"
+"29083_expMod" -> "require(bool,string)"
+"9944_toUint224" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"23554_disable" -> "revert NotEnabled()"
+"22738_equal" -> "keccak256(bytes)"
+"9944_toInt88" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"27684_baseDssOpStatePtr" -> "keccak256(bytes)"
+"20550_setupContract" -> "keccak256(bytes)"
+"29083_hashToG1" -> "addmod(uint256,uint256,uint256)"
+"15788_upgradeSystemToV2" -> "keccak256(bytes)"
+"19233_resolveActiveDispute" -> "revert InvalidHeight()"
+"29806_removeOperator" -> "revert OperatorAndIndexDontMatch()"
+"20550_upgradeContractV2" -> "keccak256(bytes)"
+"9944_toInt24" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"20550_onboardOperator" -> "revert OperatorNotOptedIn()"
+"9944_toInt176" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"26793__modfield" -> "revert(uint256,uint256)"
+"29806_verifySignature" -> "revert SignatureVerificationFailed()"
+"5476__setAdmin" -> "revert ERC1967InvalidAdmin(address)"
+"22738_slice" -> "mload(uint256)"
+"25503_unsigned" -> "revert UnsupportedTxType()"
+"6015_functionCallWithValue" -> "balance(address)"
+"30874_readBool" -> "require(bool,string)"
+"29083_pairing" -> "gas()"
+"9944_toUint240" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"25503__decodeEip4844" -> "revert InvalidFieldCount()"
+"30874_readBytes32" -> "mload(uint256)"
+"9944_toUint128" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"19233_extractCommitmentData" -> "keccak256(bytes)"
+"9944_toInt184" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"29083_expMod" -> "staticcall(uint256,uint256,uint256,uint256,uint256,uint256)"
+"11525__insert" -> "revert CheckpointUnorderedInsertion()"
+"21794_generatePublicKeyHash" -> "keccak256(bytes)"
+"30874__decodeLength" -> "mload(uint256)"
+"27684_baseDssOpStatePtr" -> "abi.encode()"
+"9944_toUint160" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"5476__setImplementation" -> "revert ERC1967InvalidImplementation(address)"
+"9944_toInt152" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"17713_getValidatorProposerStatus" -> "revert InvalidQuery()"
+"9944_toInt32" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"9944_toUint152" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4431_processInclusionProofKeccak" -> "mstore(uint256,uint256)"
+"21794__processValidatorRegistration" -> "revert InvalidPublicKey()"
+"28202_getUSDValue" -> "revert StaleAssetPrice(address,uint256,uint256)"
+"30874_readBytes" -> "require(bool,string)"
+"9944_toUint200" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"25865_updateMaxCommittedGasLimit" -> "revert ValidatorDNE(bytes20)"
+"29806_removeOperator" -> "revert OperatorIsNotRegistered()"
+"13558_get" -> "revert EnumerableMapNonexistentKey(bytes32)"
+"28202_getUSDValue" -> "revert UnsupportedOracleType()"
+"9944_toUint88" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"9944_toInt256" -> "revert SafeCastOverflowedUintToInt(uint256)"
+"26793__expandMsgXmd" -> "sha256(bytes)"
+"4431_processInclusionProofKeccak" -> "mload(uint256)"
+"4431_processInclusionProofSha256" -> "revert(uint256,uint256)"
+"9944_toInt248" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"19233_getBeaconRootForTime" -> "abi.decode()"
+"9944_toInt232" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"9944_toInt56" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"19233_getBeaconRootForTime" -> "abi.encode()"
+"4065_verifyStateRoot" -> "require(bool,string)"
+"29083_expMod" -> "invalid()"
+"4677___Ownable_init_unchained" -> "revert OwnableInvalidOwner(address)"
+"29083_pairing" -> "require(bool,string)"
+"33291__getNodeType" -> "revert(string)"
+"9944_toUint104" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"29083_hashG2Point" -> "keccak256(bytes)"
+"21794_quickBulkRegisterValidators" -> "revert UnsafeRegistrationDisabled()"
+"22738_toAddress" -> "mload(uint256)"
+"9944_toUint8" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"19233_computeCommitmentId" -> "abi.encodePacked()"
+"19233_initiateDispute" -> "revert MixedSignerError()"
+"9944_toUint40" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"19233_processResolution" -> "revert ResolvedDispute()"
+"29083_plus" -> "gas()"
+"21794_updateMaxCommittedGasLimit" -> "revert UnauthorizedCaller()"
+"6015_verifyCallResultFromTarget" -> "code(address)"
+"5652__upgradeToAndCallUUPS" -> "revert UUPSUnsupportedProxiableUUID(bytes32)"
+"33291_getSingleNodeRootHash" -> "keccak256(bytes)"
+"25865_get" -> "revert ValidatorDNE(bytes20)"
+"4431_processInclusionProofKeccak" -> "require(bool,string)"
+"29083_safePairing" -> "staticcall(uint256,uint256,uint256,uint256,uint256,uint256)"
+"33291__walkNodePath" -> "keccak256(bytes)"
+"16489_registerAsset" -> "revert AlreadyRegistered()"
+"19233_resolveActiveDispute" -> "revert ObsoleteBlock()"
+"20550_executeVaultPenalty" -> "revert UnsupportedSlasherType()"
+"19233_processResolution" -> "revert MismatchedBlockHash()"
+"26793__modfield" -> "mstore(uint256,uint256)"
+"21794__processBulkValidatorRegistration" -> "revert InvalidOperatorAddress()"
+"25503__unsignedLegacy" -> "abi.encodePacked()"
+"20550_addVault" -> "revert InvalidVaultAddress()"
+"11525__unsafeAccess" -> "mstore(uint256,uint256)"
+"6561_tryRecover" -> "mload(uint256)"
+"9944_toInt216" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"30874_readBytes32" -> "require(bool,string)"
+"19233_resolveExpiredDispute" -> "revert ResolvedDispute()"
+"33291__getNodeHash" -> "abi.encodePacked()"
+"23273_enable" -> "revert AlreadyEnabled()"
+"19233_resolveActiveDispute" -> "revert NonexistentDispute()"
+"25503__decodeLegacy" -> "abi.encodePacked()"
+"26793__expandMsgXmd" -> "bytes.concat()"
+"29083_expMod" -> "gas()"
+"6015_verifyCallResultFromTarget" -> "revert AddressEmptyCode(address)"
+"16489_deregisterAsset" -> "revert NotRegistered()"
+"8179_tryModExp" -> "abi.encodePacked()"
+"15894_removeGatewayIPByValue" -> "abi.encodePacked()"
+"9944_toUint56" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"30874_readAddress" -> "require(bool,string)"
+"19233_distributeBondFull" -> "revert BondTransferError()"
+"29083_hashG1Point" -> "keccak256(uint256,uint256)"
+"19233_processResolution" -> "revert NonexistentDispute()"
+"21794_registerValidatorUnsafe" -> "revert UnsafeRegistrationNotAllowed()"
+"29083_hashG1Point" -> "mload(uint256)"
+"29083_plus" -> "require(bool,string)"
+"29083_scalar_mul" -> "invalid()"
+"6561__throwError" -> "revert ECDSAInvalidSignatureLength(uint256)"
+"19233_processResolution" -> "revert MissingAccount()"
+"15788_onboardOperator" -> "revert OperatorExists()"
+"19233_initiateDispute" -> "revert ExistingDispute()"
+"25865_insert" -> "revert ValidatorExists(bytes20)"
+"19233__getBeaconBlockRootAtTimestamp" -> "abi.decode()"
+"6015__revert" -> "revert(uint256,uint256)"
+"33291__walkNodePath" -> "revert(string)"
+"22738_toUint24" -> "mload(uint256)"
+"19233_initiateDispute" -> "revert UnfinalizedBlock()"
+"22738_toAddress" -> "require(bool,string)"
+"4431_processInclusionProofSha256" -> "gas()"
+"20550_suspendVaultActivity" -> "revert NotRegistered()"
+"25503_preimage" -> "keccak256(bytes)"
+"21794__registerValidator" -> "revert InvalidPubkey()"
+"19233_getBeaconRootForTime" -> "revert MissingBeaconRoot()"
+"20550_onboardOperator" -> "revert InvalidOperator()"
+"29083_scalar_mul" -> "staticcall(uint256,uint256,uint256,uint256,uint256,uint256)"
+"26793__expandMsgXmd" -> "abi.encodePacked()"
+"23273_disable" -> "revert NotEnabled()"
+"25503_signature" -> "revert NoSignature()"
+"31378_writeAddress" -> "abi.encodePacked()"
+"9944_toUint32" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"17713_isOperatorRegistered" -> "revert OperatorNotRegistered()"
+"26793_mapToG2" -> "revert(uint256,uint256)"
+"4065_verifyValidatorFields" -> "require(bool,string)"
+"25503__decodeEip1559" -> "abi.encodePacked()"
+"21794_hashPubkey" -> "abi.encodePacked()"
+"25503__decodeLegacy" -> "revert InvalidFieldCount()"
+"5652__checkNotDelegated" -> "revert UUPSUnauthorizedCallContext()"
+"9944_toUint16" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"21794_bulkRegisterValidators" -> "abi.encodePacked()"
+"21794_registerValidator" -> "abi.encodePacked()"
+"19233__getBeaconBlockRootAtTimestamp" -> "abi.encode()"
+"19233_processResolution" -> "revert ExpiredDispute()"
+"4431_processInclusionProofSha256" -> "mload(uint256)"
+"22738_toBytes32PadLeft" -> "mload(uint256)"
+"6089_panic" -> "mstore(uint256,uint256)"
+"19233_initiateDispute" -> "revert MixedSenderError()"
+"21794__registerValidator" -> "revert InvalidAuthorizedOperator()"
+"9944_toUint96" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"9944_toUint120" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"6015_sendValue" -> "revert FailedCall()"
+"9944_toUint248" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"29806_addOperator" -> "revert OperatorAlreadyRegistered()"
+"9944_toUint64" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"29806_verifySignature" -> "abi.encode()"
+"15788_offboardOperator" -> "revert OperatorNotFound()"
+"19233__getBeaconBlockRootAtTimestamp" -> "revert MissingBeaconRoot()"
+"25503__unsignedEip2930" -> "abi.encodePacked()"
+"22738_toBytes32" -> "mload(uint256)"
+"9944_toInt144" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"26793_mapToG2" -> "gas()"
+"26793_plus" -> "staticcall(uint256,uint256,uint256,uint256,uint256,uint256)"
+"29083_hashG1Point" -> "mstore(uint256,uint256)"
+"15788_addNewStrategy" -> "revert InvalidStrategy()"
+"6561_tryRecover" -> "ecrecover(bytes32,uint8,bytes32,bytes32)"
+"19233_initiateDispute" -> "revert MixedSlotError()"
+"29083_findYFromX" -> "addmod(uint256,uint256,uint256)"
+"22738_toUint24" -> "require(bool,string)"
+"33449__getSecureKey" -> "abi.encodePacked()"
+"26793__modfield" -> "gas()"
+"9944_toInt240" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"21794__processValidatorRegistration" -> "revert InvalidOperatorAddress()"
+"4431_processInclusionProofKeccak" -> "keccak256(uint256,uint256)"
+"6561_tryRecover" -> "byte(uint256,uint256)"
+"19233_resolveExpiredDispute" -> "revert ExistingDispute()"
+"9944_toInt208" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"26793__modfield" -> "mload(uint256)"
+"25503__decodeEip1559" -> "revert InvalidFieldCount()"
+"15788_removeStrategy" -> "revert StrategyNotFound()"
+"15788_getOperatorTokenBalanceAt" -> "revert QueryError()"
+"21794__batchRegisterValidators" -> "revert InvalidAuthorizedOperator()"
+"21794_batchRegisterValidators" -> "abi.encodePacked()"
+"23554_enable" -> "revert AlreadyEnabled()"
+"9944_toInt128" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"19233_generateDisputeId" -> "keccak256(bytes)"
+"25503_signature" -> "revert InvalidSignatureLength()"
+"4065_verifyBalanceContainer" -> "require(bool,string)"
+"28202_getUSDValue" -> "revert InvalidAssetPrice(address,uint80)"
+"15788_disableStrategy" -> "revert StrategyNotFound()"
+"6015__revert" -> "mload(uint256)"
+"31378__memcpy" -> "mstore(uint256,uint256)"
+"29083_scalar_mul" -> "gas()"
+"27199_baseDssOpStatePtr" -> "keccak256(bytes)"
+"29083_hashToG1" -> "mulmod(uint256,uint256,uint256)"
+"6015_sendValue" -> "balance(address)"
+"19233_processResolution" -> "revert MismatchedParentHash()"
+"15788_enableStrategy" -> "revert StrategyNotFound()"
+"30874_readBool" -> "mload(uint256)"
+"17713_getProposerStatus" -> "revert InvalidQuery()"
+"25503__decodeEip4844" -> "abi.encodePacked()"
+"17713_isOperatorAuthorizedForValidator" -> "revert InvalidQuery()"
+"21794_updateValidatorGasLimit" -> "revert UnauthorizedAccess()"
+"19233_processResolution" -> "revert MissingTransaction()"
+"9944_toInt80" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"20550_getOperatorStakeAtTime" -> "revert InvalidTimeQuery()"
+"9944_toInt192" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"25503__decodeEip2930" -> "revert InvalidFieldCount()"
+"33291__getNodeHash" -> "keccak256(bytes)"
+"9944_toUint192" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"21794_secureRegisterValidator" -> "revert InvalidBLSSignatureProvided()"
+"22738_slice" -> "require(bool,string)"
+"16489_initialize" -> "keccak256(bytes)"
+"8179_tryModExp" -> "mload(uint256)"
+"15894_removeGatewayIPByValue" -> "keccak256(bytes)"
+"4431_merkleizeSha256" -> "abi.encodePacked()"
+"9944_toUint24" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"9944_toInt72" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"8179_tryModExp" -> "mstore(uint256,uint256)"
+"20550_offboardOperator" -> "revert NotRegistered()"
+"19233_processResolution" -> "keccak256(bytes)"
+"25503__unsignedEip4844" -> "abi.encodePacked()"
+"4431_processInclusionProofSha256" -> "mstore(uint256,uint256)"
+"28202_getUSDValue" -> "abi.decode()"
+"33291_get" -> "require(bool,string)"
+"17713_registerNewOperator" -> "revert OperatorAlreadyRegistered()"
+"27199_baseDssOpStatePtr" -> "abi.encode()"
+"5476__setBeacon" -> "revert ERC1967InvalidImplementation(address)"
+"6015_functionCallWithValue" -> "revert InsufficientBalance(uint256,uint256)"
+"30874_readList" -> "require(bool,string)"
+"22738_slice" -> "mstore(uint256,uint256)"
+"9944_toUint136" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"9944_toInt160" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"6015__revert" -> "revert FailedCall()"
+"21794_batchRegisterValidatorsUnsafe" -> "revert UnsafeRegistrationNotAllowed()"
+"19233_computeCommitmentId" -> "keccak256(bytes)"
+"30874_readBool" -> "byte(uint256,uint256)"
+"30874__copy" -> "mload(uint256)"
+"27684_isThresholdReached" -> "abi.encode()"
+"9944_toUint48" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"23554_add" -> "revert AlreadyAdded()"
+"29083_pairing" -> "staticcall(uint256,uint256,uint256,uint256,uint256,uint256)"
+"19233_processResolution" -> "revert InvalidProofLength()"
+"15788_initializeSystem" -> "keccak256(bytes)"
+}"8179_ternary" -> "9944_toUint"
+"20550_getOperatorStakeAtTime" -> "1241_delegator"
+"15788_checkStrategyStatus" -> "23273_getTimes"
+"15788_getOperatorCollaterals" -> "14445_timestamp"
+"27684_unregistrationHook" -> "29806_removeOperator"
+"15788_getOperatorStakeAt" -> "14445_timestamp"
+"27199_getActiveVaults" -> "29310_fetchVaultsNotQueuedForWithdrawal"
+"20550_removeVault" -> "13558_remove"
+"20550_resumeVaultActivity" -> "23273_enable"
+"27684_requestUpdateStakeHook" -> "29310_removeVault"
+"15788_upgradeSystemToV2" -> "14445_timestamp"
+"27684_verifySignature" -> "29806_verifySignature"
+"26793_hashToCurveG2" -> "26793_mapToG2"
+"20550_suspendVaultActivity" -> "13558_contains"
+"21794__batchRegisterValidators" -> "25865_insert"
+"14445_get" -> "14445_getFull"
+"20550_executeVaultPenalty" -> "1241_slasher"
+"27199__init" -> "29201_init"
+"19233__getSlotFromTimestamp" -> "22118_getEth2GenesisTimestamp"
+"15788_getRestakeableStrategies" -> "13558_keys"
+"13558_keys" -> "14171_values"
+"17713_getOperatorStake" -> "23027_get"
+"5476_getAdmin" -> "6213_getAddressSlot"
+"21794__getValidatorInfo" -> "25865_getController"
+"27199_isOperatorRegistered" -> "29201_isOperatorRegistered"
+"14445__getFullAt" -> "14445_unpack"
+"15788_deregisterOperatorFromAVS" -> "1871_deregisterOperatorFromAVS"
+"19233_resolveActiveDispute" -> "22118_getBlockhashEvmLookback"
+"25503__unsignedEip1559" -> "31378_writeBytes"
+"16489_deregisterAsset" -> "13558_contains"
+"26890__verifySignature" -> "26793_hashToCurveG2"
+"17713_getTotalStake" -> "23027_at"
+"19233_finalizeDisputeResolution" -> "14171_remove"
+"20550_getOperatorStakeAt" -> "1241_delegator"
+"14445_blockNumber" -> "9944_toUint48"
+"20550_checkVaultStatus" -> "23273_getTimes"
+"15788_disableStrategy" -> "23273_disable"
+"25503__decodeEip1559" -> "30874_readRawBytes"
+"19233__isWithinEIP4788Window" -> "22118_getEip4788Window"
+"20550_executeVaultPenalty" -> "673_slash"
+"19233_getTimeFromSlot" -> "22118_getEth2GenesisTimestamp"
+"23273_disable" -> "13558_get"
+"25503__unsignedEip2930" -> "31378_writeAddress"
+"19233__getBeaconBlockRootAtSlot" -> "22118_getSlotTime"
+"17713_getProposerStatus" -> "22338_getValidatorByPubkeyHash"
+"28202_getStakeDistributionUSDForOperators" -> "5756_totalSupply"
+"33291__makeLeafNode" -> "31378_writeBytes"
+"21794__registerValidator" -> "25865_insert"
+"19233_resolveExpiredDispute" -> "14171_contains"
+"15788_getOperatorTokenBalanceAt" -> "14445_timestamp"
+"27199_isOperatorJailed" -> "29310_isOperatorJailed"
+"33449_get" -> "33291_get"
+"29201_removeOperator" -> "14171_remove"
+"27684__jailOperator" -> "29310_jailOperator"
+"27199_unregistrationHook" -> "29201_removeOperator"
+"25503__decodeEip4844" -> "22738_slice"
+"20550_getOperatorStakeAtTime" -> "14445_timestamp"
+"25503__unsignedLegacy" -> "31378_writeUint"
+"25503__decodeEip1559" -> "22738_slice"
+"20550_getOperatorCollaterals" -> "111_subnetwork"
+"20550_getOperatorStakeAtTime" -> "23273_atWithTimes"
+"15788_getOperatorCollaterals" -> "1664_getOperatorShares"
+"23273_add" -> "13558_set"
+"20550_penalizeOperator" -> "23273_atWithTimes"
+"20550_getEpochForTimestamp" -> "22118_getEpochDuration"
+"17713_isOperator" -> "23027_contains"
+"15788_calculateEpochStart" -> "22118_getEpochDuration"
+"33291__getUpdatedTrieRoot" -> "22738_slice"
+"21794__getValidatorInfo" -> "25865_getAuthorizedOperator"
+"11525_upperLookupRecent" -> "8179_sqrt"
+"15788_onboardOperator" -> "22218_registerNewOperator"
+"19233_processResolution" -> "22118_getMaxChallengeDuration"
+"16489__getVaultActiveBalance" -> "5756_totalSupply"
+"19233_processResolution" -> "33449_get"
+"33291__makeLeafNode" -> "22738_fromNibbles"
+"17713_getProposerStatus" -> "14445_timestamp"
+"17713_registerNewOperator" -> "23027_contains"
+"8179_mulDiv" -> "6089_panic"
+"23027_length" -> "14171_length"
+"33291__getNewPath" -> "22738_slice"
+"17713_isOperatorRegistered" -> "23554_getTimes"
+"25503__unsignedEip1559" -> "31378_writeAddress"
+"20550_getOperatorStakeAt" -> "14445_timestamp"
+"15788_removeStrategy" -> "13558_remove"
+"4065_verifyBalanceContainer" -> "4431_verifyInclusionSha256"
+"21794__registerValidator" -> "25865_getOrInsertController"
+"15788_getOperatorRestakedStrategies" -> "1664_operatorShares"
+"17713_isOperatorEnabled" -> "23027_contains"
+"27684_isOperatorRegistered" -> "29806_isOperatorRegistered"
+"16489_deregisterAsset" -> "13558_remove"
+"29806_verifySignature" -> "29083_generatorG1"
+"15788_getOperatorRestakedStrategies" -> "23273_atWithTimes"
+"25503__decodeEip1559" -> "30874_toRLPItem"
+"23273_getTimes" -> "13558_get"
+"26793_compress" -> "26793_negate"
+"4065_verifyValidatorFields" -> "4431_verifyInclusionSha256"
+"5476_getBeacon" -> "6213_getAddressSlot"
+"27199_finishUpdateStakeHook" -> "29310_addVault"
+"20550_penalizeOperator" -> "111_subnetwork"
+"20550_getOperatorStakeAt" -> "23273_atWithTimes"
+"20550_addVault" -> "205_isEntity"
+"20550_getOperatorStakeNow" -> "14445_timestamp"
+"29201_addOperator" -> "14171_add"
+"15788_getOperatorStakeAt" -> "13558_length"
+"19233_processResolution" -> "31378_writeUint"
+"29806_verifySignature" -> "29083_negGeneratorG2"
+"20550_executeVaultPenalty" -> "903_requestSlash"
+"19233_getTimeFromSlot" -> "22118_getSlotTime"
+"16489_getOperatorCollaterals" -> "14445_timestamp"
+"19233__getSlotFromTimestamp" -> "22118_getSlotTime"
+"17713_registerNewOperator" -> "23027_set"
+"19233_parseAccount" -> "30874_readList"
+"16489_registerAsset" -> "22055_isAssetAllowlisted"
+"33449_verifyExclusionProof" -> "33291_verifyExclusionProof"
+"29201_init" -> "29914_registerDSS"
+"17713_getValidatorProposerStatus" -> "23027_get"
+"26890__verifySignature" -> "26793_negate"
+"25503__unsignedEip2930" -> "31378_writeList"
+"15788_getOperatorCollaterals" -> "3384_sharesToUnderlyingView"
+"25503__decodeEip4844" -> "30874_readBytes"
+"15788_enableStrategy" -> "13558_contains"
+"20550_getOperatorCollaterals" -> "1241_delegator"
+"19233_processResolution" -> "14171_contains"
+"21794_updateMaxCommittedGasLimit" -> "25865_getController"
+"19233_fetchAllDisputes" -> "14171_length"
+"16489_getOperatorCollaterals" -> "30000_asset"
+"13558_contains" -> "14171_contains"
+"11525__upperBinaryLookup" -> "8179_average"
+"25503__decodeEip1559" -> "30874_readUint256"
+"13558_length" -> "14171_length"
+"20550_executeVaultPenalty" -> "134_TYPE"
+"15788_addNewStrategy" -> "13558_contains"
+"20550_resumeVaultActivity" -> "13558_contains"
+"17713_getSupportedRestakingProtocols" -> "14171_values"
+"15788_getOperatorTokenBalanceAt" -> "3384_sharesToUnderlyingView"
+"19233_extractCommitmentData" -> "25503_decodeEnveloped"
+"15788_offboardOperator" -> "22218_isOperatorRegistered"
+"27199_getRegisteredOperators" -> "29201_getOperators"
+"20550_listAuthorizedVaults" -> "13558_keys"
+"14445_withUpdate" -> "14445_get"
+"19233_initiateDispute" -> "22118_getChallengeBond"
+"33291__getNodeID" -> "30874_readBytes"
+"19233__getBeaconBlockRootAtSlot" -> "22118_getEth2GenesisTimestamp"
+"20550_getEpochAtTs" -> "22118_getEpochDuration"
+"21794__processValidatorRegistration" -> "25865_getOrInsertAuthorizedOperator"
+"16489_registerAsset" -> "23273_enable"
+"19233_getBeaconRootForSlot" -> "22118_getSlotTime"
+"25503__unsignedLegacy" -> "31378_writeList"
+"21794__batchRegisterValidators" -> "25865_getOrInsertAuthorizedOperator"
+"5476_upgradeBeaconToAndCall" -> "6015_functionDelegateCall"
+"21794__processValidatorRegistration" -> "25865_getOrInsertController"
+"19233_extractCommitmentData" -> "25503_recoverSender"
+"14445_timestamp" -> "9944_toUint48"
+"20550_getCurrentEpochNumber" -> "14445_timestamp"
+"15788_enableStrategy" -> "23273_enable"
+"21794__processBulkValidatorRegistration" -> "25865_insert"
+"5476__setBeacon" -> "6213_getAddressSlot"
+"28202_getStakeDistributionUSDForOperators" -> "5756_balanceOf"
+"17713_getValidatorProposerStatus" -> "23554_getTimes"
+"28202_getUSDValue" -> "45_latestRoundData"
+"33291__makeExtensionNode" -> "22738_fromNibbles"
+"20550_calculateEpochStart" -> "22118_getEpochDuration"
+"17713_removeRestakingProtocol" -> "14171_remove"
+"19233_initiateDispute" -> "14171_add"
+"19233_getBeaconRootForTime" -> "22118_getBeaconRootsContract"
+"33291__walkNodePath" -> "22738_slice"
+"19233_fetchAllDisputes" -> "14171_at"
+"19233_initiateDispute" -> "22118_getJustificationDelay"
+"15788_getOperatorRestakedStrategies" -> "13558_length"
+"15788_getOperatorStakeInfo" -> "23273_atWithTimes"
+"8179_log256" -> "9944_toUint"
+"21794__processBulkValidatorRegistration" -> "25865_getOrInsertAuthorizedOperator"
+"20550_getOperatorCollaterals" -> "379_stakeAt"
+"28202_getUSDValue" -> "5756_decimals"
+"33291__editBranchIndex" -> "30874_toRLPItem"
+"25503__decodeEip2930" -> "30874_readList"
+"29806_verifySignature" -> "29083_hashToG1"
+"19233__getBeaconBlockRootAtTimestamp" -> "22118_getBeaconRootsContract"
+"8179_log2" -> "9944_toUint"
+"17713_isOperatorRegistered" -> "23027_contains"
+"23554_add" -> "23027_set"
+"33291__walkNodePath" -> "22738_toBytes32"
+"20550_onboardOperator" -> "22218_isOperatorRegistered"
+"20550_onboardOperator" -> "505_isOptedIn"
+"23273_enable" -> "13558_get"
+"23027_at" -> "14171_at"
+"29806_init" -> "29914_registerDSS"
+"15788_getEpochStartTs" -> "22118_getEpochDuration"
+"21794_retrieveAllValidators" -> "25865_getAll"
+"17713_initialize" -> "14445_timestamp"
+"15788_addNewStrategy" -> "23273_add"
+"23554_enable" -> "23027_set"
+"23027_contains" -> "14171_contains"
+"21794_generatePublicKeyHash" -> "26793_compress"
+"29201_getOperators" -> "14171_values"
+"33291__removeHexPrefix" -> "22738_slice"
+"11525__lowerBinaryLookup" -> "8179_average"
+"16489_getOperatorStake" -> "14445_timestamp"
+"27684_getRegisteredOperators" -> "29806_getOperators"
+"16489_getOperatorCollaterals" -> "23273_getTimes"
+"15788_getOperatorTokenBalanceAt" -> "1664_operatorShares"
+"20550_getOperatorStakeAt" -> "111_subnetwork"
+"23027_keys" -> "14171_at"
+"17713_isOperatorEnabled" -> "23554_getTimes"
+"19233_parseBlockHeader" -> "30874_readUint256"
+"33291__getNodeID" -> "22738_toBytes32"
+"15788_registerOperatorToAVS" -> "1871_registerOperatorToAVS"
+"33291__getNodeID" -> "30874_readRawBytes"
+"20550_onboardOperator" -> "22218_registerNewOperator"
+"8179_modExp" -> "6089_panic"
+"19233_distributeBondHalf" -> "22118_getChallengeBond"
+"20550_upgradeContractV2" -> "14445_timestamp"
+"19233_fetchDisputeById" -> "14171_contains"
+"5476_getImplementation" -> "6213_getAddressSlot"
+"17713_registerOperator" -> "14445_timestamp"
+"25503__unsignedEip4844" -> "31378_writeList"
+"21794_secureRegisterValidator" -> "25865_length"
+"33291__parseProof" -> "30874_readBytes"
+"17713_unpauseOperator" -> "23554_enable"
+"29310_removeVault" -> "14171_contains"
+"25503__decodeLegacy" -> "30874_readAddress"
+"27684__kickOperator" -> "29806_removeOperator"
+"15788_disableStrategy" -> "13558_contains"
+"20550_fetchOperatorCollateral" -> "23273_atWithTimes"
+"29806_verifySignature" -> "29083_scalar_mul"
+"5476_upgradeToAndCall" -> "6015_functionDelegateCall"
+"23554_enable" -> "23027_get"
+"20550_suspendVaultActivity" -> "23273_disable"
+"28202_getStakeDistributionUSDForOperators" -> "29894_getActiveVaults"
+"17713_resumeOperator" -> "23554_enable"
+"20550_getOperatorCollaterals" -> "14445_timestamp"
+"25503_recoverSender" -> "6561_recover"
+"21794_batchRegisterValidators" -> "25865_length"
+"20550_getOperatorStakeAtTime" -> "111_subnetwork"
+"19233_parseBlockHeader" -> "30874_readList"
+"13558_set" -> "14171_add"
+"15788_getOperatorStake" -> "14445_timestamp"
+"5476_upgradeBeaconToAndCall" -> "5486_implementation"
+"21794_quickRegisterValidator" -> "22118_isUnsafeRegistrationAllowed"
+"20550_fetchOperatorCollateral" -> "379_stakeAt"
+"25503__unsignedEip1559" -> "31378_writeList"
+"20550_offboardOperator" -> "22218_isOperatorRegistered"
+"15788_resumeOperator" -> "22218_resumeOperator"
+"20550_getOperatorStakeAt" -> "379_stakeAt"
+"16489_getWhitelistedAssets" -> "13558_keys"
+"19233_parseAccount" -> "30874_readUint256"
+"8179_mulDiv" -> "9944_toUint"
+"8179_sqrt" -> "9944_toUint"
+"15788_getOperatorRestakedStrategies" -> "14445_timestamp"
+"16489_getOperatorStakeAt" -> "23273_getTimes"
+"19233_fetchActiveDisputes" -> "14171_at"
+"17713_addRestakingProtocol" -> "14171_add"
+"16489__getVaultActiveBalance" -> "5756_balanceOf"
+"15788_getOperatorStakeInfo" -> "3384_sharesToUnderlyingView"
+"4065_verifyValidatorFields" -> "4431_merkleizeSha256"
+"19233_parseAccount" -> "30874_toRLPItem"
+"15788_addNewStrategy" -> "23273_enable"
+"23554_getTimes" -> "23027_get"
+"17713_getProposerStatus" -> "22044_getOperatorCollaterals"
+"21794_registerValidator" -> "25865_length"
+"15788_updateAVSMetadataURI" -> "1871_updateAVSMetadataURI"
+"5476__setBeacon" -> "5486_implementation"
+"20550_addVault" -> "23273_enable"
+"15788_getOperatorStakeAt" -> "3384_underlyingToken"
+"8179_ceilDiv" -> "6089_panic"
+"20550_fetchOperatorCollateral" -> "14445_timestamp"
+"23554_atWithTimes" -> "23027_at"
+"15788_onboardOperator" -> "22218_isOperatorRegistered"
+"17713_suspendOperator" -> "23554_disable"
+"17713_getTotalStake" -> "22044_getOperatorStake"
+"15788_getOperatorTokenBalanceAt" -> "3384_underlyingToken"
+"25503__decodeEip2930" -> "30874_readBytes"
+"19233_getSlotFromTime" -> "22118_getSlotTime"
+"29310_addVault" -> "14171_add"
+"23554_disable" -> "14445_timestamp"
+"27199_registrationHook" -> "29201_addOperator"
+"15788_getOperatorCollaterals" -> "13558_length"
+"15788_getOperatorCollaterals" -> "3384_underlyingToken"
+"20550_fetchOperatorCollateral" -> "1241_delegator"
+"33291__makeNode" -> "31378_writeList"
+"20550_getOperatorStakeAt" -> "13558_length"
+"15788_getOperatorStakeAt" -> "23273_atWithTimes"
+"25503__unsignedLegacy" -> "31378_writeBytes"
+"25503__decodeEip2930" -> "30874_readUint256"
+"4065_verifyValidatorBalance" -> "4431_verifyInclusionSha256"
+"20550_getOperatorStake" -> "14445_timestamp"
+"15788_addNewStrategy" -> "1781_strategyIsWhitelistedForDeposit"
+"19233_resolveExpiredDispute" -> "14445_timestamp"
+"19233_parseBlockHeader" -> "30874_readBytes32"
+"28202_getUSDValue" -> "45_decimals"
+"21794__processValidatorRegistration" -> "25865_insert"
+"25503__unsignedEip4844" -> "31378_writeBytes"
+"20550_getOperatorStakeAtTime" -> "13558_length"
+"5476__setAdmin" -> "6213_getAddressSlot"
+"33291__editBranchIndex" -> "31378_writeBytes"
+"15788_getRegisteredStrategies" -> "13558_keys"
+"27199__unjailOperator" -> "29310_unjailOperator"
+"17713_registerOperator" -> "23027_contains"
+"20550_addVault" -> "23273_add"
+"21794_quickBulkRegisterValidators" -> "22118_isUnsafeRegistrationAllowed"
+"33449_verifyInclusionProof" -> "33291_verifyInclusionProof"
+"17713_getProposerStatus" -> "23554_getTimes"
+"29806_verifySignature" -> "29083_safePairing"
+"29806_removeOperator" -> "29083_plus"
+"33291__getUpdatedTrieRoot" -> "22738_toNibbles"
+"16489_registerAsset" -> "13558_contains"
+"21794_findValidatorByHash" -> "25865_get"
+"25503__decodeEip4844" -> "30874_readUint256"
+"20550_penalizeOperator" -> "1241_collateral"
+"29201_removeOperator" -> "14171_contains"
+"20550_offboardOperator" -> "22218_removeOperator"
+"21794_updateMaxCommittedGasLimit" -> "25865_updateMaxCommittedGasLimit"
+"19233_getBeaconRootForSlot" -> "22118_getEth2GenesisTimestamp"
+"17713_getCurrentEpoch" -> "14445_timestamp"
+"29806_addOperator" -> "29083_plus"
+"16489_isAssetEnabled" -> "23273_getTimes"
+"15788_getEpochAtTs" -> "22118_getEpochDuration"
+"17713_getValidatorProposerStatus" -> "22118_getMinimumOperatorStake"
+"33291__makeNode" -> "30874_readList"
+"20550_penalizeOperator" -> "1241_delegator"
+"25503__decodeEip4844" -> "30874_toRLPItem"
+"20550_getEpochStartTs" -> "22118_getEpochDuration"
+"27199_requestUpdateStakeHook" -> "29310_removeVault"
+"25503__unsignedEip4844" -> "31378_writeUint"
+"20550_executeVaultPenalty" -> "111_subnetwork"
+"16489_getCurrentEpoch" -> "14445_timestamp"
+"20550_addVault" -> "13558_contains"
+"20550_getOperatorStakeAtTime" -> "1241_collateral"
+"17713_registerOperator" -> "23027_set"
+"17713_registerNewOperator" -> "14445_timestamp"
+"33291__walkNodePath" -> "22738_toNibbles"
+"17713_getValidatorProposerStatus" -> "22044_getOperatorCollaterals"
+"13558_at" -> "14171_at"
+"25503__unsignedEip2930" -> "31378_writeBytes"
+"23027_set" -> "14171_add"
+"28202_getStakeDistributionUSDForOperators" -> "30000_asset"
+"25503__unsignedEip2930" -> "31378_writeUint"
+"29201_isOperatorRegistered" -> "14171_contains"
+"25503__decodeEip1559" -> "30874_readList"
+"33449_getSingleNodeRootHash" -> "33291_getSingleNodeRootHash"
+"20550_onboardOperator" -> "205_isEntity"
+"23554_enable" -> "14445_timestamp"
+"25503__decodeEip2930" -> "30874_readAddress"
+"28202_getStakeDistributionUSDForOperators" -> "5172_convertToAssets"
+"21794_getValidatorByPubkeyHash" -> "25865_get"
+"33291__getNodePath" -> "30874_readBytes"
+"5652__upgradeToAndCallUUPS" -> "5182_proxiableUUID"
+"20550_getOperatorCollaterals" -> "1241_collateral"
+"20550_getOperatorCollaterals" -> "23273_atWithTimes"
+"25503__decodeLegacy" -> "30874_readBytes"
+"19233_extractCommitmentData" -> "6561_recover"
+"33291__parseProof" -> "30874_readList"
+"17713_getTotalStake" -> "23027_length"
+"15788_removeStrategy" -> "13558_contains"
+"20550_getOperatorStakeAtTime" -> "379_stakeAt"
+"25503__decodeEip2930" -> "30874_readBytes32"
+"15788_suspendOperator" -> "22218_suspendOperator"
+"25503__decodeLegacy" -> "30874_readList"
+"15788_onboardOperator" -> "1664_isOperator"
+"21794_bulkRegisterValidators" -> "25865_length"
+"15788_getOperatorStakeInfo" -> "14445_timestamp"
+"33291__editBranchValue" -> "30874_toRLPItem"
+"29310_fetchVaultsNotQueuedForWithdrawal" -> "14171_values"
+"27684_finishUpdateStakeHook" -> "29310_addVault"
+"15788_getOperatorStakeInfo" -> "1664_operatorShares"
+"25503__decodeEip4844" -> "30874_readRawBytes"
+"5652__checkProxy" -> "5476_getImplementation"
+"26890__verifySignature" -> "26793_pairing"
+"33291__getNodeValue" -> "30874_readBytes"
+"4065_getBalanceAtIndex" -> "4150_fromLittleEndianUint64"
+"13558_remove" -> "14171_remove"
+"17713_pauseOperator" -> "23554_disable"
+"19233_fetchActiveDisputes" -> "14171_length"
+"25503__unsignedEip4844" -> "31378_writeAddress"
+"27684_allOperatorsG1" -> "29806_allOperatorsG1"
+"33291__makeExtensionNode" -> "31378_writeBytes"
+"16489__getVaultActiveBalance" -> "5172_convertToAssets"
+"15788_getOperatorStakeAt" -> "1664_getOperatorShares"
+"17713_getProposerStatus" -> "22118_getMinimumOperatorStake"
+"15788_getOperatorStakeInfo" -> "3384_underlyingToken"
+"17713_getRestakingMiddlewareProtocols" -> "14171_values"
+"15788_initializeSystem" -> "14445_timestamp"
+"20550_removeVault" -> "13558_contains"
+"20550_getCurrentEpoch" -> "14445_timestamp"
+"15788_getOperatorTokenBalance" -> "14445_timestamp"
+"23273_atWithTimes" -> "13558_at"
+"5652__upgradeToAndCallUUPS" -> "5476_upgradeToAndCall"
+"15788_getEpochForTimestamp" -> "22118_getEpochDuration"
+"19233_resolveExpiredDispute" -> "22118_getMaxChallengeDuration"
+"20550_resumeOperatorActivity" -> "22218_resumeOperator"
+"21794__registerValidator" -> "25865_getOrInsertAuthorizedOperator"
+"17713_getProposerStatus" -> "23027_get"
+"33291__editBranchValue" -> "31378_writeBytes"
+"4065_verifyStateRoot" -> "4431_verifyInclusionSha256"
+"20550_suspendOperatorActivity" -> "22218_resumeOperator"
+"17713_getEpochAtTs" -> "22118_getEpochDuration"
+"25503__decodeEip4844" -> "30874_readList"
+"21794__batchRegisterValidators" -> "25865_getOrInsertController"
+"25503__decodeEip2930" -> "30874_readRawBytes"
+"23273_disable" -> "13558_set"
+"4065_getActivationEpoch" -> "4150_fromLittleEndianUint64"
+"27684_registrationHook" -> "29806_addOperator"
+"25503__decodeEip1559" -> "30874_readAddress"
+"33291_getSingleNodeRootHash" -> "22738_toNibbles"
+"26890__verifySignature" -> "26793_generatorG1"
+"21794_hashPubkey" -> "26793_compress"
+"27684_isThresholdReached" -> "30041_getStakeDistributionUSDForOperators"
+"33291__getNodePath" -> "22738_toNibbles"
+"16489_initialize" -> "14445_timestamp"
+"20550_getOperatorCollaterals" -> "13558_length"
+"16489_getOperatorStakeAt" -> "30000_asset"
+"8179_ceilDiv" -> "9944_toUint"
+"21794_updateValidatorGasLimit" -> "25865_updateMaxCommittedGasLimit"
+"4065_getExitEpoch" -> "4150_fromLittleEndianUint64"
+"21794__getValidatorDetails" -> "25865_getAuthorizedOperator"
+"19233_initiateDispute" -> "14171_contains"
+"20550_fetchOperatorCollateral" -> "13558_length"
+"27199__jailOperator" -> "29310_jailOperator"
+"17713_deregisterOperator" -> "23027_remove"
+"21794_batchRegisterValidatorsUnsafe" -> "22118_isUnsafeRegistrationAllowed"
+"15788_getOperatorCollaterals" -> "23273_atWithTimes"
+"17713_isOperatorAuthorizedForValidator" -> "22338_getValidatorByPubkeyHash"
+"23027_remove" -> "14171_remove"
+"16489_getOperatorStakeAt" -> "14445_timestamp"
+"17713_getValidatorProposerStatus" -> "22338_getValidatorByPubkeyHash"
+"25503__decodeEip1559" -> "30874_readBytes"
+"19233_resolveActiveDispute" -> "14171_contains"
+"8179_log10" -> "9944_toUint"
+"23027_keys" -> "14171_length"
+"16489_registerAsset" -> "23273_add"
+"15788_getOperatorStakeInfo" -> "13558_length"
+"23273_disable" -> "14445_timestamp"
+"26793_hashToCurveG2" -> "26793_plus"
+"17713_getOperatorStake" -> "22044_getOperatorStake"
+"27684__unjailOperator" -> "29310_unjailOperator"
+"19233_distributeBondFull" -> "22118_getChallengeBond"
+"15788_updateMetadataURI" -> "1871_updateAVSMetadataURI"
+"19233_parseBlockHeader" -> "30874_toRLPItem"
+"25503__decodeEip1559" -> "30874_readBytes32"
+"17713_getEpochStartTs" -> "22118_getEpochDuration"
+"4065_getEffectiveBalanceGwei" -> "4150_fromLittleEndianUint64"
+"20550_fetchOperatorCollateral" -> "111_subnetwork"
+"23554_disable" -> "23027_set"
+"20550_penalizeOperator" -> "13558_length"
+"33449_update" -> "33291_update"
+"25503__decodeEip2930" -> "30874_toRLPItem"
+"15788_getOperatorTokenBalanceAt" -> "13558_length"
+"27684_getActiveVaults" -> "29310_fetchVaultsNotQueuedForWithdrawal"
+"29310_removeVault" -> "14171_remove"
+"25503__unsignedEip1559" -> "31378_writeUint"
+"23554_disable" -> "23027_get"
+"15788_getCurrentEpoch" -> "14445_timestamp"
+"17713_getValidatorProposerStatus" -> "14445_timestamp"
+"25503__decodeLegacy" -> "30874_toRLPItem"
+"23273_enable" -> "14445_timestamp"
+"21794__getValidatorDetails" -> "25865_getController"
+"25503__decodeEip4844" -> "30874_readBytes32"
+"21794_getAllValidators" -> "25865_getAll"
+"23273_enable" -> "13558_set"
+"29806_removeOperator" -> "29083_negate"
+"25503__decodeLegacy" -> "30874_readUint256"
+"20550_setupContract" -> "14445_timestamp"
+"20550_fetchOperatorCollateral" -> "1241_collateral"
+"15788_getOperatorStakeAt" -> "3384_sharesToUnderlyingView"
+"20550_getOperatorStakeAt" -> "1241_collateral"
+"17713_removeOperator" -> "23027_remove"
+"19233_processResolution" -> "14445_timestamp"
+"29806_verifySignature" -> "29083_plus"
+"19233_getSlotFromTime" -> "22118_getEth2GenesisTimestamp"
+"21794_updateValidatorGasLimit" -> "25865_getController"
+"21794_registerValidatorUnsafe" -> "22118_isUnsafeRegistrationAllowed"
+"33291_verifyInclusionProof" -> "22738_equal"
+"21794__processBulkValidatorRegistration" -> "25865_getOrInsertController"
+"27684___BlsBaseDSS_init" -> "29914_registerDSS"
+"27684_isOperatorJailed" -> "29310_isOperatorJailed"
+"25503__unsignedLegacy" -> "31378_writeAddress"
+"25503__decodeEip2930" -> "22738_slice"
+"5476__setImplementation" -> "6213_getAddressSlot"
+"25503__decodeEip4844" -> "30874_readAddress"
+"20550_penalizeOperator" -> "379_stakeAt"
+"19233_initiateDispute" -> "14445_timestamp"
+"17713_initializeV2" -> "14445_timestamp"
+"14445_withUpdate" -> "8179_max"
+"19233_processResolution" -> "33291_get"
+"15788_getOperatorTokenBalanceAt" -> "23273_atWithTimes"
+"33291__makeNode" -> "30874_readRawBytes"
+}

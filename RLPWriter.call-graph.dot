@@ -1,0 +1,34 @@
+strict digraph {
+subgraph cluster_31378_RLPWriter {
+label = "RLPWriter"
+"31378_writeBytes" [label="writeBytes"]
+"31378_writeBool" [label="writeBool"]
+"31378__flatten" [label="_flatten"]
+"31378_writeUint" [label="writeUint"]
+"31378_writeList" [label="writeList"]
+"31378_writeString" [label="writeString"]
+"31378__writeLength" [label="_writeLength"]
+"31378_writeAddress" [label="writeAddress"]
+"31378__memcpy" [label="_memcpy"]
+"31378__toBinary" [label="_toBinary"]
+"31378_writeString" -> "31378_writeBytes"
+"31378_writeBytes" -> "31378__writeLength"
+"31378_writeUint" -> "31378_writeBytes"
+"31378_writeList" -> "31378__writeLength"
+"31378__flatten" -> "31378__memcpy"
+"31378_writeList" -> "31378__flatten"
+"31378_writeUint" -> "31378__toBinary"
+"31378_writeAddress" -> "31378_writeBytes"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"abi.encodePacked()" 
+"mload(uint256)" 
+"mstore(uint256,uint256)" 
+"31378__memcpy" -> "mstore(uint256,uint256)"
+"31378_writeAddress" -> "abi.encodePacked()"
+"31378_writeBytes" -> "abi.encodePacked()"
+"31378__toBinary" -> "abi.encodePacked()"
+"31378__memcpy" -> "mload(uint256)"
+"31378_writeList" -> "abi.encodePacked()"
+}
+}

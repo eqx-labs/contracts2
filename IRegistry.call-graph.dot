@@ -1,0 +1,10 @@
+strict digraph {
+subgraph cluster_205_IRegistry {
+label = "IRegistry"
+"205_entity" [label="entity"]
+"205_isEntity" [label="isEntity"]
+"205_totalEntities" [label="totalEntities"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}
+}

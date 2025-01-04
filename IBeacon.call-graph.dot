@@ -1,0 +1,8 @@
+strict digraph {
+subgraph cluster_5486_IBeacon {
+label = "IBeacon"
+"5486_implementation" [label="implementation"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}
+}

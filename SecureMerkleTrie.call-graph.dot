@@ -1,0 +1,22 @@
+strict digraph {
+subgraph cluster_33449_SecureMerkleTrie {
+label = "SecureMerkleTrie"
+"33449_update" [label="update"]
+"33449_get" [label="get"]
+"33449__getSecureKey" [label="_getSecureKey"]
+"33449_verifyInclusionProof" [label="verifyInclusionProof"]
+"33449_verifyExclusionProof" [label="verifyExclusionProof"]
+"33449_getSingleNodeRootHash" [label="getSingleNodeRootHash"]
+"33449_getSingleNodeRootHash" -> "33449__getSecureKey"
+"33449_update" -> "33449__getSecureKey"
+"33449_verifyExclusionProof" -> "33449__getSecureKey"
+"33449_verifyInclusionProof" -> "33449__getSecureKey"
+"33449_get" -> "33449__getSecureKey"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"abi.encodePacked()" 
+"keccak256(bytes)" 
+"33449__getSecureKey" -> "abi.encodePacked()"
+"33449__getSecureKey" -> "keccak256(bytes)"
+}
+}

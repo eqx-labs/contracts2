@@ -16,6 +16,7 @@ remappings = [
   "@symbiotic/=lib/core/src/",
   "@eigenlayer/=lib/eigenlayer-contracts/",
   "@eigenlayer-middleware/=lib/eigenlayer-middleware/",
+  "@chainlink/contracts/=lib/chainlink/contracts/",
   "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
   "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
   "@openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/",
