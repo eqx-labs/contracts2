@@ -222,64 +222,9 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
     /// @notice Get the status of multiple proposers, given their pubkey hashes.
     /// @param pubkeyHashes The pubkey hashes of the proposers to get the status for.
     /// @return statuses The statuses of the proposers, including their operator and active stake.
-    function getProposerStatuses(
-        bytes20[] calldata pubkeyHashes
-    ) public view returns (ValidatorProposerStatus[] memory statuses) {
-        statuses = new ValidatorProposerStatus[](pubkeyHashes.length);
-        for (uint256 i = 0; i < pubkeyHashes.length; ++i) {
-            statuses[i] = getProposerStatus(pubkeyHashes[i]);
-        }
-    }
 
-    /// @notice Get the status of a proposer, given their pubkey hash.
-    /// @param pubkeyHash The pubkey hash of the proposer to get the status for.
-    /// @return status The status of the proposer, including their operator and active stake.
-    function getProposerStatus(
-        bytes20 pubkeyHash
-    ) public view returns (ValidatorProposerStatus memory status) {
-        if (pubkeyHash == bytes20(0)) {
-            revert InvalidQuery();
-        }
 
-        uint48 epochStartTs = getEpochStartTs(getEpochAtTs(Time.timestamp()));
-        // NOTE: this will revert when the proposer does not exist.
-        IValidator.ValidatorInfo memory validator = validators
-            .getValidatorByPubkeyHash(pubkeyHash);
 
-        EnumerableMap.Operator memory operatorData = operators.get(
-            validator.authorizedOperator
-        );
-
-        status.validatorPubkeyHash = pubkeyHash;
-        status.operatorAddress = validator.authorizedOperator;
-        status.operatorRpcUrl = operatorData.rpc;
-
-        (uint48 enabledTime, uint48 disabledTime) = operators.getTimes(
-            validator.authorizedOperator
-        );
-        if (!_wasEnabledAt(enabledTime, disabledTime, epochStartTs)) {
-            return status;
-        }
-
-        (status.collateralTokens, status.collateralAmounts) = IMiddleware(
-            operatorData.middleware
-        ).getOperatorCollaterals(validator.authorizedOperator);
-
-        // NOTE: check if the sum of the collaterals covers the minimum operator stake required.
-
-        uint256 totalOperatorStake = 0;
-        for (uint256 i = 0; i < status.collateralAmounts.length; ++i) {
-            totalOperatorStake += status.collateralAmounts[i];
-        }
-
-        if (totalOperatorStake < parameters.getMinimumOperatorStake()) {
-            status.isActive = false;
-        } else {
-            status.isActive = true;
-        }
-
-        return status;
-    }
 
     /// @notice Get the amount staked by an operator for a given collateral asset.
     function getOperatorStake(
