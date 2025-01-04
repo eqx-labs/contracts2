@@ -1,0 +1,1220 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1400pt" height="2601pt" viewBox="0.00 0.00 1400.39 2600.59">
+<g id="graph0" class="graph" transform="translate(4,2596.590087890625) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="none" points="-4,4 -4,-2596.59 1396.39,-2596.59 1396.39,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterSlashing">
+
+<path fill="#445773" stroke="#445773" d="M20,-912.59C20,-912.59 1341.83,-912.59 1341.83,-912.59 1347.83,-912.59 1353.83,-918.59 1353.83,-924.59 1353.83,-924.59 1353.83,-2435.59 1353.83,-2435.59 1353.83,-2441.59 1347.83,-2447.59 1341.83,-2447.59 1341.83,-2447.59 20,-2447.59 20,-2447.59 14,-2447.59 8,-2441.59 8,-2435.59 8,-2435.59 8,-924.59 8,-924.59 8,-918.59 14,-912.59 20,-912.59" style=""/>
+<text text-anchor="middle" x="680.92" y="-2430.99" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">Slashing</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterEnumerableSet.Bytes32Set">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M562.84,-105.59C562.84,-105.59 707.27,-105.59 707.27,-105.59 713.27,-105.59 719.27,-111.59 719.27,-117.59 719.27,-117.59 719.27,-386.59 719.27,-386.59 719.27,-392.59 713.27,-398.59 707.27,-398.59 707.27,-398.59 562.84,-398.59 562.84,-398.59 556.84,-398.59 550.84,-392.59 550.84,-386.59 550.84,-386.59 550.84,-117.59 550.84,-117.59 550.84,-111.59 556.84,-105.59 562.84,-105.59" style=""/>
+<text text-anchor="middle" x="635.05" y="-381.99" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">EnumerableSet.Bytes32Set</text>
+</g>
+<g id="clust3" class="cluster" data-name="clusterISystemParameters">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M1139.48,-114.59C1139.48,-114.59 1372.39,-114.59 1372.39,-114.59 1378.39,-114.59 1384.39,-120.59 1384.39,-126.59 1384.39,-126.59 1384.39,-557.59 1384.39,-557.59 1384.39,-563.59 1378.39,-569.59 1372.39,-569.59 1372.39,-569.59 1139.48,-569.59 1139.48,-569.59 1133.48,-569.59 1127.48,-563.59 1127.48,-557.59 1127.48,-557.59 1127.48,-126.59 1127.48,-126.59 1127.48,-120.59 1133.48,-114.59 1139.48,-114.59" style=""/>
+<text text-anchor="middle" x="1255.93" y="-552.99" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">ISystemParameters</text>
+</g>
+<g id="clust4" class="cluster" data-name="clusterTime">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M587.79,-759.59C587.79,-759.59 682.32,-759.59 682.32,-759.59 688.32,-759.59 694.32,-765.59 694.32,-771.59 694.32,-771.59 694.32,-824.59 694.32,-824.59 694.32,-830.59 688.32,-836.59 682.32,-836.59 682.32,-836.59 587.79,-836.59 587.79,-836.59 581.79,-836.59 575.79,-830.59 575.79,-824.59 575.79,-824.59 575.79,-771.59 575.79,-771.59 575.79,-765.59 581.79,-759.59 587.79,-759.59" style=""/>
+<text text-anchor="middle" x="635.05" y="-819.99" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">Time</text>
+</g>
+<g id="clust5" class="cluster" data-name="clusterSecureMerkleTrie">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M589.05,-606.59C589.05,-606.59 682.05,-606.59 682.05,-606.59 688.05,-606.59 694.05,-612.59 694.05,-618.59 694.05,-618.59 694.05,-671.59 694.05,-671.59 694.05,-677.59 688.05,-683.59 682.05,-683.59 682.05,-683.59 589.05,-683.59 589.05,-683.59 583.05,-683.59 577.05,-677.59 577.05,-671.59 577.05,-671.59 577.05,-618.59 577.05,-618.59 577.05,-612.59 583.05,-606.59 589.05,-606.59" style=""/>
+<text text-anchor="middle" x="635.55" y="-666.99" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">SecureMerkleTrie</text>
+</g>
+<g id="clust6" class="cluster" data-name="clusterRLPWriter">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M591.01,-521.59C591.01,-521.59 679.1,-521.59 679.1,-521.59 685.1,-521.59 691.1,-527.59 691.1,-533.59 691.1,-533.59 691.1,-586.59 691.1,-586.59 691.1,-592.59 685.1,-598.59 679.1,-598.59 679.1,-598.59 591.01,-598.59 591.01,-598.59 585.01,-598.59 579.01,-592.59 579.01,-586.59 579.01,-586.59 579.01,-533.59 579.01,-533.59 579.01,-527.59 585.01,-521.59 591.01,-521.59" style=""/>
+<text text-anchor="middle" x="635.05" y="-581.99" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">RLPWriter</text>
+</g>
+<g id="clust7" class="cluster" data-name="clusterMerkleTrie">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M608.05,-436.59C608.05,-436.59 663.05,-436.59 663.05,-436.59 669.05,-436.59 675.05,-442.59 675.05,-448.59 675.05,-448.59 675.05,-501.59 675.05,-501.59 675.05,-507.59 669.05,-513.59 663.05,-513.59 663.05,-513.59 608.05,-513.59 608.05,-513.59 602.05,-513.59 596.05,-507.59 596.05,-501.59 596.05,-501.59 596.05,-448.59 596.05,-448.59 596.05,-442.59 602.05,-436.59 608.05,-436.59" style=""/>
+<text text-anchor="middle" x="635.55" y="-496.99" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">MerkleTrie</text>
+</g>
+<g id="clust8" class="cluster" data-name="clusterECDSA">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M911.92,-827.59C911.92,-827.59 983.89,-827.59 983.89,-827.59 989.89,-827.59 995.89,-833.59 995.89,-839.59 995.89,-839.59 995.89,-892.59 995.89,-892.59 995.89,-898.59 989.89,-904.59 983.89,-904.59 983.89,-904.59 911.92,-904.59 911.92,-904.59 905.92,-904.59 899.92,-898.59 899.92,-892.59 899.92,-892.59 899.92,-839.59 899.92,-839.59 899.92,-833.59 905.92,-827.59 911.92,-827.59" style=""/>
+<text text-anchor="middle" x="947.91" y="-887.99" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">ECDSA</text>
+</g>
+<g id="clust9" class="cluster" data-name="clusterTransactionDecoder.Transaction">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M861.11,-742.59C861.11,-742.59 1035.7,-742.59 1035.7,-742.59 1041.7,-742.59 1047.7,-748.59 1047.7,-754.59 1047.7,-754.59 1047.7,-807.59 1047.7,-807.59 1047.7,-813.59 1041.7,-819.59 1035.7,-819.59 1035.7,-819.59 861.11,-819.59 861.11,-819.59 855.11,-819.59 849.11,-813.59 849.11,-807.59 849.11,-807.59 849.11,-754.59 849.11,-754.59 849.11,-748.59 855.11,-742.59 861.11,-742.59" style=""/>
+<text text-anchor="middle" x="948.41" y="-802.99" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">TransactionDecoder.Transaction</text>
+</g>
+<g id="clust10" class="cluster" data-name="clusterheaderRLP">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M897.95,-657.59C897.95,-657.59 997.86,-657.59 997.86,-657.59 1003.86,-657.59 1009.86,-663.59 1009.86,-669.59 1009.86,-669.59 1009.86,-722.59 1009.86,-722.59 1009.86,-728.59 1003.86,-734.59 997.86,-734.59 997.86,-734.59 897.95,-734.59 897.95,-734.59 891.95,-734.59 885.95,-728.59 885.95,-722.59 885.95,-722.59 885.95,-669.59 885.95,-669.59 885.95,-663.59 891.95,-657.59 897.95,-657.59" style=""/>
+<text text-anchor="middle" x="947.91" y="-717.99" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">headerRLP</text>
+</g>
+<g id="clust11" class="cluster" data-name="clusteraccountRLP">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M897.95,-572.59C897.95,-572.59 997.86,-572.59 997.86,-572.59 1003.86,-572.59 1009.86,-578.59 1009.86,-584.59 1009.86,-584.59 1009.86,-637.59 1009.86,-637.59 1009.86,-643.59 1003.86,-649.59 997.86,-649.59 997.86,-649.59 897.95,-649.59 897.95,-649.59 891.95,-649.59 885.95,-643.59 885.95,-637.59 885.95,-637.59 885.95,-584.59 885.95,-584.59 885.95,-578.59 891.95,-572.59 897.95,-572.59" style=""/>
+<text text-anchor="middle" x="947.91" y="-632.99" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">accountRLP</text>
+</g>
+<g id="clust12" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="37.7,-2455.59 37.7,-2584.59 392.59,-2584.59 392.59,-2455.59 37.7,-2455.59" style=""/>
+<text text-anchor="middle" x="215.15" y="-2567.99" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- Slashing.initializeContract -->
+<g id="node1" class="node" pointer-events="visible" data-name="Slashing.initializeContract">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.7" cy="-2180.59" rx="78.15" ry="18" style=""/>
+<text text-anchor="middle" x="110.7" y="-2176.39" font-family="Times,serif" font-size="14.00" style="">initializeContract</text>
+</g>
+<!-- Slashing.__Ownable_init -->
+<g id="node29" class="node" pointer-events="visible" data-name="Slashing.__Ownable_init">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="357.59" cy="-2207.59" rx="73.02" ry="18" style=""/>
+<text text-anchor="middle" x="357.59" y="-2203.39" font-family="Times,serif" font-size="14.00" style="">__Ownable_init</text>
+</g>
+<!-- Slashing.initializeContract&#45;&gt;Slashing.__Ownable_init -->
+<g id="edge1" class="edge" data-name="Slashing.initializeContract-&gt;Slashing.__Ownable_init">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M183.19,-2188.47C212.35,-2191.69 246.19,-2195.42 276.2,-2198.73" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="275.47,-2202.17 285.79,-2199.78 276.23,-2195.21 275.47,-2202.17" style=""/>
+</g>
+<!-- Slashing.ISystemParameters -->
+<g id="node30" class="node" pointer-events="visible" data-name="Slashing.ISystemParameters">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="357.59" cy="-2153.59" rx="85.68" ry="18" style=""/>
+<text text-anchor="middle" x="357.59" y="-2149.39" font-family="Times,serif" font-size="14.00" style="">ISystemParameters</text>
+</g>
+<!-- Slashing.initializeContract&#45;&gt;Slashing.ISystemParameters -->
+<g id="edge2" class="edge" data-name="Slashing.initializeContract-&gt;Slashing.ISystemParameters">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M183.19,-2172.71C209.28,-2169.83 239.11,-2166.54 266.6,-2163.51" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="266.89,-2167 276.44,-2162.43 266.12,-2160.04 266.89,-2167" style=""/>
+</g>
+<!-- Slashing._authorizeUpgrade -->
+<g id="node2" class="node" pointer-events="visible" data-name="Slashing._authorizeUpgrade">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="110.7" cy="-1748.59" rx="85.08" ry="18" style=""/>
+<text text-anchor="middle" x="110.7" y="-1744.39" font-family="Times,serif" font-size="14.00" style="">_authorizeUpgrade</text>
+</g>
+<!-- Slashing.fetchAllDisputes -->
+<g id="node3" class="node" pointer-events="visible" data-name="Slashing.fetchAllDisputes">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.7" cy="-1046.59" rx="76.45" ry="18" style=""/>
+<text text-anchor="middle" x="110.7" y="-1042.39" font-family="Times,serif" font-size="14.00" style="">fetchAllDisputes</text>
+</g>
+<!-- EnumerableSet.Bytes32Set.length -->
+<g id="node59" class="node" pointer-events="visible" data-name="EnumerableSet.Bytes32Set.length">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-185.59" rx="35.35" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-181.39" font-family="Times,serif" font-size="14.00" style="">length</text>
+</g>
+<!-- Slashing.fetchAllDisputes&#45;&gt;EnumerableSet.Bytes32Set.length -->
+<g id="edge3" class="edge" data-name="Slashing.fetchAllDisputes-&gt;EnumerableSet.Bytes32Set.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M167.05,-1033.32C181.56,-1029.01 195.81,-1022.2 205.41,-1010.59 261.55,-942.64 212.51,-698.86 241.41,-615.59 259.33,-563.98 464.8,-234.6 509.78,-203.59 532.58,-187.86 562.88,-181.07 587.85,-179.28" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="587.84,-182.79 597.7,-178.9 587.57,-175.79 587.84,-182.79" style=""/>
+</g>
+<!-- Slashing.fetchAllDisputes&#45;&gt;EnumerableSet.Bytes32Set.length -->
+<g id="edge4" class="edge" data-name="Slashing.fetchAllDisputes-&gt;EnumerableSet.Bytes32Set.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M186.96,-1043.19C193.98,-1039.51 200.34,-1034.72 205.41,-1028.59 261.55,-960.64 212.51,-716.86 241.41,-633.59 259.33,-581.98 464.8,-252.6 509.78,-221.59 532.84,-205.69 563.57,-198.91 588.7,-195.03" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="588.87,-198.55 598.27,-193.66 587.87,-191.62 588.87,-198.55" style=""/>
+</g>
+<!-- EnumerableSet.Bytes32Set.at -->
+<g id="node60" class="node" pointer-events="visible" data-name="EnumerableSet.Bytes32Set.at">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-131.59" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-127.39" font-family="Times,serif" font-size="14.00" style="">at</text>
+</g>
+<!-- Slashing.fetchAllDisputes&#45;&gt;EnumerableSet.Bytes32Set.at -->
+<g id="edge5" class="edge" data-name="Slashing.fetchAllDisputes-&gt;EnumerableSet.Bytes32Set.at">
+
+<path fill="none" stroke="white" stroke-width="2" d="M179.91,-1037.96C189.77,-1033.84 198.8,-1027.96 205.41,-1019.59 311.45,-885.34 138.74,-387.43 241.41,-250.59 284.55,-193.08 503.78,-152.28 594.58,-137.59" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="594.94,-141.08 604.27,-136.05 593.85,-134.16 594.94,-141.08" style=""/>
+</g>
+<!-- Slashing.fetchActiveDisputes -->
+<g id="node4" class="node" pointer-events="visible" data-name="Slashing.fetchActiveDisputes">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.7" cy="-992.59" rx="89.75" ry="18" style=""/>
+<text text-anchor="middle" x="110.7" y="-988.39" font-family="Times,serif" font-size="14.00" style="">fetchActiveDisputes</text>
+</g>
+<!-- Slashing.fetchActiveDisputes&#45;&gt;EnumerableSet.Bytes32Set.length -->
+<g id="edge6" class="edge" data-name="Slashing.fetchActiveDisputes-&gt;EnumerableSet.Bytes32Set.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M171.74,-978.17C184.69,-973.82 196.99,-967.2 205.41,-956.59 303.17,-833.34 137.81,-367.97 241.41,-249.59 329.63,-148.78 508.33,-158.56 590.69,-173.28" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="589.83,-176.68 600.32,-175.15 591.16,-169.81 589.83,-176.68" style=""/>
+</g>
+<!-- Slashing.fetchActiveDisputes&#45;&gt;EnumerableSet.Bytes32Set.length -->
+<g id="edge8" class="edge" data-name="Slashing.fetchActiveDisputes-&gt;EnumerableSet.Bytes32Set.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M194.47,-984.9C198.55,-981.99 202.25,-978.57 205.41,-974.59 303.17,-851.34 137.81,-385.97 241.41,-267.59 327.88,-168.78 501.27,-176.21 585.68,-183.13" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="585.15,-186.6 595.42,-183.96 585.75,-179.62 585.15,-186.6" style=""/>
+</g>
+<!-- Slashing.fetchActiveDisputes&#45;&gt;EnumerableSet.Bytes32Set.at -->
+<g id="edge7" class="edge" data-name="Slashing.fetchActiveDisputes-&gt;EnumerableSet.Bytes32Set.at">
+
+<path fill="none" stroke="white" stroke-width="2" d="M171.79,-978.21C184.73,-973.85 197.02,-967.22 205.41,-956.59 260.36,-886.89 180.12,-222.79 241.41,-158.59 335.92,-59.6 522.3,-93.27 599.4,-117.06" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="598.18,-120.34 608.77,-120.12 600.35,-113.68 598.18,-120.34" style=""/>
+</g>
+<!-- Slashing.fetchActiveDisputes&#45;&gt;EnumerableSet.Bytes32Set.at -->
+<g id="edge9" class="edge" data-name="Slashing.fetchActiveDisputes-&gt;EnumerableSet.Bytes32Set.at">
+
+<path fill="none" stroke="white" stroke-width="2" d="M194.5,-984.93C198.57,-982 202.27,-978.58 205.41,-974.59 260.36,-904.89 180.12,-240.79 241.41,-176.59 334.1,-79.5 515.15,-110.02 594.83,-125.58" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="593.7,-128.93 604.19,-127.43 595.06,-122.06 593.7,-128.93" style=""/>
+</g>
+<!-- Slashing.fetchDisputeById -->
+<g id="node5" class="node" pointer-events="visible" data-name="Slashing.fetchDisputeById">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="357.59" cy="-938.59" rx="79.88" ry="18" style=""/>
+<text text-anchor="middle" x="357.59" y="-934.39" font-family="Times,serif" font-size="14.00" style="">fetchDisputeById</text>
+</g>
+<!-- Slashing.NonexistentDispute -->
+<g id="node31" class="node" pointer-events="visible" data-name="Slashing.NonexistentDispute">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1100.59" rx="87.99" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1096.39" font-family="Times,serif" font-size="14.00" style="">NonexistentDispute</text>
+</g>
+<!-- Slashing.fetchDisputeById&#45;&gt;Slashing.NonexistentDispute -->
+<g id="edge11" class="edge" data-name="Slashing.fetchDisputeById-&gt;Slashing.NonexistentDispute">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M434.34,-944.85C448.77,-949.03 462.78,-955.55 473.78,-965.59 511.15,-999.69 472.12,-1039.79 509.78,-1073.59 517.92,-1080.9 527.58,-1086.4 537.85,-1090.5" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="536.68,-1093.8 547.28,-1093.73 538.95,-1087.18 536.68,-1093.8" style=""/>
+</g>
+<!-- EnumerableSet.Bytes32Set.contains -->
+<g id="node61" class="node" pointer-events="visible" data-name="EnumerableSet.Bytes32Set.contains">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-239.59" rx="43.44" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-235.39" font-family="Times,serif" font-size="14.00" style="">contains</text>
+</g>
+<!-- Slashing.fetchDisputeById&#45;&gt;EnumerableSet.Bytes32Set.contains -->
+<g id="edge10" class="edge" data-name="Slashing.fetchDisputeById-&gt;EnumerableSet.Bytes32Set.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M368.57,-919.47C391.59,-874.41 448.35,-757.41 473.78,-652.59 494.08,-568.87 452.65,-331.08 509.78,-266.59 526.59,-247.61 553.34,-240.22 577.71,-237.85" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="577.78,-241.35 587.54,-237.21 577.33,-234.37 577.78,-241.35" style=""/>
+</g>
+<!-- Slashing.initiateDispute -->
+<g id="node6" class="node" pointer-events="visible" data-name="Slashing.initiateDispute">
+
+<ellipse fill="#ff9797" stroke="brown" stroke-width="3" cx="357.59" cy="-1910.59" rx="67.79" ry="18" style=""/>
+<text text-anchor="middle" x="357.59" y="-1906.39" font-family="Times,serif" font-size="14.00" style="">initiateDispute</text>
+</g>
+<!-- Slashing.extractCommitmentData -->
+<g id="node11" class="node" pointer-events="visible" data-name="Slashing.extractCommitmentData">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1856.59" rx="106.51" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1852.39" font-family="Times,serif" font-size="14.00" style="">extractCommitmentData</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Slashing.extractCommitmentData -->
+<g id="edge21" class="edge" data-name="Slashing.initiateDispute-&gt;Slashing.extractCommitmentData">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M404.7,-1896.36C439.76,-1888.05 489.33,-1877.89 533.41,-1869.79" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="533.79,-1873.28 543.01,-1868.05 532.54,-1866.39 533.79,-1873.28" style=""/>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Slashing.extractCommitmentData -->
+<g id="edge22" class="edge" data-name="Slashing.initiateDispute-&gt;Slashing.extractCommitmentData">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M422.48,-1903.87C465.3,-1896.69 521.64,-1885.69 565.41,-1875.98" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="566.04,-1879.42 575.03,-1873.81 564.5,-1872.59 566.04,-1879.42" style=""/>
+</g>
+<!-- Slashing.generateDisputeId -->
+<g id="node12" class="node" pointer-events="visible" data-name="Slashing.generateDisputeId">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-2180.59" rx="81.65" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-2176.39" font-family="Times,serif" font-size="14.00" style="">generateDisputeId</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Slashing.generateDisputeId -->
+<g id="edge15" class="edge" data-name="Slashing.initiateDispute-&gt;Slashing.generateDisputeId">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M364.63,-1929.71C380.35,-1976.14 427.14,-2095.33 509.78,-2153.59 520.2,-2160.94 532.24,-2166.34 544.65,-2170.31" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="543.63,-2173.66 554.21,-2173 545.53,-2166.92 543.63,-2173.66" style=""/>
+</g>
+<!-- Slashing.getCurrentSlot -->
+<g id="node19" class="node" pointer-events="visible" data-name="Slashing.getCurrentSlot">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1748.59" rx="67.8" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1744.39" font-family="Times,serif" font-size="14.00" style="">getCurrentSlot</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Slashing.getCurrentSlot -->
+<g id="edge18" class="edge" data-name="Slashing.initiateDispute-&gt;Slashing.getCurrentSlot">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M373.65,-1892.02C398.65,-1862.49 451.78,-1805.15 509.78,-1775.59 524.75,-1767.96 541.8,-1762.48 558.37,-1758.54" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="558.92,-1762.01 567.95,-1756.47 557.44,-1755.17 558.92,-1762.01" style=""/>
+</g>
+<!-- Slashing.EmptyCommitmentList -->
+<g id="node32" class="node" pointer-events="visible" data-name="Slashing.EmptyCommitmentList">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-2234.59" rx="102.56" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-2230.39" font-family="Times,serif" font-size="14.00" style="">EmptyCommitmentList</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Slashing.EmptyCommitmentList -->
+<g id="edge12" class="edge" data-name="Slashing.initiateDispute-&gt;Slashing.EmptyCommitmentList">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M369.39,-1929.71C390.36,-1967.1 437.71,-2052.69 473.78,-2126.59 491.06,-2161.99 479.22,-2182.72 509.78,-2207.59 516.31,-2212.91 523.67,-2217.25 531.45,-2220.77" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="530.12,-2224.01 540.71,-2224.41 532.68,-2217.5 530.12,-2224.01" style=""/>
+</g>
+<!-- Slashing.InvalidBondAmount -->
+<g id="node33" class="node" pointer-events="visible" data-name="Slashing.InvalidBondAmount">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-2288.59" rx="90.94" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-2284.39" font-family="Times,serif" font-size="14.00" style="">InvalidBondAmount</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Slashing.InvalidBondAmount -->
+<g id="edge14" class="edge" data-name="Slashing.initiateDispute-&gt;Slashing.InvalidBondAmount">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M370.62,-1929.53C393.51,-1966.26 443.71,-2050.27 473.78,-2126.59 496.53,-2184.36 464.85,-2218.72 509.78,-2261.59 517.13,-2268.61 525.86,-2273.98 535.24,-2278.06" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="533.97,-2281.32 544.56,-2281.52 536.4,-2274.76 533.97,-2281.32" style=""/>
+</g>
+<!-- Slashing.ExistingDispute -->
+<g id="node34" class="node" pointer-events="visible" data-name="Slashing.ExistingDispute">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1802.59" rx="73.04" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1798.39" font-family="Times,serif" font-size="14.00" style="">ExistingDispute</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Slashing.ExistingDispute -->
+<g id="edge17" class="edge" data-name="Slashing.initiateDispute-&gt;Slashing.ExistingDispute">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M385.92,-1892.93C415.39,-1874.62 464.23,-1846.36 509.78,-1829.59 525.38,-1823.84 542.56,-1819.14 559.03,-1815.37" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="559.47,-1818.85 568.5,-1813.3 557.98,-1812.01 559.47,-1818.85" style=""/>
+</g>
+<!-- Slashing.UnfinalizedBlock -->
+<g id="node35" class="node" pointer-events="visible" data-name="Slashing.UnfinalizedBlock">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-2342.59" rx="79.87" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-2338.39" font-family="Times,serif" font-size="14.00" style="">UnfinalizedBlock</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Slashing.UnfinalizedBlock -->
+<g id="edge20" class="edge" data-name="Slashing.initiateDispute-&gt;Slashing.UnfinalizedBlock">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M371.32,-1929.62C395.15,-1966.18 446.57,-2049.44 473.78,-2126.59 502.22,-2207.23 450.09,-2254.35 509.78,-2315.59 518.79,-2324.84 530.18,-2331.27 542.38,-2335.69" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="541.31,-2339.02 551.9,-2338.59 543.35,-2332.33 541.31,-2339.02" style=""/>
+</g>
+<!-- Slashing.MixedSlotError -->
+<g id="node36" class="node" pointer-events="visible" data-name="Slashing.MixedSlotError">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-2396.59" rx="72.38" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-2392.39" font-family="Times,serif" font-size="14.00" style="">MixedSlotError</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Slashing.MixedSlotError -->
+<g id="edge23" class="edge" data-name="Slashing.initiateDispute-&gt;Slashing.MixedSlotError">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M371.61,-1929.52C395.94,-1965.91 448.16,-2048.89 473.78,-2126.59 507.96,-2230.28 435.2,-2289.85 509.78,-2369.59 520.26,-2380.8 534.22,-2387.91 548.99,-2392.33" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="548.04,-2395.7 558.59,-2394.71 549.73,-2388.91 548.04,-2395.7" style=""/>
+</g>
+<!-- Slashing.MixedSignerError -->
+<g id="node37" class="node" pointer-events="visible" data-name="Slashing.MixedSignerError">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1910.59" rx="81.67" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1906.39" font-family="Times,serif" font-size="14.00" style="">MixedSignerError</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Slashing.MixedSignerError -->
+<g id="edge24" class="edge" data-name="Slashing.initiateDispute-&gt;Slashing.MixedSignerError">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M426.68,-1910.59C460.6,-1910.59 502.17,-1910.59 539.16,-1910.59" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="539,-1914.09 549,-1910.59 539,-1907.09 539,-1914.09" style=""/>
+</g>
+<!-- Slashing.MixedSenderError -->
+<g id="node38" class="node" pointer-events="visible" data-name="Slashing.MixedSenderError">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1964.59" rx="83.38" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1960.39" font-family="Times,serif" font-size="14.00" style="">MixedSenderError</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Slashing.MixedSenderError -->
+<g id="edge25" class="edge" data-name="Slashing.initiateDispute-&gt;Slashing.MixedSenderError">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M414.67,-1921.58C455.85,-1929.65 512.27,-1940.71 557.58,-1949.6" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="556.89,-1953.03 567.37,-1951.52 558.23,-1946.16 556.89,-1953.03" style=""/>
+</g>
+<!-- Slashing.NonSequentialNonce -->
+<g id="node39" class="node" pointer-events="visible" data-name="Slashing.NonSequentialNonce">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-2018.59" rx="93.77" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-2014.39" font-family="Times,serif" font-size="14.00" style="">NonSequentialNonce</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Slashing.NonSequentialNonce -->
+<g id="edge26" class="edge" data-name="Slashing.initiateDispute-&gt;Slashing.NonSequentialNonce">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M385.92,-1928.25C415.39,-1946.56 464.23,-1974.81 509.78,-1991.59 522.18,-1996.16 535.58,-2000.07 548.83,-2003.37" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="547.97,-2006.77 558.5,-2005.66 549.58,-1999.95 547.97,-2006.77" style=""/>
+</g>
+<!-- Slashing.Dispute -->
+<g id="node40" class="node" pointer-events="visible" data-name="Slashing.Dispute">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-2072.59" rx="41.16" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-2068.39" font-family="Times,serif" font-size="14.00" style="">Dispute</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Slashing.Dispute -->
+<g id="edge28" class="edge" data-name="Slashing.initiateDispute-&gt;Slashing.Dispute">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M373.65,-1929.16C398.65,-1958.69 451.78,-2016.02 509.78,-2045.59 531.67,-2056.75 558.01,-2063.31 580.8,-2067.16" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="579.98,-2070.57 590.4,-2068.62 581.04,-2063.65 579.98,-2070.57" style=""/>
+</g>
+<!-- Slashing.DisputeOpened -->
+<g id="node41" class="node" pointer-events="visible" data-name="Slashing.DisputeOpened">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-2126.59" rx="71.22" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-2122.39" font-family="Times,serif" font-size="14.00" style="">DisputeOpened</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Slashing.DisputeOpened -->
+<g id="edge30" class="edge" data-name="Slashing.initiateDispute-&gt;Slashing.DisputeOpened">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M368.08,-1929.72C388.35,-1968.46 439.78,-2056.19 509.78,-2099.59 523.1,-2107.85 538.6,-2113.61 554.04,-2117.61" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="552.88,-2120.94 563.41,-2119.78 554.46,-2114.12 552.88,-2120.94" style=""/>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;EnumerableSet.Bytes32Set.contains -->
+<g id="edge16" class="edge" data-name="Slashing.initiateDispute-&gt;EnumerableSet.Bytes32Set.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M364.19,-1891.19C383.68,-1822.6 448.76,-1584.8 473.78,-1383.59 481.44,-1321.98 470.04,-314.29 509.78,-266.59 526.13,-246.96 553.09,-239.56 577.72,-237.34" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="577.9,-240.84 587.68,-236.78 577.5,-233.85 577.9,-240.84" style=""/>
+</g>
+<!-- EnumerableSet.Bytes32Set.add -->
+<g id="node62" class="node" pointer-events="visible" data-name="EnumerableSet.Bytes32Set.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-347.59" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-343.39" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;EnumerableSet.Bytes32Set.add -->
+<g id="edge27" class="edge" data-name="Slashing.initiateDispute-&gt;EnumerableSet.Bytes32Set.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M364.15,-1891.19C383.5,-1822.58 448.19,-1584.73 473.78,-1383.59 487.12,-1278.69 458.67,-525.16 509.78,-432.59 528.79,-398.15 568.4,-374.82 597.82,-361.45" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="599.13,-364.69 606.93,-357.52 596.36,-358.27 599.13,-364.69" style=""/>
+</g>
+<!-- ISystemParameters.getChallengeBond -->
+<g id="node64" class="node" pointer-events="visible" data-name="ISystemParameters.getChallengeBond">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1255.93" cy="-518.59" rx="82.82" ry="18" style=""/>
+<text text-anchor="middle" x="1255.93" y="-514.39" font-family="Times,serif" font-size="14.00" style="">getChallengeBond</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;ISystemParameters.getChallengeBond -->
+<g id="edge13" class="edge" data-name="Slashing.initiateDispute-&gt;ISystemParameters.getChallengeBond">
+
+<path fill="none" stroke="white" stroke-width="2" d="M363.74,-1891.62C382.03,-1823.51 444.28,-1584.66 473.78,-1383.59 481.41,-1331.55 474.37,-950.48 509.78,-911.59 585.83,-828.04 682.48,-950.48 760.33,-868.59 852.86,-771.26 700.86,-663.03 796.33,-568.59 898.61,-467.42 1083.14,-483.61 1184.14,-502.27" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1183.48,-505.71 1193.96,-504.16 1184.8,-498.83 1183.48,-505.71" style=""/>
+</g>
+<!-- ISystemParameters.getJustificationDelay -->
+<g id="node65" class="node" pointer-events="visible" data-name="ISystemParameters.getJustificationDelay">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1255.93" cy="-302.59" rx="93.19" ry="18" style=""/>
+<text text-anchor="middle" x="1255.93" y="-298.39" font-family="Times,serif" font-size="14.00" style="">getJustificationDelay</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;ISystemParameters.getJustificationDelay -->
+<g id="edge19" class="edge" data-name="Slashing.initiateDispute-&gt;ISystemParameters.getJustificationDelay">
+
+<path fill="none" stroke="white" stroke-width="2" d="M363.79,-1891.63C382.22,-1823.54 444.92,-1584.76 473.78,-1383.59 481.92,-1326.81 470.07,-909.98 509.78,-868.59 587.35,-787.73 682.69,-921.38 760.33,-840.59 837.83,-759.95 717.52,-417.94 796.33,-338.59 844.53,-290.07 1033.48,-290.36 1153.29,-295.86" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1152.92,-299.35 1163.08,-296.34 1153.26,-292.36 1152.92,-299.35" style=""/>
+</g>
+<!-- Time.timestamp -->
+<g id="node72" class="node" pointer-events="visible" data-name="Time.timestamp">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-785.59" rx="51.04" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-781.39" font-family="Times,serif" font-size="14.00" style="">timestamp</text>
+</g>
+<!-- Slashing.initiateDispute&#45;&gt;Time.timestamp -->
+<g id="edge29" class="edge" data-name="Slashing.initiateDispute-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M363.81,-1891.63C382.33,-1823.56 445.28,-1584.81 473.78,-1383.59 482.25,-1323.72 475.13,-890.14 509.78,-840.59 525.03,-818.77 550.98,-805.5 575.24,-797.48" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="576.22,-800.84 584.8,-794.62 574.21,-794.13 576.22,-800.84" style=""/>
+</g>
+<!-- Slashing.resolveActiveDispute -->
+<g id="node7" class="node" pointer-events="visible" data-name="Slashing.resolveActiveDispute">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.7" cy="-1118.59" rx="94.91" ry="18" style=""/>
+<text text-anchor="middle" x="110.7" y="-1114.39" font-family="Times,serif" font-size="14.00" style="">resolveActiveDispute</text>
+</g>
+<!-- Slashing.processResolution -->
+<g id="node9" class="node" pointer-events="visible" data-name="Slashing.processResolution">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="357.59" cy="-1282.59" rx="81.69" ry="18" style=""/>
+<text text-anchor="middle" x="357.59" y="-1278.39" font-family="Times,serif" font-size="14.00" style="">processResolution</text>
+</g>
+<!-- Slashing.resolveActiveDispute&#45;&gt;Slashing.processResolution -->
+<g id="edge39" class="edge" data-name="Slashing.resolveActiveDispute-&gt;Slashing.processResolution">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M124.31,-1137.88C145.01,-1167.93 189.15,-1225.57 241.41,-1255.59 251.35,-1261.3 262.43,-1265.8 273.68,-1269.36" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="272.42,-1272.64 283,-1272.02 274.35,-1265.91 272.42,-1272.64" style=""/>
+</g>
+<!-- Slashing.resolveActiveDispute&#45;&gt;Slashing.getCurrentSlot -->
+<g id="edge33" class="edge" data-name="Slashing.resolveActiveDispute-&gt;Slashing.getCurrentSlot">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M118.34,-1137.99C133.2,-1178.08 173.28,-1269.67 241.41,-1309.59 286.13,-1335.79 437.02,-1293.05 473.78,-1329.59 535.81,-1391.27 451.82,-1656.07 509.78,-1721.59 521.03,-1734.31 536.73,-1741.82 553.2,-1746.11" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="552.41,-1749.52 562.92,-1748.17 553.86,-1742.67 552.41,-1749.52" style=""/>
+</g>
+<!-- Slashing.resolveActiveDispute&#45;&gt;Slashing.NonexistentDispute -->
+<g id="edge32" class="edge" data-name="Slashing.resolveActiveDispute-&gt;Slashing.NonexistentDispute">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M200.62,-1125.58C214.27,-1126.41 228.21,-1127.13 241.41,-1127.59 344.62,-1131.17 370.86,-1136.2 473.78,-1127.59 501.2,-1125.3 531,-1120.83 557.38,-1116.18" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="557.83,-1119.66 567.05,-1114.43 556.58,-1112.77 557.83,-1119.66" style=""/>
+</g>
+<!-- Slashing.ObsoleteBlock -->
+<g id="node42" class="node" pointer-events="visible" data-name="Slashing.ObsoleteBlock">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="357.59" cy="-1356.59" rx="68.36" ry="18" style=""/>
+<text text-anchor="middle" x="357.59" y="-1352.39" font-family="Times,serif" font-size="14.00" style="">ObsoleteBlock</text>
+</g>
+<!-- Slashing.resolveActiveDispute&#45;&gt;Slashing.ObsoleteBlock -->
+<g id="edge35" class="edge" data-name="Slashing.resolveActiveDispute-&gt;Slashing.ObsoleteBlock">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M118.33,-1137.83C133.4,-1178.72 174.29,-1274.62 241.41,-1324.59 253.51,-1333.59 268.01,-1340.06 282.59,-1344.71" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="281.31,-1347.99 291.89,-1347.38 283.24,-1341.26 281.31,-1347.99" style=""/>
+</g>
+<!-- Slashing.InvalidHeight -->
+<g id="node43" class="node" pointer-events="visible" data-name="Slashing.InvalidHeight">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="357.59" cy="-1174.59" rx="64.85" ry="18" style=""/>
+<text text-anchor="middle" x="357.59" y="-1170.39" font-family="Times,serif" font-size="14.00" style="">InvalidHeight</text>
+</g>
+<!-- Slashing.resolveActiveDispute&#45;&gt;Slashing.InvalidHeight -->
+<g id="edge37" class="edge" data-name="Slashing.resolveActiveDispute-&gt;Slashing.InvalidHeight">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M175.09,-1133.08C211.22,-1141.35 256.37,-1151.67 292.6,-1159.96" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="291.53,-1163.3 302.06,-1162.12 293.09,-1156.48 291.53,-1163.3" style=""/>
+</g>
+<!-- Slashing.blockhash -->
+<g id="node44" class="node" pointer-events="visible" data-name="Slashing.blockhash">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="357.59" cy="-1100.59" rx="50.39" ry="18" style=""/>
+<text text-anchor="middle" x="357.59" y="-1096.39" font-family="Times,serif" font-size="14.00" style="">blockhash</text>
+</g>
+<!-- Slashing.resolveActiveDispute&#45;&gt;Slashing.blockhash -->
+<g id="edge38" class="edge" data-name="Slashing.resolveActiveDispute-&gt;Slashing.blockhash">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M201.15,-1112.01C231.94,-1109.75 265.73,-1107.27 293.92,-1105.2" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="294.13,-1108.69 303.84,-1104.47 293.61,-1101.71 294.13,-1108.69" style=""/>
+</g>
+<!-- Slashing.resolveActiveDispute&#45;&gt;EnumerableSet.Bytes32Set.contains -->
+<g id="edge31" class="edge" data-name="Slashing.resolveActiveDispute-&gt;EnumerableSet.Bytes32Set.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M165.58,-1102.64C180.41,-1095.86 195.2,-1086.45 205.41,-1073.59 251.26,-1015.82 218.99,-981.86 241.41,-911.59 322.2,-658.39 374.6,-607.17 473.78,-360.59 490.47,-319.08 475.83,-295.73 509.78,-266.59 528.43,-250.57 554.38,-243.38 577.74,-240.37" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="577.78,-243.88 587.38,-239.4 577.08,-236.92 577.78,-243.88" style=""/>
+</g>
+<!-- ISystemParameters.getBlockhashEvmLookback -->
+<g id="node66" class="node" pointer-events="visible" data-name="ISystemParameters.getBlockhashEvmLookback">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1255.93" cy="-140.59" rx="120.41" ry="18" style=""/>
+<text text-anchor="middle" x="1255.93" y="-136.39" font-family="Times,serif" font-size="14.00" style="">getBlockhashEvmLookback</text>
+</g>
+<!-- Slashing.resolveActiveDispute&#45;&gt;ISystemParameters.getBlockhashEvmLookback -->
+<g id="edge34" class="edge" data-name="Slashing.resolveActiveDispute-&gt;ISystemParameters.getBlockhashEvmLookback">
+
+<path fill="none" stroke="white" stroke-width="2" d="M152.79,-1101.18C172.08,-1093.64 193.42,-1082.62 205.41,-1064.59 293.25,-932.48 175.74,-496 241.41,-351.59 310.03,-200.7 356.08,-154.66 509.78,-92.59 752.15,5.29 1075.39,-75.36 1201.43,-118.32" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1199.9,-121.49 1210.5,-121.48 1202.21,-114.88 1199.9,-121.49" style=""/>
+</g>
+<!-- Slashing.resolveActiveDispute&#45;&gt;ISystemParameters.getBlockhashEvmLookback -->
+<g id="edge36" class="edge" data-name="Slashing.resolveActiveDispute-&gt;ISystemParameters.getBlockhashEvmLookback">
+
+<path fill="none" stroke="white" stroke-width="2" d="M180.44,-1105.43C190.24,-1099.59 199.11,-1092.06 205.41,-1082.59 293.25,-950.48 175.74,-514 241.41,-369.59 310.03,-218.7 356.08,-172.66 509.78,-110.59 738.02,-18.41 1037.97,-84.56 1177.43,-121.1" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1176.12,-124.37 1186.68,-123.55 1177.91,-117.61 1176.12,-124.37" style=""/>
+</g>
+<!-- Slashing.resolveExpiredDispute -->
+<g id="node8" class="node" pointer-events="visible" data-name="Slashing.resolveExpiredDispute">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="357.59" cy="-1228.59" rx="99.57" ry="18" style=""/>
+<text text-anchor="middle" x="357.59" y="-1224.39" font-family="Times,serif" font-size="14.00" style="">resolveExpiredDispute</text>
+</g>
+<!-- Slashing.finalizeDisputeResolution -->
+<g id="node10" class="node" pointer-events="visible" data-name="Slashing.finalizeDisputeResolution">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1316.59" rx="111.76" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1312.39" font-family="Times,serif" font-size="14.00" style="">finalizeDisputeResolution</text>
+</g>
+<!-- Slashing.resolveExpiredDispute&#45;&gt;Slashing.finalizeDisputeResolution -->
+<g id="edge46" class="edge" data-name="Slashing.resolveExpiredDispute-&gt;Slashing.finalizeDisputeResolution">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M435.94,-1240.78C449.01,-1244.49 462.11,-1249.31 473.78,-1255.59 493.16,-1266.02 490.31,-1279.32 509.78,-1289.59 517.83,-1293.84 526.52,-1297.42 535.42,-1300.44" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="534.18,-1303.72 544.77,-1303.32 536.25,-1297.03 534.18,-1303.72" style=""/>
+</g>
+<!-- Slashing.resolveExpiredDispute&#45;&gt;Slashing.NonexistentDispute -->
+<g id="edge41" class="edge" data-name="Slashing.resolveExpiredDispute-&gt;Slashing.NonexistentDispute">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M442.9,-1218.15C454.04,-1214.19 464.71,-1208.83 473.78,-1201.59 502.35,-1178.76 481.02,-1150.19 509.78,-1127.59 518.61,-1120.65 528.83,-1115.4 539.55,-1111.45" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="540.48,-1114.83 548.93,-1108.44 538.34,-1108.16 540.48,-1114.83" style=""/>
+</g>
+<!-- Slashing.resolveExpiredDispute&#45;&gt;Slashing.ExistingDispute -->
+<g id="edge45" class="edge" data-name="Slashing.resolveExpiredDispute-&gt;Slashing.ExistingDispute">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M448.27,-1237.2C457.99,-1241.51 466.86,-1247.45 473.78,-1255.59 548.82,-1343.82 434.01,-1687.97 509.78,-1775.59 519.82,-1787.2 533.57,-1794.5 548.28,-1798.97" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="547.32,-1802.33 557.87,-1801.35 549.01,-1795.54 547.32,-1802.33" style=""/>
+</g>
+<!-- Slashing.ResolvedDispute -->
+<g id="node45" class="node" pointer-events="visible" data-name="Slashing.ResolvedDispute">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1154.59" rx="77.04" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1150.39" font-family="Times,serif" font-size="14.00" style="">ResolvedDispute</text>
+</g>
+<!-- Slashing.resolveExpiredDispute&#45;&gt;Slashing.ResolvedDispute -->
+<g id="edge42" class="edge" data-name="Slashing.resolveExpiredDispute-&gt;Slashing.ResolvedDispute">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M430.19,-1215.05C444.84,-1211.39 459.98,-1206.92 473.78,-1201.59 490.85,-1194.99 492.65,-1188.05 509.78,-1181.59 524.53,-1176.03 540.72,-1171.47 556.4,-1167.78" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="556.88,-1171.26 565.88,-1165.67 555.36,-1164.43 556.88,-1171.26" style=""/>
+</g>
+<!-- Slashing.resolveExpiredDispute&#45;&gt;EnumerableSet.Bytes32Set.contains -->
+<g id="edge40" class="edge" data-name="Slashing.resolveExpiredDispute-&gt;EnumerableSet.Bytes32Set.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M448.51,-1220.18C458.19,-1215.84 466.98,-1209.83 473.78,-1201.59 539.92,-1121.37 442.98,-346.26 509.78,-266.59 526.19,-247.01 553.15,-239.62 577.78,-237.39" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="577.95,-240.88 587.73,-236.82 577.55,-233.9 577.95,-240.88" style=""/>
+</g>
+<!-- ISystemParameters.getMaxChallengeDuration -->
+<g id="node67" class="node" pointer-events="visible" data-name="ISystemParameters.getMaxChallengeDuration">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1255.93" cy="-248.59" rx="114.03" ry="18" style=""/>
+<text text-anchor="middle" x="1255.93" y="-244.39" font-family="Times,serif" font-size="14.00" style="">getMaxChallengeDuration</text>
+</g>
+<!-- Slashing.resolveExpiredDispute&#45;&gt;ISystemParameters.getMaxChallengeDuration -->
+<g id="edge43" class="edge" data-name="Slashing.resolveExpiredDispute-&gt;ISystemParameters.getMaxChallengeDuration">
+
+<path fill="none" stroke="white" stroke-width="2" d="M447.94,-1220.06C457.78,-1215.75 466.76,-1209.78 473.78,-1201.59 542.76,-1121.01 437.63,-803.36 509.78,-725.59 586.38,-643.02 683.58,-770.02 760.33,-687.59 829.15,-613.69 722.15,-303.11 796.33,-234.59 848.27,-186.61 1048.72,-211.91 1166.72,-231.93" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1165.85,-235.33 1176.3,-233.58 1167.04,-228.43 1165.85,-235.33" style=""/>
+</g>
+<!-- Slashing.resolveExpiredDispute&#45;&gt;Time.timestamp -->
+<g id="edge44" class="edge" data-name="Slashing.resolveExpiredDispute-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M447.75,-1219.9C457.63,-1215.61 466.67,-1209.7 473.78,-1201.59 526.93,-1140.98 462.49,-905.89 509.78,-840.59 525.39,-819.03 551.38,-805.79 575.57,-797.72" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="576.54,-801.09 585.1,-794.84 574.51,-794.39 576.54,-801.09" style=""/>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.finalizeDisputeResolution -->
+<g id="edge61" class="edge" data-name="Slashing.processResolution-&gt;Slashing.finalizeDisputeResolution">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M440.12,-1280.21C481.46,-1283.67 530.94,-1290.05 569.58,-1297" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="568.79,-1300.41 579.27,-1298.81 570.08,-1293.53 568.79,-1300.41" style=""/>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.finalizeDisputeResolution -->
+<g id="edge62" class="edge" data-name="Slashing.processResolution-&gt;Slashing.finalizeDisputeResolution">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M431.33,-1291.57C461.51,-1295.29 497.1,-1299.68 529.96,-1303.74" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="529.53,-1307.21 539.89,-1304.97 530.39,-1300.27 529.53,-1307.21" style=""/>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.finalizeDisputeResolution -->
+<g id="edge67" class="edge" data-name="Slashing.processResolution-&gt;Slashing.finalizeDisputeResolution">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M404.39,-1298.6C433.25,-1304.53 472.03,-1310.35 509.5,-1314.66" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="508.8,-1318.1 519.13,-1315.73 509.57,-1311.15 508.8,-1318.1" style=""/>
+</g>
+<!-- Slashing.parseBlockHeader -->
+<g id="node15" class="node" pointer-events="visible" data-name="Slashing.parseBlockHeader">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1262.59" rx="82.21" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1258.39" font-family="Times,serif" font-size="14.00" style="">parseBlockHeader</text>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.parseBlockHeader -->
+<g id="edge55" class="edge" data-name="Slashing.processResolution-&gt;Slashing.parseBlockHeader">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M426.68,-1271.73C460.46,-1268.39 501.82,-1265.21 538.69,-1263.06" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="538.72,-1266.56 548.5,-1262.51 538.32,-1259.57 538.72,-1266.56" style=""/>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.parseBlockHeader -->
+<g id="edge56" class="edge" data-name="Slashing.processResolution-&gt;Slashing.parseBlockHeader">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M440.49,-1282.87C476.09,-1280.99 517.67,-1277.96 553.15,-1274.67" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="553.29,-1278.18 562.91,-1273.74 552.62,-1271.21 553.29,-1278.18" style=""/>
+</g>
+<!-- Slashing.parseAccount -->
+<g id="node16" class="node" pointer-events="visible" data-name="Slashing.parseAccount">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1208.59" rx="64.25" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1204.39" font-family="Times,serif" font-size="14.00" style="">parseAccount</text>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.parseAccount -->
+<g id="edge60" class="edge" data-name="Slashing.processResolution-&gt;Slashing.parseAccount">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M423.22,-1270.75C439.96,-1266.79 457.78,-1261.77 473.78,-1255.59 490.85,-1248.99 492.65,-1242.05 509.78,-1235.59 526.98,-1229.1 546.15,-1223.98 564.18,-1220.02" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="564.71,-1223.48 573.78,-1218.02 563.28,-1216.63 564.71,-1223.48" style=""/>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.NonexistentDispute -->
+<g id="edge48" class="edge" data-name="Slashing.processResolution-&gt;Slashing.NonexistentDispute">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M436.2,-1276.28C450.07,-1272.05 463.39,-1265.53 473.78,-1255.59 516.47,-1214.73 466.75,-1168.1 509.78,-1127.59 517.69,-1120.14 527.16,-1114.55 537.29,-1110.39" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="538.29,-1113.75 546.57,-1107.14 535.98,-1107.14 538.29,-1113.75" style=""/>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.ResolvedDispute -->
+<g id="edge49" class="edge" data-name="Slashing.processResolution-&gt;Slashing.ResolvedDispute">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M433.96,-1275.02C448.25,-1270.91 462.3,-1264.76 473.78,-1255.59 502.35,-1232.76 481.02,-1204.19 509.78,-1181.59 520.61,-1173.08 533.54,-1167.11 546.91,-1162.95" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="547.6,-1166.39 556.34,-1160.41 545.78,-1159.64 547.6,-1166.39" style=""/>
+</g>
+<!-- Slashing.ExpiredDispute -->
+<g id="node46" class="node" pointer-events="visible" data-name="Slashing.ExpiredDispute">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1424.59" rx="71.79" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1420.39" font-family="Times,serif" font-size="14.00" style="">ExpiredDispute</text>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.ExpiredDispute -->
+<g id="edge52" class="edge" data-name="Slashing.processResolution-&gt;Slashing.ExpiredDispute">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M430.2,-1291.98C445.9,-1296.75 461.49,-1303.89 473.78,-1314.59 504.1,-1340.99 478.71,-1372.06 509.78,-1397.59 521.51,-1407.23 535.9,-1413.63 550.68,-1417.85" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="549.65,-1421.2 560.19,-1420.18 551.31,-1414.4 549.65,-1421.2" style=""/>
+</g>
+<!-- Slashing.InvalidProofLength -->
+<g id="node47" class="node" pointer-events="visible" data-name="Slashing.InvalidProofLength">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1478.59" rx="87.41" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1474.39" font-family="Times,serif" font-size="14.00" style="">InvalidProofLength</text>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.InvalidProofLength -->
+<g id="edge53" class="edge" data-name="Slashing.processResolution-&gt;Slashing.InvalidProofLength">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M432.33,-1290.96C447.66,-1295.78 462.56,-1303.21 473.78,-1314.59 517.98,-1359.42 464.31,-1408.04 509.78,-1451.59 517.68,-1459.16 527.19,-1464.82 537.38,-1469.01" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="536.15,-1472.29 546.75,-1472.29 538.47,-1465.68 536.15,-1472.29" style=""/>
+</g>
+<!-- Slashing.MismatchedBlockHash -->
+<g id="node48" class="node" pointer-events="visible" data-name="Slashing.MismatchedBlockHash">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1532.59" rx="101.88" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1528.39" font-family="Times,serif" font-size="14.00" style="">MismatchedBlockHash</text>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.MismatchedBlockHash -->
+<g id="edge54" class="edge" data-name="Slashing.processResolution-&gt;Slashing.MismatchedBlockHash">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M433.22,-1290.48C448.43,-1295.34 463.03,-1302.9 473.78,-1314.59 532.22,-1378.2 449.54,-1443.67 509.78,-1505.59 515.33,-1511.3 521.79,-1515.94 528.79,-1519.69" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="526.88,-1522.67 537.43,-1523.63 529.78,-1516.3 526.88,-1522.67" style=""/>
+</g>
+<!-- Slashing.MismatchedParentHash -->
+<g id="node49" class="node" pointer-events="visible" data-name="Slashing.MismatchedParentHash">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1586.59" rx="103.08" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1582.39" font-family="Times,serif" font-size="14.00" style="">MismatchedParentHash</text>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.MismatchedParentHash -->
+<g id="edge57" class="edge" data-name="Slashing.processResolution-&gt;Slashing.MismatchedParentHash">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M433.87,-1290.26C448.95,-1295.13 463.34,-1302.76 473.78,-1314.59 546.58,-1397.12 434.64,-1479.16 509.78,-1559.59 514.99,-1565.17 521.06,-1569.74 527.67,-1573.46" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="525.97,-1576.53 536.5,-1577.66 528.97,-1570.2 525.97,-1576.53" style=""/>
+</g>
+<!-- Slashing.MissingAccount -->
+<g id="node50" class="node" pointer-events="visible" data-name="Slashing.MissingAccount">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1640.59" rx="74.75" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1636.39" font-family="Times,serif" font-size="14.00" style="">MissingAccount</text>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.MissingAccount -->
+<g id="edge59" class="edge" data-name="Slashing.processResolution-&gt;Slashing.MissingAccount">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M434.1,-1290.06C449.17,-1294.94 463.5,-1302.63 473.78,-1314.59 561,-1416.11 419.69,-1514.6 509.78,-1613.59 519.6,-1624.39 532.65,-1631.41 546.59,-1635.88" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="545.52,-1639.22 556.09,-1638.41 547.32,-1632.46 545.52,-1639.22" style=""/>
+</g>
+<!-- Slashing.MissingTransaction -->
+<g id="node51" class="node" pointer-events="visible" data-name="Slashing.MissingTransaction">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1694.59" rx="87.99" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1690.39" font-family="Times,serif" font-size="14.00" style="">MissingTransaction</text>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.MissingTransaction -->
+<g id="edge65" class="edge" data-name="Slashing.processResolution-&gt;Slashing.MissingTransaction">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M434.26,-1289.92C449.32,-1294.81 463.61,-1302.53 473.78,-1314.59 575.46,-1435.13 404.7,-1549.99 509.78,-1667.59 517.02,-1675.7 526.07,-1681.68 535.97,-1686.06" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="534.5,-1689.25 545.09,-1689.45 536.93,-1682.69 534.5,-1689.25" style=""/>
+</g>
+<!-- Slashing.InvalidTransactionHashProof -->
+<g id="node52" class="node" pointer-events="visible" data-name="Slashing.InvalidTransactionHashProof">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-1370.59" rx="125.06" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1366.39" font-family="Times,serif" font-size="14.00" style="">InvalidTransactionHashProof</text>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Slashing.InvalidTransactionHashProof -->
+<g id="edge66" class="edge" data-name="Slashing.processResolution-&gt;Slashing.InvalidTransactionHashProof">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M421.31,-1295.06C438.84,-1299.85 457.53,-1306.24 473.78,-1314.59 492.05,-1323.98 491.24,-1334.73 509.78,-1343.59 517.4,-1347.24 525.53,-1350.4 533.84,-1353.13" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="532.62,-1356.42 543.2,-1355.97 534.65,-1349.72 532.62,-1356.42" style=""/>
+</g>
+<!-- Slashing.processResolution&#45;&gt;EnumerableSet.Bytes32Set.contains -->
+<g id="edge47" class="edge" data-name="Slashing.processResolution-&gt;EnumerableSet.Bytes32Set.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M438.48,-1278.03C452.07,-1273.64 464.71,-1266.61 473.78,-1255.59 543.64,-1170.67 439.22,-350.93 509.78,-266.59 526.17,-246.99 553.13,-239.6 577.76,-237.37" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="577.93,-240.87 587.71,-236.81 577.53,-233.88 577.93,-240.87" style=""/>
+</g>
+<!-- Slashing.processResolution&#45;&gt;ISystemParameters.getMaxChallengeDuration -->
+<g id="edge50" class="edge" data-name="Slashing.processResolution-&gt;ISystemParameters.getMaxChallengeDuration">
+
+<path fill="none" stroke="white" stroke-width="2" d="M438.17,-1277.77C451.79,-1273.4 464.51,-1266.45 473.78,-1255.59 546.07,-1170.83 433.68,-836.95 509.78,-755.59 586.58,-673.47 683.19,-802.39 760.33,-720.59 828.86,-647.93 724.73,-342.22 796.33,-272.59 819.71,-249.85 1000.57,-246.38 1128.03,-246.83" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1127.93,-250.33 1137.94,-246.87 1127.96,-243.33 1127.93,-250.33" style=""/>
+</g>
+<!-- Slashing.processResolution&#45;&gt;Time.timestamp -->
+<g id="edge51" class="edge" data-name="Slashing.processResolution-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M438.04,-1277.66C451.67,-1273.3 464.43,-1266.38 473.78,-1255.59 534.36,-1185.6 455.96,-915.91 509.78,-840.59 525.25,-818.93 551.23,-805.68 575.44,-797.63" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="576.42,-800.99 584.98,-794.75 574.4,-794.29 576.42,-800.99" style=""/>
+</g>
+<!-- SecureMerkleTrie.get -->
+<g id="node73" class="node" pointer-events="visible" data-name="SecureMerkleTrie.get">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-632.59" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-628.39" font-family="Times,serif" font-size="14.00" style="">get</text>
+</g>
+<!-- Slashing.processResolution&#45;&gt;SecureMerkleTrie.get -->
+<g id="edge58" class="edge" data-name="Slashing.processResolution-&gt;SecureMerkleTrie.get">
+
+<path fill="none" stroke="white" stroke-width="2" d="M438.2,-1277.8C451.82,-1273.43 464.53,-1266.47 473.78,-1255.59 550.2,-1165.62 453.38,-829.29 509.78,-725.59 529.41,-689.49 569.75,-663.4 599.16,-648.2" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="600.48,-651.45 607.9,-643.88 597.38,-645.18 600.48,-651.45" style=""/>
+</g>
+<!-- RLPWriter.writeUint -->
+<g id="node74" class="node" pointer-events="visible" data-name="RLPWriter.writeUint">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-547.59" rx="48.09" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-543.39" font-family="Times,serif" font-size="14.00" style="">writeUint</text>
+</g>
+<!-- Slashing.processResolution&#45;&gt;RLPWriter.writeUint -->
+<g id="edge63" class="edge" data-name="Slashing.processResolution-&gt;RLPWriter.writeUint">
+
+<path fill="none" stroke="white" stroke-width="2" d="M438.31,-1277.89C451.92,-1273.52 464.6,-1266.53 473.78,-1255.59 567.16,-1144.23 427.16,-722.16 509.78,-602.59 525.32,-580.09 552.27,-566.69 577.11,-558.76" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="577.91,-562.17 586.54,-556.03 575.96,-555.45 577.91,-562.17" style=""/>
+</g>
+<!-- MerkleTrie.get -->
+<g id="node75" class="node" pointer-events="visible" data-name="MerkleTrie.get">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-462.59" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-458.39" font-family="Times,serif" font-size="14.00" style="">get</text>
+</g>
+<!-- Slashing.processResolution&#45;&gt;MerkleTrie.get -->
+<g id="edge64" class="edge" data-name="Slashing.processResolution-&gt;MerkleTrie.get">
+
+<path fill="none" stroke="white" stroke-width="2" d="M438.37,-1277.94C451.97,-1273.56 464.64,-1266.56 473.78,-1255.59 526.33,-1192.52 463.32,-585.28 509.78,-517.59 529.05,-489.5 566.12,-475.6 594.78,-468.82" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="595.24,-472.3 604.29,-466.81 593.79,-465.45 595.24,-472.3" style=""/>
+</g>
+<!-- Slashing.distributeBondFull -->
+<g id="node17" class="node" pointer-events="visible" data-name="Slashing.distributeBondFull">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="947.91" cy="-1262.59" rx="84.01" ry="18" style=""/>
+<text text-anchor="middle" x="947.91" y="-1258.39" font-family="Times,serif" font-size="14.00" style="">distributeBondFull</text>
+</g>
+<!-- Slashing.finalizeDisputeResolution&#45;&gt;Slashing.distributeBondFull -->
+<g id="edge71" class="edge" data-name="Slashing.finalizeDisputeResolution-&gt;Slashing.distributeBondFull">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M714.9,-1302.89C761.53,-1294.79 820.41,-1284.56 867.19,-1276.44" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="867.5,-1279.94 876.75,-1274.78 866.3,-1273.04 867.5,-1279.94" style=""/>
+</g>
+<!-- Slashing.distributeBondHalf -->
+<g id="node18" class="node" pointer-events="visible" data-name="Slashing.distributeBondHalf">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="947.91" cy="-1316.59" rx="85.7" ry="18" style=""/>
+<text text-anchor="middle" x="947.91" y="-1312.39" font-family="Times,serif" font-size="14.00" style="">distributeBondHalf</text>
+</g>
+<!-- Slashing.finalizeDisputeResolution&#45;&gt;Slashing.distributeBondHalf -->
+<g id="edge68" class="edge" data-name="Slashing.finalizeDisputeResolution-&gt;Slashing.distributeBondHalf">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M741.73,-1310.16C777.63,-1309.68 817.48,-1309.74 852.45,-1310.32" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="852,-1313.82 862.06,-1310.51 852.13,-1306.82 852,-1313.82" style=""/>
+</g>
+<!-- Slashing.finalizeDisputeResolution&#45;&gt;Slashing.distributeBondHalf -->
+<g id="edge69" class="edge" data-name="Slashing.finalizeDisputeResolution-&gt;Slashing.distributeBondHalf">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M741.73,-1323.02C777.63,-1323.49 817.48,-1323.44 852.45,-1322.85" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="852.13,-1326.36 862.06,-1322.67 852,-1319.36 852.13,-1326.36" style=""/>
+</g>
+<!-- Slashing.DisputeDefended -->
+<g id="node53" class="node" pointer-events="visible" data-name="Slashing.DisputeDefended">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="947.91" cy="-1154.59" rx="78.72" ry="18" style=""/>
+<text text-anchor="middle" x="947.91" y="-1150.39" font-family="Times,serif" font-size="14.00" style="">DisputeDefended</text>
+</g>
+<!-- Slashing.finalizeDisputeResolution&#45;&gt;Slashing.DisputeDefended -->
+<g id="edge70" class="edge" data-name="Slashing.finalizeDisputeResolution-&gt;Slashing.DisputeDefended">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M732,-1306.6C742.37,-1302.49 752.12,-1296.96 760.33,-1289.59 797.99,-1255.79 758.07,-1214.69 796.33,-1181.59 812.79,-1167.35 834.13,-1159.46 855.55,-1155.32" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="855.83,-1158.82 865.14,-1153.77 854.71,-1151.91 855.83,-1158.82" style=""/>
+</g>
+<!-- Slashing.DisputeViolation -->
+<g id="node54" class="node" pointer-events="visible" data-name="Slashing.DisputeViolation">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="947.91" cy="-1100.59" rx="77.61" ry="18" style=""/>
+<text text-anchor="middle" x="947.91" y="-1096.39" font-family="Times,serif" font-size="14.00" style="">DisputeViolation</text>
+</g>
+<!-- Slashing.finalizeDisputeResolution&#45;&gt;Slashing.DisputeViolation -->
+<g id="edge72" class="edge" data-name="Slashing.finalizeDisputeResolution-&gt;Slashing.DisputeViolation">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M733.68,-1307.02C743.57,-1302.8 752.74,-1297.14 760.33,-1289.59 812.61,-1237.56 743.12,-1178.66 796.33,-1127.59 812.67,-1111.91 834.82,-1103.68 857.1,-1099.68" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="857.44,-1103.17 866.83,-1098.26 856.43,-1096.24 857.44,-1103.17" style=""/>
+</g>
+<!-- EnumerableSet.Bytes32Set.remove -->
+<g id="node63" class="node" pointer-events="visible" data-name="EnumerableSet.Bytes32Set.remove">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="635.05" cy="-293.59" rx="39.99" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-289.39" font-family="Times,serif" font-size="14.00" style="">remove</text>
+</g>
+<!-- Slashing.finalizeDisputeResolution&#45;&gt;EnumerableSet.Bytes32Set.remove -->
+<g id="edge73" class="edge" data-name="Slashing.finalizeDisputeResolution-&gt;EnumerableSet.Bytes32Set.remove">
+
+<path fill="none" stroke="white" stroke-width="2" d="M529.08,-1309.92C513.88,-1303.93 500.47,-1294.66 491.78,-1280.59 477.89,-1258.12 477.89,-352.06 491.78,-329.59 510.05,-300.02 549.12,-291.67 581.86,-290.36" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="581.52,-293.86 591.47,-290.22 581.42,-286.86 581.52,-293.86" style=""/>
+</g>
+<!-- Slashing.computeCommitmentId -->
+<g id="node13" class="node" pointer-events="visible" data-name="Slashing.computeCommitmentId">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="947.91" cy="-1829.59" rx="103.1" ry="18" style=""/>
+<text text-anchor="middle" x="947.91" y="-1825.39" font-family="Times,serif" font-size="14.00" style="">computeCommitmentId</text>
+</g>
+<!-- Slashing.extractCommitmentData&#45;&gt;Slashing.computeCommitmentId -->
+<g id="edge75" class="edge" data-name="Slashing.extractCommitmentData-&gt;Slashing.computeCommitmentId">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M732.28,-1848.23C766.5,-1845.26 805.23,-1841.9 840.27,-1838.85" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="840.32,-1842.36 849.98,-1838.01 839.72,-1835.39 840.32,-1842.36" style=""/>
+</g>
+<!-- Slashing.TransactionDetail -->
+<g id="node55" class="node" pointer-events="visible" data-name="Slashing.TransactionDetail">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="947.91" cy="-1883.59" rx="80.43" ry="18" style=""/>
+<text text-anchor="middle" x="947.91" y="-1879.39" font-family="Times,serif" font-size="14.00" style="">TransactionDetail</text>
+</g>
+<!-- Slashing.extractCommitmentData&#45;&gt;Slashing.TransactionDetail -->
+<g id="edge77" class="edge" data-name="Slashing.extractCommitmentData-&gt;Slashing.TransactionDetail">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M732.28,-1864.95C772.42,-1868.43 818.75,-1872.46 858.07,-1875.87" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="857.56,-1879.34 867.82,-1876.72 858.16,-1872.37 857.56,-1879.34" style=""/>
+</g>
+<!-- ECDSA.recover -->
+<g id="node76" class="node" pointer-events="visible" data-name="ECDSA.recover">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="947.91" cy="-853.59" rx="39.97" ry="18" style=""/>
+<text text-anchor="middle" x="947.91" y="-849.39" font-family="Times,serif" font-size="14.00" style="">recover</text>
+</g>
+<!-- Slashing.extractCommitmentData&#45;&gt;ECDSA.recover -->
+<g id="edge74" class="edge" data-name="Slashing.extractCommitmentData-&gt;ECDSA.recover">
+
+<path fill="none" stroke="white" stroke-width="2" d="M733.88,-1848.84C743.99,-1844.35 753.17,-1838.13 760.33,-1829.59 826.15,-1751.13 736.01,-991.35 796.33,-908.59 818.86,-877.68 860.6,-864.1 894.43,-858.16" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="894.61,-861.68 903.96,-856.7 893.54,-854.76 894.61,-861.68" style=""/>
+</g>
+<!-- TransactionDecoder.Transaction.recoverSender -->
+<g id="node77" class="node" pointer-events="visible" data-name="TransactionDecoder.Transaction.recoverSender">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="947.91" cy="-768.59" rx="66.6" ry="18" style=""/>
+<text text-anchor="middle" x="947.91" y="-764.39" font-family="Times,serif" font-size="14.00" style="">recoverSender</text>
+</g>
+<!-- Slashing.extractCommitmentData&#45;&gt;TransactionDecoder.Transaction.recoverSender -->
+<g id="edge76" class="edge" data-name="Slashing.extractCommitmentData-&gt;TransactionDecoder.Transaction.recoverSender">
+
+<path fill="none" stroke="white" stroke-width="2" d="M733.91,-1848.86C744.02,-1844.37 753.18,-1838.14 760.33,-1829.59 832.07,-1743.78 730.6,-914.09 796.33,-823.59 813.93,-799.36 843.33,-785.79 871.5,-778.19" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="872.05,-781.66 880.94,-775.9 870.4,-774.85 872.05,-781.66" style=""/>
+</g>
+<!-- Slashing.toLittleEndian -->
+<g id="node14" class="node" pointer-events="visible" data-name="Slashing.toLittleEndian">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1255.93" cy="-1829.59" rx="66.64" ry="18" style=""/>
+<text text-anchor="middle" x="1255.93" y="-1825.39" font-family="Times,serif" font-size="14.00" style="">toLittleEndian</text>
+</g>
+<!-- Slashing.computeCommitmentId&#45;&gt;Slashing.toLittleEndian -->
+<g id="edge78" class="edge" data-name="Slashing.computeCommitmentId-&gt;Slashing.toLittleEndian">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M1052.09,-1829.59C1092.29,-1829.59 1137.64,-1829.59 1175.25,-1829.59" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="1175.19,-1833.09 1185.19,-1829.59 1175.19,-1826.09 1175.19,-1833.09" style=""/>
+</g>
+<!-- headerRLP.toRLPItem -->
+<g id="node78" class="node" pointer-events="visible" data-name="headerRLP.toRLPItem">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="947.91" cy="-683.59" rx="53.91" ry="18" style=""/>
+<text text-anchor="middle" x="947.91" y="-679.39" font-family="Times,serif" font-size="14.00" style="">toRLPItem</text>
+</g>
+<!-- Slashing.parseBlockHeader&#45;&gt;headerRLP.toRLPItem -->
+<g id="edge79" class="edge" data-name="Slashing.parseBlockHeader-&gt;headerRLP.toRLPItem">
+
+<path fill="none" stroke="white" stroke-width="2" d="M717.99,-1260.03C734.12,-1255.69 749.41,-1248.18 760.33,-1235.59 832.9,-1151.94 729.63,-826.98 796.33,-738.59 816.52,-711.84 851.03,-698.09 881.92,-691.02" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="882.37,-694.5 891.47,-689.07 880.97,-687.64 882.37,-694.5" style=""/>
+</g>
+<!-- accountRLP.toRLPItem -->
+<g id="node79" class="node" pointer-events="visible" data-name="accountRLP.toRLPItem">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="947.91" cy="-598.59" rx="53.91" ry="18" style=""/>
+<text text-anchor="middle" x="947.91" y="-594.39" font-family="Times,serif" font-size="14.00" style="">toRLPItem</text>
+</g>
+<!-- Slashing.parseAccount&#45;&gt;accountRLP.toRLPItem -->
+<g id="edge80" class="edge" data-name="Slashing.parseAccount-&gt;accountRLP.toRLPItem">
+
+<path fill="none" stroke="white" stroke-width="2" d="M700.56,-1209.58C722.67,-1206.46 745.54,-1198.72 760.33,-1181.59 837.21,-1092.59 725.69,-747.62 796.33,-653.59 816.46,-626.8 850.97,-613.04 881.87,-605.98" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="882.33,-609.46 891.43,-604.04 880.93,-602.61 882.33,-609.46" style=""/>
+</g>
+<!-- Slashing.payable -->
+<g id="node56" class="node" pointer-events="visible" data-name="Slashing.payable">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1255.93" cy="-1262.59" rx="41.13" ry="18" style=""/>
+<text text-anchor="middle" x="1255.93" y="-1258.39" font-family="Times,serif" font-size="14.00" style="">payable</text>
+</g>
+<!-- Slashing.distributeBondFull&#45;&gt;Slashing.payable -->
+<g id="edge81" class="edge" data-name="Slashing.distributeBondFull-&gt;Slashing.payable">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M1033.34,-1262.59C1086.75,-1262.59 1154.22,-1262.59 1200.6,-1262.59" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="1200.36,-1266.09 1210.36,-1262.59 1200.36,-1259.09 1200.36,-1266.09" style=""/>
+</g>
+<!-- Slashing.BondTransferError -->
+<g id="node57" class="node" pointer-events="visible" data-name="Slashing.BondTransferError">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1255.93" cy="-1316.59" rx="85.09" ry="18" style=""/>
+<text text-anchor="middle" x="1255.93" y="-1312.39" font-family="Times,serif" font-size="14.00" style="">BondTransferError</text>
+</g>
+<!-- Slashing.distributeBondFull&#45;&gt;Slashing.BondTransferError -->
+<g id="edge83" class="edge" data-name="Slashing.distributeBondFull-&gt;Slashing.BondTransferError">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M1015.69,-1274.37C1062.52,-1282.64 1125.37,-1293.73 1174.89,-1302.47" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="1174.06,-1305.87 1184.52,-1304.16 1175.28,-1298.98 1174.06,-1305.87" style=""/>
+</g>
+<!-- Slashing.distributeBondFull&#45;&gt;ISystemParameters.getChallengeBond -->
+<g id="edge82" class="edge" data-name="Slashing.distributeBondFull-&gt;ISystemParameters.getChallengeBond">
+
+<path fill="none" stroke="white" stroke-width="2" d="M1031.7,-1266.21C1056.83,-1262.93 1082.3,-1254.43 1099.48,-1235.59 1148.62,-1181.7 1112.94,-980.06 1127.48,-908.59 1155.43,-771.16 1215.77,-614.45 1242.15,-549.4" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1245.27,-551.02 1245.81,-540.44 1238.79,-548.38 1245.27,-551.02" style=""/>
+</g>
+<!-- Slashing.distributeBondHalf&#45;&gt;Slashing.payable -->
+<g id="edge84" class="edge" data-name="Slashing.distributeBondHalf-&gt;Slashing.payable">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M1016.44,-1304.67C1072.79,-1294.73 1151.91,-1280.77 1203.3,-1271.7" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="1203.83,-1275.16 1213.07,-1269.98 1202.62,-1268.27 1203.83,-1275.16" style=""/>
+</g>
+<!-- Slashing.distributeBondHalf&#45;&gt;Slashing.BondTransferError -->
+<g id="edge86" class="edge" data-name="Slashing.distributeBondHalf-&gt;Slashing.BondTransferError">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M1034.97,-1316.59C1072.85,-1316.59 1117.55,-1316.59 1156.73,-1316.59" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="1156.49,-1320.09 1166.49,-1316.59 1156.49,-1313.09 1156.49,-1320.09" style=""/>
+</g>
+<!-- Slashing.distributeBondHalf&#45;&gt;ISystemParameters.getChallengeBond -->
+<g id="edge85" class="edge" data-name="Slashing.distributeBondHalf-&gt;ISystemParameters.getChallengeBond">
+
+<path fill="none" stroke="white" stroke-width="2" d="M1033.41,-1320.12C1058.03,-1316.7 1082.77,-1308.14 1099.48,-1289.59 1127.89,-1258.05 1119.27,-950.24 1127.48,-908.59 1154.6,-771 1215.38,-614.38 1242.02,-549.37" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1245.13,-551 1245.71,-540.42 1238.66,-548.33 1245.13,-551" style=""/>
+</g>
+<!-- Slashing.getSlotFromTime -->
+<g id="node20" class="node" pointer-events="visible" data-name="Slashing.getSlotFromTime">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="947.91" cy="-1208.59" rx="79.91" ry="18" style=""/>
+<text text-anchor="middle" x="947.91" y="-1204.39" font-family="Times,serif" font-size="14.00" style="">getSlotFromTime</text>
+</g>
+<!-- Slashing.getCurrentSlot&#45;&gt;Slashing.getSlotFromTime -->
+<g id="edge87" class="edge" data-name="Slashing.getCurrentSlot-&gt;Slashing.getSlotFromTime">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M704.07,-1748.99C725.04,-1745.55 746.29,-1737.76 760.33,-1721.59 831.37,-1639.84 723.82,-1316.02 796.33,-1235.59 811.57,-1218.69 833.47,-1210.08 855.86,-1206.1" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="856.27,-1209.58 865.69,-1204.72 855.3,-1202.64 856.27,-1209.58" style=""/>
+</g>
+<!-- ISystemParameters.getEth2GenesisTimestamp -->
+<g id="node68" class="node" pointer-events="visible" data-name="ISystemParameters.getEth2GenesisTimestamp">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1255.93" cy="-356.59" rx="115.19" ry="18" style=""/>
+<text text-anchor="middle" x="1255.93" y="-352.39" font-family="Times,serif" font-size="14.00" style="">getEth2GenesisTimestamp</text>
+</g>
+<!-- Slashing.getSlotFromTime&#45;&gt;ISystemParameters.getEth2GenesisTimestamp -->
+<g id="edge88" class="edge" data-name="Slashing.getSlotFromTime-&gt;ISystemParameters.getEth2GenesisTimestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M1026.77,-1213.33C1053.68,-1210.67 1081.56,-1202.26 1099.48,-1181.59 1157.59,-1114.55 1070.42,-451.53 1127.48,-383.59 1131.35,-378.98 1135.79,-375.04 1140.64,-371.68" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1142.32,-374.75 1149.23,-366.72 1138.82,-368.69 1142.32,-374.75" style=""/>
+</g>
+<!-- ISystemParameters.getSlotTime -->
+<g id="node69" class="node" pointer-events="visible" data-name="ISystemParameters.getSlotTime">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1255.93" cy="-410.59" rx="58.56" ry="18" style=""/>
+<text text-anchor="middle" x="1255.93" y="-406.39" font-family="Times,serif" font-size="14.00" style="">getSlotTime</text>
+</g>
+<!-- Slashing.getSlotFromTime&#45;&gt;ISystemParameters.getSlotTime -->
+<g id="edge89" class="edge" data-name="Slashing.getSlotFromTime-&gt;ISystemParameters.getSlotTime">
+
+<path fill="none" stroke="white" stroke-width="2" d="M1026.74,-1213.31C1053.65,-1210.64 1081.53,-1202.24 1099.48,-1181.59 1153.74,-1119.15 1074.19,-500.87 1127.48,-437.59 1141.36,-421.11 1162.56,-413.15 1183.71,-409.66" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1183.96,-413.16 1193.45,-408.44 1183.09,-406.21 1183.96,-413.16" style=""/>
+</g>
+<!-- Slashing.getTimeFromSlot -->
+<g id="node21" class="node" pointer-events="visible" data-name="Slashing.getTimeFromSlot">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="110.7" cy="-938.59" rx="79.91" ry="18" style=""/>
+<text text-anchor="middle" x="110.7" y="-934.39" font-family="Times,serif" font-size="14.00" style="">getTimeFromSlot</text>
+</g>
+<!-- Slashing.getTimeFromSlot&#45;&gt;ISystemParameters.getEth2GenesisTimestamp -->
+<g id="edge90" class="edge" data-name="Slashing.getTimeFromSlot-&gt;ISystemParameters.getEth2GenesisTimestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M111.41,-919.31C110.09,-802.98 109.64,-195.9 241.41,-82.59 386.07,41.8 961.35,20.02 1099.48,-111.59 1170.2,-178.97 1061.26,-257.78 1127.48,-329.59 1131.71,-334.18 1136.51,-338.09 1141.71,-341.43" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1139.77,-344.35 1150.23,-346.03 1143.1,-338.2 1139.77,-344.35" style=""/>
+</g>
+<!-- Slashing.getTimeFromSlot&#45;&gt;ISystemParameters.getSlotTime -->
+<g id="edge91" class="edge" data-name="Slashing.getTimeFromSlot-&gt;ISystemParameters.getSlotTime">
+
+<path fill="none" stroke="white" stroke-width="2" d="M111.46,-919.23C110.45,-803.73 111.6,-206.95 241.41,-95.59 260.94,-78.84 730.46,-91.09 760.33,-101.59 954.45,-169.81 940.61,-297.47 1127.48,-383.59 1145.84,-392.05 1166.93,-397.9 1186.59,-401.92" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1185.82,-405.34 1196.29,-403.75 1187.11,-398.46 1185.82,-405.34" style=""/>
+</g>
+<!-- Slashing.getBeaconRootForSlot -->
+<g id="node22" class="node" pointer-events="visible" data-name="Slashing.getBeaconRootForSlot">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="635.05" cy="-992.59" rx="99.6" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-988.39" font-family="Times,serif" font-size="14.00" style="">getBeaconRootForSlot</text>
+</g>
+<!-- Slashing.getBeaconRootForTime -->
+<g id="node23" class="node" pointer-events="visible" data-name="Slashing.getBeaconRootForTime">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="947.91" cy="-965.59" rx="104.23" ry="18" style=""/>
+<text text-anchor="middle" x="947.91" y="-961.39" font-family="Times,serif" font-size="14.00" style="">getBeaconRootForTime</text>
+</g>
+<!-- Slashing.getBeaconRootForSlot&#45;&gt;Slashing.getBeaconRootForTime -->
+<g id="edge94" class="edge" data-name="Slashing.getBeaconRootForSlot-&gt;Slashing.getBeaconRootForTime">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M727.22,-984.67C762.4,-981.62 802.9,-978.1 839.47,-974.92" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="839.56,-978.43 849.22,-974.07 838.95,-971.45 839.56,-978.43" style=""/>
+</g>
+<!-- Slashing.getBeaconRootForSlot&#45;&gt;ISystemParameters.getEth2GenesisTimestamp -->
+<g id="edge92" class="edge" data-name="Slashing.getBeaconRootForSlot-&gt;ISystemParameters.getEth2GenesisTimestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M729.99,-986.16C741.58,-981.62 752.18,-975.03 760.33,-965.59 838.05,-875.55 716.31,-519.58 796.33,-431.59 802.38,-424.94 1022.64,-391.14 1155.67,-371.26" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1155.89,-374.77 1165.26,-369.83 1154.86,-367.84 1155.89,-374.77" style=""/>
+</g>
+<!-- Slashing.getBeaconRootForSlot&#45;&gt;ISystemParameters.getSlotTime -->
+<g id="edge93" class="edge" data-name="Slashing.getBeaconRootForSlot-&gt;ISystemParameters.getSlotTime">
+
+<path fill="none" stroke="white" stroke-width="2" d="M729.85,-986.03C741.45,-981.52 752.1,-974.96 760.33,-965.59 823.16,-894.03 736.5,-612.67 796.33,-538.59 845.47,-477.75 1072.49,-436.92 1187.6,-419.76" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1188.02,-423.24 1197.4,-418.32 1187,-416.31 1188.02,-423.24" style=""/>
+</g>
+<!-- Slashing.MissingBeaconRoot -->
+<g id="node58" class="node" pointer-events="visible" data-name="Slashing.MissingBeaconRoot">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1255.93" cy="-992.59" rx="89.8" ry="18" style=""/>
+<text text-anchor="middle" x="1255.93" y="-988.39" font-family="Times,serif" font-size="14.00" style="">MissingBeaconRoot</text>
+</g>
+<!-- Slashing.getBeaconRootForTime&#45;&gt;Slashing.MissingBeaconRoot -->
+<g id="edge96" class="edge" data-name="Slashing.getBeaconRootForTime-&gt;Slashing.MissingBeaconRoot">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M1043.22,-973.91C1079.9,-977.15 1121.89,-980.85 1158.75,-984.1" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="1158.27,-987.57 1168.54,-984.97 1158.89,-980.6 1158.27,-987.57" style=""/>
+</g>
+<!-- ISystemParameters.getBeaconRootsContract -->
+<g id="node70" class="node" pointer-events="visible" data-name="ISystemParameters.getBeaconRootsContract">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1255.93" cy="-464.59" rx="107.66" ry="18" style=""/>
+<text text-anchor="middle" x="1255.93" y="-460.39" font-family="Times,serif" font-size="14.00" style="">getBeaconRootsContract</text>
+</g>
+<!-- Slashing.getBeaconRootForTime&#45;&gt;ISystemParameters.getBeaconRootsContract -->
+<g id="edge95" class="edge" data-name="Slashing.getBeaconRootForTime-&gt;ISystemParameters.getBeaconRootsContract">
+
+<path fill="none" stroke="white" stroke-width="2" d="M1029.17,-953.15C1055.68,-944.92 1082.66,-931.27 1099.48,-908.59 1154.79,-833.98 1066.62,-561.75 1127.48,-491.59 1132.2,-486.14 1137.72,-481.63 1143.78,-477.91" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1145.2,-481.12 1152.49,-473.42 1141.99,-474.89 1145.2,-481.12" style=""/>
+</g>
+<!-- Slashing._getSlotFromTimestamp -->
+<g id="node24" class="node" pointer-events="visible" data-name="Slashing._getSlotFromTimestamp">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="635.05" cy="-938.59" rx="107.7" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-934.39" font-family="Times,serif" font-size="14.00" style="">_getSlotFromTimestamp</text>
+</g>
+<!-- Slashing._getSlotFromTimestamp&#45;&gt;ISystemParameters.getEth2GenesisTimestamp -->
+<g id="edge97" class="edge" data-name="Slashing._getSlotFromTimestamp-&gt;ISystemParameters.getEth2GenesisTimestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M689.88,-921.82C715.62,-910.9 744.26,-893.88 760.33,-868.59 818.17,-777.56 719.57,-460.35 796.33,-384.59 843,-338.54 1018.83,-340.08 1138.7,-347.09" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1138.36,-350.57 1148.55,-347.69 1138.78,-343.59 1138.36,-350.57" style=""/>
+</g>
+<!-- Slashing._getSlotFromTimestamp&#45;&gt;ISystemParameters.getSlotTime -->
+<g id="edge98" class="edge" data-name="Slashing._getSlotFromTimestamp-&gt;ISystemParameters.getSlotTime">
+
+<path fill="none" stroke="white" stroke-width="2" d="M689.81,-921.78C715.53,-910.84 744.18,-893.83 760.33,-868.59 813.7,-785.22 724.6,-492.8 796.33,-424.59 850.74,-372.86 1073.63,-389.72 1187.42,-402.2" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1186.74,-405.65 1197.06,-403.29 1187.52,-398.69 1186.74,-405.65" style=""/>
+</g>
+<!-- Slashing._getBeaconBlockRootAtTimestamp -->
+<g id="node25" class="node" pointer-events="visible" data-name="Slashing._getBeaconBlockRootAtTimestamp">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="947.91" cy="-1019.59" rx="151.64" ry="18" style=""/>
+<text text-anchor="middle" x="947.91" y="-1015.39" font-family="Times,serif" font-size="14.00" style="">_getBeaconBlockRootAtTimestamp</text>
+</g>
+<!-- Slashing._getBeaconBlockRootAtTimestamp&#45;&gt;Slashing.MissingBeaconRoot -->
+<g id="edge100" class="edge" data-name="Slashing._getBeaconBlockRootAtTimestamp-&gt;Slashing.MissingBeaconRoot">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M1073.82,-1008.57C1102.08,-1006.07 1131.67,-1003.46 1158.55,-1001.09" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="1158.84,-1004.58 1168.49,-1000.22 1158.22,-997.61 1158.84,-1004.58" style=""/>
+</g>
+<!-- Slashing._getBeaconBlockRootAtTimestamp&#45;&gt;ISystemParameters.getBeaconRootsContract -->
+<g id="edge99" class="edge" data-name="Slashing._getBeaconBlockRootAtTimestamp-&gt;ISystemParameters.getBeaconRootsContract">
+
+<path fill="none" stroke="white" stroke-width="2" d="M1078.03,-1009.53C1086.02,-1005.11 1093.32,-999.55 1099.48,-992.59 1173.39,-909.1 1054.88,-576.23 1127.48,-491.59 1132.17,-486.12 1137.67,-481.59 1143.71,-477.85" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1145.13,-481.06 1152.4,-473.35 1141.91,-474.84 1145.13,-481.06" style=""/>
+</g>
+<!-- Slashing._getBeaconBlockRootAtSlot -->
+<g id="node26" class="node" pointer-events="visible" data-name="Slashing._getBeaconBlockRootAtSlot">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="635.05" cy="-1046.59" rx="123.88" ry="18" style=""/>
+<text text-anchor="middle" x="635.05" y="-1042.39" font-family="Times,serif" font-size="14.00" style="">_getBeaconBlockRootAtSlot</text>
+</g>
+<!-- Slashing._getBeaconBlockRootAtSlot&#45;&gt;Slashing._getBeaconBlockRootAtTimestamp -->
+<g id="edge103" class="edge" data-name="Slashing._getBeaconBlockRootAtSlot-&gt;Slashing._getBeaconBlockRootAtTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M744.34,-1037.18C764.97,-1035.39 786.82,-1033.49 808.24,-1031.63" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="808.48,-1035.13 818.14,-1030.77 807.87,-1028.15 808.48,-1035.13" style=""/>
+</g>
+<!-- Slashing._getBeaconBlockRootAtSlot&#45;&gt;ISystemParameters.getEth2GenesisTimestamp -->
+<g id="edge101" class="edge" data-name="Slashing._getBeaconBlockRootAtSlot-&gt;ISystemParameters.getEth2GenesisTimestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M739.23,-1035.91C747.18,-1031.76 754.4,-1026.42 760.33,-1019.59 832.06,-936.98 730.18,-615.72 796.33,-528.59 882.91,-414.56 983.57,-503.65 1099.48,-419.59 1115.89,-407.69 1110.29,-394.34 1127.48,-383.59 1134.48,-379.21 1142.08,-375.52 1149.96,-372.43" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1150.96,-375.79 1159.24,-369.18 1148.65,-369.18 1150.96,-375.79" style=""/>
+</g>
+<!-- Slashing._getBeaconBlockRootAtSlot&#45;&gt;ISystemParameters.getSlotTime -->
+<g id="edge102" class="edge" data-name="Slashing._getBeaconBlockRootAtSlot-&gt;ISystemParameters.getSlotTime">
+
+<path fill="none" stroke="white" stroke-width="2" d="M739.19,-1035.87C747.14,-1031.73 754.38,-1026.41 760.33,-1019.59 826.5,-943.89 727.1,-641.49 796.33,-568.59 889.92,-470.05 995.69,-616.32 1099.48,-528.59 1131.79,-501.27 1096.24,-466.14 1127.48,-437.59 1142.68,-423.69 1163.2,-416.26 1183.33,-412.46" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1183.75,-415.94 1193.1,-410.96 1182.69,-409.02 1183.75,-415.94" style=""/>
+</g>
+<!-- Slashing.getLatestBeaconRoot -->
+<g id="node27" class="node" pointer-events="visible" data-name="Slashing.getLatestBeaconRoot">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="357.59" cy="-1046.59" rx="94.33" ry="18" style=""/>
+<text text-anchor="middle" x="357.59" y="-1042.39" font-family="Times,serif" font-size="14.00" style="">getLatestBeaconRoot</text>
+</g>
+<!-- Slashing.getLatestBeaconRoot&#45;&gt;Slashing._getSlotFromTimestamp -->
+<g id="edge104" class="edge" data-name="Slashing.getLatestBeaconRoot-&gt;Slashing._getSlotFromTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M438.45,-1036.17C450.97,-1032.26 463.23,-1026.91 473.78,-1019.59 497.48,-1003.15 485.94,-981.84 509.78,-965.59 516.68,-960.88 524.26,-956.98 532.17,-953.74" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="533.31,-957.05 541.52,-950.35 530.93,-950.46 533.31,-957.05" style=""/>
+</g>
+<!-- Slashing.getLatestBeaconRoot&#45;&gt;Slashing._getBeaconBlockRootAtSlot -->
+<g id="edge105" class="edge" data-name="Slashing.getLatestBeaconRoot-&gt;Slashing._getBeaconBlockRootAtSlot">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M453.39,-1046.59C467.47,-1046.59 482.22,-1046.59 496.96,-1046.59" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="496.87,-1050.09 506.87,-1046.59 496.87,-1043.09 496.87,-1050.09" style=""/>
+</g>
+<!-- Slashing._isWithinEIP4788Window -->
+<g id="node28" class="node" pointer-events="visible" data-name="Slashing._isWithinEIP4788Window">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="357.59" cy="-992.59" rx="116.37" ry="18" style=""/>
+<text text-anchor="middle" x="357.59" y="-988.39" font-family="Times,serif" font-size="14.00" style="">_isWithinEIP4788Window</text>
+</g>
+<!-- Slashing._isWithinEIP4788Window&#45;&gt;Slashing.getCurrentSlot -->
+<g id="edge107" class="edge" data-name="Slashing._isWithinEIP4788Window-&gt;Slashing.getCurrentSlot">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M453.9,-1003.77C461.43,-1007.79 468.25,-1012.97 473.78,-1019.59 573.91,-1139.47 408.66,-1602.53 509.78,-1721.59 520.93,-1734.73 536.84,-1742.36 553.56,-1746.63" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="552.36,-1749.95 562.86,-1748.56 553.78,-1743.1 552.36,-1749.95" style=""/>
+</g>
+<!-- Slashing._isWithinEIP4788Window&#45;&gt;Slashing._getSlotFromTimestamp -->
+<g id="edge106" class="edge" data-name="Slashing._isWithinEIP4788Window-&gt;Slashing._getSlotFromTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M433.86,-977.83C469.35,-970.88 511.84,-962.55 548.54,-955.35" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="549.14,-958.8 558.28,-953.44 547.8,-951.93 549.14,-958.8" style=""/>
+</g>
+<!-- ISystemParameters.getEip4788Window -->
+<g id="node71" class="node" pointer-events="visible" data-name="ISystemParameters.getEip4788Window">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1255.93" cy="-194.59" rx="88.63" ry="18" style=""/>
+<text text-anchor="middle" x="1255.93" y="-190.39" font-family="Times,serif" font-size="14.00" style="">getEip4788Window</text>
+</g>
+<!-- Slashing._isWithinEIP4788Window&#45;&gt;ISystemParameters.getEip4788Window -->
+<g id="edge108" class="edge" data-name="Slashing._isWithinEIP4788Window-&gt;ISystemParameters.getEip4788Window">
+
+<path fill="none" stroke="white" stroke-width="2" d="M453.52,-981.46C461.18,-977.43 468.13,-972.24 473.78,-965.59 550.62,-875.1 428.03,-518.68 509.78,-432.59 587,-351.26 678.92,-479.73 760.33,-402.59 827.8,-338.66 725.31,-256.54 796.33,-196.59 850.43,-150.92 1050.67,-167.74 1167.91,-182.26" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1167.36,-185.72 1177.72,-183.5 1168.24,-178.78 1167.36,-185.72" style=""/>
+</g>
+<!-- key -->
+<g id="node80" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="none" stroke-width="3" points="175.7,-2551.59 45.7,-2551.59 45.7,-2463.59 175.7,-2463.59 175.7,-2551.59" style=""/>
+<text text-anchor="start" x="95.34" y="-2532.99" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="91.45" y="-2512.99" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="68.91" y="-2492.99" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="55.31" y="-2472.99" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node81" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="none" stroke-width="3" points="384.59,-2551.59 330.59,-2551.59 330.59,-2463.59 384.59,-2463.59 384.59,-2551.59" style=""/>
+<text text-anchor="start" x="347.59" y="-2532.99" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="347.59" y="-2512.99" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="none" points="345.59,-2487.59 345.59,-2507.59 370.59,-2507.59 370.59,-2487.59 345.59,-2487.59" style=""/>
+<text text-anchor="start" x="347.59" y="-2492.99" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="347.59,-2469.59 347.59,-2485.59 368.59,-2485.59 368.59,-2469.59 347.59,-2469.59" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge109" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M168.7,-2537.59C242.45,-2537.59 264.02,-2537.59 331.85,-2537.59" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="331.57,-2541.09 341.57,-2537.59 331.57,-2534.09 331.57,-2541.09" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge110" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M168.7,-2517.59C242.45,-2517.59 264.02,-2517.59 331.85,-2517.59" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="331.57,-2521.09 341.57,-2517.59 331.57,-2514.09 331.57,-2521.09" style=""/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,508 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="912pt" height="1218pt" viewBox="0.00 0.00 912.25 1218.00">
+<g id="graph0" class="graph" transform="translate(4,1214) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="none" points="-4,4 -4,-1214 908.25,-1214 908.25,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterBoltDSSMiddlewareV1">
+
+<path fill="#445773" stroke="#445773" d="M20,-448C20,-448 884.25,-448 884.25,-448 890.25,-448 896.25,-454 896.25,-460 896.25,-460 896.25,-1053 896.25,-1053 896.25,-1059 890.25,-1065 884.25,-1065 884.25,-1065 20,-1065 20,-1065 14,-1065 8,-1059 8,-1053 8,-1053 8,-460 8,-460 8,-454 14,-448 20,-448" style=""/>
+<text text-anchor="middle" x="452.13" y="-1048.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">BoltDSSMiddlewareV1</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterTime">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M535.8,-363C535.8,-363 630.33,-363 630.33,-363 636.33,-363 642.33,-369 642.33,-375 642.33,-375 642.33,-428 642.33,-428 642.33,-434 636.33,-440 630.33,-440 630.33,-440 535.8,-440 535.8,-440 529.8,-440 523.8,-434 523.8,-428 523.8,-428 523.8,-375 523.8,-375 523.8,-369 529.8,-363 535.8,-363" style=""/>
+<text text-anchor="middle" x="583.07" y="-423.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">Time</text>
+</g>
+<g id="clust3" class="cluster" data-name="clusterEnumerableMap.AddressToUintMap">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M483.09,-8C483.09,-8 683.04,-8 683.04,-8 689.04,-8 695.04,-14 695.04,-20 695.04,-20 695.04,-343 695.04,-343 695.04,-349 689.04,-355 683.04,-355 683.04,-355 483.09,-355 483.09,-355 477.09,-355 471.09,-349 471.09,-343 471.09,-343 471.09,-20 471.09,-20 471.09,-14 477.09,-8 483.09,-8" style=""/>
+<text text-anchor="middle" x="583.07" y="-338.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">EnumerableMap.AddressToUintMap</text>
+</g>
+<g id="clust4" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="35.57,-1073 35.57,-1202 371.12,-1202 371.12,-1073 35.57,-1073" style=""/>
+<text text-anchor="middle" x="203.35" y="-1185.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- BoltDSSMiddlewareV1.&lt;Constructor&gt; -->
+<g id="node1" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="108.57" cy="-1014" rx="67.55" ry="18" style=""/>
+<text text-anchor="middle" x="108.57" y="-1009.8" font-family="Times,serif" font-size="14.00" style="">&lt;Constructor&gt;</text>
+</g>
+<!-- BoltDSSMiddlewareV1._disableInitializers -->
+<g id="node16" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1._disableInitializers">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="336.12" cy="-1014" rx="84.52" ry="18" style=""/>
+<text text-anchor="middle" x="336.12" y="-1009.8" font-family="Times,serif" font-size="14.00" style="">_disableInitializers</text>
+</g>
+<!-- BoltDSSMiddlewareV1.&lt;Constructor&gt;&#45;&gt;BoltDSSMiddlewareV1._disableInitializers -->
+<g id="edge1" class="edge" data-name="BoltDSSMiddlewareV1.&lt;Constructor&gt;-&gt;BoltDSSMiddlewareV1._disableInitializers">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M177.55,-1014C196.47,-1014 217.4,-1014 237.67,-1014" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="237.48,-1017.5 247.48,-1014 237.48,-1010.5 237.48,-1017.5" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.initialize -->
+<g id="node2" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.initialize">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="108.57" cy="-906" rx="44.64" ry="18" style=""/>
+<text text-anchor="middle" x="108.57" y="-901.8" font-family="Times,serif" font-size="14.00" style="">initialize</text>
+</g>
+<!-- BoltDSSMiddlewareV1.__Ownable_init -->
+<g id="node17" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.__Ownable_init">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="336.12" cy="-960" rx="73.02" ry="18" style=""/>
+<text text-anchor="middle" x="336.12" y="-955.8" font-family="Times,serif" font-size="14.00" style="">__Ownable_init</text>
+</g>
+<!-- BoltDSSMiddlewareV1.initialize&#45;&gt;BoltDSSMiddlewareV1.__Ownable_init -->
+<g id="edge2" class="edge" data-name="BoltDSSMiddlewareV1.initialize-&gt;BoltDSSMiddlewareV1.__Ownable_init">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M148.86,-915.41C181.81,-923.3 229.6,-934.74 268.52,-944.05" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="267.6,-947.43 278.14,-946.36 269.23,-940.62 267.6,-947.43" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1._init -->
+<g id="node18" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1._init">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="336.12" cy="-906" rx="28.99" ry="18" style=""/>
+<text text-anchor="middle" x="336.12" y="-901.8" font-family="Times,serif" font-size="14.00" style="">_init</text>
+</g>
+<!-- BoltDSSMiddlewareV1.initialize&#45;&gt;BoltDSSMiddlewareV1._init -->
+<g id="edge3" class="edge" data-name="BoltDSSMiddlewareV1.initialize-&gt;BoltDSSMiddlewareV1._init">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M154.67,-906C195.01,-906 253.68,-906 293.06,-906" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="292.85,-909.5 302.85,-906 292.85,-902.5 292.85,-909.5" style=""/>
+</g>
+<!-- Time.timestamp -->
+<g id="node29" class="node" pointer-events="visible" data-name="Time.timestamp">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="583.07" cy="-389" rx="51.04" ry="18" style=""/>
+<text text-anchor="middle" x="583.07" y="-384.8" font-family="Times,serif" font-size="14.00" style="">timestamp</text>
+</g>
+<!-- BoltDSSMiddlewareV1.initialize&#45;&gt;Time.timestamp -->
+<g id="edge4" class="edge" data-name="BoltDSSMiddlewareV1.initialize-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M136.24,-890.43C157.74,-876.31 186.7,-853.37 201.14,-825 239.41,-749.8 179.65,-508.76 237.14,-447 256.15,-426.57 425.76,-405.57 519.85,-395.36" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="520.02,-398.86 529.59,-394.31 519.28,-391.9 520.02,-398.86" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1._authorizeUpgrade -->
+<g id="node3" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1._authorizeUpgrade">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="108.57" cy="-798" rx="85.08" ry="18" style=""/>
+<text text-anchor="middle" x="108.57" y="-793.8" font-family="Times,serif" font-size="14.00" style="">_authorizeUpgrade</text>
+</g>
+<!-- BoltDSSMiddlewareV1.getEpochStartTs -->
+<g id="node4" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.getEpochStartTs">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="583.07" cy="-852" rx="75.3" ry="18" style=""/>
+<text text-anchor="middle" x="583.07" y="-847.8" font-family="Times,serif" font-size="14.00" style="">getEpochStartTs</text>
+</g>
+<!-- BoltDSSMiddlewareV1.getEpochAtTs -->
+<g id="node5" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.getEpochAtTs">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="583.07" cy="-528" rx="66.64" ry="18" style=""/>
+<text text-anchor="middle" x="583.07" y="-523.8" font-family="Times,serif" font-size="14.00" style="">getEpochAtTs</text>
+</g>
+<!-- BoltDSSMiddlewareV1.getCurrentEpoch -->
+<g id="node6" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.getCurrentEpoch">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="336.12" cy="-528" rx="77.01" ry="18" style=""/>
+<text text-anchor="middle" x="336.12" y="-523.8" font-family="Times,serif" font-size="14.00" style="">getCurrentEpoch</text>
+</g>
+<!-- BoltDSSMiddlewareV1.getCurrentEpoch&#45;&gt;BoltDSSMiddlewareV1.getEpochAtTs -->
+<g id="edge5" class="edge" data-name="BoltDSSMiddlewareV1.getCurrentEpoch-&gt;BoltDSSMiddlewareV1.getEpochAtTs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M414.63,-528C442.58,-528 474.16,-528 502.31,-528" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="501.95,-531.5 511.95,-528 501.95,-524.5 501.95,-531.5" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getCurrentEpoch&#45;&gt;Time.timestamp -->
+<g id="edge6" class="edge" data-name="BoltDSSMiddlewareV1.getCurrentEpoch-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M401.94,-517.44C413.71,-513.56 425.33,-508.25 435.11,-501 459.17,-483.15 448.85,-464.07 471.09,-444 488.63,-428.18 511.54,-415.81 532,-406.85" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="533.34,-410.08 541.22,-403 530.64,-403.62 533.34,-410.08" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getWhitelistedAssets -->
+<g id="node7" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.getWhitelistedAssets">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="108.57" cy="-474" rx="92.64" ry="18" style=""/>
+<text text-anchor="middle" x="108.57" y="-469.8" font-family="Times,serif" font-size="14.00" style="">getWhitelistedAssets</text>
+</g>
+<!-- EnumerableMap.AddressToUintMap.keys -->
+<g id="node30" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.keys">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="583.07" cy="-34" rx="28.98" ry="18" style=""/>
+<text text-anchor="middle" x="583.07" y="-29.8" font-family="Times,serif" font-size="14.00" style="">keys</text>
+</g>
+<!-- BoltDSSMiddlewareV1.getWhitelistedAssets&#45;&gt;EnumerableMap.AddressToUintMap.keys -->
+<g id="edge7" class="edge" data-name="BoltDSSMiddlewareV1.getWhitelistedAssets-&gt;EnumerableMap.AddressToUintMap.keys">
+
+<path fill="none" stroke="white" stroke-width="2" d="M109.26,-454.66C109.37,-390.14 119.17,-180.8 237.14,-82 324.66,-8.69 470.74,-17.42 541.36,-27.04" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="540.65,-30.47 551.05,-28.45 541.66,-23.55 540.65,-30.47" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.registerAsset -->
+<g id="node8" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.registerAsset">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="108.57" cy="-690" rx="61.41" ry="18" style=""/>
+<text text-anchor="middle" x="108.57" y="-685.8" font-family="Times,serif" font-size="14.00" style="">registerAsset</text>
+</g>
+<!-- BoltDSSMiddlewareV1.AlreadyRegistered -->
+<g id="node19" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.AlreadyRegistered">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="336.12" cy="-798" rx="83.37" ry="18" style=""/>
+<text text-anchor="middle" x="336.12" y="-793.8" font-family="Times,serif" font-size="14.00" style="">AlreadyRegistered</text>
+</g>
+<!-- BoltDSSMiddlewareV1.registerAsset&#45;&gt;BoltDSSMiddlewareV1.AlreadyRegistered -->
+<g id="edge9" class="edge" data-name="BoltDSSMiddlewareV1.registerAsset-&gt;BoltDSSMiddlewareV1.AlreadyRegistered">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M132.82,-707.78C157.52,-725.91 198.28,-753.77 237.14,-771 245.25,-774.6 253.96,-777.82 262.71,-780.68" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="261.59,-784 272.17,-783.6 263.65,-777.31 261.59,-784" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.IKarakCore -->
+<g id="node20" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.IKarakCore">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="336.12" cy="-636" rx="56.73" ry="18" style=""/>
+<text text-anchor="middle" x="336.12" y="-631.8" font-family="Times,serif" font-size="14.00" style="">IKarakCore</text>
+</g>
+<!-- BoltDSSMiddlewareV1.registerAsset&#45;&gt;BoltDSSMiddlewareV1.IKarakCore -->
+<g id="edge10" class="edge" data-name="BoltDSSMiddlewareV1.registerAsset-&gt;BoltDSSMiddlewareV1.IKarakCore">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M158.51,-678.28C193.05,-670.01 239.5,-658.89 276.09,-650.13" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="276.74,-653.58 285.65,-647.85 275.11,-646.77 276.74,-653.58" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.core -->
+<g id="node21" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.core">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="336.12" cy="-690" rx="27.81" ry="18" style=""/>
+<text text-anchor="middle" x="336.12" y="-685.8" font-family="Times,serif" font-size="14.00" style="">core</text>
+</g>
+<!-- BoltDSSMiddlewareV1.registerAsset&#45;&gt;BoltDSSMiddlewareV1.core -->
+<g id="edge11" class="edge" data-name="BoltDSSMiddlewareV1.registerAsset-&gt;BoltDSSMiddlewareV1.core">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M171.2,-690C210.35,-690 259.94,-690 294.27,-690" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="294.04,-693.5 304.04,-690 294.04,-686.5 294.04,-693.5" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.AssetNotAllowed -->
+<g id="node22" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.AssetNotAllowed">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="336.12" cy="-744" rx="80.48" ry="18" style=""/>
+<text text-anchor="middle" x="336.12" y="-739.8" font-family="Times,serif" font-size="14.00" style="">AssetNotAllowed</text>
+</g>
+<!-- BoltDSSMiddlewareV1.registerAsset&#45;&gt;BoltDSSMiddlewareV1.AssetNotAllowed -->
+<g id="edge12" class="edge" data-name="BoltDSSMiddlewareV1.registerAsset-&gt;BoltDSSMiddlewareV1.AssetNotAllowed">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M158.51,-701.72C189.78,-709.2 230.82,-719.03 265.46,-727.32" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="264.42,-730.67 274.96,-729.6 266.05,-723.87 264.42,-730.67" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.contains -->
+<g id="node31" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.contains">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="583.07" cy="-142" rx="43.44" ry="18" style=""/>
+<text text-anchor="middle" x="583.07" y="-137.8" font-family="Times,serif" font-size="14.00" style="">contains</text>
+</g>
+<!-- BoltDSSMiddlewareV1.registerAsset&#45;&gt;EnumerableMap.AddressToUintMap.contains -->
+<g id="edge8" class="edge" data-name="BoltDSSMiddlewareV1.registerAsset-&gt;EnumerableMap.AddressToUintMap.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M168.04,-683.85C180.69,-679.78 192.77,-673.29 201.14,-663 263.31,-586.54 172.64,-295.51 237.14,-221 241.98,-215.4 435.34,-173.39 530.39,-153.02" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="530.84,-156.5 539.88,-150.98 529.37,-149.66 530.84,-156.5" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.add -->
+<g id="node32" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="583.07" cy="-250" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="583.07" y="-245.8" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- BoltDSSMiddlewareV1.registerAsset&#45;&gt;EnumerableMap.AddressToUintMap.add -->
+<g id="edge13" class="edge" data-name="BoltDSSMiddlewareV1.registerAsset-&gt;EnumerableMap.AddressToUintMap.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M167.59,-683.48C180.26,-679.42 192.46,-673.02 201.14,-663 274.61,-578.13 174.34,-506.05 237.14,-413 308.64,-307.05 468.36,-268.21 542.66,-255.51" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="543.19,-258.97 552.51,-253.91 542.08,-252.06 543.19,-258.97" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.enable -->
+<g id="node33" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.enable">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="583.07" cy="-196" rx="36.47" ry="18" style=""/>
+<text text-anchor="middle" x="583.07" y="-191.8" font-family="Times,serif" font-size="14.00" style="">enable</text>
+</g>
+<!-- BoltDSSMiddlewareV1.registerAsset&#45;&gt;EnumerableMap.AddressToUintMap.enable -->
+<g id="edge14" class="edge" data-name="BoltDSSMiddlewareV1.registerAsset-&gt;EnumerableMap.AddressToUintMap.enable">
+
+<path fill="none" stroke="white" stroke-width="2" d="M167.95,-683.78C180.61,-679.71 192.71,-673.24 201.14,-663 255.48,-597.01 181.24,-344.68 237.14,-280 256.66,-257.41 444.23,-220.9 534.28,-204.48" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="534.89,-207.92 544.1,-202.7 533.64,-201.03 534.89,-207.92" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.deregisterAsset -->
+<g id="node9" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.deregisterAsset">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="108.57" cy="-528" rx="70.63" ry="18" style=""/>
+<text text-anchor="middle" x="108.57" y="-523.8" font-family="Times,serif" font-size="14.00" style="">deregisterAsset</text>
+</g>
+<!-- BoltDSSMiddlewareV1.NotRegistered -->
+<g id="node23" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.NotRegistered">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="336.12" cy="-474" rx="66.64" ry="18" style=""/>
+<text text-anchor="middle" x="336.12" y="-469.8" font-family="Times,serif" font-size="14.00" style="">NotRegistered</text>
+</g>
+<!-- BoltDSSMiddlewareV1.deregisterAsset&#45;&gt;BoltDSSMiddlewareV1.NotRegistered -->
+<g id="edge16" class="edge" data-name="BoltDSSMiddlewareV1.deregisterAsset-&gt;BoltDSSMiddlewareV1.NotRegistered">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M162.74,-515.27C195.22,-507.5 236.95,-497.5 271.22,-489.3" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="271.62,-492.8 280.53,-487.07 269.99,-485.99 271.62,-492.8" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.deregisterAsset&#45;&gt;EnumerableMap.AddressToUintMap.contains -->
+<g id="edge15" class="edge" data-name="BoltDSSMiddlewareV1.deregisterAsset-&gt;EnumerableMap.AddressToUintMap.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M173.44,-519.65C184.02,-515.57 193.88,-509.62 201.14,-501 290.48,-394.9 140.32,-290.32 237.14,-191 313.37,-112.8 453.65,-120.53 529.71,-131.88" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="528.83,-135.29 539.25,-133.4 529.93,-128.37 528.83,-135.29" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.remove -->
+<g id="node34" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.remove">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="583.07" cy="-88" rx="39.99" ry="18" style=""/>
+<text text-anchor="middle" x="583.07" y="-83.8" font-family="Times,serif" font-size="14.00" style="">remove</text>
+</g>
+<!-- BoltDSSMiddlewareV1.deregisterAsset&#45;&gt;EnumerableMap.AddressToUintMap.remove -->
+<g id="edge17" class="edge" data-name="BoltDSSMiddlewareV1.deregisterAsset-&gt;EnumerableMap.AddressToUintMap.remove">
+
+<path fill="none" stroke="white" stroke-width="2" d="M173.59,-519.77C184.15,-515.68 193.97,-509.7 201.14,-501 255.08,-435.54 177.19,-181.01 237.14,-121 276.88,-81.22 442.53,-81.94 529,-85.23" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="528.75,-88.72 538.89,-85.63 529.04,-81.72 528.75,-88.72" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.isAssetEnabled -->
+<g id="node10" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.isAssetEnabled">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="108.57" cy="-582" rx="70.65" ry="18" style=""/>
+<text text-anchor="middle" x="108.57" y="-577.8" font-family="Times,serif" font-size="14.00" style="">isAssetEnabled</text>
+</g>
+<!-- EnumerableMap.AddressToUintMap.getTimes -->
+<g id="node35" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.getTimes">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="583.07" cy="-304" rx="46.94" ry="18" style=""/>
+<text text-anchor="middle" x="583.07" y="-299.8" font-family="Times,serif" font-size="14.00" style="">getTimes</text>
+</g>
+<!-- BoltDSSMiddlewareV1.isAssetEnabled&#45;&gt;EnumerableMap.AddressToUintMap.getTimes -->
+<g id="edge18" class="edge" data-name="BoltDSSMiddlewareV1.isAssetEnabled-&gt;EnumerableMap.AddressToUintMap.getTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M173.01,-573.27C183.62,-569.22 193.61,-563.39 201.14,-555 261.18,-488.11 172.66,-418.62 237.14,-356 314.14,-281.22 449.87,-285.06 526.08,-294.5" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="525.32,-297.93 535.69,-295.79 526.24,-290.99 525.32,-297.93" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorCollaterals -->
+<g id="node11" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.getOperatorCollaterals">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="336.12" cy="-852" rx="98.97" ry="18" style=""/>
+<text text-anchor="middle" x="336.12" y="-847.8" font-family="Times,serif" font-size="14.00" style="">getOperatorCollaterals</text>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorCollaterals&#45;&gt;BoltDSSMiddlewareV1.getEpochStartTs -->
+<g id="edge19" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorCollaterals-&gt;BoltDSSMiddlewareV1.getEpochStartTs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M436.4,-852C455.27,-852 474.91,-852 493.42,-852" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="493.33,-855.5 503.33,-852 493.33,-848.5 493.33,-855.5" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorCollaterals&#45;&gt;BoltDSSMiddlewareV1.getEpochAtTs -->
+<g id="edge20" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorCollaterals-&gt;BoltDSSMiddlewareV1.getEpochAtTs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M415.04,-840.13C422.62,-836.32 429.54,-831.38 435.11,-825 514.68,-733.76 390.15,-645.02 471.09,-555 479.74,-545.38 491.19,-538.91 503.45,-534.61" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="504.38,-537.98 513,-531.84 502.43,-531.26 504.38,-537.98" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1._wasEnabledAt -->
+<g id="node14" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1._wasEnabledAt">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="583.07" cy="-636" rx="72.36" ry="18" style=""/>
+<text text-anchor="middle" x="583.07" y="-631.8" font-family="Times,serif" font-size="14.00" style="">_wasEnabledAt</text>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorCollaterals&#45;&gt;BoltDSSMiddlewareV1._wasEnabledAt -->
+<g id="edge25" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorCollaterals-&gt;BoltDSSMiddlewareV1._wasEnabledAt">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M414.03,-839.88C421.89,-836.12 429.15,-831.27 435.11,-825 485.93,-771.55 419.47,-715.67 471.09,-663 479.01,-654.92 488.91,-649.11 499.51,-644.94" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="500.44,-648.32 508.84,-641.86 498.24,-641.67 500.44,-648.32" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1._getVaultActiveBalance -->
+<g id="node15" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1._getVaultActiveBalance">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="583.07" cy="-690" rx="105.91" ry="18" style=""/>
+<text text-anchor="middle" x="583.07" y="-685.8" font-family="Times,serif" font-size="14.00" style="">_getVaultActiveBalance</text>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorCollaterals&#45;&gt;BoltDSSMiddlewareV1._getVaultActiveBalance -->
+<g id="edge26" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorCollaterals-&gt;BoltDSSMiddlewareV1._getVaultActiveBalance">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M412.92,-839.48C421.07,-835.8 428.71,-831.07 435.11,-825 471.82,-790.18 433.87,-751.26 471.09,-717 475.16,-713.26 479.65,-710.02 484.43,-707.2" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="485.95,-710.35 493.33,-702.74 482.82,-704.09 485.95,-710.35" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getActiveVaults -->
+<g id="node24" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.getActiveVaults">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="583.07" cy="-744" rx="73.58" ry="18" style=""/>
+<text text-anchor="middle" x="583.07" y="-739.8" font-family="Times,serif" font-size="14.00" style="">getActiveVaults</text>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorCollaterals&#45;&gt;BoltDSSMiddlewareV1.getActiveVaults -->
+<g id="edge22" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorCollaterals-&gt;BoltDSSMiddlewareV1.getActiveVaults">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M409.19,-838.62C418.4,-835.09 427.32,-830.63 435.11,-825 458.48,-808.1 447.47,-787.54 471.09,-771 480.52,-764.4 491.37,-759.41 502.52,-755.63" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="503.2,-759.08 511.78,-752.86 501.19,-752.37 503.2,-759.08" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.IKarakBaseVault -->
+<g id="node25" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.IKarakBaseVault">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="583.07" cy="-798" rx="78.14" ry="18" style=""/>
+<text text-anchor="middle" x="583.07" y="-793.8" font-family="Times,serif" font-size="14.00" style="">IKarakBaseVault</text>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorCollaterals&#45;&gt;BoltDSSMiddlewareV1.IKarakBaseVault -->
+<g id="edge23" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorCollaterals-&gt;BoltDSSMiddlewareV1.IKarakBaseVault">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M402.76,-837.53C436.34,-830.13 477.23,-821.11 511.48,-813.56" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="511.8,-817.07 520.81,-811.5 510.3,-810.24 511.8,-817.07" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorCollaterals&#45;&gt;Time.timestamp -->
+<g id="edge21" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorCollaterals-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M415.29,-840.34C422.82,-836.49 429.67,-831.49 435.11,-825 489.77,-759.85 422.91,-514.07 471.09,-444 484.23,-424.89 505.99,-412.13 526.78,-403.74" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="527.82,-407.09 535.99,-400.35 525.4,-400.52 527.82,-407.09" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorCollaterals&#45;&gt;EnumerableMap.AddressToUintMap.getTimes -->
+<g id="edge24" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorCollaterals-&gt;EnumerableMap.AddressToUintMap.getTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M415.87,-840.19C423.19,-836.36 429.83,-831.4 435.11,-825 501.18,-744.86 412.98,-445.08 471.09,-359 484.53,-339.09 507.37,-326.09 528.85,-317.75" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="529.8,-321.13 538.06,-314.49 527.46,-314.53 529.8,-321.13" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorStake -->
+<g id="node12" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.getOperatorStake">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="108.57" cy="-636" rx="78.71" ry="18" style=""/>
+<text text-anchor="middle" x="108.57" y="-631.8" font-family="Times,serif" font-size="14.00" style="">getOperatorStake</text>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorStakeAt -->
+<g id="node13" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.getOperatorStakeAt">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="336.12" cy="-582" rx="88.03" ry="18" style=""/>
+<text text-anchor="middle" x="336.12" y="-577.8" font-family="Times,serif" font-size="14.00" style="">getOperatorStakeAt</text>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorStake&#45;&gt;BoltDSSMiddlewareV1.getOperatorStakeAt -->
+<g id="edge28" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorStake-&gt;BoltDSSMiddlewareV1.getOperatorStakeAt">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M166.19,-622.44C195.56,-615.41 231.74,-606.75 263.07,-599.25" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="263.86,-602.66 272.77,-596.93 262.23,-595.85 263.86,-602.66" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorStake&#45;&gt;Time.timestamp -->
+<g id="edge27" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorStake-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M176.71,-625.75C185.92,-621.8 194.48,-616.39 201.14,-609 260.39,-543.17 171.1,-472.02 237.14,-413 317.11,-341.53 453.46,-358.13 528.54,-374.68" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="527.46,-378.02 537.99,-376.86 529.03,-371.2 527.46,-378.02" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorStakeAt&#45;&gt;BoltDSSMiddlewareV1.getEpochStartTs -->
+<g id="edge31" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorStakeAt-&gt;BoltDSSMiddlewareV1.getEpochStartTs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M411.47,-592.46C420.38,-596.43 428.61,-601.79 435.11,-609 500.27,-681.3 404.85,-753.7 471.09,-825 478.29,-832.75 487.3,-838.44 497.06,-842.59" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="495.82,-845.86 506.41,-845.92 498.17,-839.27 495.82,-845.86" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorStakeAt&#45;&gt;BoltDSSMiddlewareV1.getEpochAtTs -->
+<g id="edge32" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorStakeAt-&gt;BoltDSSMiddlewareV1.getEpochAtTs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M399.25,-568.3C435,-560.42 479.9,-550.52 516.26,-542.51" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="516.76,-545.98 525.78,-540.41 515.26,-539.14 516.76,-545.98" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorStakeAt&#45;&gt;BoltDSSMiddlewareV1._wasEnabledAt -->
+<g id="edge36" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorStakeAt-&gt;BoltDSSMiddlewareV1._wasEnabledAt">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M399.25,-595.7C434.24,-603.41 478,-613.06 513.93,-620.98" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="512.81,-624.31 523.33,-623.05 514.31,-617.48 512.81,-624.31" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorStakeAt&#45;&gt;BoltDSSMiddlewareV1._getVaultActiveBalance -->
+<g id="edge37" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorStakeAt-&gt;BoltDSSMiddlewareV1._getVaultActiveBalance">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M405.89,-594.15C416.26,-597.86 426.39,-602.69 435.11,-609 458.48,-625.9 447.47,-646.46 471.09,-663 476.49,-666.78 482.35,-670.03 488.47,-672.83" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="487.1,-676.05 497.69,-676.54 489.72,-669.56 487.1,-676.05" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorStakeAt&#45;&gt;BoltDSSMiddlewareV1.getActiveVaults -->
+<g id="edge33" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorStakeAt-&gt;BoltDSSMiddlewareV1.getActiveVaults">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M409.47,-593.03C418.91,-596.9 427.81,-602.08 435.11,-609 471.82,-643.82 433.87,-682.74 471.09,-717 479.17,-724.43 488.94,-729.91 499.29,-733.94" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="498.18,-737.26 508.78,-737.07 500.38,-730.61 498.18,-737.26" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorStakeAt&#45;&gt;BoltDSSMiddlewareV1.IKarakBaseVault -->
+<g id="edge34" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorStakeAt-&gt;BoltDSSMiddlewareV1.IKarakBaseVault">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M410.63,-592.58C419.78,-596.52 428.3,-601.84 435.11,-609 485.93,-662.45 419.47,-718.33 471.09,-771 478.07,-778.12 486.59,-783.48 495.77,-787.51" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="494.26,-790.68 504.85,-790.87 496.69,-784.12 494.26,-790.68" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.InvalidQuery -->
+<g id="node26" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.InvalidQuery">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="583.07" cy="-582" rx="62.55" ry="18" style=""/>
+<text text-anchor="middle" x="583.07" y="-577.8" font-family="Times,serif" font-size="14.00" style="">InvalidQuery</text>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorStakeAt&#45;&gt;BoltDSSMiddlewareV1.InvalidQuery -->
+<g id="edge30" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorStakeAt-&gt;BoltDSSMiddlewareV1.InvalidQuery">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M425.55,-582C451.93,-582 480.59,-582 506.09,-582" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="506.08,-585.5 516.08,-582 506.08,-578.5 506.08,-585.5" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorStakeAt&#45;&gt;Time.timestamp -->
+<g id="edge29" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorStakeAt-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M409.52,-571.02C418.95,-567.15 427.84,-561.95 435.11,-555 472.59,-519.16 437.21,-483.26 471.09,-444 486.3,-426.38 508.49,-413.83 529.04,-405.21" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="530.02,-408.58 538.06,-401.68 527.48,-402.06 530.02,-408.58" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.getOperatorStakeAt&#45;&gt;EnumerableMap.AddressToUintMap.getTimes -->
+<g id="edge35" class="edge" data-name="BoltDSSMiddlewareV1.getOperatorStakeAt-&gt;EnumerableMap.AddressToUintMap.getTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M411.36,-571.44C420.29,-567.48 428.55,-562.16 435.11,-555 494.94,-489.7 417.77,-429.71 471.09,-359 485.49,-339.91 508.31,-327.03 529.52,-318.56" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="530.73,-321.85 538.91,-315.12 528.32,-315.28 530.73,-321.85" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.IERC20Metadata -->
+<g id="node27" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.IERC20Metadata">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="809.64" cy="-690" rx="78.73" ry="18" style=""/>
+<text text-anchor="middle" x="809.64" y="-685.8" font-family="Times,serif" font-size="14.00" style="">IERC20Metadata</text>
+</g>
+<!-- BoltDSSMiddlewareV1._getVaultActiveBalance&#45;&gt;BoltDSSMiddlewareV1.IERC20Metadata -->
+<g id="edge38" class="edge" data-name="BoltDSSMiddlewareV1._getVaultActiveBalance-&gt;BoltDSSMiddlewareV1.IERC20Metadata">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M683.87,-683.29C696.39,-683.21 709.12,-683.25 721.43,-683.4" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="720.99,-686.9 731.05,-683.55 721.1,-679.9 720.99,-686.9" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1._getVaultActiveBalance&#45;&gt;BoltDSSMiddlewareV1.IERC20Metadata -->
+<g id="edge39" class="edge" data-name="BoltDSSMiddlewareV1._getVaultActiveBalance-&gt;BoltDSSMiddlewareV1.IERC20Metadata">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M683.87,-696.71C696.39,-696.79 709.12,-696.75 721.43,-696.6" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="721.1,-700.1 731.05,-696.45 720.99,-693.1 721.1,-700.1" style=""/>
+</g>
+<!-- BoltDSSMiddlewareV1.IERC4626 -->
+<g id="node28" class="node" pointer-events="visible" data-name="BoltDSSMiddlewareV1.IERC4626">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="809.64" cy="-744" rx="52.2" ry="18" style=""/>
+<text text-anchor="middle" x="809.64" y="-739.8" font-family="Times,serif" font-size="14.00" style="">IERC4626</text>
+</g>
+<!-- BoltDSSMiddlewareV1._getVaultActiveBalance&#45;&gt;BoltDSSMiddlewareV1.IERC4626 -->
+<g id="edge40" class="edge" data-name="BoltDSSMiddlewareV1._getVaultActiveBalance-&gt;BoltDSSMiddlewareV1.IERC4626">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M648.42,-705.47C681.23,-713.36 720.76,-722.87 752.34,-730.46" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="751.42,-733.84 761.96,-732.78 753.06,-727.04 751.42,-733.84" style=""/>
+</g>
+<!-- key -->
+<g id="node36" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="none" stroke-width="3" points="173.57,-1169 43.57,-1169 43.57,-1081 173.57,-1081 173.57,-1169" style=""/>
+<text text-anchor="start" x="93.21" y="-1150.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="89.32" y="-1130.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="66.77" y="-1110.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="53.17" y="-1090.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node37" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="none" stroke-width="3" points="363.12,-1169 309.12,-1169 309.12,-1081 363.12,-1081 363.12,-1169" style=""/>
+<text text-anchor="start" x="326.12" y="-1150.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="326.12" y="-1130.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="none" points="324.12,-1105 324.12,-1125 349.12,-1125 349.12,-1105 324.12,-1105" style=""/>
+<text text-anchor="start" x="326.12" y="-1110.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="326.12,-1087 326.12,-1103 347.12,-1103 347.12,-1087 326.12,-1087" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge41" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M166.57,-1155C231.66,-1155 251.08,-1155 310.29,-1155" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="310.1,-1158.5 320.1,-1155 310.1,-1151.5 310.1,-1158.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge42" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M166.57,-1135C231.66,-1135 251.08,-1135 310.29,-1135" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="310.1,-1138.5 320.1,-1135 310.1,-1131.5 310.1,-1138.5" style=""/>
+</g>
+</g>
+</svg>

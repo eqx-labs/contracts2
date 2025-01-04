@@ -1,0 +1,1216 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1072pt" height="2422pt" viewBox="0.00 0.00 1071.87 2422.00">
+<g id="graph0" class="graph" transform="translate(4,2418) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="none" points="-4,4 -4,-2418 1067.87,-2418 1067.87,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterEigenLayerMiddleware">
+
+<path fill="#445773" stroke="#445773" d="M20,-1220C20,-1220 812.02,-1220 812.02,-1220 818.02,-1220 824.02,-1226 824.02,-1232 824.02,-1232 824.02,-2257 824.02,-2257 824.02,-2263 818.02,-2269 812.02,-2269 812.02,-2269 20,-2269 20,-2269 14,-2269 8,-2263 8,-2257 8,-2257 8,-1232 8,-1232 8,-1226 14,-1220 20,-1220" style=""/>
+<text text-anchor="middle" x="416.01" y="-2252.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">EigenLayerMiddleware</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterTime">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M664.39,-718C664.39,-718 758.92,-718 758.92,-718 764.92,-718 770.92,-724 770.92,-730 770.92,-730 770.92,-783 770.92,-783 770.92,-789 764.92,-795 758.92,-795 758.92,-795 664.39,-795 664.39,-795 658.39,-795 652.39,-789 652.39,-783 652.39,-783 652.39,-730 652.39,-730 652.39,-724 658.39,-718 664.39,-718" style=""/>
+<text text-anchor="middle" x="711.65" y="-778.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">Time</text>
+</g>
+<g id="clust3" class="cluster" data-name="clusterISystemParameters">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M888.21,-1652C888.21,-1652 1043.87,-1652 1043.87,-1652 1049.87,-1652 1055.87,-1658 1055.87,-1664 1055.87,-1664 1055.87,-1717 1055.87,-1717 1055.87,-1723 1049.87,-1729 1043.87,-1729 1043.87,-1729 888.21,-1729 888.21,-1729 882.21,-1729 876.21,-1723 876.21,-1717 876.21,-1717 876.21,-1664 876.21,-1664 876.21,-1658 882.21,-1652 888.21,-1652" style=""/>
+<text text-anchor="middle" x="966.04" y="-1712.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">ISystemParameters</text>
+</g>
+<g id="clust4" class="cluster" data-name="clusterEnumerableMap.AddressToUintMap">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M612.2,-201C612.2,-201 812.11,-201 812.11,-201 818.11,-201 824.11,-207 824.11,-213 824.11,-213 824.11,-698 824.11,-698 824.11,-704 818.11,-710 812.11,-710 812.11,-710 612.2,-710 612.2,-710 606.2,-710 600.2,-704 600.2,-698 600.2,-698 600.2,-213 600.2,-213 600.2,-207 606.2,-201 612.2,-201" style=""/>
+<text text-anchor="middle" x="712.15" y="-693.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">EnumerableMap.AddressToUintMap</text>
+</g>
+<g id="clust5" class="cluster" data-name="clusterStrategyManagerStorage">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M579.1,-1135C579.1,-1135 844.21,-1135 844.21,-1135 850.21,-1135 856.21,-1141 856.21,-1147 856.21,-1147 856.21,-1200 856.21,-1200 856.21,-1206 850.21,-1212 844.21,-1212 844.21,-1212 579.1,-1212 579.1,-1212 573.1,-1212 567.1,-1206 567.1,-1200 567.1,-1200 567.1,-1147 567.1,-1147 567.1,-1141 573.1,-1135 579.1,-1135" style=""/>
+<text text-anchor="middle" x="711.65" y="-1195.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">StrategyManagerStorage</text>
+</g>
+<g id="clust6" class="cluster" data-name="clusterIManager">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M319.38,-373C319.38,-373 497.56,-373 497.56,-373 503.56,-373 509.56,-379 509.56,-385 509.56,-385 509.56,-600 509.56,-600 509.56,-606 503.56,-612 497.56,-612 497.56,-612 319.38,-612 319.38,-612 313.38,-612 307.38,-606 307.38,-600 307.38,-600 307.38,-385 307.38,-385 307.38,-379 313.38,-373 319.38,-373" style=""/>
+<text text-anchor="middle" x="408.47" y="-595.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IManager</text>
+</g>
+<g id="clust7" class="cluster" data-name="clusterDelegationManagerStorage">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M632.76,-803C632.76,-803 790.55,-803 790.55,-803 796.55,-803 802.55,-809 802.55,-815 802.55,-815 802.55,-976 802.55,-976 802.55,-982 796.55,-988 790.55,-988 790.55,-988 632.76,-988 632.76,-988 626.76,-988 620.76,-982 620.76,-976 620.76,-976 620.76,-815 620.76,-815 620.76,-809 626.76,-803 632.76,-803" style=""/>
+<text text-anchor="middle" x="711.65" y="-971.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">DelegationManagerStorage</text>
+</g>
+<g id="clust8" class="cluster" data-name="clusterIStrategy">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M604.86,-996C604.86,-996 818.45,-996 818.45,-996 824.45,-996 830.45,-1002 830.45,-1008 830.45,-1008 830.45,-1115 830.45,-1115 830.45,-1121 824.45,-1127 818.45,-1127 818.45,-1127 604.86,-1127 604.86,-1127 598.86,-1127 592.86,-1121 592.86,-1115 592.86,-1115 592.86,-1008 592.86,-1008 592.86,-1002 598.86,-996 604.86,-996" style=""/>
+<text text-anchor="middle" x="711.65" y="-1110.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IStrategy</text>
+</g>
+<g id="clust9" class="cluster" data-name="clusterIAVSDirectory">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M591.98,-8C591.98,-8 831.33,-8 831.33,-8 837.33,-8 843.33,-14 843.33,-20 843.33,-20 843.33,-181 843.33,-181 843.33,-187 837.33,-193 831.33,-193 831.33,-193 591.98,-193 591.98,-193 585.98,-193 579.98,-187 579.98,-181 579.98,-181 579.98,-20 579.98,-20 579.98,-14 585.98,-8 591.98,-8" style=""/>
+<text text-anchor="middle" x="711.65" y="-176.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IAVSDirectory</text>
+</g>
+<g id="clust10" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="55.92,-2277 55.92,-2406 443.47,-2406 443.47,-2277 55.92,-2277" style=""/>
+<text text-anchor="middle" x="249.7" y="-2389.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- EigenLayerMiddleware.initializeSystem -->
+<g id="node1" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.initializeSystem">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-2110" rx="73.02" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-2105.8" font-family="Times,serif" font-size="14.00" style="">initializeSystem</text>
+</g>
+<!-- EigenLayerMiddleware.__Ownable_init -->
+<g id="node34" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.__Ownable_init">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-2164" rx="73.02" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-2159.8" font-family="Times,serif" font-size="14.00" style="">__Ownable_init</text>
+</g>
+<!-- EigenLayerMiddleware.initializeSystem&#45;&gt;EigenLayerMiddleware.__Ownable_init -->
+<g id="edge1" class="edge" data-name="EigenLayerMiddleware.initializeSystem-&gt;EigenLayerMiddleware.__Ownable_init">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M188.78,-2121.45C231.84,-2129.83 290.46,-2141.23 336.17,-2150.13" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="335.24,-2153.51 345.72,-2151.99 336.58,-2146.64 335.24,-2153.51" style=""/>
+</g>
+<!-- EigenLayerMiddleware.ISystemParameters -->
+<g id="node35" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.ISystemParameters">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-2218" rx="85.68" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-2213.8" font-family="Times,serif" font-size="14.00" style="">ISystemParameters</text>
+</g>
+<!-- EigenLayerMiddleware.initializeSystem&#45;&gt;EigenLayerMiddleware.ISystemParameters -->
+<g id="edge2" class="edge" data-name="EigenLayerMiddleware.initializeSystem-&gt;EigenLayerMiddleware.ISystemParameters">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M197,-2117.68C212.69,-2121.7 228.65,-2127.79 241.84,-2137 265.49,-2153.52 253.94,-2174.85 277.84,-2191 288.81,-2198.41 301.41,-2203.85 314.34,-2207.84" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="313.32,-2211.19 323.88,-2210.44 315.15,-2204.43 313.32,-2211.19" style=""/>
+</g>
+<!-- EigenLayerMiddleware.IManager -->
+<g id="node36" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.IManager">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-1948" rx="48.64" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1943.8" font-family="Times,serif" font-size="14.00" style="">IManager</text>
+</g>
+<!-- EigenLayerMiddleware.initializeSystem&#45;&gt;EigenLayerMiddleware.IManager -->
+<g id="edge3" class="edge" data-name="EigenLayerMiddleware.initializeSystem-&gt;EigenLayerMiddleware.IManager">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M200.06,-2104.37C215.29,-2100.26 230.28,-2093.61 241.84,-2083 279.11,-2048.78 240.04,-2008.64 277.84,-1975 296.24,-1958.62 321.95,-1951.23 345.63,-1948.16" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="345.9,-1951.65 355.5,-1947.17 345.2,-1944.69 345.9,-1951.65" style=""/>
+</g>
+<!-- EigenLayerMiddleware.IAVSDirectory -->
+<g id="node37" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.IAVSDirectory">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-2002" rx="70.64" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1997.8" font-family="Times,serif" font-size="14.00" style="">IAVSDirectory</text>
+</g>
+<!-- EigenLayerMiddleware.initializeSystem&#45;&gt;EigenLayerMiddleware.IAVSDirectory -->
+<g id="edge5" class="edge" data-name="EigenLayerMiddleware.initializeSystem-&gt;EigenLayerMiddleware.IAVSDirectory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M197,-2102.32C212.69,-2098.3 228.65,-2092.21 241.84,-2083 265.49,-2066.48 253.94,-2045.15 277.84,-2029 292.1,-2019.37 309.1,-2013.06 326.01,-2008.96" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="326.27,-2012.48 335.32,-2006.98 324.81,-2005.64 326.27,-2012.48" style=""/>
+</g>
+<!-- EigenLayerMiddleware.DelegationManagerStorage -->
+<g id="node38" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.DelegationManagerStorage">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-2056" rx="117.44" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-2051.8" font-family="Times,serif" font-size="14.00" style="">DelegationManagerStorage</text>
+</g>
+<!-- EigenLayerMiddleware.initializeSystem&#45;&gt;EigenLayerMiddleware.DelegationManagerStorage -->
+<g id="edge6" class="edge" data-name="EigenLayerMiddleware.initializeSystem-&gt;EigenLayerMiddleware.DelegationManagerStorage">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M188.78,-2098.55C226.5,-2091.21 276.17,-2081.55 318.64,-2073.28" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="319.15,-2076.75 328.3,-2071.4 317.82,-2069.88 319.15,-2076.75" style=""/>
+</g>
+<!-- EigenLayerMiddleware.StrategyManagerStorage -->
+<g id="node39" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.StrategyManagerStorage">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-2110" rx="107.07" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-2105.8" font-family="Times,serif" font-size="14.00" style="">StrategyManagerStorage</text>
+</g>
+<!-- EigenLayerMiddleware.initializeSystem&#45;&gt;EigenLayerMiddleware.StrategyManagerStorage -->
+<g id="edge7" class="edge" data-name="EigenLayerMiddleware.initializeSystem-&gt;EigenLayerMiddleware.StrategyManagerStorage">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M203.21,-2110C228.9,-2110 258.49,-2110 287.02,-2110" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="287.01,-2113.5 297.01,-2110 287.01,-2106.5 287.01,-2113.5" style=""/>
+</g>
+<!-- Time.timestamp -->
+<g id="node50" class="node" pointer-events="visible" data-name="Time.timestamp">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-744" rx="51.04" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-739.8" font-family="Times,serif" font-size="14.00" style="">timestamp</text>
+</g>
+<!-- EigenLayerMiddleware.initializeSystem&#45;&gt;Time.timestamp -->
+<g id="edge4" class="edge" data-name="EigenLayerMiddleware.initializeSystem-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M202.08,-2106.63C217.33,-2102.45 231.82,-2095.21 241.84,-2083 305.11,-2005.89 217.76,-1265.62 277.84,-1186 351.48,-1088.42 462.92,-1195.61 539.1,-1100 580.96,-1047.46 526.51,-852.53 567.1,-799 586.58,-773.32 619.62,-759.63 649.09,-752.33" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="649.5,-755.83 658.5,-750.24 647.98,-748.99 649.5,-755.83" style=""/>
+</g>
+<!-- EigenLayerMiddleware.upgradeSystemToV2 -->
+<g id="node2" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.upgradeSystemToV2">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-2164" rx="93.21" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-2159.8" font-family="Times,serif" font-size="14.00" style="">upgradeSystemToV2</text>
+</g>
+<!-- EigenLayerMiddleware.upgradeSystemToV2&#45;&gt;EigenLayerMiddleware.__Ownable_init -->
+<g id="edge8" class="edge" data-name="EigenLayerMiddleware.upgradeSystemToV2-&gt;EigenLayerMiddleware.__Ownable_init">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M223.5,-2164C255.03,-2164 290.06,-2164 321.02,-2164" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="320.99,-2167.5 330.99,-2164 320.99,-2160.5 320.99,-2167.5" style=""/>
+</g>
+<!-- EigenLayerMiddleware.upgradeSystemToV2&#45;&gt;EigenLayerMiddleware.ISystemParameters -->
+<g id="edge9" class="edge" data-name="EigenLayerMiddleware.upgradeSystemToV2-&gt;EigenLayerMiddleware.ISystemParameters">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M198.17,-2177.28C238.03,-2185.03 288.45,-2194.84 329.82,-2202.89" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="328.89,-2206.28 339.38,-2204.75 330.23,-2199.41 328.89,-2206.28" style=""/>
+</g>
+<!-- EigenLayerMiddleware.upgradeSystemToV2&#45;&gt;EigenLayerMiddleware.IManager -->
+<g id="edge10" class="edge" data-name="EigenLayerMiddleware.upgradeSystemToV2-&gt;EigenLayerMiddleware.IManager">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M213.19,-2155.15C223.88,-2150.98 233.86,-2145.13 241.84,-2137 293.52,-2084.38 225.34,-2026.81 277.84,-1975 295.66,-1957.41 321.79,-1949.9 345.92,-1947.08" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="346,-1950.59 355.67,-1946.24 345.4,-1943.61 346,-1950.59" style=""/>
+</g>
+<!-- EigenLayerMiddleware.upgradeSystemToV2&#45;&gt;EigenLayerMiddleware.IAVSDirectory -->
+<g id="edge12" class="edge" data-name="EigenLayerMiddleware.upgradeSystemToV2-&gt;EigenLayerMiddleware.IAVSDirectory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M211.89,-2154.6C222.89,-2150.52 233.3,-2144.84 241.84,-2137 279.11,-2102.78 240.04,-2062.64 277.84,-2029 290.83,-2017.44 307.46,-2010.35 324.45,-2006.11" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="324.81,-2009.61 333.87,-2004.12 323.36,-2002.76 324.81,-2009.61" style=""/>
+</g>
+<!-- EigenLayerMiddleware.upgradeSystemToV2&#45;&gt;EigenLayerMiddleware.DelegationManagerStorage -->
+<g id="edge13" class="edge" data-name="EigenLayerMiddleware.upgradeSystemToV2-&gt;EigenLayerMiddleware.DelegationManagerStorage">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M207.53,-2153.3C219.69,-2149.42 231.6,-2144.15 241.84,-2137 265.49,-2120.48 253.94,-2099.15 277.84,-2083 284.47,-2078.52 291.68,-2074.77 299.21,-2071.61" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="300.26,-2074.96 308.42,-2068.2 297.82,-2068.4 300.26,-2074.96" style=""/>
+</g>
+<!-- EigenLayerMiddleware.upgradeSystemToV2&#45;&gt;EigenLayerMiddleware.StrategyManagerStorage -->
+<g id="edge14" class="edge" data-name="EigenLayerMiddleware.upgradeSystemToV2-&gt;EigenLayerMiddleware.StrategyManagerStorage">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M198.17,-2150.72C235.54,-2143.45 282.2,-2134.37 321.97,-2126.63" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="322.5,-2130.1 331.65,-2124.75 321.17,-2123.23 322.5,-2130.1" style=""/>
+</g>
+<!-- EigenLayerMiddleware.upgradeSystemToV2&#45;&gt;Time.timestamp -->
+<g id="edge11" class="edge" data-name="EigenLayerMiddleware.upgradeSystemToV2-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M215.12,-2156.16C225.4,-2151.82 234.74,-2145.66 241.84,-2137 306.55,-2058.05 212.98,-1297.83 277.84,-1219 353.67,-1126.84 461.5,-1247.66 539.1,-1157 590.99,-1096.38 519.35,-862.94 567.1,-799 586.39,-773.18 619.42,-759.48 648.93,-752.21" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="649.36,-755.7 658.36,-750.13 647.84,-748.87 649.36,-755.7" style=""/>
+</g>
+<!-- EigenLayerMiddleware._authorizeUpgrade -->
+<g id="node3" class="node" pointer-events="visible" data-name="EigenLayerMiddleware._authorizeUpgrade">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="128.92" cy="-2056" rx="85.08" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-2051.8" font-family="Times,serif" font-size="14.00" style="">_authorizeUpgrade</text>
+</g>
+<!-- EigenLayerMiddleware.calculateEpochStart -->
+<g id="node4" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.calculateEpochStart">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="711.65" cy="-1732" rx="88.01" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1727.8" font-family="Times,serif" font-size="14.00" style="">calculateEpochStart</text>
+</g>
+<!-- ISystemParameters.getEpochDuration -->
+<g id="node51" class="node" pointer-events="visible" data-name="ISystemParameters.getEpochDuration">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="966.04" cy="-1678" rx="81.66" ry="18" style=""/>
+<text text-anchor="middle" x="966.04" y="-1673.8" font-family="Times,serif" font-size="14.00" style="">getEpochDuration</text>
+</g>
+<!-- EigenLayerMiddleware.calculateEpochStart&#45;&gt;ISystemParameters.getEpochDuration -->
+<g id="edge15" class="edge" data-name="EigenLayerMiddleware.calculateEpochStart-&gt;ISystemParameters.getEpochDuration">
+
+<path fill="none" stroke="white" stroke-width="2" d="M781.45,-1719.89C805.2,-1715.49 831.93,-1710.29 856.21,-1705 869.61,-1702.08 883.87,-1698.72 897.51,-1695.39" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="898.01,-1698.87 906.88,-1693.08 896.33,-1692.08 898.01,-1698.87" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getEpochForTimestamp -->
+<g id="node5" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.getEpochForTimestamp">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="711.65" cy="-1840" rx="104.23" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1835.8" font-family="Times,serif" font-size="14.00" style="">getEpochForTimestamp</text>
+</g>
+<!-- EigenLayerMiddleware.getEpochForTimestamp&#45;&gt;ISystemParameters.getEpochDuration -->
+<g id="edge16" class="edge" data-name="EigenLayerMiddleware.getEpochForTimestamp-&gt;ISystemParameters.getEpochDuration">
+
+<path fill="none" stroke="white" stroke-width="2" d="M807.64,-1831.94C824.6,-1827.82 841.52,-1821.79 856.21,-1813 898.36,-1787.78 930.99,-1739.87 949.11,-1708.44" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="952.05,-1710.36 953.86,-1699.92 945.93,-1706.95 952.05,-1710.36" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getCurrentEpoch -->
+<g id="node6" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.getCurrentEpoch">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="408.47" cy="-1894" rx="77.01" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1889.8" font-family="Times,serif" font-size="14.00" style="">getCurrentEpoch</text>
+</g>
+<!-- EigenLayerMiddleware.getCurrentEpoch&#45;&gt;EigenLayerMiddleware.getEpochForTimestamp -->
+<g id="edge17" class="edge" data-name="EigenLayerMiddleware.getCurrentEpoch-&gt;EigenLayerMiddleware.getEpochForTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M472.24,-1882.75C515.84,-1874.93 574.54,-1864.4 622.78,-1855.76" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="623.24,-1859.23 632.46,-1854.02 622,-1852.34 623.24,-1859.23" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getCurrentEpoch&#45;&gt;Time.timestamp -->
+<g id="edge18" class="edge" data-name="EigenLayerMiddleware.getCurrentEpoch-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M486.93,-1894.44C506.76,-1890.57 526.13,-1882.53 539.1,-1867 615.2,-1775.89 498.56,-895.92 567.1,-799 585.78,-772.59 618.94,-758.86 648.69,-751.72" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="649.17,-755.2 658.22,-749.68 647.71,-748.35 649.17,-755.2" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getRegisteredStrategies -->
+<g id="node7" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.getRegisteredStrategies">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-1678" rx="102.42" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1673.8" font-family="Times,serif" font-size="14.00" style="">getRegisteredStrategies</text>
+</g>
+<!-- EnumerableMap.AddressToUintMap.keys -->
+<g id="node52" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.keys">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-281" rx="28.98" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-276.8" font-family="Times,serif" font-size="14.00" style="">keys</text>
+</g>
+<!-- EigenLayerMiddleware.getRegisteredStrategies&#45;&gt;EnumerableMap.AddressToUintMap.keys -->
+<g id="edge19" class="edge" data-name="EigenLayerMiddleware.getRegisteredStrategies-&gt;EnumerableMap.AddressToUintMap.keys">
+
+<path fill="none" stroke="white" stroke-width="2" d="M218.91,-1668.43C227.68,-1664.22 235.62,-1658.56 241.84,-1651 301.54,-1578.42 216.17,-876.91 277.84,-806 355.32,-716.92 460.76,-846.32 539.1,-758 605.59,-683.05 500.77,-383.09 567.1,-308 592.04,-279.77 636.37,-275.21 669.19,-276.35" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="668.81,-279.84 678.99,-276.93 669.22,-272.85 668.81,-279.84" style=""/>
+</g>
+<!-- EigenLayerMiddleware.addNewStrategy -->
+<g id="node8" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.addNewStrategy">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="408.47" cy="-1570" rx="75.29" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1565.8" font-family="Times,serif" font-size="14.00" style="">addNewStrategy</text>
+</g>
+<!-- EigenLayerMiddleware.StrategyAlreadyExists -->
+<g id="node40" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.StrategyAlreadyExists">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-1462" rx="97.86" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1457.8" font-family="Times,serif" font-size="14.00" style="">StrategyAlreadyExists</text>
+</g>
+<!-- EigenLayerMiddleware.addNewStrategy&#45;&gt;EigenLayerMiddleware.StrategyAlreadyExists -->
+<g id="edge21" class="edge" data-name="EigenLayerMiddleware.addNewStrategy-&gt;EigenLayerMiddleware.StrategyAlreadyExists">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M483.53,-1566.04C503.09,-1562.08 523.17,-1555.09 539.1,-1543 560.64,-1526.66 545.4,-1505.13 567.1,-1489 578.09,-1480.83 590.82,-1474.91 604.08,-1470.65" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="604.78,-1474.09 613.46,-1468.01 602.88,-1467.35 604.78,-1474.09" style=""/>
+</g>
+<!-- EigenLayerMiddleware.IStrategy -->
+<g id="node41" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.IStrategy">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-1786" rx="46.37" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1781.8" font-family="Times,serif" font-size="14.00" style="">IStrategy</text>
+</g>
+<!-- EigenLayerMiddleware.addNewStrategy&#45;&gt;EigenLayerMiddleware.IStrategy -->
+<g id="edge23" class="edge" data-name="EigenLayerMiddleware.addNewStrategy-&gt;EigenLayerMiddleware.IStrategy">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M485.18,-1570.76C505.11,-1574.63 524.96,-1582.37 539.1,-1597 589.88,-1649.54 515.82,-1706.95 567.1,-1759 588.96,-1781.19 622.89,-1788.3 652.28,-1789.69" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="651.87,-1793.19 661.94,-1789.9 652.02,-1786.19 651.87,-1793.19" style=""/>
+</g>
+<!-- EigenLayerMiddleware.InvalidStrategy -->
+<g id="node42" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.InvalidStrategy">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-1408" rx="70.64" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1403.8" font-family="Times,serif" font-size="14.00" style="">InvalidStrategy</text>
+</g>
+<!-- EigenLayerMiddleware.addNewStrategy&#45;&gt;EigenLayerMiddleware.InvalidStrategy -->
+<g id="edge24" class="edge" data-name="EigenLayerMiddleware.addNewStrategy-&gt;EigenLayerMiddleware.InvalidStrategy">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M484.76,-1568.41C504.56,-1564.51 524.46,-1556.95 539.1,-1543 575,-1508.79 530.87,-1468.86 567.1,-1435 583.37,-1419.8 605.35,-1411.85 627.23,-1407.97" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="627.65,-1411.44 637.05,-1406.55 626.65,-1404.51 627.65,-1411.44" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.contains -->
+<g id="node53" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.contains">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-443" rx="43.44" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-438.8" font-family="Times,serif" font-size="14.00" style="">contains</text>
+</g>
+<!-- EigenLayerMiddleware.addNewStrategy&#45;&gt;EnumerableMap.AddressToUintMap.contains -->
+<g id="edge20" class="edge" data-name="EigenLayerMiddleware.addNewStrategy-&gt;EnumerableMap.AddressToUintMap.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M484.9,-1570.82C505.44,-1567.11 525.69,-1559.06 539.1,-1543 615.55,-1451.46 489.77,-560.79 567.1,-470 588.32,-445.08 624.63,-438.43 655.43,-437.95" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="655.16,-441.45 665.2,-438.06 655.24,-434.45 655.16,-441.45" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.add -->
+<g id="node54" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-551" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-546.8" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- EigenLayerMiddleware.addNewStrategy&#45;&gt;EnumerableMap.AddressToUintMap.add -->
+<g id="edge25" class="edge" data-name="EigenLayerMiddleware.addNewStrategy-&gt;EnumerableMap.AddressToUintMap.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M485.21,-1570.73C505.63,-1567 525.74,-1558.95 539.1,-1543 607.98,-1460.77 497.43,-659.56 567.1,-578 592.07,-548.77 637.82,-544.69 670.97,-546.22" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="670.63,-549.71 680.85,-546.92 671.12,-542.73 670.63,-549.71" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.enable -->
+<g id="node55" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.enable">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-497" rx="36.47" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-492.8" font-family="Times,serif" font-size="14.00" style="">enable</text>
+</g>
+<!-- EigenLayerMiddleware.addNewStrategy&#45;&gt;EnumerableMap.AddressToUintMap.enable -->
+<g id="edge26" class="edge" data-name="EigenLayerMiddleware.addNewStrategy-&gt;EnumerableMap.AddressToUintMap.enable">
+
+<path fill="none" stroke="white" stroke-width="2" d="M484.88,-1570.81C505.42,-1567.1 525.68,-1559.05 539.1,-1543 611.76,-1456.11 493.6,-610.18 567.1,-524 589.88,-497.29 630,-491.57 662.04,-491.95" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="661.62,-495.44 671.74,-492.31 661.87,-488.44 661.62,-495.44" style=""/>
+</g>
+<!-- StrategyManagerStorage.strategyIsWhitelistedForDeposit -->
+<g id="node61" class="node" pointer-events="visible" data-name="StrategyManagerStorage.strategyIsWhitelistedForDeposit">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-1161" rx="136.61" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1156.8" font-family="Times,serif" font-size="14.00" style="">strategyIsWhitelistedForDeposit</text>
+</g>
+<!-- EigenLayerMiddleware.addNewStrategy&#45;&gt;StrategyManagerStorage.strategyIsWhitelistedForDeposit -->
+<g id="edge22" class="edge" data-name="EigenLayerMiddleware.addNewStrategy-&gt;StrategyManagerStorage.strategyIsWhitelistedForDeposit">
+
+<path fill="none" stroke="white" stroke-width="2" d="M484.99,-1570.19C505.28,-1566.41 525.38,-1558.48 539.1,-1543 587.49,-1488.43 523.25,-1274.27 567.1,-1216 578.95,-1200.26 595.9,-1189.02 614.03,-1181" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="615.28,-1184.27 623.26,-1177.3 612.68,-1177.77 615.28,-1184.27" style=""/>
+</g>
+<!-- EigenLayerMiddleware.removeStrategy -->
+<g id="node9" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.removeStrategy">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-1786" rx="72.35" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1781.8" font-family="Times,serif" font-size="14.00" style="">removeStrategy</text>
+</g>
+<!-- EigenLayerMiddleware.StrategyNotFound -->
+<g id="node43" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.StrategyNotFound">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-1354" rx="82.28" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1349.8" font-family="Times,serif" font-size="14.00" style="">StrategyNotFound</text>
+</g>
+<!-- EigenLayerMiddleware.removeStrategy&#45;&gt;EigenLayerMiddleware.StrategyNotFound -->
+<g id="edge28" class="edge" data-name="EigenLayerMiddleware.removeStrategy-&gt;EigenLayerMiddleware.StrategyNotFound">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M201.32,-1782.31C216.69,-1778.16 231.43,-1771 241.84,-1759 297.13,-1695.26 221.56,-1443.87 277.84,-1381 287.17,-1370.58 299.4,-1363.58 312.61,-1358.98" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="313.43,-1362.38 322.06,-1356.23 311.48,-1355.66 313.43,-1362.38" style=""/>
+</g>
+<!-- EigenLayerMiddleware.removeStrategy&#45;&gt;EnumerableMap.AddressToUintMap.contains -->
+<g id="edge27" class="edge" data-name="EigenLayerMiddleware.removeStrategy-&gt;EnumerableMap.AddressToUintMap.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M201.46,-1782.76C216.92,-1778.6 231.67,-1771.34 241.84,-1759 298.51,-1690.26 219.3,-1025.15 277.84,-958 355.42,-869.01 460.7,-998.26 539.1,-910 604.17,-836.75 502.19,-543.39 567.1,-470 588.71,-445.57 624.85,-438.87 655.45,-438.26" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="655.13,-441.75 665.15,-438.31 655.17,-434.75 655.13,-441.75" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.remove -->
+<g id="node56" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.remove">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-389" rx="39.99" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-384.8" font-family="Times,serif" font-size="14.00" style="">remove</text>
+</g>
+<!-- EigenLayerMiddleware.removeStrategy&#45;&gt;EnumerableMap.AddressToUintMap.remove -->
+<g id="edge29" class="edge" data-name="EigenLayerMiddleware.removeStrategy-&gt;EnumerableMap.AddressToUintMap.remove">
+
+<path fill="none" stroke="white" stroke-width="2" d="M201.48,-1782.77C216.95,-1778.62 231.68,-1771.35 241.84,-1759 301.81,-1686.07 219.58,-984.3 277.84,-910 352.47,-814.84 463.32,-928.24 539.1,-834 597.44,-761.45 505.3,-485.63 567.1,-416 589.49,-390.77 627.36,-384.47 658.59,-384.24" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="658.41,-387.74 668.47,-384.42 658.54,-380.74 658.41,-387.74" style=""/>
+</g>
+<!-- EigenLayerMiddleware.onboardOperator -->
+<g id="node10" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.onboardOperator">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-1894" rx="77" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1889.8" font-family="Times,serif" font-size="14.00" style="">onboardOperator</text>
+</g>
+<!-- EigenLayerMiddleware.registerOperatorToAVS -->
+<g id="node22" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.registerOperatorToAVS">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-1516" rx="104.21" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1511.8" font-family="Times,serif" font-size="14.00" style="">registerOperatorToAVS</text>
+</g>
+<!-- EigenLayerMiddleware.onboardOperator&#45;&gt;EigenLayerMiddleware.registerOperatorToAVS -->
+<g id="edge34" class="edge" data-name="EigenLayerMiddleware.onboardOperator-&gt;EigenLayerMiddleware.registerOperatorToAVS">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M204.65,-1889.2C218.77,-1884.94 232.13,-1878.02 241.84,-1867 337.63,-1758.3 180.35,-1650.18 277.84,-1543 283.42,-1536.86 290.01,-1531.92 297.2,-1527.95" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="298.61,-1531.16 306.21,-1523.77 295.66,-1524.81 298.61,-1531.16" style=""/>
+</g>
+<!-- EigenLayerMiddleware.OperatorExists -->
+<g id="node44" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.OperatorExists">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-1408" rx="68.93" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1403.8" font-family="Times,serif" font-size="14.00" style="">OperatorExists</text>
+</g>
+<!-- EigenLayerMiddleware.onboardOperator&#45;&gt;EigenLayerMiddleware.OperatorExists -->
+<g id="edge31" class="edge" data-name="EigenLayerMiddleware.onboardOperator-&gt;EigenLayerMiddleware.OperatorExists">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M204.88,-1889.41C218.98,-1885.13 232.28,-1878.15 241.84,-1867 304.53,-1793.86 214.01,-1507.15 277.84,-1435 290.15,-1421.08 307.62,-1413.26 325.75,-1409.07" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="326.19,-1412.55 335.38,-1407.28 324.91,-1405.67 326.19,-1412.55" style=""/>
+</g>
+<!-- EigenLayerMiddleware.InvalidOperator -->
+<g id="node45" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.InvalidOperator">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-1462" rx="72.92" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1457.8" font-family="Times,serif" font-size="14.00" style="">InvalidOperator</text>
+</g>
+<!-- EigenLayerMiddleware.onboardOperator&#45;&gt;EigenLayerMiddleware.InvalidOperator -->
+<g id="edge33" class="edge" data-name="EigenLayerMiddleware.onboardOperator-&gt;EigenLayerMiddleware.InvalidOperator">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M204.78,-1889.32C218.89,-1885.05 232.21,-1878.1 241.84,-1867 297.13,-1803.26 221.56,-1551.87 277.84,-1489 289.2,-1476.31 304.85,-1468.7 321.35,-1464.3" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="322.09,-1467.72 331.12,-1462.17 320.6,-1460.88 322.09,-1467.72" style=""/>
+</g>
+<!-- IManager.isOperatorRegistered -->
+<g id="node62" class="node" pointer-events="visible" data-name="IManager.isOperatorRegistered">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-507" rx="93.18" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-502.8" font-family="Times,serif" font-size="14.00" style="">isOperatorRegistered</text>
+</g>
+<!-- EigenLayerMiddleware.onboardOperator&#45;&gt;IManager.isOperatorRegistered -->
+<g id="edge30" class="edge" data-name="EigenLayerMiddleware.onboardOperator-&gt;IManager.isOperatorRegistered">
+
+<path fill="none" stroke="white" stroke-width="2" d="M205.37,-1889.81C219.43,-1885.51 232.6,-1878.42 241.84,-1867 335.07,-1751.84 182.82,-647.68 277.84,-534 284.83,-525.63 293.69,-519.44 303.47,-514.9" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="304.45,-518.28 312.5,-511.4 301.91,-511.75 304.45,-518.28" style=""/>
+</g>
+<!-- IManager.registerNewOperator -->
+<g id="node63" class="node" pointer-events="visible" data-name="IManager.registerNewOperator">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-561" rx="92.59" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-556.8" font-family="Times,serif" font-size="14.00" style="">registerNewOperator</text>
+</g>
+<!-- EigenLayerMiddleware.onboardOperator&#45;&gt;IManager.registerNewOperator -->
+<g id="edge35" class="edge" data-name="EigenLayerMiddleware.onboardOperator-&gt;IManager.registerNewOperator">
+
+<path fill="none" stroke="white" stroke-width="2" d="M205.23,-1889.69C219.3,-1885.4 232.5,-1878.34 241.84,-1867 300.71,-1795.47 263.51,-1125.53 277.84,-1034 304.5,-863.78 370,-667.13 396.29,-592.19" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="399.54,-593.48 399.57,-582.89 392.94,-591.15 399.54,-593.48" style=""/>
+</g>
+<!-- DelegationManagerStorage.isOperator -->
+<g id="node66" class="node" pointer-events="visible" data-name="DelegationManagerStorage.isOperator">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-829" rx="51.59" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-824.8" font-family="Times,serif" font-size="14.00" style="">isOperator</text>
+</g>
+<!-- EigenLayerMiddleware.onboardOperator&#45;&gt;DelegationManagerStorage.isOperator -->
+<g id="edge32" class="edge" data-name="EigenLayerMiddleware.onboardOperator-&gt;DelegationManagerStorage.isOperator">
+
+<path fill="none" stroke="white" stroke-width="2" d="M205.12,-1889.61C219.2,-1885.32 232.43,-1878.29 241.84,-1867 334.17,-1756.21 209.64,-1346.08 277.84,-1219 346.36,-1091.33 463.69,-1147.72 539.1,-1024 578.5,-959.36 514.13,-910.08 567.1,-856 587.64,-835.03 618.97,-827.5 647.11,-825.55" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="646.91,-829.06 656.75,-825.14 646.61,-822.07 646.91,-829.06" style=""/>
+</g>
+<!-- EigenLayerMiddleware.offboardOperator -->
+<g id="node11" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.offboardOperator">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-1408" rx="78.7" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1403.8" font-family="Times,serif" font-size="14.00" style="">offboardOperator</text>
+</g>
+<!-- EigenLayerMiddleware.deregisterOperatorFromAVS -->
+<g id="node23" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.deregisterOperatorFromAVS">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-1246" rx="123.84" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1241.8" font-family="Times,serif" font-size="14.00" style="">deregisterOperatorFromAVS</text>
+</g>
+<!-- EigenLayerMiddleware.offboardOperator&#45;&gt;EigenLayerMiddleware.deregisterOperatorFromAVS -->
+<g id="edge38" class="edge" data-name="EigenLayerMiddleware.offboardOperator-&gt;EigenLayerMiddleware.deregisterOperatorFromAVS">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M203.83,-1401.29C217.75,-1397.13 231.24,-1390.73 241.84,-1381 279.11,-1346.78 240.04,-1306.64 277.84,-1273 282.43,-1268.92 287.47,-1265.39 292.82,-1262.35" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="294.04,-1265.65 301.48,-1258.11 290.96,-1259.37 294.04,-1265.65" style=""/>
+</g>
+<!-- EigenLayerMiddleware.OperatorNotFound -->
+<g id="node46" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.OperatorNotFound">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-1300" rx="84.55" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1295.8" font-family="Times,serif" font-size="14.00" style="">OperatorNotFound</text>
+</g>
+<!-- EigenLayerMiddleware.offboardOperator&#45;&gt;EigenLayerMiddleware.OperatorNotFound -->
+<g id="edge37" class="edge" data-name="EigenLayerMiddleware.offboardOperator-&gt;EigenLayerMiddleware.OperatorNotFound">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M200.51,-1399.39C215.05,-1395.38 229.63,-1389.53 241.84,-1381 265.49,-1364.48 253.94,-1343.15 277.84,-1327 289.14,-1319.36 302.17,-1313.82 315.52,-1309.8" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="316.13,-1313.26 324.9,-1307.31 314.33,-1306.5 316.13,-1313.26" style=""/>
+</g>
+<!-- EigenLayerMiddleware.offboardOperator&#45;&gt;IManager.isOperatorRegistered -->
+<g id="edge36" class="edge" data-name="EigenLayerMiddleware.offboardOperator-&gt;IManager.isOperatorRegistered">
+
+<path fill="none" stroke="white" stroke-width="2" d="M196.24,-1397.44C213.57,-1393.19 230.54,-1385.74 241.84,-1372 301.67,-1299.25 216.87,-596.8 277.84,-525 285.79,-515.64 296.07,-509 307.36,-504.46" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="308.18,-507.87 316.56,-501.4 305.97,-501.23 308.18,-507.87" style=""/>
+</g>
+<!-- EigenLayerMiddleware.offboardOperator&#45;&gt;IManager.isOperatorRegistered -->
+<g id="edge39" class="edge" data-name="EigenLayerMiddleware.offboardOperator-&gt;IManager.isOperatorRegistered">
+
+<path fill="none" stroke="white" stroke-width="2" d="M207.52,-1411.79C220.73,-1407.62 233.02,-1400.73 241.84,-1390 301.67,-1317.25 216.87,-614.8 277.84,-543 287.22,-531.95 299.84,-524.71 313.53,-519.93" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="314.28,-523.36 322.89,-517.19 312.31,-516.65 314.28,-523.36" style=""/>
+</g>
+<!-- EigenLayerMiddleware.suspendOperator -->
+<g id="node12" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.suspendOperator">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-1300" rx="76.44" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1295.8" font-family="Times,serif" font-size="14.00" style="">suspendOperator</text>
+</g>
+<!-- IManager.suspendOperator -->
+<g id="node64" class="node" pointer-events="visible" data-name="IManager.suspendOperator">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-453" rx="76.44" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-448.8" font-family="Times,serif" font-size="14.00" style="">suspendOperator</text>
+</g>
+<!-- EigenLayerMiddleware.suspendOperator&#45;&gt;IManager.suspendOperator -->
+<g id="edge40" class="edge" data-name="EigenLayerMiddleware.suspendOperator-&gt;IManager.suspendOperator">
+
+<path fill="none" stroke="white" stroke-width="2" d="M204.92,-1295.77C219.11,-1291.48 232.43,-1284.41 241.84,-1273 297.96,-1204.96 220.66,-547.15 277.84,-480 288.25,-467.78 302.62,-460.21 318.03,-455.68" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="318.7,-459.12 327.6,-453.37 317.06,-452.31 318.7,-459.12" style=""/>
+</g>
+<!-- EigenLayerMiddleware.resumeOperator -->
+<g id="node13" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.resumeOperator">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-1246" rx="73.48" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1241.8" font-family="Times,serif" font-size="14.00" style="">resumeOperator</text>
+</g>
+<!-- IManager.resumeOperator -->
+<g id="node65" class="node" pointer-events="visible" data-name="IManager.resumeOperator">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-399" rx="73.48" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-394.8" font-family="Times,serif" font-size="14.00" style="">resumeOperator</text>
+</g>
+<!-- EigenLayerMiddleware.resumeOperator&#45;&gt;IManager.resumeOperator -->
+<g id="edge41" class="edge" data-name="EigenLayerMiddleware.resumeOperator-&gt;IManager.resumeOperator">
+
+<path fill="none" stroke="white" stroke-width="2" d="M130.57,-1226.77C134.75,-1114.58 161.55,-545.46 277.84,-426 289.47,-414.06 304.91,-406.71 321.07,-402.32" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="321.58,-405.79 330.57,-400.18 320.04,-398.96 321.58,-405.79" style=""/>
+</g>
+<!-- EigenLayerMiddleware.disableStrategy -->
+<g id="node14" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.disableStrategy">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-1732" rx="70.64" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1727.8" font-family="Times,serif" font-size="14.00" style="">disableStrategy</text>
+</g>
+<!-- EigenLayerMiddleware.disableStrategy&#45;&gt;EigenLayerMiddleware.StrategyNotFound -->
+<g id="edge43" class="edge" data-name="EigenLayerMiddleware.disableStrategy-&gt;EigenLayerMiddleware.StrategyNotFound">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M199.73,-1728.58C215.63,-1724.49 231,-1717.3 241.84,-1705 337.63,-1596.3 180.35,-1488.18 277.84,-1381 287.25,-1370.65 299.52,-1363.69 312.75,-1359.1" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="313.58,-1362.51 322.21,-1356.37 311.63,-1355.79 313.58,-1362.51" style=""/>
+</g>
+<!-- EigenLayerMiddleware.disableStrategy&#45;&gt;EnumerableMap.AddressToUintMap.contains -->
+<g id="edge42" class="edge" data-name="EigenLayerMiddleware.disableStrategy-&gt;EnumerableMap.AddressToUintMap.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M200,-1729.13C215.99,-1725.04 231.34,-1717.72 241.84,-1705 297.42,-1637.66 225.05,-989.55 277.84,-920 351.75,-822.63 463.69,-930.21 539.1,-834 589.15,-770.15 512.95,-530.41 567.1,-470 588.87,-445.71 625.01,-439.01 655.57,-438.36" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="655.23,-441.86 665.25,-438.41 655.26,-434.86 655.23,-441.86" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.disable -->
+<g id="node57" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.disable">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-335" rx="38.28" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-330.8" font-family="Times,serif" font-size="14.00" style="">disable</text>
+</g>
+<!-- EigenLayerMiddleware.disableStrategy&#45;&gt;EnumerableMap.AddressToUintMap.disable -->
+<g id="edge44" class="edge" data-name="EigenLayerMiddleware.disableStrategy-&gt;EnumerableMap.AddressToUintMap.disable">
+
+<path fill="none" stroke="white" stroke-width="2" d="M200.04,-1729.16C216.03,-1725.08 231.37,-1717.74 241.84,-1705 303.32,-1630.15 212.97,-905.93 277.84,-834 356.42,-746.86 459.52,-882.22 539.1,-796 604.65,-724.98 503.04,-434.36 567.1,-362 589.83,-336.33 628.58,-330.24 660.1,-330.21" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="659.99,-333.71 670.07,-330.46 660.16,-326.71 659.99,-333.71" style=""/>
+</g>
+<!-- EigenLayerMiddleware.enableStrategy -->
+<g id="node15" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.enableStrategy">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-1840" rx="68.33" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1835.8" font-family="Times,serif" font-size="14.00" style="">enableStrategy</text>
+</g>
+<!-- EigenLayerMiddleware.enableStrategy&#45;&gt;EigenLayerMiddleware.StrategyNotFound -->
+<g id="edge46" class="edge" data-name="EigenLayerMiddleware.enableStrategy-&gt;EigenLayerMiddleware.StrategyNotFound">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M197.93,-1837.29C214.54,-1833.3 230.72,-1825.98 241.84,-1813 304.53,-1739.86 214.01,-1453.15 277.84,-1381 287.17,-1370.45 299.46,-1363.41 312.75,-1358.79" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="313.64,-1362.18 322.28,-1356.05 311.7,-1355.45 313.64,-1362.18" style=""/>
+</g>
+<!-- EigenLayerMiddleware.enableStrategy&#45;&gt;EnumerableMap.AddressToUintMap.contains -->
+<g id="edge45" class="edge" data-name="EigenLayerMiddleware.enableStrategy-&gt;EnumerableMap.AddressToUintMap.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M197.98,-1837.65C214.7,-1833.67 230.91,-1826.27 241.84,-1813 300.3,-1741.99 216.17,-1054.23 277.84,-986 356.52,-898.95 459.77,-1034.46 539.1,-948 611.04,-869.6 496.8,-549.88 567.1,-470 588.65,-445.51 624.79,-438.82 655.41,-438.22" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="655.09,-441.71 665.11,-438.28 655.13,-434.71 655.09,-441.71" style=""/>
+</g>
+<!-- EigenLayerMiddleware.enableStrategy&#45;&gt;EnumerableMap.AddressToUintMap.enable -->
+<g id="edge47" class="edge" data-name="EigenLayerMiddleware.enableStrategy-&gt;EnumerableMap.AddressToUintMap.enable">
+
+<path fill="none" stroke="white" stroke-width="2" d="M197.96,-1837.64C214.68,-1833.66 230.9,-1826.26 241.84,-1813 297.69,-1745.31 218.93,-1089.04 277.84,-1024 356.61,-937.03 459.68,-1072.38 539.1,-986 608.72,-910.28 499.07,-601.14 567.1,-524 590.25,-497.75 630.15,-491.96 662.02,-492.19" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="661.54,-495.68 671.64,-492.5 661.76,-488.68 661.54,-495.68" style=""/>
+</g>
+<!-- EigenLayerMiddleware.checkStrategyStatus -->
+<g id="node16" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.checkStrategyStatus">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-1570" rx="89.19" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1565.8" font-family="Times,serif" font-size="14.00" style="">checkStrategyStatus</text>
+</g>
+<!-- EnumerableMap.AddressToUintMap.getTimes -->
+<g id="node58" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.getTimes">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-227" rx="46.94" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-222.8" font-family="Times,serif" font-size="14.00" style="">getTimes</text>
+</g>
+<!-- EigenLayerMiddleware.checkStrategyStatus&#45;&gt;EnumerableMap.AddressToUintMap.getTimes -->
+<g id="edge48" class="edge" data-name="EigenLayerMiddleware.checkStrategyStatus-&gt;EnumerableMap.AddressToUintMap.getTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M213.15,-1562.92C224.18,-1558.55 234.28,-1552.18 241.84,-1543 299.34,-1473.21 218.44,-798.18 277.84,-730 355.39,-640.98 460.62,-770.19 539.1,-682 602.47,-610.8 503.89,-325.34 567.1,-254 587.91,-230.52 622.12,-223.43 651.93,-222.37" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="651.82,-225.87 661.79,-222.29 651.76,-218.87 651.82,-225.87" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeInfo -->
+<g id="node17" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.getOperatorStakeInfo">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="408.47" cy="-1678" rx="94.89" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1673.8" font-family="Times,serif" font-size="14.00" style="">getOperatorStakeInfo</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeInfo&#45;&gt;EigenLayerMiddleware.calculateEpochStart -->
+<g id="edge51" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeInfo-&gt;EigenLayerMiddleware.calculateEpochStart">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M480.85,-1690.8C525.53,-1698.81 583.21,-1709.15 629.61,-1717.47" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="628.94,-1720.9 639.4,-1719.22 630.17,-1714.01 628.94,-1720.9" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeInfo&#45;&gt;EigenLayerMiddleware.getEpochForTimestamp -->
+<g id="edge52" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeInfo-&gt;EigenLayerMiddleware.getEpochForTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M500.54,-1683.55C514.81,-1687.98 528.37,-1694.77 539.1,-1705 575,-1739.21 530.87,-1779.14 567.1,-1813 575.67,-1821.01 585.84,-1827.01 596.74,-1831.46" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="595.36,-1834.68 605.95,-1834.7 597.68,-1828.08 595.36,-1834.68" style=""/>
+</g>
+<!-- EigenLayerMiddleware._isActiveAtTimestamp -->
+<g id="node21" class="node" pointer-events="visible" data-name="EigenLayerMiddleware._isActiveAtTimestamp">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-1678" rx="101.3" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1673.8" font-family="Times,serif" font-size="14.00" style="">_isActiveAtTimestamp</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeInfo&#45;&gt;EigenLayerMiddleware._isActiveAtTimestamp -->
+<g id="edge56" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeInfo-&gt;EigenLayerMiddleware._isActiveAtTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M504.77,-1678C533.8,-1678 566.01,-1678 596.17,-1678" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="595.92,-1681.5 605.92,-1678 595.92,-1674.5 595.92,-1681.5" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeInfo&#45;&gt;EigenLayerMiddleware.IStrategy -->
+<g id="edge57" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeInfo-&gt;EigenLayerMiddleware.IStrategy">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M497.38,-1685.29C512.32,-1689.5 526.92,-1695.76 539.1,-1705 560.64,-1721.34 545.4,-1742.87 567.1,-1759 591.09,-1776.83 623.41,-1783.96 651.31,-1786.47" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="650.95,-1789.96 661.16,-1787.14 651.42,-1782.97 650.95,-1789.96" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeInfo&#45;&gt;Time.timestamp -->
+<g id="edge53" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeInfo-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M502.87,-1674.22C516.8,-1669.58 529.63,-1662.26 539.1,-1651 600.06,-1578.5 512.15,-876.15 567.1,-799 585.87,-772.66 619.03,-758.93 648.76,-751.78" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="649.24,-755.25 658.28,-749.73 647.77,-748.41 649.24,-755.25" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.length -->
+<g id="node59" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.length">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-605" rx="35.35" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-600.8" font-family="Times,serif" font-size="14.00" style="">length</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeInfo&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge49" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeInfo-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M473.72,-1663.75C497.85,-1659.75 523.25,-1651.96 539.1,-1633 611.76,-1546.11 493.6,-700.18 567.1,-614 593.4,-583.17 642.79,-580.31 676.21,-586.89" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="675.09,-590.22 685.64,-589.23 676.78,-583.42 675.09,-590.22" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeInfo&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge50" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeInfo-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M502.92,-1674.26C516.84,-1669.62 529.66,-1662.29 539.1,-1651 611.76,-1564.11 493.6,-718.18 567.1,-632 590.17,-604.95 631.02,-599.43 663.26,-599.97" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="662.87,-603.46 673,-600.37 663.16,-596.46 662.87,-603.46" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeInfo&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge54" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeInfo-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M446.06,-1695.89C476.01,-1700.21 516.91,-1695.54 539.1,-1669 611.76,-1582.11 493.6,-736.18 567.1,-650 590.89,-622.1 633.6,-617.11 666.27,-614.8" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="666.36,-618.3 676.1,-614.14 665.89,-611.31 666.36,-618.3" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.atWithTimes -->
+<g id="node60" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.atWithTimes">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-659" rx="61.41" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-654.8" font-family="Times,serif" font-size="14.00" style="">atWithTimes</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeInfo&#45;&gt;EnumerableMap.AddressToUintMap.atWithTimes -->
+<g id="edge55" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeInfo-&gt;EnumerableMap.AddressToUintMap.atWithTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M502.9,-1674.25C516.82,-1669.6 529.65,-1662.27 539.1,-1651 606.02,-1571.18 506.8,-798.93 567.1,-714 584.12,-690.03 613.06,-676.51 640.52,-668.88" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="641.19,-672.32 650.05,-666.5 639.5,-665.52 641.19,-672.32" style=""/>
+</g>
+<!-- DelegationManagerStorage.operatorShares -->
+<g id="node67" class="node" pointer-events="visible" data-name="DelegationManagerStorage.operatorShares">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-937" rx="68.91" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-932.8" font-family="Times,serif" font-size="14.00" style="">operatorShares</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeInfo&#45;&gt;DelegationManagerStorage.operatorShares -->
+<g id="edge59" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeInfo-&gt;DelegationManagerStorage.operatorShares">
+
+<path fill="none" stroke="white" stroke-width="2" d="M502.78,-1674.14C516.72,-1669.51 529.58,-1662.22 539.1,-1651 586.54,-1595.13 524.3,-1051.49 567.1,-992 583.25,-969.56 609.84,-956.27 635.77,-948.41" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="636.35,-951.88 645.08,-945.86 634.51,-945.12 636.35,-951.88" style=""/>
+</g>
+<!-- IStrategy.underlyingToken -->
+<g id="node69" class="node" pointer-events="visible" data-name="IStrategy.underlyingToken">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-1022" rx="77.59" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1017.8" font-family="Times,serif" font-size="14.00" style="">underlyingToken</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeInfo&#45;&gt;IStrategy.underlyingToken -->
+<g id="edge58" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeInfo-&gt;IStrategy.underlyingToken">
+
+<path fill="none" stroke="white" stroke-width="2" d="M502.74,-1674.11C516.68,-1669.48 529.56,-1662.2 539.1,-1651 582.54,-1600.04 523.17,-1099.53 567.1,-1049 580.81,-1033.23 600.57,-1024.82 621.06,-1020.65" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="621.56,-1024.12 630.88,-1019.07 620.45,-1017.21 621.56,-1024.12" style=""/>
+</g>
+<!-- IStrategy.sharesToUnderlyingView -->
+<g id="node70" class="node" pointer-events="visible" data-name="IStrategy.sharesToUnderlyingView">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-1076" rx="110.6" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1071.8" font-family="Times,serif" font-size="14.00" style="">sharesToUnderlyingView</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeInfo&#45;&gt;IStrategy.sharesToUnderlyingView -->
+<g id="edge60" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeInfo-&gt;IStrategy.sharesToUnderlyingView">
+
+<path fill="none" stroke="white" stroke-width="2" d="M502.67,-1674.05C516.62,-1669.43 529.52,-1662.16 539.1,-1651 614.5,-1563.21 498.98,-1224.55 567.1,-1131 579.65,-1113.77 598.34,-1101.93 618.12,-1093.81" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="619.2,-1097.14 627.36,-1090.38 616.77,-1090.58 619.2,-1097.14" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalance -->
+<g id="node18" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.getOperatorTokenBalance">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-2002" rx="112.84" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1997.8" font-family="Times,serif" font-size="14.00" style="">getOperatorTokenBalance</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalanceAt -->
+<g id="node19" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.getOperatorTokenBalanceAt">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="408.47" cy="-1840" rx="122.65" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1835.8" font-family="Times,serif" font-size="14.00" style="">getOperatorTokenBalanceAt</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalance&#45;&gt;EigenLayerMiddleware.getOperatorTokenBalanceAt -->
+<g id="edge61" class="edge" data-name="EigenLayerMiddleware.getOperatorTokenBalance-&gt;EigenLayerMiddleware.getOperatorTokenBalanceAt">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M218.35,-1989.98C226.94,-1986.18 234.99,-1981.29 241.84,-1975 279.11,-1940.78 240.04,-1900.64 277.84,-1867 282.48,-1862.87 287.58,-1859.31 293,-1856.25" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="294.34,-1859.49 301.8,-1851.97 291.27,-1853.2 294.34,-1859.49" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalance&#45;&gt;Time.timestamp -->
+<g id="edge62" class="edge" data-name="EigenLayerMiddleware.getOperatorTokenBalance-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M222.1,-1990.82C229.6,-1986.81 236.38,-1981.64 241.84,-1975 302.91,-1900.68 214.75,-1182.61 277.84,-1110 355.27,-1020.88 458.84,-1148.58 539.1,-1062 579.06,-1018.9 531.28,-845.59 567.1,-799 586.75,-773.45 619.8,-759.77 649.24,-752.44" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="649.64,-755.94 658.63,-750.34 648.1,-749.11 649.64,-755.94" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalanceAt&#45;&gt;EigenLayerMiddleware.calculateEpochStart -->
+<g id="edge65" class="edge" data-name="EigenLayerMiddleware.getOperatorTokenBalanceAt-&gt;EigenLayerMiddleware.calculateEpochStart">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M509.4,-1828.82C520.05,-1824.89 530.22,-1819.74 539.1,-1813 560.64,-1796.66 545.4,-1775.13 567.1,-1759 580.16,-1749.3 595.68,-1742.76 611.62,-1738.41" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="612,-1741.92 620.91,-1736.2 610.38,-1735.11 612,-1741.92" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalanceAt&#45;&gt;EigenLayerMiddleware.getEpochForTimestamp -->
+<g id="edge66" class="edge" data-name="EigenLayerMiddleware.getOperatorTokenBalanceAt-&gt;EigenLayerMiddleware.getEpochForTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M532.41,-1840C552.42,-1840 573.11,-1840 593,-1840" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="592.9,-1843.5 602.9,-1840 592.9,-1836.5 592.9,-1843.5" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalanceAt&#45;&gt;EigenLayerMiddleware._isActiveAtTimestamp -->
+<g id="edge70" class="edge" data-name="EigenLayerMiddleware.getOperatorTokenBalanceAt-&gt;EigenLayerMiddleware._isActiveAtTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M513.55,-1829.61C522.95,-1825.48 531.7,-1820.06 539.1,-1813 575,-1778.79 530.87,-1738.86 567.1,-1705 576.18,-1696.52 587.04,-1690.29 598.66,-1685.77" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="599.76,-1689.1 608.14,-1682.61 597.55,-1682.46 599.76,-1689.1" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalanceAt&#45;&gt;EigenLayerMiddleware.IStrategy -->
+<g id="edge69" class="edge" data-name="EigenLayerMiddleware.getOperatorTokenBalanceAt-&gt;EigenLayerMiddleware.IStrategy">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M454.56,-1821.95C506.97,-1808.21 593.63,-1792.33 651.43,-1785.63" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="651.44,-1789.15 661.01,-1784.6 650.69,-1782.19 651.44,-1789.15" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalanceAt&#45;&gt;EigenLayerMiddleware.IStrategy -->
+<g id="edge72" class="edge" data-name="EigenLayerMiddleware.getOperatorTokenBalanceAt-&gt;EigenLayerMiddleware.IStrategy">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M490.58,-1825.46C542.7,-1816.11 609.05,-1804.22 655.21,-1795.94" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="655.75,-1799.4 664.98,-1794.19 654.52,-1792.51 655.75,-1799.4" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalanceAt&#45;&gt;EigenLayerMiddleware.IStrategy -->
+<g id="edge73" class="edge" data-name="EigenLayerMiddleware.getOperatorTokenBalanceAt-&gt;EigenLayerMiddleware.IStrategy">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M523.34,-1832.72C573.4,-1824.75 629.24,-1813.65 666.82,-1803.72" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="667.69,-1807.11 676.39,-1801.07 665.82,-1800.36 667.69,-1807.11" style=""/>
+</g>
+<!-- EigenLayerMiddleware.QueryError -->
+<g id="node47" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.QueryError">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-1948" rx="55.59" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1943.8" font-family="Times,serif" font-size="14.00" style="">QueryError</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalanceAt&#45;&gt;EigenLayerMiddleware.QueryError -->
+<g id="edge64" class="edge" data-name="EigenLayerMiddleware.getOperatorTokenBalanceAt-&gt;EigenLayerMiddleware.QueryError">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M509.4,-1851.18C520.05,-1855.11 530.22,-1860.26 539.1,-1867 560.64,-1883.34 545.4,-1904.87 567.1,-1921 588.52,-1936.92 616.58,-1944.31 642.21,-1947.5" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="641.63,-1950.96 651.93,-1948.47 642.33,-1943.99 641.63,-1950.96" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalanceAt&#45;&gt;Time.timestamp -->
+<g id="edge63" class="edge" data-name="EigenLayerMiddleware.getOperatorTokenBalanceAt-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M516.49,-1830.62C525.07,-1826.24 532.83,-1820.49 539.1,-1813 611.41,-1726.54 501.96,-890.98 567.1,-799 585.8,-772.61 618.96,-758.88 648.71,-751.73" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="649.19,-755.21 658.23,-749.69 647.72,-748.37 649.19,-755.21" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalanceAt&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge67" class="edge" data-name="EigenLayerMiddleware.getOperatorTokenBalanceAt-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M516.82,-1830.49C525.28,-1826.13 532.92,-1820.42 539.1,-1813 581.11,-1762.58 524.61,-682.01 567.1,-632 590.12,-604.91 630.98,-599.39 663.23,-599.94" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="662.84,-603.43 672.98,-600.35 663.13,-596.44 662.84,-603.43" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalanceAt&#45;&gt;EnumerableMap.AddressToUintMap.atWithTimes -->
+<g id="edge68" class="edge" data-name="EigenLayerMiddleware.getOperatorTokenBalanceAt-&gt;EnumerableMap.AddressToUintMap.atWithTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M516.81,-1830.48C525.27,-1826.12 532.92,-1820.41 539.1,-1813 617.37,-1719.22 496.61,-813.76 567.1,-714 584.07,-690 613,-676.47 640.47,-668.84" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="641.14,-672.28 650,-666.47 639.45,-665.49 641.14,-672.28" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorTokenBalanceAt&#45;&gt;DelegationManagerStorage.operatorShares -->
+<g id="edge71" class="edge" data-name="EigenLayerMiddleware.getOperatorTokenBalanceAt-&gt;DelegationManagerStorage.operatorShares">
+
+<path fill="none" stroke="white" stroke-width="2" d="M516.44,-1830.58C525.03,-1826.21 532.81,-1820.47 539.1,-1813 597.89,-1743.18 514.1,-1066.31 567.1,-992 583.16,-969.49 609.72,-956.19 635.67,-948.34" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="636.26,-951.8 644.98,-945.79 634.41,-945.05 636.26,-951.8" style=""/>
+</g>
+<!-- EigenLayerMiddleware.updateMetadataURI -->
+<g id="node20" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.updateMetadataURI">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-1516" rx="89.17" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1511.8" font-family="Times,serif" font-size="14.00" style="">updateMetadataURI</text>
+</g>
+<!-- IAVSDirectory.updateAVSMetadataURI -->
+<g id="node71" class="node" pointer-events="visible" data-name="IAVSDirectory.updateAVSMetadataURI">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-34" rx="108.81" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-29.8" font-family="Times,serif" font-size="14.00" style="">updateAVSMetadataURI</text>
+</g>
+<!-- EigenLayerMiddleware.updateMetadataURI&#45;&gt;IAVSDirectory.updateAVSMetadataURI -->
+<g id="edge74" class="edge" data-name="EigenLayerMiddleware.updateMetadataURI-&gt;IAVSDirectory.updateAVSMetadataURI">
+
+<path fill="none" stroke="white" stroke-width="2" d="M213.14,-1508.92C224.18,-1504.55 234.28,-1498.18 241.84,-1489 298.93,-1419.74 217,-747.99 277.84,-682 357.18,-595.96 459.64,-734.93 539.1,-649 583.51,-600.98 524.16,-110.34 567.1,-61 574.03,-53.04 582.49,-46.96 591.81,-42.35" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="592.89,-45.69 600.76,-38.6 590.19,-39.24 592.89,-45.69" style=""/>
+</g>
+<!-- IAVSDirectory.registerOperatorToAVS -->
+<g id="node72" class="node" pointer-events="visible" data-name="IAVSDirectory.registerOperatorToAVS">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-142" rx="104.21" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-137.8" font-family="Times,serif" font-size="14.00" style="">registerOperatorToAVS</text>
+</g>
+<!-- EigenLayerMiddleware.registerOperatorToAVS&#45;&gt;IAVSDirectory.registerOperatorToAVS -->
+<g id="edge75" class="edge" data-name="EigenLayerMiddleware.registerOperatorToAVS-&gt;IAVSDirectory.registerOperatorToAVS">
+
+<path fill="none" stroke="white" stroke-width="2" d="M509.09,-1510.06C520.62,-1505.39 531.09,-1498.63 539.1,-1489 585,-1433.79 525.78,-255.71 567.1,-197 579.69,-179.12 598.92,-167.05 619.25,-158.91" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="620.25,-162.27 628.46,-155.58 617.87,-155.68 620.25,-162.27" style=""/>
+</g>
+<!-- EigenLayerMiddleware.Unauthorized -->
+<g id="node48" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.Unauthorized">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-1246" rx="63.69" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1241.8" font-family="Times,serif" font-size="14.00" style="">Unauthorized</text>
+</g>
+<!-- EigenLayerMiddleware.deregisterOperatorFromAVS&#45;&gt;EigenLayerMiddleware.Unauthorized -->
+<g id="edge76" class="edge" data-name="EigenLayerMiddleware.deregisterOperatorFromAVS-&gt;EigenLayerMiddleware.Unauthorized">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M533.71,-1246C567.74,-1246 603.62,-1246 634.11,-1246" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="633.8,-1249.5 643.8,-1246 633.8,-1242.5 633.8,-1249.5" style=""/>
+</g>
+<!-- IAVSDirectory.deregisterOperatorFromAVS -->
+<g id="node73" class="node" pointer-events="visible" data-name="IAVSDirectory.deregisterOperatorFromAVS">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-88" rx="123.84" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-83.8" font-family="Times,serif" font-size="14.00" style="">deregisterOperatorFromAVS</text>
+</g>
+<!-- EigenLayerMiddleware.deregisterOperatorFromAVS&#45;&gt;IAVSDirectory.deregisterOperatorFromAVS -->
+<g id="edge77" class="edge" data-name="EigenLayerMiddleware.deregisterOperatorFromAVS-&gt;IAVSDirectory.deregisterOperatorFromAVS">
+
+<path fill="none" stroke="white" stroke-width="2" d="M415.21,-1226.75C436.18,-1155.4 509.05,-898.95 539.1,-682 547.76,-619.52 525.65,-162.54 567.1,-115 571.89,-109.5 577.42,-104.9 583.45,-101.06" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="585.01,-104.2 592.15,-96.38 581.69,-98.04 585.01,-104.2" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorRestakedStrategies -->
+<g id="node24" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.getOperatorRestakedStrategies">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="408.47" cy="-1732" rx="130.76" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1727.8" font-family="Times,serif" font-size="14.00" style="">getOperatorRestakedStrategies</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorRestakedStrategies&#45;&gt;EigenLayerMiddleware.calculateEpochStart -->
+<g id="edge79" class="edge" data-name="EigenLayerMiddleware.getOperatorRestakedStrategies-&gt;EigenLayerMiddleware.calculateEpochStart">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M540.7,-1732C563.76,-1732 587.43,-1732 609.51,-1732" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="609.28,-1735.5 619.28,-1732 609.28,-1728.5 609.28,-1735.5" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorRestakedStrategies&#45;&gt;EigenLayerMiddleware.getEpochForTimestamp -->
+<g id="edge80" class="edge" data-name="EigenLayerMiddleware.getOperatorRestakedStrategies-&gt;EigenLayerMiddleware.getEpochForTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M511.7,-1744.05C521.51,-1747.86 530.86,-1752.75 539.1,-1759 560.64,-1775.34 545.4,-1796.87 567.1,-1813 576.85,-1820.24 587.96,-1825.72 599.6,-1829.84" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="598.41,-1833.13 609,-1832.76 600.49,-1826.45 598.41,-1833.13" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorRestakedStrategies&#45;&gt;EigenLayerMiddleware._isActiveAtTimestamp -->
+<g id="edge84" class="edge" data-name="EigenLayerMiddleware.getOperatorRestakedStrategies-&gt;EigenLayerMiddleware._isActiveAtTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M492.97,-1717.03C533.66,-1709.73 582.58,-1700.96 623.72,-1693.59" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="624.3,-1697.04 633.52,-1691.83 623.06,-1690.15 624.3,-1697.04" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorRestakedStrategies&#45;&gt;EigenLayerMiddleware.IStrategy -->
+<g id="edge86" class="edge" data-name="EigenLayerMiddleware.getOperatorRestakedStrategies-&gt;EigenLayerMiddleware.IStrategy">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M492.97,-1746.97C544.73,-1756.25 609.79,-1767.92 655.25,-1776.07" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="654.37,-1779.46 664.83,-1777.78 655.61,-1772.57 654.37,-1779.46" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorRestakedStrategies&#45;&gt;Time.timestamp -->
+<g id="edge81" class="edge" data-name="EigenLayerMiddleware.getOperatorRestakedStrategies-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M518.87,-1721.33C526.5,-1717.13 533.41,-1711.78 539.1,-1705 603.84,-1627.85 508.75,-881.09 567.1,-799 585.84,-772.64 619.01,-758.91 648.74,-751.76" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="649.22,-755.24 658.26,-749.72 647.75,-748.39 649.22,-755.24" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorRestakedStrategies&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge78" class="edge" data-name="EigenLayerMiddleware.getOperatorRestakedStrategies-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M504.88,-1718.73C518.05,-1713.93 530.11,-1706.76 539.1,-1696 615.55,-1604.46 489.77,-713.79 567.1,-623 591.31,-594.58 635.15,-589.92 668.03,-592.8" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="667.57,-596.27 677.92,-594.01 668.42,-589.32 667.57,-596.27" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorRestakedStrategies&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge82" class="edge" data-name="EigenLayerMiddleware.getOperatorRestakedStrategies-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M528.54,-1724.08C532.38,-1721.14 535.93,-1717.79 539.1,-1714 615.55,-1622.46 489.77,-731.79 567.1,-641 589.94,-614.19 630.24,-608.52 662.34,-607.51" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="662.1,-611.01 672.05,-607.36 661.99,-604.02 662.1,-611.01" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorRestakedStrategies&#45;&gt;EnumerableMap.AddressToUintMap.atWithTimes -->
+<g id="edge83" class="edge" data-name="EigenLayerMiddleware.getOperatorRestakedStrategies-&gt;EnumerableMap.AddressToUintMap.atWithTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M518.89,-1721.35C526.52,-1717.14 533.42,-1711.79 539.1,-1705 609.8,-1620.53 503.4,-803.87 567.1,-714 584.1,-690.02 613.04,-676.49 640.5,-668.86" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="641.17,-672.3 650.03,-666.49 639.48,-665.51 641.17,-672.3" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorRestakedStrategies&#45;&gt;DelegationManagerStorage.operatorShares -->
+<g id="edge85" class="edge" data-name="EigenLayerMiddleware.getOperatorRestakedStrategies-&gt;DelegationManagerStorage.operatorShares">
+
+<path fill="none" stroke="white" stroke-width="2" d="M518.81,-1721.28C526.45,-1717.09 533.38,-1711.76 539.1,-1705 590.32,-1644.48 520.9,-1056.43 567.1,-992 583.21,-969.53 609.79,-956.24 635.73,-948.38" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="636.32,-951.85 645.04,-945.84 634.47,-945.1 636.32,-951.85" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getRestakeableStrategies -->
+<g id="node25" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.getRestakeableStrategies">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="128.92" cy="-1624" rx="107.64" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1619.8" font-family="Times,serif" font-size="14.00" style="">getRestakeableStrategies</text>
+</g>
+<!-- EigenLayerMiddleware.getRestakeableStrategies&#45;&gt;EnumerableMap.AddressToUintMap.keys -->
+<g id="edge87" class="edge" data-name="EigenLayerMiddleware.getRestakeableStrategies-&gt;EnumerableMap.AddressToUintMap.keys">
+
+<path fill="none" stroke="white" stroke-width="2" d="M220.77,-1613.5C228.8,-1609.4 236.06,-1604.02 241.84,-1597 300.44,-1525.82 217.31,-837.54 277.84,-768 355.35,-678.95 460.51,-808.09 539.1,-720 600.19,-651.52 506.15,-376.6 567.1,-308 592.12,-279.84 636.43,-275.27 669.23,-276.39" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="668.84,-279.88 679.03,-276.96 669.24,-272.89 668.84,-279.88" style=""/>
+</g>
+<!-- EigenLayerMiddleware.avsDirectory -->
+<g id="node26" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.avsDirectory">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="128.92" cy="-1354" rx="60.82" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1349.8" font-family="Times,serif" font-size="14.00" style="">avsDirectory</text>
+</g>
+<!-- EigenLayerMiddleware.getEpochStartTs -->
+<g id="node27" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.getEpochStartTs">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="711.65" cy="-1570" rx="75.3" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1565.8" font-family="Times,serif" font-size="14.00" style="">getEpochStartTs</text>
+</g>
+<!-- EigenLayerMiddleware.getEpochStartTs&#45;&gt;ISystemParameters.getEpochDuration -->
+<g id="edge88" class="edge" data-name="EigenLayerMiddleware.getEpochStartTs-&gt;ISystemParameters.getEpochDuration">
+
+<path fill="none" stroke="white" stroke-width="2" d="M783.56,-1576.82C807.34,-1580.8 833.56,-1587.08 856.21,-1597 886.11,-1610.1 915.53,-1632.75 936.23,-1650.78" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="933.89,-1653.38 943.68,-1657.43 938.55,-1648.16 933.89,-1653.38" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getEpochAtTs -->
+<g id="node28" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.getEpochAtTs">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="711.65" cy="-1624" rx="66.64" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1619.8" font-family="Times,serif" font-size="14.00" style="">getEpochAtTs</text>
+</g>
+<!-- EigenLayerMiddleware.getEpochAtTs&#45;&gt;ISystemParameters.getEpochDuration -->
+<g id="edge89" class="edge" data-name="EigenLayerMiddleware.getEpochAtTs-&gt;ISystemParameters.getEpochDuration">
+
+<path fill="none" stroke="white" stroke-width="2" d="M770.09,-1634.02C796.4,-1638.82 827.96,-1644.85 856.21,-1651 869.61,-1653.92 883.87,-1657.28 897.51,-1660.61" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="896.33,-1663.92 906.88,-1662.92 898.01,-1657.13 896.33,-1663.92" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorCollaterals -->
+<g id="node29" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.getOperatorCollaterals">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="408.47" cy="-1624" rx="98.97" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1619.8" font-family="Times,serif" font-size="14.00" style="">getOperatorCollaterals</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorCollaterals&#45;&gt;EigenLayerMiddleware.getEpochStartTs -->
+<g id="edge92" class="edge" data-name="EigenLayerMiddleware.getOperatorCollaterals-&gt;EigenLayerMiddleware.getEpochStartTs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M482.38,-1610.93C528.95,-1602.58 589.16,-1591.78 636.05,-1583.38" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="636.39,-1586.87 645.61,-1581.66 635.15,-1579.98 636.39,-1586.87" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorCollaterals&#45;&gt;EigenLayerMiddleware.getEpochAtTs -->
+<g id="edge93" class="edge" data-name="EigenLayerMiddleware.getOperatorCollaterals-&gt;EigenLayerMiddleware.getEpochAtTs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M508.92,-1624C548.47,-1624 593.35,-1624 630.73,-1624" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="630.58,-1627.5 640.58,-1624 630.58,-1620.5 630.58,-1627.5" style=""/>
+</g>
+<!-- EigenLayerMiddleware._wasEnabledAt -->
+<g id="node33" class="node" pointer-events="visible" data-name="EigenLayerMiddleware._wasEnabledAt">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-1516" rx="72.36" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1511.8" font-family="Times,serif" font-size="14.00" style="">_wasEnabledAt</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorCollaterals&#45;&gt;EigenLayerMiddleware._wasEnabledAt -->
+<g id="edge98" class="edge" data-name="EigenLayerMiddleware.getOperatorCollaterals-&gt;EigenLayerMiddleware._wasEnabledAt">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M499.74,-1616.02C513.85,-1611.83 527.56,-1605.75 539.1,-1597 560.64,-1580.66 545.4,-1559.13 567.1,-1543 583.87,-1530.53 604.72,-1523.3 625.28,-1519.21" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="625.75,-1522.68 635.02,-1517.56 624.58,-1515.78 625.75,-1522.68" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorCollaterals&#45;&gt;EigenLayerMiddleware.IStrategy -->
+<g id="edge99" class="edge" data-name="EigenLayerMiddleware.getOperatorCollaterals-&gt;EigenLayerMiddleware.IStrategy">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M503.19,-1630.4C516.48,-1634.84 529.03,-1641.41 539.1,-1651 575,-1685.21 530.87,-1725.14 567.1,-1759 589.52,-1779.95 622.8,-1787.12 651.68,-1788.87" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="651.44,-1792.36 661.56,-1789.22 651.69,-1785.37 651.44,-1792.36" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorCollaterals&#45;&gt;Time.timestamp -->
+<g id="edge94" class="edge" data-name="EigenLayerMiddleware.getOperatorCollaterals-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M505.77,-1619.18C518.57,-1614.52 530.29,-1607.46 539.1,-1597 596.28,-1529.16 515.55,-871.21 567.1,-799 585.89,-772.68 619.06,-758.95 648.79,-751.79" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="649.26,-755.27 658.3,-749.75 647.79,-748.43 649.26,-755.27" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorCollaterals&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge90" class="edge" data-name="EigenLayerMiddleware.getOperatorCollaterals-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M446.35,-1605.97C476.26,-1601.16 516.96,-1596.44 539.1,-1570 607.98,-1487.77 497.43,-686.56 567.1,-605 595.6,-571.64 651.16,-571.04 684.17,-582.49" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="682.67,-585.66 693.24,-586.44 685.46,-579.24 682.67,-585.66" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorCollaterals&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge91" class="edge" data-name="EigenLayerMiddleware.getOperatorCollaterals-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M494.3,-1614.01C511.48,-1609.42 527.74,-1601.57 539.1,-1588 607.98,-1505.77 497.43,-704.56 567.1,-623 591.35,-594.61 635.18,-589.95 668.06,-592.82" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="667.58,-596.29 677.94,-594.02 668.43,-589.34 667.58,-596.29" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorCollaterals&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge95" class="edge" data-name="EigenLayerMiddleware.getOperatorCollaterals-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M507.11,-1627.65C519.4,-1623.08 530.61,-1616.13 539.1,-1606 607.98,-1523.77 497.43,-722.56 567.1,-641 589.98,-614.22 630.27,-608.55 662.36,-607.53" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="662.12,-611.04 672.06,-607.38 662.01,-604.04 662.12,-611.04" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorCollaterals&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge96" class="edge" data-name="EigenLayerMiddleware.getOperatorCollaterals-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M427.09,-1643.04C455.66,-1656.18 511.65,-1656.78 539.1,-1624 607.98,-1541.77 497.43,-740.56 567.1,-659 592.87,-628.83 640.76,-625.45 674.1,-621.23" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="674.57,-624.69 683.97,-619.79 673.57,-617.77 674.57,-624.69" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorCollaterals&#45;&gt;EnumerableMap.AddressToUintMap.atWithTimes -->
+<g id="edge97" class="edge" data-name="EigenLayerMiddleware.getOperatorCollaterals-&gt;EnumerableMap.AddressToUintMap.atWithTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M505.8,-1619.21C518.59,-1614.54 530.31,-1607.47 539.1,-1597 602.23,-1521.83 510.2,-793.99 567.1,-714 584.14,-690.05 613.09,-676.53 640.54,-668.89" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="641.21,-672.33 650.07,-666.52 639.52,-665.54 641.21,-672.33" style=""/>
+</g>
+<!-- DelegationManagerStorage.getOperatorShares -->
+<g id="node68" class="node" pointer-events="visible" data-name="DelegationManagerStorage.getOperatorShares">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-883" rx="82.8" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-878.8" font-family="Times,serif" font-size="14.00" style="">getOperatorShares</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorCollaterals&#45;&gt;DelegationManagerStorage.getOperatorShares -->
+<g id="edge101" class="edge" data-name="EigenLayerMiddleware.getOperatorCollaterals-&gt;DelegationManagerStorage.getOperatorShares">
+
+<path fill="none" stroke="white" stroke-width="2" d="M505.72,-1619.14C518.52,-1614.48 530.26,-1607.43 539.1,-1597 588.5,-1538.72 517.14,-967.8 567.1,-910 579.56,-895.59 597.06,-887.31 615.58,-882.81" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="616.08,-886.28 625.21,-880.9 614.72,-879.41 616.08,-886.28" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorCollaterals&#45;&gt;IStrategy.underlyingToken -->
+<g id="edge100" class="edge" data-name="EigenLayerMiddleware.getOperatorCollaterals-&gt;IStrategy.underlyingToken">
+
+<path fill="none" stroke="white" stroke-width="2" d="M505.62,-1619.06C518.44,-1614.41 530.2,-1607.39 539.1,-1597 618.42,-1504.39 486.89,-1140.84 567.1,-1049 580.85,-1033.26 600.62,-1024.86 621.11,-1020.7" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="621.61,-1024.16 630.92,-1019.11 620.49,-1017.25 621.61,-1024.16" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeAt -->
+<g id="node30" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.getOperatorStakeAt">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="408.47" cy="-1786" rx="88.03" ry="18" style=""/>
+<text text-anchor="middle" x="408.47" y="-1781.8" font-family="Times,serif" font-size="14.00" style="">getOperatorStakeAt</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeAt&#45;&gt;EigenLayerMiddleware.getEpochStartTs -->
+<g id="edge104" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeAt-&gt;EigenLayerMiddleware.getEpochStartTs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M496.28,-1782.65C512.31,-1778.25 527.6,-1770.9 539.1,-1759 589.88,-1706.46 515.82,-1649.05 567.1,-1597 581.84,-1582.04 602.07,-1573.93 622.69,-1569.81" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="623.23,-1573.27 632.54,-1568.22 622.11,-1566.36 623.23,-1573.27" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeAt&#45;&gt;EigenLayerMiddleware.getEpochAtTs -->
+<g id="edge105" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeAt-&gt;EigenLayerMiddleware.getEpochAtTs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M495.87,-1781.81C511.84,-1777.45 527.2,-1770.34 539.1,-1759 575,-1724.79 530.87,-1684.86 567.1,-1651 584.38,-1634.86 608.11,-1626.89 631.31,-1623.29" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="631.59,-1626.78 641.09,-1622.08 630.73,-1619.83 631.59,-1626.78" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeAt&#45;&gt;EigenLayerMiddleware._wasEnabledAt -->
+<g id="edge109" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeAt-&gt;EigenLayerMiddleware._wasEnabledAt">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M496.68,-1783.02C512.68,-1778.59 527.85,-1771.14 539.1,-1759 604.89,-1687.98 500.63,-1613.37 567.1,-1543 582.39,-1526.82 604.07,-1518.56 625.96,-1514.69" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="626.41,-1518.16 635.83,-1513.31 625.44,-1511.23 626.41,-1518.16" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeAt&#45;&gt;EigenLayerMiddleware.IStrategy -->
+<g id="edge108" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeAt-&gt;EigenLayerMiddleware.IStrategy">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M480.09,-1774.36C534.24,-1771.57 607.82,-1771.92 657.16,-1775.39" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="656.82,-1778.88 667.07,-1776.19 657.38,-1771.9 656.82,-1778.88" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeAt&#45;&gt;EigenLayerMiddleware.IStrategy -->
+<g id="edge110" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeAt-&gt;EigenLayerMiddleware.IStrategy">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M497.8,-1786C547.04,-1786 607.05,-1786 650.79,-1786" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="650.78,-1789.5 660.78,-1786 650.78,-1782.5 650.78,-1789.5" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeAt&#45;&gt;EigenLayerMiddleware.IStrategy -->
+<g id="edge112" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeAt-&gt;EigenLayerMiddleware.IStrategy">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M480.09,-1797.64C534.24,-1800.43 607.82,-1800.08 657.16,-1796.61" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="657.38,-1800.1 667.07,-1795.81 656.82,-1793.12 657.38,-1800.1" style=""/>
+</g>
+<!-- EigenLayerMiddleware.InvalidQuery -->
+<g id="node49" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.InvalidQuery">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="711.65" cy="-1894" rx="62.55" ry="18" style=""/>
+<text text-anchor="middle" x="711.65" y="-1889.8" font-family="Times,serif" font-size="14.00" style="">InvalidQuery</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeAt&#45;&gt;EigenLayerMiddleware.InvalidQuery -->
+<g id="edge103" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeAt-&gt;EigenLayerMiddleware.InvalidQuery">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M493.33,-1792.21C509.67,-1796.4 525.82,-1802.93 539.1,-1813 560.64,-1829.34 545.4,-1850.87 567.1,-1867 586.51,-1881.42 611.37,-1888.85 634.93,-1892.49" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="634.48,-1895.96 644.85,-1893.76 635.37,-1889.01 634.48,-1895.96" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeAt&#45;&gt;Time.timestamp -->
+<g id="edge102" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeAt-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M497.3,-1783.96C513.36,-1779.48 528.4,-1771.78 539.1,-1759 607.63,-1677.2 505.36,-886.03 567.1,-799 585.82,-772.62 618.98,-758.89 648.72,-751.75" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="649.2,-755.22 658.25,-749.7 647.74,-748.38 649.2,-755.22" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeAt&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge106" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeAt-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M497.35,-1784C513.4,-1779.51 528.43,-1771.8 539.1,-1759 619.33,-1662.8 485.94,-727.41 567.1,-632 590.14,-604.92 630.99,-599.4 663.24,-599.95" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="662.85,-603.44 672.99,-600.36 663.14,-596.44 662.85,-603.44" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeAt&#45;&gt;EnumerableMap.AddressToUintMap.atWithTimes -->
+<g id="edge107" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeAt-&gt;EnumerableMap.AddressToUintMap.atWithTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M497.33,-1783.98C513.38,-1779.5 528.41,-1771.79 539.1,-1759 613.58,-1669.87 500.01,-808.81 567.1,-714 584.08,-690.01 613.02,-676.48 640.48,-668.85" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="641.16,-672.29 650.01,-666.48 639.47,-665.5 641.16,-672.29" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStakeAt&#45;&gt;DelegationManagerStorage.getOperatorShares -->
+<g id="edge111" class="edge" data-name="EigenLayerMiddleware.getOperatorStakeAt-&gt;DelegationManagerStorage.getOperatorShares">
+
+<path fill="none" stroke="white" stroke-width="2" d="M497.27,-1783.93C513.33,-1779.45 528.38,-1771.76 539.1,-1759 599.85,-1686.76 505.66,-981.64 567.1,-910 579.57,-895.46 597.17,-887.15 615.8,-882.66" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="616.36,-886.12 625.5,-880.76 615.01,-879.25 616.36,-886.12" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStake -->
+<g id="node31" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.getOperatorStake">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-1948" rx="78.71" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1943.8" font-family="Times,serif" font-size="14.00" style="">getOperatorStake</text>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStake&#45;&gt;EigenLayerMiddleware.getOperatorStakeAt -->
+<g id="edge114" class="edge" data-name="EigenLayerMiddleware.getOperatorStake-&gt;EigenLayerMiddleware.getOperatorStakeAt">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M203.83,-1941.29C217.75,-1937.13 231.24,-1930.73 241.84,-1921 279.11,-1886.78 240.04,-1846.64 277.84,-1813 287.02,-1804.83 298.01,-1798.9 309.66,-1794.62" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="310.62,-1797.99 319.11,-1791.65 308.52,-1791.31 310.62,-1797.99" style=""/>
+</g>
+<!-- EigenLayerMiddleware.getOperatorStake&#45;&gt;Time.timestamp -->
+<g id="edge113" class="edge" data-name="EigenLayerMiddleware.getOperatorStake-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M206.67,-1943.25C220.2,-1938.92 232.83,-1931.96 241.84,-1921 301.81,-1848.07 215.89,-1143.25 277.84,-1072 355.31,-982.91 458.07,-1109.86 539.1,-1024 608.27,-950.71 504.97,-878.34 567.1,-799 586.97,-773.63 620.03,-759.95 649.42,-752.59" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="649.81,-756.09 658.79,-750.47 648.27,-749.26 649.81,-756.09" style=""/>
+</g>
+<!-- EigenLayerMiddleware.updateAVSMetadataURI -->
+<g id="node32" class="node" pointer-events="visible" data-name="EigenLayerMiddleware.updateAVSMetadataURI">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="128.92" cy="-1462" rx="108.81" ry="18" style=""/>
+<text text-anchor="middle" x="128.92" y="-1457.8" font-family="Times,serif" font-size="14.00" style="">updateAVSMetadataURI</text>
+</g>
+<!-- EigenLayerMiddleware.updateAVSMetadataURI&#45;&gt;IAVSDirectory.updateAVSMetadataURI -->
+<g id="edge115" class="edge" data-name="EigenLayerMiddleware.updateAVSMetadataURI-&gt;IAVSDirectory.updateAVSMetadataURI">
+
+<path fill="none" stroke="white" stroke-width="2" d="M221.01,-1451.35C228.94,-1447.27 236.11,-1441.94 241.84,-1435 297.14,-1368.01 219.51,-718.37 277.84,-654 356.63,-567.05 460.12,-702.78 539.1,-616 580.66,-570.34 526.5,-107.52 567.1,-61 573.9,-53.21 582.18,-47.21 591.29,-42.64" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="592.6,-45.89 600.44,-38.77 589.87,-39.44 592.6,-45.89" style=""/>
+</g>
+<!-- key -->
+<g id="node74" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="none" stroke-width="3" points="193.92,-2373 63.92,-2373 63.92,-2285 193.92,-2285 193.92,-2373" style=""/>
+<text text-anchor="start" x="113.56" y="-2354.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="109.67" y="-2334.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="87.12" y="-2314.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="73.52" y="-2294.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node75" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="none" stroke-width="3" points="435.47,-2373 381.47,-2373 381.47,-2285 435.47,-2285 435.47,-2373" style=""/>
+<text text-anchor="start" x="398.47" y="-2354.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="398.47" y="-2334.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="none" points="396.47,-2309 396.47,-2329 421.47,-2329 421.47,-2309 396.47,-2309" style=""/>
+<text text-anchor="start" x="398.47" y="-2314.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="398.47,-2291 398.47,-2307 419.47,-2307 419.47,-2291 398.47,-2291" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge116" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M186.92,-2359C275.17,-2359 300.4,-2359 382.63,-2359" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="382.44,-2362.5 392.44,-2359 382.44,-2355.5 382.44,-2362.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge117" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M186.92,-2339C275.17,-2339 300.4,-2339 382.63,-2339" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="382.44,-2342.5 392.44,-2339 382.44,-2335.5 382.44,-2342.5" style=""/>
+</g>
+</g>
+</svg>

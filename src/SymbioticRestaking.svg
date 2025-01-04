@@ -1,0 +1,1141 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="966pt" height="2179pt" viewBox="0.00 0.00 965.59 2179.00">
+<g id="graph0" class="graph" transform="translate(4,2175) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="none" points="-4,4 -4,-2175 961.59,-2175 961.59,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterSymbioticMiddleware">
+
+<path fill="#445773" stroke="#445773" d="M20,-931C20,-931 737.93,-931 737.93,-931 743.93,-931 749.93,-937 749.93,-943 749.93,-943 749.93,-2014 749.93,-2014 749.93,-2020 743.93,-2026 737.93,-2026 737.93,-2026 20,-2026 20,-2026 14,-2026 8,-2020 8,-2014 8,-2014 8,-943 8,-943 8,-937 14,-931 20,-931" style=""/>
+<text text-anchor="middle" x="378.96" y="-2009.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">SymbioticMiddleware</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterTime">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M585.46,-761C585.46,-761 680,-761 680,-761 686,-761 692,-767 692,-773 692,-773 692,-826 692,-826 692,-832 686,-838 680,-838 680,-838 585.46,-838 585.46,-838 579.46,-838 573.46,-832 573.46,-826 573.46,-826 573.46,-773 573.46,-773 573.46,-767 579.46,-761 585.46,-761" style=""/>
+<text text-anchor="middle" x="632.73" y="-821.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">Time</text>
+</g>
+<g id="clust3" class="cluster" data-name="clusterISystemParameters">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M781.93,-1437C781.93,-1437 937.59,-1437 937.59,-1437 943.59,-1437 949.59,-1443 949.59,-1449 949.59,-1449 949.59,-1502 949.59,-1502 949.59,-1508 943.59,-1514 937.59,-1514 937.59,-1514 781.93,-1514 781.93,-1514 775.93,-1514 769.93,-1508 769.93,-1502 769.93,-1502 769.93,-1449 769.93,-1449 769.93,-1443 775.93,-1437 781.93,-1437" style=""/>
+<text text-anchor="middle" x="859.76" y="-1497.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">ISystemParameters</text>
+</g>
+<g id="clust4" class="cluster" data-name="clusterEnumerableMap.AddressToUintMap">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M533.28,-244C533.28,-244 733.18,-244 733.18,-244 739.18,-244 745.18,-250 745.18,-256 745.18,-256 745.18,-741 745.18,-741 745.18,-747 739.18,-753 733.18,-753 733.18,-753 533.28,-753 533.28,-753 527.28,-753 521.28,-747 521.28,-741 521.28,-741 521.28,-256 521.28,-256 521.28,-250 527.28,-244 533.28,-244" style=""/>
+<text text-anchor="middle" x="633.23" y="-736.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">EnumerableMap.AddressToUintMap</text>
+</g>
+<g id="clust5" class="cluster" data-name="clusterIManager">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M287.8,-8C287.8,-8 465.98,-8 465.98,-8 471.98,-8 477.98,-14 477.98,-20 477.98,-20 477.98,-235 477.98,-235 477.98,-241 471.98,-247 465.98,-247 465.98,-247 287.8,-247 287.8,-247 281.8,-247 275.8,-241 275.8,-235 275.8,-235 275.8,-20 275.8,-20 275.8,-14 281.8,-8 287.8,-8" style=""/>
+<text text-anchor="middle" x="376.89" y="-230.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IManager</text>
+</g>
+<g id="clust6" class="cluster" data-name="clusterNETWORK_ADDRESS">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M566.63,-846C566.63,-846 698.83,-846 698.83,-846 704.83,-846 710.83,-852 710.83,-858 710.83,-858 710.83,-911 710.83,-911 710.83,-917 704.83,-923 698.83,-923 698.83,-923 566.63,-923 566.63,-923 560.63,-923 554.63,-917 554.63,-911 554.63,-911 554.63,-858 554.63,-858 554.63,-852 560.63,-846 566.63,-846" style=""/>
+<text text-anchor="middle" x="632.73" y="-906.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">NETWORK_ADDRESS</text>
+</g>
+<g id="clust7" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="51.12,-2034 51.12,-2163 411.89,-2163 411.89,-2034 51.12,-2034" style=""/>
+<text text-anchor="middle" x="231.5" y="-2146.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- SymbioticMiddleware.setupContract -->
+<g id="node1" class="node" pointer-events="visible" data-name="SymbioticMiddleware.setupContract">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-1921" rx="64.85" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1916.8" font-family="Times,serif" font-size="14.00" style="">setupContract</text>
+</g>
+<!-- SymbioticMiddleware.__Ownable_init -->
+<g id="node30" class="node" pointer-events="visible" data-name="SymbioticMiddleware.__Ownable_init">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-1975" rx="73.02" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1970.8" font-family="Times,serif" font-size="14.00" style="">__Ownable_init</text>
+</g>
+<!-- SymbioticMiddleware.setupContract&#45;&gt;SymbioticMiddleware.__Ownable_init -->
+<g id="edge1" class="edge" data-name="SymbioticMiddleware.setupContract-&gt;SymbioticMiddleware.__Ownable_init">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M177.69,-1932.32C215.09,-1940.37 265.73,-1951.28 306.45,-1960.05" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="305.55,-1963.43 316.06,-1962.12 307.03,-1956.59 305.55,-1963.43" style=""/>
+</g>
+<!-- SymbioticMiddleware.ISystemParameters -->
+<g id="node31" class="node" pointer-events="visible" data-name="SymbioticMiddleware.ISystemParameters">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-1867" rx="85.68" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1862.8" font-family="Times,serif" font-size="14.00" style="">ISystemParameters</text>
+</g>
+<!-- SymbioticMiddleware.setupContract&#45;&gt;SymbioticMiddleware.ISystemParameters -->
+<g id="edge2" class="edge" data-name="SymbioticMiddleware.setupContract-&gt;SymbioticMiddleware.ISystemParameters">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M177.69,-1909.68C213.46,-1901.98 261.32,-1891.67 301.06,-1883.11" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="301.65,-1886.57 310.68,-1881.04 300.17,-1879.72 301.65,-1886.57" style=""/>
+</g>
+<!-- SymbioticMiddleware.IManager -->
+<g id="node32" class="node" pointer-events="visible" data-name="SymbioticMiddleware.IManager">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-1921" rx="48.64" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1916.8" font-family="Times,serif" font-size="14.00" style="">IManager</text>
+</g>
+<!-- SymbioticMiddleware.setupContract&#45;&gt;SymbioticMiddleware.IManager -->
+<g id="edge3" class="edge" data-name="SymbioticMiddleware.setupContract-&gt;SymbioticMiddleware.IManager">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M190.35,-1921C228.52,-1921 276.43,-1921 314,-1921" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="313.8,-1924.5 323.8,-1921 313.8,-1917.5 313.8,-1924.5" style=""/>
+</g>
+<!-- Time.timestamp -->
+<g id="node49" class="node" pointer-events="visible" data-name="Time.timestamp">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-787" rx="51.04" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-782.8" font-family="Times,serif" font-size="14.00" style="">timestamp</text>
+</g>
+<!-- SymbioticMiddleware.setupContract&#45;&gt;Time.timestamp -->
+<g id="edge4" class="edge" data-name="SymbioticMiddleware.setupContract-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M189.53,-1918.26C205.82,-1914.32 221.68,-1907.04 232.24,-1894 299.69,-1810.7 200.47,-1013.04 268.24,-930 331.09,-852.98 398.64,-925.27 485.54,-877 504.97,-866.2 503.16,-854.89 521.28,-842 540.81,-828.1 564.37,-815.84 584.71,-806.45" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="586.12,-809.65 593.81,-802.36 583.25,-803.27 586.12,-809.65" style=""/>
+</g>
+<!-- SymbioticMiddleware.upgradeContractV2 -->
+<g id="node2" class="node" pointer-events="visible" data-name="SymbioticMiddleware.upgradeContractV2">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-1867" rx="87.39" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1862.8" font-family="Times,serif" font-size="14.00" style="">upgradeContractV2</text>
+</g>
+<!-- SymbioticMiddleware.upgradeContractV2&#45;&gt;SymbioticMiddleware.__Ownable_init -->
+<g id="edge5" class="edge" data-name="SymbioticMiddleware.upgradeContractV2-&gt;SymbioticMiddleware.__Ownable_init">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M198.3,-1877.74C210.32,-1881.61 222.14,-1886.86 232.24,-1894 255.8,-1910.64 244.67,-1931.38 268.24,-1948 277.07,-1954.23 287.19,-1959.02 297.62,-1962.71" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="296.46,-1966.02 307.05,-1965.65 298.55,-1959.33 296.46,-1966.02" style=""/>
+</g>
+<!-- SymbioticMiddleware.upgradeContractV2&#45;&gt;SymbioticMiddleware.ISystemParameters -->
+<g id="edge6" class="edge" data-name="SymbioticMiddleware.upgradeContractV2-&gt;SymbioticMiddleware.ISystemParameters">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M212.83,-1867C233.53,-1867 255.74,-1867 276.9,-1867" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="276.9,-1870.5 286.9,-1867 276.9,-1863.5 276.9,-1870.5" style=""/>
+</g>
+<!-- SymbioticMiddleware.upgradeContractV2&#45;&gt;SymbioticMiddleware.IManager -->
+<g id="edge7" class="edge" data-name="SymbioticMiddleware.upgradeContractV2-&gt;SymbioticMiddleware.IManager">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M187.75,-1880.49C228.51,-1889.26 281.18,-1900.6 320.42,-1909.05" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="319.44,-1912.42 329.95,-1911.11 320.91,-1905.58 319.44,-1912.42" style=""/>
+</g>
+<!-- SymbioticMiddleware.upgradeContractV2&#45;&gt;Time.timestamp -->
+<g id="edge8" class="edge" data-name="SymbioticMiddleware.upgradeContractV2-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M185.79,-1853.07C203.67,-1845.9 221.34,-1835.13 232.24,-1819 289.64,-1734.05 205.55,-978.12 268.24,-897 277.94,-884.44 478.71,-828.54 577.61,-801.6" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="578.36,-805.03 587.09,-799.03 576.52,-798.28 578.36,-805.03" style=""/>
+</g>
+<!-- SymbioticMiddleware._authorizeUpgrade -->
+<g id="node3" class="node" pointer-events="visible" data-name="SymbioticMiddleware._authorizeUpgrade">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="124.12" cy="-1792" rx="85.08" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1787.8" font-family="Times,serif" font-size="14.00" style="">_authorizeUpgrade</text>
+</g>
+<!-- SymbioticMiddleware.calculateEpochStart -->
+<g id="node4" class="node" pointer-events="visible" data-name="SymbioticMiddleware.calculateEpochStart">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="632.73" cy="-1571" rx="88.01" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-1566.8" font-family="Times,serif" font-size="14.00" style="">calculateEpochStart</text>
+</g>
+<!-- ISystemParameters.getEpochDuration -->
+<g id="node50" class="node" pointer-events="visible" data-name="ISystemParameters.getEpochDuration">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="859.76" cy="-1463" rx="81.66" ry="18" style=""/>
+<text text-anchor="middle" x="859.76" y="-1458.8" font-family="Times,serif" font-size="14.00" style="">getEpochDuration</text>
+</g>
+<!-- SymbioticMiddleware.calculateEpochStart&#45;&gt;ISystemParameters.getEpochDuration -->
+<g id="edge9" class="edge" data-name="SymbioticMiddleware.calculateEpochStart-&gt;ISystemParameters.getEpochDuration">
+
+<path fill="none" stroke="white" stroke-width="2" d="M704.41,-1559.47C719.81,-1555.62 735.74,-1550.58 749.93,-1544 779.36,-1530.36 808.62,-1507.95 829.38,-1490.15" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="831.65,-1492.82 836.86,-1483.59 827.03,-1487.56 831.65,-1492.82" style=""/>
+</g>
+<!-- SymbioticMiddleware.getEpochForTimestamp -->
+<g id="node5" class="node" pointer-events="visible" data-name="SymbioticMiddleware.getEpochForTimestamp">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="632.73" cy="-1733" rx="104.23" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-1728.8" font-family="Times,serif" font-size="14.00" style="">getEpochForTimestamp</text>
+</g>
+<!-- SymbioticMiddleware.getEpochForTimestamp&#45;&gt;ISystemParameters.getEpochDuration -->
+<g id="edge10" class="edge" data-name="SymbioticMiddleware.getEpochForTimestamp-&gt;ISystemParameters.getEpochDuration">
+
+<path fill="none" stroke="white" stroke-width="2" d="M720.77,-1722.27C731.32,-1718.32 741.37,-1713.04 749.93,-1706 816.41,-1651.23 843.77,-1547.44 853.74,-1495.01" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="857.17,-1495.7 855.48,-1485.24 850.28,-1494.47 857.17,-1495.7" style=""/>
+</g>
+<!-- SymbioticMiddleware.getCurrentEpochNumber -->
+<g id="node6" class="node" pointer-events="visible" data-name="SymbioticMiddleware.getCurrentEpochNumber">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="376.89" cy="-1625" rx="108.8" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1620.8" font-family="Times,serif" font-size="14.00" style="">getCurrentEpochNumber</text>
+</g>
+<!-- SymbioticMiddleware.getCurrentEpochNumber&#45;&gt;SymbioticMiddleware.getEpochForTimestamp -->
+<g id="edge11" class="edge" data-name="SymbioticMiddleware.getCurrentEpochNumber-&gt;SymbioticMiddleware.getEpochForTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M458.44,-1638.08C468.06,-1641.66 477.36,-1646.21 485.54,-1652 509.03,-1668.63 497.74,-1689.44 521.28,-1706 526.69,-1709.81 532.58,-1713.08 538.72,-1715.89" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="537.42,-1719.14 548,-1719.62 540.03,-1712.64 537.42,-1719.14" style=""/>
+</g>
+<!-- SymbioticMiddleware.getCurrentEpochNumber&#45;&gt;Time.timestamp -->
+<g id="edge12" class="edge" data-name="SymbioticMiddleware.getCurrentEpochNumber-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M466.04,-1613.61C473.46,-1609.66 480.16,-1604.56 485.54,-1598 538.81,-1532.94 475.33,-912.43 521.28,-842 533.85,-822.73 555.32,-809.94 576,-801.6" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="577,-804.96 585.18,-798.23 574.59,-798.39 577,-804.96" style=""/>
+</g>
+<!-- SymbioticMiddleware.listAuthorizedVaults -->
+<g id="node7" class="node" pointer-events="visible" data-name="SymbioticMiddleware.listAuthorizedVaults">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-1119" rx="91.5" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1114.8" font-family="Times,serif" font-size="14.00" style="">listAuthorizedVaults</text>
+</g>
+<!-- EnumerableMap.AddressToUintMap.keys -->
+<g id="node51" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.keys">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-270" rx="28.98" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-265.8" font-family="Times,serif" font-size="14.00" style="">keys</text>
+</g>
+<!-- SymbioticMiddleware.listAuthorizedVaults&#45;&gt;EnumerableMap.AddressToUintMap.keys -->
+<g id="edge13" class="edge" data-name="SymbioticMiddleware.listAuthorizedVaults-&gt;EnumerableMap.AddressToUintMap.keys">
+
+<path fill="none" stroke="white" stroke-width="2" d="M207.2,-1110.32C216.82,-1106.08 225.57,-1100.17 232.24,-1092 288.7,-1022.8 205.32,-352.39 268.24,-289 312.13,-244.78 504.09,-257.41 589.96,-265.55" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="589.48,-269.02 599.78,-266.51 590.17,-262.05 589.48,-269.02" style=""/>
+</g>
+<!-- SymbioticMiddleware.addVault -->
+<g id="node8" class="node" pointer-events="visible" data-name="SymbioticMiddleware.addVault">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-1389" rx="46.37" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1384.8" font-family="Times,serif" font-size="14.00" style="">addVault</text>
+</g>
+<!-- SymbioticMiddleware.AlreadyRegistered -->
+<g id="node33" class="node" pointer-events="visible" data-name="SymbioticMiddleware.AlreadyRegistered">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-1173" rx="83.37" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1168.8" font-family="Times,serif" font-size="14.00" style="">AlreadyRegistered</text>
+</g>
+<!-- SymbioticMiddleware.addVault&#45;&gt;SymbioticMiddleware.AlreadyRegistered -->
+<g id="edge15" class="edge" data-name="SymbioticMiddleware.addVault-&gt;SymbioticMiddleware.AlreadyRegistered">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M171.73,-1387.99C192.88,-1385.11 216.6,-1378.09 232.24,-1362 283.65,-1309.12 216.8,-1252.85 268.24,-1200 273.88,-1194.2 280.57,-1189.58 287.81,-1185.9" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="288.97,-1189.21 296.79,-1182.06 286.22,-1182.78 288.97,-1189.21" style=""/>
+</g>
+<!-- SymbioticMiddleware.IRegistry -->
+<g id="node34" class="node" pointer-events="visible" data-name="SymbioticMiddleware.IRegistry">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-1119" rx="46.95" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1114.8" font-family="Times,serif" font-size="14.00" style="">IRegistry</text>
+</g>
+<!-- SymbioticMiddleware.addVault&#45;&gt;SymbioticMiddleware.IRegistry -->
+<g id="edge16" class="edge" data-name="SymbioticMiddleware.addVault-&gt;SymbioticMiddleware.IRegistry">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M171.85,-1388.39C193.15,-1385.62 216.97,-1378.57 232.24,-1362 298.19,-1290.43 202.25,-1217.54 268.24,-1146 280.54,-1132.67 298.35,-1125.49 315.96,-1121.74" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="316.41,-1125.22 325.68,-1120.09 315.23,-1118.32 316.41,-1125.22" style=""/>
+</g>
+<!-- SymbioticMiddleware.InvalidVaultAddress -->
+<g id="node35" class="node" pointer-events="visible" data-name="SymbioticMiddleware.InvalidVaultAddress">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-1065" rx="91.49" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1060.8" font-family="Times,serif" font-size="14.00" style="">InvalidVaultAddress</text>
+</g>
+<!-- SymbioticMiddleware.addVault&#45;&gt;SymbioticMiddleware.InvalidVaultAddress -->
+<g id="edge17" class="edge" data-name="SymbioticMiddleware.addVault-&gt;SymbioticMiddleware.InvalidVaultAddress">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M171.81,-1388.65C193.24,-1385.95 217.18,-1378.89 232.24,-1362 312.81,-1271.64 187.62,-1182.31 268.24,-1092 272.62,-1087.1 277.74,-1083.02 283.34,-1079.64" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="284.55,-1082.95 291.89,-1075.32 281.39,-1076.7 284.55,-1082.95" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.contains -->
+<g id="node52" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.contains">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-432" rx="43.44" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-427.8" font-family="Times,serif" font-size="14.00" style="">contains</text>
+</g>
+<!-- SymbioticMiddleware.addVault&#45;&gt;EnumerableMap.AddressToUintMap.contains -->
+<g id="edge14" class="edge" data-name="SymbioticMiddleware.addVault-&gt;EnumerableMap.AddressToUintMap.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M171.91,-1389.26C193.64,-1386.75 217.8,-1379.67 232.24,-1362 287.06,-1294.9 216.05,-652.17 268.24,-583 329.61,-501.68 403.93,-570.99 485.54,-510 507.71,-493.43 498.43,-474.62 521.28,-459 537.37,-448 557.47,-441.47 576.1,-437.6" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="576.5,-441.08 585.72,-435.86 575.26,-434.19 576.5,-441.08" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.add -->
+<g id="node53" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-594" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-589.8" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- SymbioticMiddleware.addVault&#45;&gt;EnumerableMap.AddressToUintMap.add -->
+<g id="edge18" class="edge" data-name="SymbioticMiddleware.addVault-&gt;EnumerableMap.AddressToUintMap.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M171.87,-1389.23C193.59,-1386.71 217.75,-1379.64 232.24,-1362 331.24,-1241.46 165.38,-778.27 268.24,-661 300.62,-624.09 437.25,-629.9 485.54,-621 521.85,-614.3 563.25,-606.66 592.69,-601.22" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="593.15,-604.69 602.34,-599.43 591.88,-597.81 593.15,-604.69" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.enable -->
+<g id="node54" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.enable">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-486" rx="36.47" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-481.8" font-family="Times,serif" font-size="14.00" style="">enable</text>
+</g>
+<!-- SymbioticMiddleware.addVault&#45;&gt;EnumerableMap.AddressToUintMap.enable -->
+<g id="edge19" class="edge" data-name="SymbioticMiddleware.addVault-&gt;EnumerableMap.AddressToUintMap.enable">
+
+<path fill="none" stroke="white" stroke-width="2" d="M171.9,-1389.25C193.62,-1386.73 217.78,-1379.66 232.24,-1362 284.47,-1298.23 213.69,-682.8 268.24,-621 333.12,-547.49 406.66,-641.23 485.54,-583 513.64,-562.25 493.88,-534.67 521.28,-513 538.51,-499.37 561.62,-492.49 582.26,-489.07" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="582.61,-492.55 592.04,-487.72 581.66,-485.62 582.61,-492.55" style=""/>
+</g>
+<!-- SymbioticMiddleware.removeVault -->
+<g id="node9" class="node" pointer-events="visible" data-name="SymbioticMiddleware.removeVault">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-1335" rx="61.4" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1330.8" font-family="Times,serif" font-size="14.00" style="">removeVault</text>
+</g>
+<!-- SymbioticMiddleware.NotRegistered -->
+<g id="node36" class="node" pointer-events="visible" data-name="SymbioticMiddleware.NotRegistered">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-1011" rx="66.64" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1006.8" font-family="Times,serif" font-size="14.00" style="">NotRegistered</text>
+</g>
+<!-- SymbioticMiddleware.removeVault&#45;&gt;SymbioticMiddleware.NotRegistered -->
+<g id="edge21" class="edge" data-name="SymbioticMiddleware.removeVault-&gt;SymbioticMiddleware.NotRegistered">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M186.22,-1332.17C203.36,-1328.36 220.5,-1321.17 232.24,-1308 312.81,-1217.64 187.62,-1128.31 268.24,-1038 276.2,-1029.08 286.63,-1022.9 297.86,-1018.65" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="298.89,-1022 307.39,-1015.67 296.8,-1015.32 298.89,-1022" style=""/>
+</g>
+<!-- SymbioticMiddleware.removeVault&#45;&gt;EnumerableMap.AddressToUintMap.contains -->
+<g id="edge20" class="edge" data-name="SymbioticMiddleware.removeVault-&gt;EnumerableMap.AddressToUintMap.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M186.38,-1332.9C203.73,-1329.15 220.96,-1321.81 232.24,-1308 287.13,-1240.81 214,-595.71 268.24,-528 287.87,-503.5 483.32,-461.6 579.22,-442.29" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="579.7,-445.77 588.81,-440.37 578.32,-438.9 579.7,-445.77" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.remove -->
+<g id="node55" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.remove">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-540" rx="39.99" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-535.8" font-family="Times,serif" font-size="14.00" style="">remove</text>
+</g>
+<!-- SymbioticMiddleware.removeVault&#45;&gt;EnumerableMap.AddressToUintMap.remove -->
+<g id="edge22" class="edge" data-name="SymbioticMiddleware.removeVault-&gt;EnumerableMap.AddressToUintMap.remove">
+
+<path fill="none" stroke="white" stroke-width="2" d="M186.61,-1332.8C203.87,-1329.03 220.98,-1321.71 232.24,-1308 329.88,-1189.21 168.36,-733.9 268.24,-617 345.44,-526.64 499.8,-526.46 580.26,-533.46" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="579.69,-536.92 589.97,-534.39 580.35,-529.95 579.69,-536.92" style=""/>
+</g>
+<!-- SymbioticMiddleware.onboardOperator -->
+<g id="node10" class="node" pointer-events="visible" data-name="SymbioticMiddleware.onboardOperator">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-1443" rx="77" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1438.8" font-family="Times,serif" font-size="14.00" style="">onboardOperator</text>
+</g>
+<!-- SymbioticMiddleware.onboardOperator&#45;&gt;SymbioticMiddleware.AlreadyRegistered -->
+<g id="edge24" class="edge" data-name="SymbioticMiddleware.onboardOperator-&gt;SymbioticMiddleware.AlreadyRegistered">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M198.19,-1436.59C211.01,-1432.37 223.14,-1425.87 232.24,-1416 298.19,-1344.43 202.25,-1271.54 268.24,-1200 273.62,-1194.17 280.05,-1189.51 287.06,-1185.81" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="288.39,-1189.05 296.13,-1181.81 285.57,-1182.65 288.39,-1189.05" style=""/>
+</g>
+<!-- SymbioticMiddleware.onboardOperator&#45;&gt;SymbioticMiddleware.IRegistry -->
+<g id="edge25" class="edge" data-name="SymbioticMiddleware.onboardOperator-&gt;SymbioticMiddleware.IRegistry">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M198.44,-1436.82C211.25,-1432.58 223.3,-1426.02 232.24,-1416 312.81,-1325.64 187.62,-1236.31 268.24,-1146 280.37,-1132.41 298.23,-1125.18 315.92,-1121.46" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="316.42,-1124.92 325.71,-1119.83 315.27,-1118.02 316.42,-1124.92" style=""/>
+</g>
+<!-- SymbioticMiddleware.InvalidOperator -->
+<g id="node37" class="node" pointer-events="visible" data-name="SymbioticMiddleware.InvalidOperator">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-1335" rx="72.92" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1330.8" font-family="Times,serif" font-size="14.00" style="">InvalidOperator</text>
+</g>
+<!-- SymbioticMiddleware.onboardOperator&#45;&gt;SymbioticMiddleware.InvalidOperator -->
+<g id="edge26" class="edge" data-name="SymbioticMiddleware.onboardOperator-&gt;SymbioticMiddleware.InvalidOperator">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M193.26,-1433.8C206.99,-1429.82 220.73,-1424.13 232.24,-1416 255.8,-1399.36 244.67,-1378.62 268.24,-1362 277.07,-1355.77 287.19,-1350.98 297.62,-1347.29" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="298.55,-1350.67 307.05,-1344.35 296.46,-1343.98 298.55,-1350.67" style=""/>
+</g>
+<!-- SymbioticMiddleware.IOptInService -->
+<g id="node38" class="node" pointer-events="visible" data-name="SymbioticMiddleware.IOptInService">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-1227" rx="65.98" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1222.8" font-family="Times,serif" font-size="14.00" style="">IOptInService</text>
+</g>
+<!-- SymbioticMiddleware.onboardOperator&#45;&gt;SymbioticMiddleware.IOptInService -->
+<g id="edge27" class="edge" data-name="SymbioticMiddleware.onboardOperator-&gt;SymbioticMiddleware.IOptInService">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M197.5,-1436.29C210.46,-1432.1 222.81,-1425.69 232.24,-1416 283.65,-1363.12 216.8,-1306.85 268.24,-1254 276.72,-1245.29 287.55,-1239.23 299.07,-1235.05" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="299.81,-1238.48 308.36,-1232.22 297.77,-1231.79 299.81,-1238.48" style=""/>
+</g>
+<!-- SymbioticMiddleware.OperatorNotOptedIn -->
+<g id="node39" class="node" pointer-events="visible" data-name="SymbioticMiddleware.OperatorNotOptedIn">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-1281" rx="91.47" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1276.8" font-family="Times,serif" font-size="14.00" style="">OperatorNotOptedIn</text>
+</g>
+<!-- SymbioticMiddleware.onboardOperator&#45;&gt;SymbioticMiddleware.OperatorNotOptedIn -->
+<g id="edge28" class="edge" data-name="SymbioticMiddleware.onboardOperator-&gt;SymbioticMiddleware.OperatorNotOptedIn">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M196.45,-1435.59C209.57,-1431.46 222.26,-1425.26 232.24,-1416 269.33,-1381.59 231.13,-1342.39 268.24,-1308 273.36,-1303.25 279.19,-1299.31 285.43,-1296.03" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="286.57,-1299.36 294.26,-1292.08 283.7,-1292.97 286.57,-1299.36" style=""/>
+</g>
+<!-- IManager.isOperatorRegistered -->
+<g id="node60" class="node" pointer-events="visible" data-name="IManager.isOperatorRegistered">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-142" rx="93.18" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-137.8" font-family="Times,serif" font-size="14.00" style="">isOperatorRegistered</text>
+</g>
+<!-- SymbioticMiddleware.onboardOperator&#45;&gt;IManager.isOperatorRegistered -->
+<g id="edge23" class="edge" data-name="SymbioticMiddleware.onboardOperator-&gt;IManager.isOperatorRegistered">
+
+<path fill="none" stroke="white" stroke-width="2" d="M199.28,-1437.53C212.02,-1433.23 223.84,-1426.47 232.24,-1416 319.01,-1307.9 181.41,-277.05 268.24,-169 272.01,-164.31 276.46,-160.36 281.37,-157.05" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="283.05,-160.12 290.11,-152.22 279.67,-153.99 283.05,-160.12" style=""/>
+</g>
+<!-- IManager.registerNewOperator -->
+<g id="node61" class="node" pointer-events="visible" data-name="IManager.registerNewOperator">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-196" rx="92.59" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-191.8" font-family="Times,serif" font-size="14.00" style="">registerNewOperator</text>
+</g>
+<!-- SymbioticMiddleware.onboardOperator&#45;&gt;IManager.registerNewOperator -->
+<g id="edge29" class="edge" data-name="SymbioticMiddleware.onboardOperator-&gt;IManager.registerNewOperator">
+
+<path fill="none" stroke="white" stroke-width="2" d="M199.12,-1437.4C211.87,-1433.11 223.74,-1426.39 232.24,-1416 284.88,-1351.7 256.98,-751.33 268.24,-669 291.34,-500.16 345.18,-302.71 366.73,-227.37" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="370.01,-228.64 369.41,-218.06 363.28,-226.7 370.01,-228.64" style=""/>
+</g>
+<!-- SymbioticMiddleware.offboardOperator -->
+<g id="node11" class="node" pointer-events="visible" data-name="SymbioticMiddleware.offboardOperator">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-1065" rx="78.7" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1060.8" font-family="Times,serif" font-size="14.00" style="">offboardOperator</text>
+</g>
+<!-- SymbioticMiddleware.offboardOperator&#45;&gt;SymbioticMiddleware.NotRegistered -->
+<g id="edge31" class="edge" data-name="SymbioticMiddleware.offboardOperator-&gt;SymbioticMiddleware.NotRegistered">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M184.55,-1052.2C222.24,-1044.09 271.04,-1033.58 309.92,-1025.2" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="310.44,-1028.67 319.48,-1023.15 308.96,-1021.83 310.44,-1028.67" style=""/>
+</g>
+<!-- SymbioticMiddleware.offboardOperator&#45;&gt;IManager.isOperatorRegistered -->
+<g id="edge30" class="edge" data-name="SymbioticMiddleware.offboardOperator-&gt;IManager.isOperatorRegistered">
+
+<path fill="none" stroke="white" stroke-width="2" d="M200.27,-1059.07C212.6,-1054.77 224.01,-1048.12 232.24,-1038 293.2,-963.02 207.23,-243.95 268.24,-169 272.14,-164.21 276.75,-160.19 281.84,-156.84" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="283.09,-160.14 290.2,-152.28 279.74,-153.99 283.09,-160.14" style=""/>
+</g>
+<!-- IManager.removeOperator -->
+<g id="node62" class="node" pointer-events="visible" data-name="IManager.removeOperator">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-88" rx="74.12" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-83.8" font-family="Times,serif" font-size="14.00" style="">removeOperator</text>
+</g>
+<!-- SymbioticMiddleware.offboardOperator&#45;&gt;IManager.removeOperator -->
+<g id="edge32" class="edge" data-name="SymbioticMiddleware.offboardOperator-&gt;IManager.removeOperator">
+
+<path fill="none" stroke="white" stroke-width="2" d="M200.29,-1059.09C212.62,-1054.78 224.02,-1048.13 232.24,-1038 296.89,-958.29 203.54,-194.67 268.24,-115 274.49,-107.3 282.57,-101.61 291.51,-97.43" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="292.75,-100.7 300.83,-93.84 290.24,-94.16 292.75,-100.7" style=""/>
+</g>
+<!-- SymbioticMiddleware.suspendOperatorActivity -->
+<g id="node12" class="node" pointer-events="visible" data-name="SymbioticMiddleware.suspendOperatorActivity">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-957" rx="108.24" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-952.8" font-family="Times,serif" font-size="14.00" style="">suspendOperatorActivity</text>
+</g>
+<!-- IManager.resumeOperator -->
+<g id="node63" class="node" pointer-events="visible" data-name="IManager.resumeOperator">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-34" rx="73.48" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-29.8" font-family="Times,serif" font-size="14.00" style="">resumeOperator</text>
+</g>
+<!-- SymbioticMiddleware.suspendOperatorActivity&#45;&gt;IManager.resumeOperator -->
+<g id="edge33" class="edge" data-name="SymbioticMiddleware.suspendOperatorActivity-&gt;IManager.resumeOperator">
+
+<path fill="none" stroke="white" stroke-width="2" d="M125.42,-937.65C127.63,-819.44 145.06,-195.44 268.24,-61 275.1,-53.51 283.71,-47.96 293.04,-43.87" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="294.15,-47.19 302.34,-40.47 291.75,-40.61 294.15,-47.19" style=""/>
+</g>
+<!-- SymbioticMiddleware.resumeOperatorActivity -->
+<g id="node13" class="node" pointer-events="visible" data-name="SymbioticMiddleware.resumeOperatorActivity">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-1011" rx="104.78" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1006.8" font-family="Times,serif" font-size="14.00" style="">resumeOperatorActivity</text>
+</g>
+<!-- SymbioticMiddleware.resumeOperatorActivity&#45;&gt;IManager.resumeOperator -->
+<g id="edge34" class="edge" data-name="SymbioticMiddleware.resumeOperatorActivity-&gt;IManager.resumeOperator">
+
+<path fill="none" stroke="white" stroke-width="2" d="M211.89,-1000.13C219.66,-996.11 226.68,-990.85 232.24,-984 296.89,-904.29 203.54,-140.67 268.24,-61 274.64,-53.11 282.98,-47.33 292.18,-43.12" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="293.25,-46.45 301.37,-39.65 290.78,-39.9 293.25,-46.45" style=""/>
+</g>
+<!-- SymbioticMiddleware.suspendVaultActivity -->
+<g id="node14" class="node" pointer-events="visible" data-name="SymbioticMiddleware.suspendVaultActivity">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-1227" rx="95.01" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1222.8" font-family="Times,serif" font-size="14.00" style="">suspendVaultActivity</text>
+</g>
+<!-- SymbioticMiddleware.suspendVaultActivity&#45;&gt;SymbioticMiddleware.NotRegistered -->
+<g id="edge36" class="edge" data-name="SymbioticMiddleware.suspendVaultActivity-&gt;SymbioticMiddleware.NotRegistered">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M206.47,-1216.97C216.08,-1212.92 225.02,-1207.43 232.24,-1200 283.65,-1147.12 216.8,-1090.85 268.24,-1038 276.53,-1029.48 287.08,-1023.5 298.31,-1019.33" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="299.29,-1022.69 307.8,-1016.38 297.21,-1016.01 299.29,-1022.69" style=""/>
+</g>
+<!-- SymbioticMiddleware.suspendVaultActivity&#45;&gt;EnumerableMap.AddressToUintMap.contains -->
+<g id="edge35" class="edge" data-name="SymbioticMiddleware.suspendVaultActivity-&gt;EnumerableMap.AddressToUintMap.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M208.5,-1217.73C217.61,-1213.54 225.87,-1207.8 232.24,-1200 288.29,-1131.32 204.16,-464.25 268.24,-403 311.91,-361.26 492.51,-397.88 581.59,-419.22" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="580.56,-422.57 591.1,-421.53 582.21,-415.76 580.56,-422.57" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.disable -->
+<g id="node56" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.disable">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-378" rx="38.28" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-373.8" font-family="Times,serif" font-size="14.00" style="">disable</text>
+</g>
+<!-- SymbioticMiddleware.suspendVaultActivity&#45;&gt;EnumerableMap.AddressToUintMap.disable -->
+<g id="edge37" class="edge" data-name="SymbioticMiddleware.suspendVaultActivity-&gt;EnumerableMap.AddressToUintMap.disable">
+
+<path fill="none" stroke="white" stroke-width="2" d="M208.51,-1217.74C217.62,-1213.54 225.88,-1207.8 232.24,-1200 289.86,-1129.31 202.53,-443.24 268.24,-380 311.75,-338.13 493.36,-357.74 582.26,-370.31" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="581.54,-373.75 591.94,-371.71 582.54,-366.82 581.54,-373.75" style=""/>
+</g>
+<!-- SymbioticMiddleware.resumeVaultActivity -->
+<g id="node15" class="node" pointer-events="visible" data-name="SymbioticMiddleware.resumeVaultActivity">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-1281" rx="92.05" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1276.8" font-family="Times,serif" font-size="14.00" style="">resumeVaultActivity</text>
+</g>
+<!-- SymbioticMiddleware.resumeVaultActivity&#45;&gt;SymbioticMiddleware.NotRegistered -->
+<g id="edge39" class="edge" data-name="SymbioticMiddleware.resumeVaultActivity-&gt;SymbioticMiddleware.NotRegistered">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M206.05,-1271.66C215.91,-1267.53 225.03,-1261.83 232.24,-1254 298.19,-1182.43 202.25,-1109.54 268.24,-1038 276.3,-1029.26 286.72,-1023.17 297.91,-1018.95" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="298.88,-1022.31 307.38,-1015.98 296.79,-1015.64 298.88,-1022.31" style=""/>
+</g>
+<!-- SymbioticMiddleware.resumeVaultActivity&#45;&gt;EnumerableMap.AddressToUintMap.contains -->
+<g id="edge38" class="edge" data-name="SymbioticMiddleware.resumeVaultActivity-&gt;EnumerableMap.AddressToUintMap.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M207.46,-1272.2C216.98,-1267.97 225.63,-1262.1 232.24,-1254 288.22,-1185.41 206.46,-521.42 268.24,-458 309.53,-415.62 484.54,-421.29 575.82,-427.42" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="575.41,-430.9 585.63,-428.11 575.9,-423.92 575.41,-430.9" style=""/>
+</g>
+<!-- SymbioticMiddleware.resumeVaultActivity&#45;&gt;EnumerableMap.AddressToUintMap.enable -->
+<g id="edge40" class="edge" data-name="SymbioticMiddleware.resumeVaultActivity-&gt;EnumerableMap.AddressToUintMap.enable">
+
+<path fill="none" stroke="white" stroke-width="2" d="M207.43,-1272.17C216.95,-1267.95 225.61,-1262.08 232.24,-1254 283.45,-1191.54 213.03,-586.95 268.24,-528 349.93,-440.78 507.84,-459.06 585.84,-474.89" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="585.08,-478.31 595.59,-476.97 586.53,-471.46 585.08,-478.31" style=""/>
+</g>
+<!-- SymbioticMiddleware.checkVaultStatus -->
+<g id="node16" class="node" pointer-events="visible" data-name="SymbioticMiddleware.checkVaultStatus">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-1173" rx="78.73" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1168.8" font-family="Times,serif" font-size="14.00" style="">checkVaultStatus</text>
+</g>
+<!-- EnumerableMap.AddressToUintMap.getTimes -->
+<g id="node57" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.getTimes">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-324" rx="46.94" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-319.8" font-family="Times,serif" font-size="14.00" style="">getTimes</text>
+</g>
+<!-- SymbioticMiddleware.checkVaultStatus&#45;&gt;EnumerableMap.AddressToUintMap.getTimes -->
+<g id="edge41" class="edge" data-name="SymbioticMiddleware.checkVaultStatus-&gt;EnumerableMap.AddressToUintMap.getTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M200.24,-1167.05C212.57,-1162.74 223.99,-1156.1 232.24,-1146 288.15,-1077.5 206.62,-414.42 268.24,-351 349.48,-267.38 502.06,-290.14 581.21,-309.46" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="580.24,-312.83 590.79,-311.9 581.96,-306.04 580.24,-312.83" style=""/>
+</g>
+<!-- SymbioticMiddleware.fetchOperatorCollateral -->
+<g id="node17" class="node" pointer-events="visible" data-name="SymbioticMiddleware.fetchOperatorCollateral">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="376.89" cy="-1497" rx="102.96" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1492.8" font-family="Times,serif" font-size="14.00" style="">fetchOperatorCollateral</text>
+</g>
+<!-- SymbioticMiddleware.fetchOperatorCollateral&#45;&gt;SymbioticMiddleware.calculateEpochStart -->
+<g id="edge44" class="edge" data-name="SymbioticMiddleware.fetchOperatorCollateral-&gt;SymbioticMiddleware.calculateEpochStart">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M426.71,-1514.04C454.31,-1523.41 489.54,-1534.93 521.28,-1544 533.24,-1547.42 546,-1550.79 558.44,-1553.93" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="557.26,-1557.24 567.8,-1556.25 558.94,-1550.44 557.26,-1557.24" style=""/>
+</g>
+<!-- SymbioticMiddleware.fetchOperatorCollateral&#45;&gt;SymbioticMiddleware.getEpochForTimestamp -->
+<g id="edge45" class="edge" data-name="SymbioticMiddleware.fetchOperatorCollateral-&gt;SymbioticMiddleware.getEpochForTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M439.71,-1512.54C456.74,-1519.58 473.75,-1529.67 485.54,-1544 532.36,-1600.95 469.73,-1653.28 521.28,-1706 525.08,-1709.89 529.35,-1713.26 533.93,-1716.17" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="531.99,-1719.1 542.46,-1720.73 535.29,-1712.93 531.99,-1719.1" style=""/>
+</g>
+<!-- SymbioticMiddleware.isActiveAtTimestamp -->
+<g id="node21" class="node" pointer-events="visible" data-name="SymbioticMiddleware.isActiveAtTimestamp">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-1679" rx="96.14" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-1674.8" font-family="Times,serif" font-size="14.00" style="">isActiveAtTimestamp</text>
+</g>
+<!-- SymbioticMiddleware.fetchOperatorCollateral&#45;&gt;SymbioticMiddleware.isActiveAtTimestamp -->
+<g id="edge49" class="edge" data-name="SymbioticMiddleware.fetchOperatorCollateral-&gt;SymbioticMiddleware.isActiveAtTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M437.7,-1512.86C455.06,-1519.95 472.76,-1529.99 485.54,-1544 519.6,-1581.36 484.13,-1617.7 521.28,-1652 526.18,-1656.53 531.72,-1660.33 537.64,-1663.52" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="536.12,-1666.68 546.66,-1667.67 539.04,-1660.31 536.12,-1666.68" style=""/>
+</g>
+<!-- SymbioticMiddleware.IVault -->
+<g id="node40" class="node" pointer-events="visible" data-name="SymbioticMiddleware.IVault">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-1517" rx="35.92" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-1512.8" font-family="Times,serif" font-size="14.00" style="">IVault</text>
+</g>
+<!-- SymbioticMiddleware.fetchOperatorCollateral&#45;&gt;SymbioticMiddleware.IVault -->
+<g id="edge50" class="edge" data-name="SymbioticMiddleware.fetchOperatorCollateral-&gt;SymbioticMiddleware.IVault">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M480.77,-1498.46C517.12,-1501 556.2,-1504.51 585.49,-1508.01" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="584.85,-1511.45 595.21,-1509.23 585.72,-1504.51 584.85,-1511.45" style=""/>
+</g>
+<!-- SymbioticMiddleware.fetchOperatorCollateral&#45;&gt;SymbioticMiddleware.IVault -->
+<g id="edge52" class="edge" data-name="SymbioticMiddleware.fetchOperatorCollateral-&gt;SymbioticMiddleware.IVault">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M456.81,-1509.52C497.98,-1513.57 547.05,-1517.16 582.72,-1518.6" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="582.56,-1522.1 592.67,-1518.94 582.8,-1515.1 582.56,-1522.1" style=""/>
+</g>
+<!-- SymbioticMiddleware.IBaseDelegator -->
+<g id="node41" class="node" pointer-events="visible" data-name="SymbioticMiddleware.IBaseDelegator">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-1463" rx="71.19" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-1458.8" font-family="Times,serif" font-size="14.00" style="">IBaseDelegator</text>
+</g>
+<!-- SymbioticMiddleware.fetchOperatorCollateral&#45;&gt;SymbioticMiddleware.IBaseDelegator -->
+<g id="edge51" class="edge" data-name="SymbioticMiddleware.fetchOperatorCollateral-&gt;SymbioticMiddleware.IBaseDelegator">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M462.06,-1485.73C492.11,-1481.7 525.77,-1477.19 555.14,-1473.26" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="555.43,-1476.75 564.88,-1471.95 554.5,-1469.81 555.43,-1476.75" style=""/>
+</g>
+<!-- SymbioticMiddleware.fetchOperatorCollateral&#45;&gt;Time.timestamp -->
+<g id="edge46" class="edge" data-name="SymbioticMiddleware.fetchOperatorCollateral-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M464.19,-1486.48C472.33,-1482.42 479.7,-1477.05 485.54,-1470 574.61,-1362.28 444.35,-958.71 521.28,-842 533.94,-822.79 555.43,-810.02 576.1,-801.66" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="577.09,-805.03 585.26,-798.28 574.67,-798.46 577.09,-805.03" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.length -->
+<g id="node58" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.length">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-648" rx="35.35" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-643.8" font-family="Times,serif" font-size="14.00" style="">length</text>
+</g>
+<!-- SymbioticMiddleware.fetchOperatorCollateral&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge42" class="edge" data-name="SymbioticMiddleware.fetchOperatorCollateral-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M429.63,-1480.17C450.17,-1475.77 472.07,-1468.49 485.54,-1452 541.48,-1383.52 465.13,-725.31 521.28,-657 539.02,-635.41 570.92,-629.44 595.88,-631.46" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="595.16,-634.9 605.56,-632.85 596.16,-627.97 595.16,-634.9" style=""/>
+</g>
+<!-- SymbioticMiddleware.fetchOperatorCollateral&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge43" class="edge" data-name="SymbioticMiddleware.fetchOperatorCollateral-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M464.53,-1486.42C472.55,-1482.36 479.81,-1477.01 485.54,-1470 541.48,-1401.52 465.13,-743.31 521.28,-675 536.16,-656.9 560.99,-649.78 583.34,-647.35" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="583.38,-650.85 593.1,-646.63 582.87,-643.87 583.38,-650.85" style=""/>
+</g>
+<!-- SymbioticMiddleware.fetchOperatorCollateral&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge47" class="edge" data-name="SymbioticMiddleware.fetchOperatorCollateral-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M479.61,-1494.21C481.72,-1492.31 483.71,-1490.24 485.54,-1488 541.48,-1419.52 465.13,-761.31 521.28,-693 537.99,-672.67 567.25,-666.19 591.45,-662.11" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="591.98,-665.57 601.28,-660.5 590.85,-658.66 591.98,-665.57" style=""/>
+</g>
+<!-- EnumerableMap.AddressToUintMap.atWithTimes -->
+<g id="node59" class="node" pointer-events="visible" data-name="EnumerableMap.AddressToUintMap.atWithTimes">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-702" rx="61.41" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-697.8" font-family="Times,serif" font-size="14.00" style="">atWithTimes</text>
+</g>
+<!-- SymbioticMiddleware.fetchOperatorCollateral&#45;&gt;EnumerableMap.AddressToUintMap.atWithTimes -->
+<g id="edge48" class="edge" data-name="SymbioticMiddleware.fetchOperatorCollateral-&gt;EnumerableMap.AddressToUintMap.atWithTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M464.49,-1486.39C472.52,-1482.34 479.79,-1477 485.54,-1470 535.88,-1408.7 477.85,-823.37 521.28,-757 532.93,-739.19 552.18,-726.92 571.38,-718.57" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="572.43,-721.92 580.44,-714.98 569.85,-715.41 572.43,-721.92" style=""/>
+</g>
+<!-- NETWORK_ADDRESS.subnetwork -->
+<g id="node64" class="node" pointer-events="visible" data-name="NETWORK_ADDRESS.subnetwork">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-872" rx="56.19" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-867.8" font-family="Times,serif" font-size="14.00" style="">subnetwork</text>
+</g>
+<!-- SymbioticMiddleware.fetchOperatorCollateral&#45;&gt;NETWORK_ADDRESS.subnetwork -->
+<g id="edge53" class="edge" data-name="SymbioticMiddleware.fetchOperatorCollateral-&gt;NETWORK_ADDRESS.subnetwork">
+
+<path fill="none" stroke="white" stroke-width="2" d="M464.12,-1486.43C472.28,-1482.38 479.67,-1477.03 485.54,-1470 563.01,-1377.15 454.27,-1027.67 521.28,-927 533.52,-908.6 553.84,-896.1 573.73,-887.73" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="574.75,-891.09 582.83,-884.24 572.24,-884.55 574.75,-891.09" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeNow -->
+<g id="node18" class="node" pointer-events="visible" data-name="SymbioticMiddleware.getOperatorStakeNow">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-1561" rx="97.27" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1556.8" font-family="Times,serif" font-size="14.00" style="">getOperatorStakeNow</text>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAtTime -->
+<g id="node19" class="node" pointer-events="visible" data-name="SymbioticMiddleware.getOperatorStakeAtTime">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-1571" rx="108.79" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1566.8" font-family="Times,serif" font-size="14.00" style="">getOperatorStakeAtTime</text>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeNow&#45;&gt;SymbioticMiddleware.getOperatorStakeAtTime -->
+<g id="edge55" class="edge" data-name="SymbioticMiddleware.getOperatorStakeNow-&gt;SymbioticMiddleware.getOperatorStakeAtTime">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M220.64,-1564.81C232.33,-1565.28 244.39,-1565.76 256.37,-1566.23" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="256.17,-1569.73 266.3,-1566.63 256.45,-1562.73 256.17,-1569.73" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeNow&#45;&gt;Time.timestamp -->
+<g id="edge54" class="edge" data-name="SymbioticMiddleware.getOperatorStakeNow-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M199.21,-1548.34C212.04,-1542.87 223.9,-1535.09 232.24,-1524 279.24,-1461.49 214.11,-877.46 268.24,-821 347.97,-737.84 497.74,-755.63 577.89,-772.94" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="576.65,-776.25 587.18,-775.04 578.19,-769.42 576.65,-776.25" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAtTime&#45;&gt;SymbioticMiddleware.calculateEpochStart -->
+<g id="edge58" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAtTime-&gt;SymbioticMiddleware.calculateEpochStart">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M487.01,-1571C501.42,-1571 516.13,-1571 530.4,-1571" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="530.32,-1574.5 540.32,-1571 530.32,-1567.5 530.32,-1574.5" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAtTime&#45;&gt;SymbioticMiddleware.getEpochForTimestamp -->
+<g id="edge59" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAtTime-&gt;SymbioticMiddleware.getEpochForTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M462.45,-1583.16C470.91,-1586.93 478.83,-1591.77 485.54,-1598 522.58,-1632.41 484.13,-1671.7 521.28,-1706 525.51,-1709.91 530.22,-1713.28 535.23,-1716.18" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="533.41,-1719.18 543.92,-1720.47 536.51,-1712.9 533.41,-1719.18" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAtTime&#45;&gt;SymbioticMiddleware.isActiveAtTimestamp -->
+<g id="edge63" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAtTime-&gt;SymbioticMiddleware.isActiveAtTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M458.44,-1584.08C468.06,-1587.66 477.36,-1592.21 485.54,-1598 509.03,-1614.63 497.74,-1635.44 521.28,-1652 527.43,-1656.33 534.2,-1659.97 541.27,-1663.02" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="539.97,-1666.27 550.56,-1666.56 542.46,-1659.73 539.97,-1666.27" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAtTime&#45;&gt;SymbioticMiddleware.IVault -->
+<g id="edge62" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAtTime-&gt;SymbioticMiddleware.IVault">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M431.1,-1554.07C475.9,-1542.97 539.44,-1529.51 582.94,-1521.93" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="583.49,-1525.38 592.77,-1520.27 582.33,-1518.48 583.49,-1525.38" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAtTime&#45;&gt;SymbioticMiddleware.IVault -->
+<g id="edge65" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAtTime-&gt;SymbioticMiddleware.IVault">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M463.83,-1559.15C506.17,-1550.83 555.33,-1539.95 589.47,-1531.17" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="590.07,-1534.63 598.85,-1528.69 588.28,-1527.87 590.07,-1534.63" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAtTime&#45;&gt;SymbioticMiddleware.IBaseDelegator -->
+<g id="edge64" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAtTime-&gt;SymbioticMiddleware.IBaseDelegator">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M450.39,-1556.55C462.78,-1552.14 475.02,-1546.42 485.54,-1539 507.56,-1523.45 498.88,-1505 521.28,-1490 531.26,-1483.31 542.74,-1478.28 554.44,-1474.49" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="555.1,-1477.94 563.75,-1471.82 553.17,-1471.22 555.1,-1477.94" style=""/>
+</g>
+<!-- SymbioticMiddleware.InvalidTimeQuery -->
+<g id="node42" class="node" pointer-events="visible" data-name="SymbioticMiddleware.InvalidTimeQuery">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-1625" rx="82.81" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-1620.8" font-family="Times,serif" font-size="14.00" style="">InvalidTimeQuery</text>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAtTime&#45;&gt;SymbioticMiddleware.InvalidTimeQuery -->
+<g id="edge57" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAtTime-&gt;SymbioticMiddleware.InvalidTimeQuery">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M447.92,-1585.9C482.17,-1593.18 523.38,-1601.95 558.09,-1609.33" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="557.09,-1612.7 567.6,-1611.36 558.54,-1605.85 557.09,-1612.7" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAtTime&#45;&gt;Time.timestamp -->
+<g id="edge56" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAtTime-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M443.76,-1555.54C459.95,-1548.57 475.49,-1538.5 485.54,-1524 571.95,-1399.24 438.04,-968.9 521.28,-842 533.9,-822.76 555.38,-809.98 576.05,-801.63" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="577.05,-805 585.22,-798.26 574.63,-798.43 577.05,-805" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAtTime&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge60" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAtTime-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M443.86,-1555.61C460.04,-1548.64 475.57,-1538.55 485.54,-1524 538.89,-1446.11 461.43,-748.02 521.28,-675 536.13,-656.88 560.96,-649.76 583.32,-647.33" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="583.36,-650.84 593.08,-646.62 582.85,-643.85 583.36,-650.84" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAtTime&#45;&gt;EnumerableMap.AddressToUintMap.atWithTimes -->
+<g id="edge61" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAtTime-&gt;EnumerableMap.AddressToUintMap.atWithTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M443.82,-1555.58C460,-1548.61 475.53,-1538.53 485.54,-1524 582.28,-1383.45 428.1,-899.94 521.28,-757 532.9,-739.17 552.15,-726.89 571.34,-718.54" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="572.4,-721.89 580.4,-714.96 569.82,-715.38 572.4,-721.89" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAtTime&#45;&gt;NETWORK_ADDRESS.subnetwork -->
+<g id="edge66" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAtTime-&gt;NETWORK_ADDRESS.subnetwork">
+
+<path fill="none" stroke="white" stroke-width="2" d="M443.69,-1555.49C459.87,-1548.52 475.44,-1538.46 485.54,-1524 561.61,-1415.02 447.97,-1037.86 521.28,-927 533.47,-908.57 553.77,-896.06 573.67,-887.69" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="574.69,-891.05 582.78,-884.2 572.19,-884.51 574.69,-891.05" style=""/>
+</g>
+<!-- SymbioticMiddleware.penalizeOperator -->
+<g id="node20" class="node" pointer-events="visible" data-name="SymbioticMiddleware.penalizeOperator">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-1698" rx="77.54" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1693.8" font-family="Times,serif" font-size="14.00" style="">penalizeOperator</text>
+</g>
+<!-- SymbioticMiddleware.penalizeOperator&#45;&gt;SymbioticMiddleware.calculateEpochStart -->
+<g id="edge67" class="edge" data-name="SymbioticMiddleware.penalizeOperator-&gt;SymbioticMiddleware.calculateEpochStart">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M183.66,-1710.65C273.4,-1728.6 439.41,-1755.63 485.54,-1721 531.06,-1686.82 480.17,-1637.38 521.28,-1598 526.96,-1592.55 533.56,-1588.15 540.64,-1584.6" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="541.91,-1587.86 549.74,-1580.72 539.17,-1581.42 541.91,-1587.86" style=""/>
+</g>
+<!-- SymbioticMiddleware.penalizeOperator&#45;&gt;SymbioticMiddleware.getEpochForTimestamp -->
+<g id="edge68" class="edge" data-name="SymbioticMiddleware.penalizeOperator-&gt;SymbioticMiddleware.getEpochForTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M158.43,-1715.48C186.76,-1729.29 228.97,-1747.47 268.24,-1755 363.62,-1773.29 475.41,-1761.71 549.58,-1749.52" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="549.8,-1753.03 559.08,-1747.91 548.63,-1746.13 549.8,-1753.03" style=""/>
+</g>
+<!-- SymbioticMiddleware.penalizeOperator&#45;&gt;SymbioticMiddleware.getOperatorStakeAtTime -->
+<g id="edge73" class="edge" data-name="SymbioticMiddleware.penalizeOperator-&gt;SymbioticMiddleware.getOperatorStakeAtTime">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M146.38,-1679.36C173.06,-1656.9 221.08,-1619.5 268.24,-1598 275.43,-1594.72 283.08,-1591.8 290.86,-1589.21" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="291.73,-1592.6 300.24,-1586.29 289.66,-1585.91 291.73,-1592.6" style=""/>
+</g>
+<!-- SymbioticMiddleware.penalizeOperator&#45;&gt;SymbioticMiddleware.isActiveAtTimestamp -->
+<g id="edge71" class="edge" data-name="SymbioticMiddleware.penalizeOperator-&gt;SymbioticMiddleware.isActiveAtTimestamp">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M164.14,-1714.75C232.13,-1741.35 375.56,-1785.88 485.54,-1741 506.12,-1732.6 501.85,-1716.8 521.28,-1706 528.76,-1701.84 536.87,-1698.32 545.18,-1695.34" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="546.16,-1698.7 554.58,-1692.27 543.99,-1692.04 546.16,-1698.7" style=""/>
+</g>
+<!-- SymbioticMiddleware.executeVaultPenalty -->
+<g id="node22" class="node" pointer-events="visible" data-name="SymbioticMiddleware.executeVaultPenalty">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-1813" rx="90.88" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1808.8" font-family="Times,serif" font-size="14.00" style="">executeVaultPenalty</text>
+</g>
+<!-- SymbioticMiddleware.penalizeOperator&#45;&gt;SymbioticMiddleware.executeVaultPenalty -->
+<g id="edge78" class="edge" data-name="SymbioticMiddleware.penalizeOperator-&gt;SymbioticMiddleware.executeVaultPenalty">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M151.82,-1716.07C179.83,-1734.4 225.65,-1762.63 268.24,-1781 279.79,-1785.98 292.35,-1790.48 304.68,-1794.43" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="303.41,-1797.7 314,-1797.3 305.47,-1791.01 303.41,-1797.7" style=""/>
+</g>
+<!-- SymbioticMiddleware.penalizeOperator&#45;&gt;SymbioticMiddleware.IVault -->
+<g id="edge72" class="edge" data-name="SymbioticMiddleware.penalizeOperator-&gt;SymbioticMiddleware.IVault">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M202.85,-1698.86C302.23,-1704.03 464.1,-1714.22 485.54,-1697 543.01,-1650.82 469.73,-1587.72 521.28,-1535 537.93,-1517.97 563.41,-1511 585.71,-1509.32" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="585.82,-1512.82 595.7,-1509.01 585.6,-1505.82 585.82,-1512.82" style=""/>
+</g>
+<!-- SymbioticMiddleware.penalizeOperator&#45;&gt;SymbioticMiddleware.IVault -->
+<g id="edge76" class="edge" data-name="SymbioticMiddleware.penalizeOperator-&gt;SymbioticMiddleware.IVault">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M188.1,-1709.34C285.28,-1720.91 463,-1733.11 485.54,-1715 543.01,-1668.82 469.73,-1605.72 521.28,-1553 537.77,-1536.13 562.95,-1529.12 585.1,-1525.54" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="585.29,-1529.04 594.71,-1524.19 584.32,-1522.11 585.29,-1529.04" style=""/>
+</g>
+<!-- SymbioticMiddleware.penalizeOperator&#45;&gt;SymbioticMiddleware.IBaseDelegator -->
+<g id="edge75" class="edge" data-name="SymbioticMiddleware.penalizeOperator-&gt;SymbioticMiddleware.IBaseDelegator">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M144.21,-1679.4C166.04,-1657.9 202.59,-1621.2 232.24,-1588 249.07,-1569.15 245.93,-1555.86 268.24,-1544 353.88,-1498.49 397.22,-1564.09 485.54,-1524 505.5,-1514.94 502.04,-1500.51 521.28,-1490 532.26,-1484 544.57,-1479.32 556.88,-1475.67" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="557.48,-1479.13 566.22,-1473.14 555.66,-1472.37 557.48,-1479.13" style=""/>
+</g>
+<!-- SymbioticMiddleware.ExcessiveSlashAmount -->
+<g id="node43" class="node" pointer-events="visible" data-name="SymbioticMiddleware.ExcessiveSlashAmount">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-1679" rx="102.46" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1674.8" font-family="Times,serif" font-size="14.00" style="">ExcessiveSlashAmount</text>
+</g>
+<!-- SymbioticMiddleware.penalizeOperator&#45;&gt;SymbioticMiddleware.ExcessiveSlashAmount -->
+<g id="edge74" class="edge" data-name="SymbioticMiddleware.penalizeOperator-&gt;SymbioticMiddleware.ExcessiveSlashAmount">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M199.68,-1692.35C221.12,-1690.73 244.95,-1688.92 267.97,-1687.18" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="267.93,-1690.69 277.64,-1686.44 267.4,-1683.71 267.93,-1690.69" style=""/>
+</g>
+<!-- SymbioticMiddleware.penalizeOperator&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge69" class="edge" data-name="SymbioticMiddleware.penalizeOperator-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M151.39,-1680.07C177.23,-1660.74 215.21,-1627.39 232.24,-1588 268.22,-1504.8 215.37,-846.63 268.24,-773 341.24,-671.33 502.39,-651.54 583.33,-648.23" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="583.17,-651.73 593.05,-647.91 582.94,-644.74 583.17,-651.73" style=""/>
+</g>
+<!-- SymbioticMiddleware.penalizeOperator&#45;&gt;EnumerableMap.AddressToUintMap.atWithTimes -->
+<g id="edge70" class="edge" data-name="SymbioticMiddleware.penalizeOperator-&gt;EnumerableMap.AddressToUintMap.atWithTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M151.35,-1680.06C177.16,-1660.71 215.11,-1627.35 232.24,-1588 264.96,-1512.82 219.44,-916.88 268.24,-851 329.31,-768.54 390.96,-812.8 485.54,-773 505.1,-764.76 552.19,-741.68 587.67,-724.04" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="589.1,-727.24 596.49,-719.65 585.98,-720.97 589.1,-727.24" style=""/>
+</g>
+<!-- SymbioticMiddleware.penalizeOperator&#45;&gt;NETWORK_ADDRESS.subnetwork -->
+<g id="edge77" class="edge" data-name="SymbioticMiddleware.penalizeOperator-&gt;NETWORK_ADDRESS.subnetwork">
+
+<path fill="none" stroke="white" stroke-width="2" d="M151.3,-1680.03C177.08,-1660.68 215,-1627.3 232.24,-1588 261.65,-1520.95 219.21,-984.39 268.24,-930 343.58,-846.42 487.24,-850.38 569.6,-860.99" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="568.89,-864.43 579.27,-862.33 569.85,-857.49 568.89,-864.43" style=""/>
+</g>
+<!-- SymbioticMiddleware.executeVaultPenalty&#45;&gt;SymbioticMiddleware.IVault -->
+<g id="edge79" class="edge" data-name="SymbioticMiddleware.executeVaultPenalty-&gt;SymbioticMiddleware.IVault">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M408.86,-1794.77C433.55,-1778.56 466.97,-1752.58 485.54,-1721 526.21,-1651.81 465.69,-1601.89 521.28,-1544 537.09,-1527.53 561.16,-1520.43 582.8,-1517.6" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="582.89,-1521.11 592.5,-1516.66 582.21,-1514.14 582.89,-1521.11" style=""/>
+</g>
+<!-- SymbioticMiddleware.IEntity -->
+<g id="node44" class="node" pointer-events="visible" data-name="SymbioticMiddleware.IEntity">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-1841" rx="37.71" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-1836.8" font-family="Times,serif" font-size="14.00" style="">IEntity</text>
+</g>
+<!-- SymbioticMiddleware.executeVaultPenalty&#45;&gt;SymbioticMiddleware.IEntity -->
+<g id="edge80" class="edge" data-name="SymbioticMiddleware.executeVaultPenalty-&gt;SymbioticMiddleware.IEntity">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M458.9,-1821.94C499.3,-1826.39 546.87,-1831.64 581.87,-1835.5" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="581.29,-1838.96 591.61,-1836.57 582.06,-1832 581.29,-1838.96" style=""/>
+</g>
+<!-- SymbioticMiddleware.ISlasher -->
+<g id="node45" class="node" pointer-events="visible" data-name="SymbioticMiddleware.ISlasher">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-1895" rx="42.86" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-1890.8" font-family="Times,serif" font-size="14.00" style="">ISlasher</text>
+</g>
+<!-- SymbioticMiddleware.executeVaultPenalty&#45;&gt;SymbioticMiddleware.ISlasher -->
+<g id="edge81" class="edge" data-name="SymbioticMiddleware.executeVaultPenalty-&gt;SymbioticMiddleware.ISlasher">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M446.61,-1825.66C459.88,-1829.37 473.42,-1834.07 485.54,-1840 503.66,-1848.87 503.13,-1859.18 521.28,-1868 538.8,-1876.51 559.21,-1882.47 577.7,-1886.58" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="576.97,-1890 587.47,-1888.59 578.38,-1883.15 576.97,-1890" style=""/>
+</g>
+<!-- SymbioticMiddleware.IVetoSlasher -->
+<g id="node46" class="node" pointer-events="visible" data-name="SymbioticMiddleware.IVetoSlasher">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-1949" rx="61.41" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-1944.8" font-family="Times,serif" font-size="14.00" style="">IVetoSlasher</text>
+</g>
+<!-- SymbioticMiddleware.executeVaultPenalty&#45;&gt;SymbioticMiddleware.IVetoSlasher -->
+<g id="edge83" class="edge" data-name="SymbioticMiddleware.executeVaultPenalty-&gt;SymbioticMiddleware.IVetoSlasher">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M455.33,-1823.21C466.29,-1827.17 476.79,-1832.59 485.54,-1840 515.87,-1865.69 490.86,-1896.4 521.28,-1922 532.09,-1931.1 545.49,-1937.22 559.19,-1941.32" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="558.3,-1944.71 568.85,-1943.79 560.03,-1937.92 558.3,-1944.71" style=""/>
+</g>
+<!-- SymbioticMiddleware.UnsupportedSlasherType -->
+<g id="node47" class="node" pointer-events="visible" data-name="SymbioticMiddleware.UnsupportedSlasherType">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-1787" rx="109.39" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-1782.8" font-family="Times,serif" font-size="14.00" style="">UnsupportedSlasherType</text>
+</g>
+<!-- SymbioticMiddleware.executeVaultPenalty&#45;&gt;SymbioticMiddleware.UnsupportedSlasherType -->
+<g id="edge85" class="edge" data-name="SymbioticMiddleware.executeVaultPenalty-&gt;SymbioticMiddleware.UnsupportedSlasherType">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M459.95,-1804.59C480.32,-1802.51 502.46,-1800.24 523.86,-1798.05" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="524.1,-1801.54 533.69,-1797.04 523.39,-1794.58 524.1,-1801.54" style=""/>
+</g>
+<!-- SymbioticMiddleware.executeVaultPenalty&#45;&gt;NETWORK_ADDRESS.subnetwork -->
+<g id="edge82" class="edge" data-name="SymbioticMiddleware.executeVaultPenalty-&gt;NETWORK_ADDRESS.subnetwork">
+
+<path fill="none" stroke="white" stroke-width="2" d="M397.79,-1794.18C423.41,-1773.68 466.85,-1739.16 485.54,-1697 520.64,-1617.78 473.99,-990.6 521.28,-918 531.78,-901.88 548.49,-890.31 565.78,-882.46" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="567.01,-885.74 574.96,-878.74 564.38,-879.25 567.01,-885.74" style=""/>
+</g>
+<!-- SymbioticMiddleware.executeVaultPenalty&#45;&gt;NETWORK_ADDRESS.subnetwork -->
+<g id="edge84" class="edge" data-name="SymbioticMiddleware.executeVaultPenalty-&gt;NETWORK_ADDRESS.subnetwork">
+
+<path fill="none" stroke="white" stroke-width="2" d="M414.96,-1795.3C439.8,-1777.57 470.59,-1748.73 485.54,-1715 520.64,-1635.78 473.99,-1008.6 521.28,-936 535.5,-914.17 561.14,-900.66 584.14,-891.54" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="585.24,-894.87 593.37,-888.08 582.78,-888.31 585.24,-894.87" style=""/>
+</g>
+<!-- SymbioticMiddleware._wasEnabledAt -->
+<g id="node23" class="node" pointer-events="visible" data-name="SymbioticMiddleware._wasEnabledAt">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-1301" rx="72.36" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-1296.8" font-family="Times,serif" font-size="14.00" style="">_wasEnabledAt</text>
+</g>
+<!-- SymbioticMiddleware.getEpochStartTs -->
+<g id="node24" class="node" pointer-events="visible" data-name="SymbioticMiddleware.getEpochStartTs">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="632.73" cy="-1355" rx="75.3" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-1350.8" font-family="Times,serif" font-size="14.00" style="">getEpochStartTs</text>
+</g>
+<!-- SymbioticMiddleware.getEpochStartTs&#45;&gt;ISystemParameters.getEpochDuration -->
+<g id="edge86" class="edge" data-name="SymbioticMiddleware.getEpochStartTs-&gt;ISystemParameters.getEpochDuration">
+
+<path fill="none" stroke="white" stroke-width="2" d="M698.32,-1365.07C715.57,-1369.07 733.86,-1374.55 749.93,-1382 779.36,-1395.64 808.62,-1418.05 829.38,-1435.85" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="827.03,-1438.44 836.86,-1442.41 831.65,-1433.18 827.03,-1438.44" style=""/>
+</g>
+<!-- SymbioticMiddleware.getEpochAtTs -->
+<g id="node25" class="node" pointer-events="visible" data-name="SymbioticMiddleware.getEpochAtTs">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="632.73" cy="-1247" rx="66.64" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-1242.8" font-family="Times,serif" font-size="14.00" style="">getEpochAtTs</text>
+</g>
+<!-- SymbioticMiddleware.getEpochAtTs&#45;&gt;ISystemParameters.getEpochDuration -->
+<g id="edge87" class="edge" data-name="SymbioticMiddleware.getEpochAtTs-&gt;ISystemParameters.getEpochDuration">
+
+<path fill="none" stroke="white" stroke-width="2" d="M698.06,-1252.33C716.15,-1256.26 734.96,-1262.89 749.93,-1274 803.68,-1313.89 835.1,-1388.82 849.39,-1431.37" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="846.04,-1432.38 852.43,-1440.83 852.7,-1430.24 846.04,-1432.38" style=""/>
+</g>
+<!-- SymbioticMiddleware.getCurrentEpoch -->
+<g id="node26" class="node" pointer-events="visible" data-name="SymbioticMiddleware.getCurrentEpoch">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="376.89" cy="-957" rx="77.01" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-952.8" font-family="Times,serif" font-size="14.00" style="">getCurrentEpoch</text>
+</g>
+<!-- SymbioticMiddleware.getCurrentEpoch&#45;&gt;SymbioticMiddleware.getEpochAtTs -->
+<g id="edge88" class="edge" data-name="SymbioticMiddleware.getCurrentEpoch-&gt;SymbioticMiddleware.getEpochAtTs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M447.16,-965.54C460.83,-969.56 474.38,-975.44 485.54,-984 564.19,-1044.36 606.57,-1159.77 623.23,-1215.43" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="619.77,-1216.06 625.91,-1224.7 626.5,-1214.12 619.77,-1216.06" style=""/>
+</g>
+<!-- SymbioticMiddleware.getCurrentEpoch&#45;&gt;Time.timestamp -->
+<g id="edge89" class="edge" data-name="SymbioticMiddleware.getCurrentEpoch-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M444.32,-947.03C459.18,-942.28 473.95,-935.3 485.54,-925 515.56,-898.32 493.68,-871.18 521.28,-842 537.2,-825.17 559.39,-812.74 579.7,-804" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="580.94,-807.28 588.9,-800.29 578.32,-800.79 580.94,-807.28" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStake -->
+<g id="node27" class="node" pointer-events="visible" data-name="SymbioticMiddleware.getOperatorStake">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="124.12" cy="-1497" rx="78.71" ry="18" style=""/>
+<text text-anchor="middle" x="124.12" y="-1492.8" font-family="Times,serif" font-size="14.00" style="">getOperatorStake</text>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAt -->
+<g id="node29" class="node" pointer-events="visible" data-name="SymbioticMiddleware.getOperatorStakeAt">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="376.89" cy="-1443" rx="88.03" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1438.8" font-family="Times,serif" font-size="14.00" style="">getOperatorStakeAt</text>
+</g>
+<!-- SymbioticMiddleware.getOperatorStake&#45;&gt;SymbioticMiddleware.getOperatorStakeAt -->
+<g id="edge91" class="edge" data-name="SymbioticMiddleware.getOperatorStake-&gt;SymbioticMiddleware.getOperatorStakeAt">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M184.55,-1484.2C219.29,-1476.72 263.48,-1467.21 300.64,-1459.2" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="300.95,-1462.72 309.99,-1457.19 299.47,-1455.87 300.95,-1462.72" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStake&#45;&gt;Time.timestamp -->
+<g id="edge90" class="edge" data-name="SymbioticMiddleware.getOperatorStake-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M200.22,-1491.04C212.56,-1486.73 223.98,-1480.1 232.24,-1470 285.97,-1404.3 206.83,-765.58 268.24,-707 338.12,-640.34 399.66,-662.82 485.54,-707 509.83,-719.49 498.85,-741.4 521.28,-757 535.64,-766.99 553.19,-773.66 570.04,-778.11" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="569.24,-781.51 579.77,-780.4 570.84,-774.7 569.24,-781.51" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorCollaterals -->
+<g id="node28" class="node" pointer-events="visible" data-name="SymbioticMiddleware.getOperatorCollaterals">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="376.89" cy="-1389" rx="98.97" ry="18" style=""/>
+<text text-anchor="middle" x="376.89" y="-1384.8" font-family="Times,serif" font-size="14.00" style="">getOperatorCollaterals</text>
+</g>
+<!-- SymbioticMiddleware.getOperatorCollaterals&#45;&gt;SymbioticMiddleware._wasEnabledAt -->
+<g id="edge99" class="edge" data-name="SymbioticMiddleware.getOperatorCollaterals-&gt;SymbioticMiddleware._wasEnabledAt">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M451.34,-1375.99C463.17,-1372.39 474.99,-1367.81 485.54,-1362 504.74,-1351.43 502.04,-1338.51 521.28,-1328 532.01,-1322.13 544.02,-1317.53 556.06,-1313.91" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="556.93,-1317.3 565.65,-1311.29 555.08,-1310.55 556.93,-1317.3" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorCollaterals&#45;&gt;SymbioticMiddleware.getEpochStartTs -->
+<g id="edge94" class="edge" data-name="SymbioticMiddleware.getOperatorCollaterals-&gt;SymbioticMiddleware.getEpochStartTs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M459.6,-1378.06C489.15,-1374.1 522.45,-1369.64 551.83,-1365.7" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="552.15,-1369.19 561.6,-1364.39 551.22,-1362.25 552.15,-1369.19" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorCollaterals&#45;&gt;SymbioticMiddleware.getEpochAtTs -->
+<g id="edge95" class="edge" data-name="SymbioticMiddleware.getOperatorCollaterals-&gt;SymbioticMiddleware.getEpochAtTs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M458.79,-1377.74C468.52,-1373.88 477.75,-1368.76 485.54,-1362 517.4,-1334.31 489.33,-1301.59 521.28,-1274 530.91,-1265.68 542.71,-1259.84 554.96,-1255.75" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="555.73,-1259.17 564.39,-1253.06 553.81,-1252.44 555.73,-1259.17" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorCollaterals&#45;&gt;SymbioticMiddleware.IVault -->
+<g id="edge100" class="edge" data-name="SymbioticMiddleware.getOperatorCollaterals-&gt;SymbioticMiddleware.IVault">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M469.14,-1396.52C474.99,-1399.45 480.53,-1402.92 485.54,-1407 513.86,-1430.06 492.88,-1458.03 521.28,-1481 539.54,-1495.77 564.68,-1502.65 586.37,-1506.68" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="585.57,-1510.09 596.01,-1508.31 586.73,-1503.19 585.57,-1510.09" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorCollaterals&#45;&gt;SymbioticMiddleware.IVault -->
+<g id="edge102" class="edge" data-name="SymbioticMiddleware.getOperatorCollaterals-&gt;SymbioticMiddleware.IVault">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M441.09,-1403.95C456.89,-1408.29 472.91,-1414.72 485.54,-1425 513.86,-1448.06 492.88,-1476.03 521.28,-1499 539.13,-1513.45 563.57,-1520.34 584.93,-1522.71" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="584.49,-1526.19 594.72,-1523.42 584.99,-1519.21 584.49,-1526.19" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorCollaterals&#45;&gt;SymbioticMiddleware.IBaseDelegator -->
+<g id="edge101" class="edge" data-name="SymbioticMiddleware.getOperatorCollaterals-&gt;SymbioticMiddleware.IBaseDelegator">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M445.65,-1403.09C459.08,-1406.69 472.91,-1410.99 485.54,-1416 502.45,-1422.72 504.34,-1429.33 521.28,-1436 533.94,-1440.98 547.78,-1445.24 561.26,-1448.8" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="560,-1452.09 570.55,-1451.13 561.71,-1445.3 560,-1452.09" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorCollaterals&#45;&gt;Time.timestamp -->
+<g id="edge96" class="edge" data-name="SymbioticMiddleware.getOperatorCollaterals-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M462.81,-1379.04C471.48,-1374.92 479.35,-1369.39 485.54,-1362 559.87,-1273.17 456.96,-938.33 521.28,-842 534.06,-822.86 555.56,-810.1 576.21,-801.74" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="577.2,-805.1 585.36,-798.35 574.77,-798.54 577.2,-805.1" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorCollaterals&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge92" class="edge" data-name="SymbioticMiddleware.getOperatorCollaterals-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M428.74,-1372.31C449.51,-1367.91 471.82,-1360.66 485.54,-1344 582.67,-1225.95 423.79,-774.76 521.28,-657 539.1,-635.48 570.98,-629.5 595.93,-631.5" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="595.2,-634.93 605.59,-632.88 596.19,-628 595.2,-634.93" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorCollaterals&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge93" class="edge" data-name="SymbioticMiddleware.getOperatorCollaterals-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M462.93,-1379.14C471.58,-1375 479.41,-1369.44 485.54,-1362 582.67,-1243.95 423.79,-792.76 521.28,-675 536.22,-656.95 561.05,-649.83 583.39,-647.39" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="583.43,-650.9 593.14,-646.67 582.91,-643.92 583.43,-650.9" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorCollaterals&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge97" class="edge" data-name="SymbioticMiddleware.getOperatorCollaterals-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M476.98,-1388.4C480.09,-1385.92 482.96,-1383.12 485.54,-1380 582.67,-1261.95 423.79,-810.76 521.28,-693 538.06,-672.73 567.32,-666.25 591.5,-662.15" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="592.02,-665.61 601.32,-660.54 590.89,-658.71 592.02,-665.61" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorCollaterals&#45;&gt;EnumerableMap.AddressToUintMap.atWithTimes -->
+<g id="edge98" class="edge" data-name="SymbioticMiddleware.getOperatorCollaterals-&gt;EnumerableMap.AddressToUintMap.atWithTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M462.88,-1379.1C471.54,-1374.97 479.39,-1369.42 485.54,-1362 571.47,-1258.3 447.03,-869.37 521.28,-757 533.01,-739.24 552.28,-726.98 571.47,-718.63" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="572.52,-721.98 580.52,-715.03 569.93,-715.47 572.52,-721.98" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorCollaterals&#45;&gt;NETWORK_ADDRESS.subnetwork -->
+<g id="edge103" class="edge" data-name="SymbioticMiddleware.getOperatorCollaterals-&gt;NETWORK_ADDRESS.subnetwork">
+
+<path fill="none" stroke="white" stroke-width="2" d="M462.71,-1378.96C471.4,-1374.85 479.3,-1369.35 485.54,-1362 548.28,-1288.04 466.88,-1007.3 521.28,-927 533.67,-908.7 554.02,-896.22 573.89,-887.84" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="574.9,-891.2 582.97,-884.34 572.38,-884.67 574.9,-891.2" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAt&#45;&gt;SymbioticMiddleware._wasEnabledAt -->
+<g id="edge111" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAt-&gt;SymbioticMiddleware._wasEnabledAt">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M454.39,-1433.39C465.73,-1429.37 476.59,-1423.77 485.54,-1416 517.4,-1388.31 489.33,-1355.59 521.28,-1328 529.8,-1320.64 540.01,-1315.22 550.72,-1311.24" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="551.63,-1314.62 560.1,-1308.25 549.51,-1307.96 551.63,-1314.62" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAt&#45;&gt;SymbioticMiddleware.getEpochStartTs -->
+<g id="edge106" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAt-&gt;SymbioticMiddleware.getEpochStartTs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M447.65,-1431.09C460.7,-1427.33 473.89,-1422.41 485.54,-1416 504.74,-1405.43 502.04,-1392.51 521.28,-1382 531.52,-1376.4 542.92,-1371.95 554.4,-1368.42" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="555.24,-1371.82 563.92,-1365.74 553.35,-1365.08 555.24,-1371.82" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAt&#45;&gt;SymbioticMiddleware.getEpochAtTs -->
+<g id="edge107" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAt-&gt;SymbioticMiddleware.getEpochAtTs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M456.19,-1434.12C467.1,-1430 477.36,-1424.17 485.54,-1416 531.57,-1370 475.1,-1319.86 521.28,-1274 530.31,-1265.03 541.81,-1258.86 553.95,-1254.66" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="554.71,-1258.08 563.33,-1251.93 552.75,-1251.36 554.71,-1258.08" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAt&#45;&gt;SymbioticMiddleware.IVault -->
+<g id="edge110" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAt-&gt;SymbioticMiddleware.IVault">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M457.43,-1451.47C467.02,-1454.25 476.58,-1457.44 485.54,-1461 502.45,-1467.72 504.34,-1474.33 521.28,-1481 543.64,-1489.8 569.71,-1496.34 590.91,-1501.74" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="589.91,-1505.1 600.47,-1504.21 591.66,-1498.32 589.91,-1505.1" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAt&#45;&gt;SymbioticMiddleware.IVault -->
+<g id="edge113" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAt-&gt;SymbioticMiddleware.IVault">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M422.71,-1459.71C442.37,-1464.87 465.48,-1471.04 485.54,-1479 502.45,-1485.72 504.34,-1492.33 521.28,-1499 540.92,-1506.73 563.43,-1512.72 582.98,-1516.41" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="582.23,-1519.83 592.67,-1518.04 583.39,-1512.93 582.23,-1519.83" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAt&#45;&gt;SymbioticMiddleware.IBaseDelegator -->
+<g id="edge112" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAt-&gt;SymbioticMiddleware.IBaseDelegator">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M461.01,-1449.55C489.72,-1451.81 521.84,-1454.34 550.41,-1456.59" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="550,-1460.07 560.24,-1457.37 550.55,-1453.09 550,-1460.07" style=""/>
+</g>
+<!-- SymbioticMiddleware.InvalidQuery -->
+<g id="node48" class="node" pointer-events="visible" data-name="SymbioticMiddleware.InvalidQuery">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="632.73" cy="-1409" rx="62.55" ry="18" style=""/>
+<text text-anchor="middle" x="632.73" y="-1404.8" font-family="Times,serif" font-size="14.00" style="">InvalidQuery</text>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAt&#45;&gt;SymbioticMiddleware.InvalidQuery -->
+<g id="edge105" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAt-&gt;SymbioticMiddleware.InvalidQuery">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M453.36,-1432.89C487.7,-1428.29 528.09,-1422.88 561.75,-1418.37" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="561.84,-1421.89 571.29,-1417.1 560.91,-1414.95 561.84,-1421.89" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAt&#45;&gt;Time.timestamp -->
+<g id="edge104" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAt-&gt;Time.timestamp">
+
+<path fill="none" stroke="white" stroke-width="2" d="M458.37,-1435.06C468.8,-1430.78 478.33,-1424.67 485.54,-1416 567.24,-1317.73 450.65,-948.52 521.28,-842 533.99,-822.82 555.49,-810.05 576.15,-801.69" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="577.14,-805.06 585.31,-798.31 574.71,-798.49 577.14,-805.06" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAt&#45;&gt;EnumerableMap.AddressToUintMap.length -->
+<g id="edge108" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAt-&gt;EnumerableMap.AddressToUintMap.length">
+
+<path fill="none" stroke="white" stroke-width="2" d="M458.48,-1435.15C468.89,-1430.86 478.39,-1424.72 485.54,-1416 590.04,-1288.5 416.39,-802.19 521.28,-675 536.19,-656.92 561.02,-649.8 583.36,-647.37" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="583.4,-650.88 593.12,-646.65 582.89,-643.89 583.4,-650.88" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAt&#45;&gt;EnumerableMap.AddressToUintMap.atWithTimes -->
+<g id="edge109" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAt-&gt;EnumerableMap.AddressToUintMap.atWithTimes">
+
+<path fill="none" stroke="white" stroke-width="2" d="M458.44,-1435.11C468.85,-1430.83 478.36,-1424.7 485.54,-1416 578.85,-1302.85 440.72,-879.56 521.28,-757 532.97,-739.21 552.23,-726.94 571.42,-718.59" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="572.47,-721.94 580.47,-715 569.89,-715.44 572.47,-721.94" style=""/>
+</g>
+<!-- SymbioticMiddleware.getOperatorStakeAt&#45;&gt;NETWORK_ADDRESS.subnetwork -->
+<g id="edge114" class="edge" data-name="SymbioticMiddleware.getOperatorStakeAt-&gt;NETWORK_ADDRESS.subnetwork">
+
+<path fill="none" stroke="white" stroke-width="2" d="M458.29,-1434.99C468.72,-1430.72 478.28,-1424.63 485.54,-1416 555.64,-1332.6 460.58,-1017.48 521.28,-927 533.59,-908.65 553.92,-896.15 573.8,-887.78" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="574.82,-891.14 582.89,-884.28 572.3,-884.6 574.82,-891.14" style=""/>
+</g>
+<!-- key -->
+<g id="node65" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="none" stroke-width="3" points="189.12,-2130 59.12,-2130 59.12,-2042 189.12,-2042 189.12,-2130" style=""/>
+<text text-anchor="start" x="108.76" y="-2111.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="104.87" y="-2091.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="82.32" y="-2071.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="68.72" y="-2051.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node66" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="none" stroke-width="3" points="403.89,-2130 349.89,-2130 349.89,-2042 403.89,-2042 403.89,-2130" style=""/>
+<text text-anchor="start" x="366.89" y="-2111.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="366.89" y="-2091.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="none" points="364.89,-2066 364.89,-2086 389.89,-2086 389.89,-2066 364.89,-2066" style=""/>
+<text text-anchor="start" x="366.89" y="-2071.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="366.89,-2048 366.89,-2064 387.89,-2064 387.89,-2048 366.89,-2048" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge115" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M182.12,-2116C258.49,-2116 280.71,-2116 351.16,-2116" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="350.86,-2119.5 360.86,-2116 350.86,-2112.5 350.86,-2119.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge116" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M182.12,-2096C258.49,-2096 280.71,-2096 351.16,-2096" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="350.86,-2099.5 360.86,-2096 350.86,-2092.5 350.86,-2099.5" style=""/>
+</g>
+</g>
+</svg>
