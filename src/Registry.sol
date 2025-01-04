@@ -314,59 +314,8 @@ contract Registry is IManager, OwnableUpgradeable, UUPSUpgradeable {
         return amount;
     }
 
-    // ========= OPERATOR FUNCTIONS ====== //
 
-    /// @notice Registers an operator. Only callable by a supported middleware contract.
-    function registerOperator(
-        address operatorAddr,
-        string calldata rpc
-    ) external onlyMiddleware {
-        if (operators.contains(operatorAddr)) {
-            revert OperatorAlreadyRegistered();
-        }
-
-        // Create an already enabled operator
-        EnumerableMap.Operator memory operator = EnumerableMap.Operator(
-            rpc,
-            msg.sender,
-            Time.timestamp()
-        );
-
-        operators.set(operatorAddr, operator);
-    }
-
-    /// @notice De-registers an operator. Only callable by a supported middleware contract.
-    function deregisterOperator(address operator) public onlyMiddleware {
-        operators.remove(operator);
-    }
-
-    /// @notice Allow an operator to signal indefinite opt-out fromx Protocol.
-    /// @dev Pausing activity does not prevent the operator from being slashable for
-    /// the current network epoch until the end of the slashing window.
-    function pauseOperator(address operator) external onlyMiddleware {
-        // SAFETY: This will revert if the operator key is not present.
-        operators.disable(operator);
-    }
-
-    /// @notice Allow a disabled operator to signal opt-in to  Protocol.
-    function unpauseOperator(address operator) external onlyMiddleware {
-        // SAFETY: This will revert if the operator key is not present.
-        operators.enable(operator);
-    }
-
-    /// @notice Check if an operator is currently enabled to work in  Protocol.
-    /// @param operator The operator address to check the enabled status for.
-    /// @return True if the operator is enabled, false otherwise.
-    function isOperatorEnabled(address operator) public view returns (bool) {
-        if (!operators.contains(operator)) {
-            revert OperatorNotRegistered();
-        }
-
-        (uint48 enabledTime, uint48 disabledTime) = operators.getTimes(
-            operator
-        );
-        return enabledTime != 0 && disabledTime == 0;
-    }
+ 
 
     // ========= ADMIN FUNCTIONS ========= //
 
