@@ -4,6 +4,10 @@ out/
 
 lib/
 /lib/
+node_modules/
+/node_modules/
+slither/
+/slither/
 
 
 # Ignores development broadcast logs
