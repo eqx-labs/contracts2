@@ -1,5 +1,0 @@
-strict digraph {
-subgraph cluster_solidity {
-label = "[Solidity]"
-}
-}

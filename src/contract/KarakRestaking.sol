@@ -18,14 +18,14 @@ import {IKarakCore} from "./interfaces/IKarakCore.sol";
 import {BaseDSS} from "src/lib/karak-onchain-sdk/src/BaseDSS.sol";
 import {IKarakBaseVault} from "src/lib/karak-onchain-sdk/src/interfaces/IKarakBaseVault.sol";
 
-/// @title Bolt Karak Middleware contract.
+/// @title   Karak Middleware contract.
 /// @notice This contract is responsible for interfacing with the Karak restaking protocol.
 /// @dev This contract is upgradeable using the UUPSProxy pattern. Storage layout remains fixed across upgrades
 /// with the use of storage gaps.
 /// See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
 /// To validate the storage layout, use the Openzeppelin Foundry Upgrades toolkit.
 /// You can also validate manually with forge: forge inspect <contract> storage-layout --pretty
-contract BoltDSSMiddlewareV1 is BaseDSS, IMiddleware, OwnableUpgradeable, UUPSUpgradeable {
+contract  DSSMiddlewareV1 is BaseDSS, IMiddleware, OwnableUpgradeable, UUPSUpgradeable {
     using EnumerableSet for EnumerableSet.AddressSet;
     using EnumerableMap for EnumerableMap.AddressToUintMap;
     using MapWithTimeData for EnumerableMap.AddressToUintMap;
@@ -35,13 +35,13 @@ contract BoltDSSMiddlewareV1 is BaseDSS, IMiddleware, OwnableUpgradeable, UUPSUp
     /// @notice Start timestamp of the first epoch.
     uint48 public START_TIMESTAMP;
 
-    /// @notice Bolt Parameters contract.
+    /// @notice   Parameters contract.
     ISystemParameters public parameters;
 
-    /// @notice Set of vault's assets that are used in Bolt Protocol.
+    /// @notice Set of vault's assets that are used in   Protocol.
     EnumerableMap.AddressToUintMap private assets;
 
-    /// @notice Name hash of the restaking protocol for identifying the instance of `IBoltMiddleware`.
+    /// @notice Name hash of the restaking protocol for identifying the instance of `I Middleware`.
     bytes32 public NAME_HASH;
 
     /// @notice Durartion of each epoch in seconds.
@@ -68,7 +68,7 @@ contract BoltDSSMiddlewareV1 is BaseDSS, IMiddleware, OwnableUpgradeable, UUPSUp
     }
     // ========= INITIALIZER & PROXY FUNCTIONALITY ========= //
 
-    /// @notice Constructor for the BoltKarakMiddleware contract.
+    /// @notice Constructor for the  KarakMiddleware contract.
     /// @param _core The address of the karak core contract.
     /// @param _maxSlashablePercentageWad The maximum percentageWad that can be slashed by DSS.
     /// @param _epochDuration The duration of each epoch.
@@ -116,7 +116,7 @@ contract BoltDSSMiddlewareV1 is BaseDSS, IMiddleware, OwnableUpgradeable, UUPSUp
     }
 
     // ========= ADMIN FUNCTIONS =========
-    /// @notice Register a asset to work in Bolt Protocol.
+    /// @notice Register a asset to work in   Protocol.
     /// @param asset The asset's address
     function registerAsset(
         address asset
@@ -133,7 +133,7 @@ contract BoltDSSMiddlewareV1 is BaseDSS, IMiddleware, OwnableUpgradeable, UUPSUp
         assets.enable(asset);
     }
 
-    /// @notice Deregister a asset to work from Bolt Protocol.
+    /// @notice Deregister a asset to work from   Protocol.
     /// @param asset The asset's address
     function deregisterAsset(
         address asset
@@ -147,7 +147,7 @@ contract BoltDSSMiddlewareV1 is BaseDSS, IMiddleware, OwnableUpgradeable, UUPSUp
 
     // ========= KARAK MIDDLEWARE LOGIC =========
 
-    /// @notice Check if a asset is currently enabled to work in Bolt Protocol.
+    /// @notice Check if a asset is currently enabled to work in   Protocol.
     /// @param asset The asset address to check the enabled status for.
     /// @return True if the asset is enabled, false otherwise.
     function isAssetEnabled(

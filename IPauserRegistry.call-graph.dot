@@ -1,9 +1,0 @@
-strict digraph {
-subgraph cluster_3014_IPauserRegistry {
-label = "IPauserRegistry"
-"3014_isPauser" [label="isPauser"]
-"3014_unpauser" [label="unpauser"]
-}subgraph cluster_solidity {
-label = "[Solidity]"
-}
-}
