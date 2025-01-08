@@ -1,6 +1,9 @@
 // this smart contract registers gateway IP addresses
 // operators can only communicate with whitelisted IP addresses here
 
+// ToDo: for gateway enable different validator pubkeys to add and remove specific gateways to their whitelist
+
+
 pragma solidity ^0.8.0;
 
 contract GatewayRegistry {
