@@ -348,6 +348,8 @@ contract ValidatorSlashing is ISlashing, OwnableUpgradeable, UUPSUpgradeable {
                validatorParams.VALIDATOR_EPOCH_TIME();
     }
 
+
+//not done 
     function _getTimestampFromEpoch(uint256 _epoch) internal view returns (uint256) {
         return validatorParams.CONSENSUS_LAUNCH_TIMESTAMP() + 
                _epoch * validatorParams.VALIDATOR_EPOCH_TIME();
