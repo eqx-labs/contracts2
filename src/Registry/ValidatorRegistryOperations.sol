@@ -15,8 +15,7 @@ contract ValidatorRegistryOperations is ValidatorRegistryTime {
     function enrollValidatorNode(
         address nodeAddress,
         string calldata endpointUrl
-    ) external       override
-   onlyRegisteredProtocol {
+    ) external override onlyRegisteredProtocol {
         if (nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeAlreadyExists();
         }
@@ -32,29 +31,25 @@ contract ValidatorRegistryOperations is ValidatorRegistryTime {
 
     function removeValidatorNode(
         address nodeAddress
-    ) public       override
-   onlyRegisteredProtocol {
+    ) public override onlyRegisteredProtocol {
         nodeOperatorRegistry.remove(nodeAddress);
     }
 
     function suspendValidatorNode(
         address nodeAddress
-    ) external       override
-   onlyRegisteredProtocol {
+    ) external override onlyRegisteredProtocol {
         nodeOperatorRegistry.disable(nodeAddress);
     }
 
     function reactivateValidatorNode(
         address nodeAddress
-    ) external       override
-   onlyRegisteredProtocol {
+    ) external override onlyRegisteredProtocol {
         nodeOperatorRegistry.enable(nodeAddress);
     }
 
     function validateNodeRegistration(
         address nodeAddress
-    ) public view   virtual    override
-   returns (bool) {
+    ) public view virtual override returns (bool) {
         return nodeOperatorRegistry.contains(nodeAddress);
     }
 

@@ -25,14 +25,5 @@ contract ValidatorRegistryTime is ValidatorRegistryBase {
         return calculateEpochFromTimestamp(Time.timestamp());
     }
 
-    function checkNodeStatusAtTime(
-        uint48 activationTime,
-        uint48 deactivationTime,
-        uint48 checkTimestamp
-    ) internal pure override returns (bool) {
-        return
-            activationTime != 0 &&
-            activationTime <= checkTimestamp &&
-            (deactivationTime == 0 || deactivationTime >= checkTimestamp);
-    }
+  
 }

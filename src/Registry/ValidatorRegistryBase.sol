@@ -12,6 +12,7 @@ import {IConsensusMiddleware} from "../interfaces/IMiddleware.sol";
 import {EnumerableMap} from "../lib/EnumerableMap.sol";
 import {OperatorMapWithTime} from "../lib/OperatorMapWithTime.sol";
 
+
 contract ValidatorRegistryBase is
     IValidatorRegistrySystem,
     OwnableUpgradeable,
