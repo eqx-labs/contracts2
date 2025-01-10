@@ -21,66 +21,7 @@ contract ValidationProcessor is ValidationUtility, Shared {
 
     using TransactionDecoder for TransactionDecoder.Transaction;
 
-    // function initiateValidation(AuthorizedMessagePacket[] calldata authorizations) public payable {
-    //     if (authorizations.length == 0) {
-    //         revert EmptyAuthorizationError();
-    //     }
-
-    //     if (msg.value != validatorParams.DISPUTE_SECURITY_DEPOSIT()) {
-    //         revert InvalidBondAmountError();
-    //     }
-
-    //     bytes32 validationId = _computeValidationId(authorizations);
-    //     if (validationSetIDs.contains(validationId)) {
-    //         revert DuplicateValidationError();
-    //     }
-
-    //     uint256 targetEpoch = authorizations[0].epoch;
-    //     if (targetEpoch > _getCurrentEpoch() - validatorParams.FINALIZATION_DELAY_SLOTS()) {
-    //         revert UnfinalizedSegmentError();
-    //     }
-
-    //     MessageDetails[] memory messagesData = new MessageDetails[](authorizations.length);
-    //     (address msgSender, address witnessAuthorizer, MessageDetails memory firstMessageData) =
-    //         _recoverAuthorizationData(authorizations[0]);
-
-    //     messagesData[0] = firstMessageData;
-
-    //     for (uint256 i = 1; i < authorizations.length; i++) {
-    //         (address otherMsgSender, address otherAuthorizer, MessageDetails memory otherMessageData) =
-    //             _recoverAuthorizationData(authorizations[i]);
-
-    //         messagesData[i] = otherMessageData;
-
-    //         if (authorizations[i].epoch != targetEpoch) {
-    //             revert MixedEpochError();
-    //         }
-    //         if (otherMsgSender != msgSender) {
-    //             revert MixedValidatorError();
-    //         }
-    //         if (otherAuthorizer != witnessAuthorizer) {
-    //             revert MixedAuthorizerError();
-    //         }
-    //         if (otherMessageData.sequence != messagesData[i - 1].sequence + 1) {
-    //             revert InvalidSequenceError();
-    //         }
-    //     }
-
-    //     validationSetIDs.add(validationId);
-    //     validationRecords[validationId] = ValidationRecord({
-    //         attestationId: validationId,
-    //         timestampInit: Time.timestamp(),
-    //         phase: ValidationPhase.Awaiting,
-    //         targetEpoch: targetEpoch,
-    //         validator: msg.sender,
-    //         witnessAuthorizer: witnessAuthorizer,
-    //         protocolDestination: msgSender,
-    //         authorizedMessages: messagesData
-    //     });
-
-    //     emit ValidationInitiated(validationId, msg.sender, witnessAuthorizer);
-    // }
-
+  
     function _verifyAndFinalize(
         bytes32 validationId,
         bytes32 trustedPreviousSegmentHash,
@@ -280,4 +221,11 @@ contract ValidationProcessor is ValidationUtility, Shared {
         participant.sequence = participantFields[0].readUint256();
         participant.holdings = participantFields[1].readUint256();
     }
+
+         function _isWithinEIP4788Window(
+        uint256 _timestamp
+    ) internal view returns (bool) {
+        return _getEpochFromTimestamp(_timestamp) <= _getCurrentEpoch() + validatorParams.BEACON_TIME_WINDOW();
+    }
+
 }

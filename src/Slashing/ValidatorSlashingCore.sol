@@ -28,9 +28,6 @@ contract ValidatorSlashingCore is
 {
     using EnumerableSet for EnumerableSet.Bytes32Set;
 
-
-
-    // mapping(bytes32 => ValidationRecord) internal validationRecords;
     uint256[46] private __gap;
 
     function initialize(address _owner, address _parameters) public initializer {
@@ -171,17 +168,5 @@ contract ValidatorSlashingCore is
     }
 
 
-    // function _distributeFullDeposit(address recipient) internal  {
-    //     (bool success,) = payable(recipient).call{value: validatorParams.DISPUTE_SECURITY_DEPOSIT()}("");
-    //     if (!success) {
-    //         revert BondTransferFailedError();
-    //     }
-    // }
-
-    // function _distributeHalfDeposit(address recipient) internal   {
-    //     (bool success,) = payable(recipient).call{value: validatorParams.DISPUTE_SECURITY_DEPOSIT() / 2}("");
-    //     if (!success) {
-    //         revert BondTransferFailedError();
-    //     }
-    // }
+  
 }
