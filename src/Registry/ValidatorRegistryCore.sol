@@ -50,8 +50,7 @@ contract ValidatorRegistryCore is
 
     function _authorizeUpgrade(
         address newSystemImplementation
-    ) internal       override
-    onlyOwner {}
+    ) internal override onlyOwner {}
 
     function registerProtocol(address protocolContract) public onlyOwner {
         protocolRegistry.add(protocolContract);
@@ -64,7 +63,6 @@ contract ValidatorRegistryCore is
     function listSupportedProtocols()
         public
         view
-           
         returns (address[] memory protocolAddressList)
     {
         return protocolRegistry.values();
@@ -73,7 +71,7 @@ contract ValidatorRegistryCore is
     function enrollValidatorNode(
         address nodeAddress,
         string calldata endpointUrl
-    ) external     onlyRegisteredProtocol {
+    ) external onlyRegisteredProtocol {
         if (nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeAlreadyExists();
         }
@@ -89,7 +87,7 @@ contract ValidatorRegistryCore is
 
     function removeValidatorNode(
         address nodeAddress
-    ) external     onlyRegisteredProtocol {
+    ) external onlyRegisteredProtocol {
         if (!nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeNotFound();
         }
@@ -98,7 +96,7 @@ contract ValidatorRegistryCore is
 
     function suspendValidatorNode(
         address nodeAddress
-    ) external     onlyRegisteredProtocol {
+    ) external onlyRegisteredProtocol {
         if (!nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeNotFound();
         }
@@ -107,7 +105,7 @@ contract ValidatorRegistryCore is
 
     function reactivateValidatorNode(
         address nodeAddress
-    ) external     onlyRegisteredProtocol {
+    ) external onlyRegisteredProtocol {
         if (!nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeNotFound();
         }
@@ -116,34 +114,37 @@ contract ValidatorRegistryCore is
 
     function validateNodeRegistration(
         address nodeAddress
-    ) public view     returns (bool) {
+    ) public view returns (bool) {
         return nodeOperatorRegistry.contains(nodeAddress);
     }
 
     function validateNodeAuthorization(
         address nodeAddress,
         bytes20 nodeIdentityHash
-    ) public view     returns (bool) {
+    ) public view returns (bool) {
         if (nodeAddress == address(0) || nodeIdentityHash == bytes20(0)) {
             revert QueryValidationFailed();
         }
 
-        return validatorNodes
-            .fetchNodeByIdentityHash(nodeIdentityHash)
-            .assignedOperatorAddress == nodeAddress;
+        return
+            validatorNodes
+                .fetchNodeByIdentityHash(nodeIdentityHash)
+                .assignedOperatorAddress == nodeAddress;
     }
 
     function fetchValidatorProfile(
         bytes20 validatorIdentityHash
-    ) public view     returns (ValidatorNodeProfile memory profile) {
+    ) public view returns (ValidatorNodeProfile memory profile) {
         if (validatorIdentityHash == bytes20(0)) {
             revert QueryValidationFailed();
         }
 
         uint48 epochStartTime = calculateEpochFromTimestamp(Time.timestamp());
 
-       IValidatorNodeTypes.ValidatorNodeDetails memory validatorData = validatorNodes
-            .fetchNodeByIdentityHash(validatorIdentityHash);
+        INodeRegistrationSystem.ValidatorNodeDetails
+            memory validatorData = validatorNodes.fetchNodeByIdentityHash(
+                validatorIdentityHash
+            );
 
         EnumerableMap.Operator memory operatorInfo = nodeOperatorRegistry.get(
             validatorData.assignedOperatorAddress
@@ -156,7 +157,13 @@ contract ValidatorRegistryCore is
         (uint48 activationTime, uint48 deactivationTime) = nodeOperatorRegistry
             .getTimes(validatorData.assignedOperatorAddress);
 
-        if (!checkNodeStatusAtTime(activationTime, deactivationTime, epochStartTime)) {
+        if (
+            !checkNodeStatusAtTime(
+                activationTime,
+                deactivationTime,
+                epochStartTime
+            )
+        ) {
             return profile;
         }
 
@@ -171,15 +178,18 @@ contract ValidatorRegistryCore is
             totalCollateral += profile.collateralAmountList[i];
         }
 
-        profile.operationalStatus = totalCollateral >= systemParameters.OPERATOR_COLLATERAL_MINIMUM();
+        profile.operationalStatus =
+            totalCollateral >= systemParameters.OPERATOR_COLLATERAL_MINIMUM();
 
         return profile;
     }
 
     function fetchValidatorProfileBatch(
         bytes20[] calldata validatorIdentityHashes
-    ) public view     returns (ValidatorNodeProfile[] memory profileList) {
-        profileList = new ValidatorNodeProfile[](validatorIdentityHashes.length);
+    ) public view returns (ValidatorNodeProfile[] memory profileList) {
+        profileList = new ValidatorNodeProfile[](
+            validatorIdentityHashes.length
+        );
         for (uint256 i = 0; i < validatorIdentityHashes.length; ++i) {
             profileList[i] = fetchValidatorProfile(validatorIdentityHashes[i]);
         }
@@ -189,7 +199,8 @@ contract ValidatorRegistryCore is
     function calculateEpochStartTime(
         uint48 epochNumber
     ) public view returns (uint48 startTimestamp) {
-        return SYSTEM_INITIALIZATION_TIME +
+        return
+            SYSTEM_INITIALIZATION_TIME +
             epochNumber *
             systemParameters.VALIDATOR_EPOCH_TIME();
     }
@@ -197,7 +208,8 @@ contract ValidatorRegistryCore is
     function calculateEpochFromTimestamp(
         uint48 timestamp
     ) public view returns (uint48 epochNumber) {
-        return (timestamp - SYSTEM_INITIALIZATION_TIME) /
+        return
+            (timestamp - SYSTEM_INITIALIZATION_TIME) /
             systemParameters.VALIDATOR_EPOCH_TIME();
     }
 
@@ -213,8 +225,11 @@ contract ValidatorRegistryCore is
             nodeOperator
         );
 
-        return IConsensusMiddleware(operatorInfo.middleware)
-            .getProviderCollateral(nodeOperator, collateralToken);
+        return
+            IConsensusMiddleware(operatorInfo.middleware).getProviderCollateral(
+                nodeOperator,
+                collateralToken
+            );
     }
 
     function calculateTotalCollateral(
@@ -236,7 +251,8 @@ contract ValidatorRegistryCore is
         uint48 deactivationTime,
         uint48 checkTimestamp
     ) internal pure returns (bool) {
-        return activationTime != 0 &&
+        return
+            activationTime != 0 &&
             activationTime <= checkTimestamp &&
             (deactivationTime == 0 || deactivationTime >= checkTimestamp);
     }

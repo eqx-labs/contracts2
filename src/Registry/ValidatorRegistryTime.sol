@@ -14,13 +14,12 @@ contract ValidatorRegistryTime is ValidatorRegistryBase {
             systemParameters.VALIDATOR_EPOCH_TIME();
     }
 
-    function calculateEpochFromTimestamp(
-        uint48 timestamp
-    ) public view override returns (uint48 epochNumber) {
-        return
-            (timestamp - SYSTEM_INITIALIZATION_TIME) /
-            systemParameters.VALIDATOR_EPOCH_TIME();
-    }
+ function calculateEpochFromTimestamp(
+    uint48 timestamp
+) internal override view returns (uint48) {
+    return (timestamp - SYSTEM_INITIALIZATION_TIME) /
+        systemParameters.VALIDATOR_EPOCH_TIME();
+}
 
     function fetchCurrentEpoch() public view returns (uint48 epochNumber) {
         return calculateEpochFromTimestamp(Time.timestamp());

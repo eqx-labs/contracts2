@@ -72,7 +72,7 @@ contract ValidatorRegistryBase is
     function enrollValidatorNode(
         address nodeAddress,
         string calldata endpointUrl
-    ) external   onlyRegisteredProtocol {
+    ) external  virtual  onlyRegisteredProtocol {
         if (nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeAlreadyExists();
         }
@@ -88,7 +88,7 @@ contract ValidatorRegistryBase is
 
     function removeValidatorNode(
         address nodeAddress
-    ) external   onlyRegisteredProtocol {
+    ) external virtual  onlyRegisteredProtocol {
         if (!nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeNotFound();
         }
@@ -97,7 +97,7 @@ contract ValidatorRegistryBase is
 
     function suspendValidatorNode(
         address nodeAddress
-    ) external   onlyRegisteredProtocol {
+    ) external virtual  onlyRegisteredProtocol {
         if (!nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeNotFound();
         }
@@ -106,7 +106,7 @@ contract ValidatorRegistryBase is
 
     function reactivateValidatorNode(
         address nodeAddress
-    ) external   onlyRegisteredProtocol {
+    ) external  virtual onlyRegisteredProtocol {
         if (!nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeNotFound();
         }
@@ -115,7 +115,7 @@ contract ValidatorRegistryBase is
 
     function validateNodeRegistration(
         address nodeAddress
-    ) external view   returns (bool) {
+    ) external virtual view   returns (bool) {
         return nodeOperatorRegistry.contains(nodeAddress);
     }
 
@@ -194,7 +194,7 @@ contract ValidatorRegistryBase is
     // Internal helper functions
     function calculateEpochFromTimestamp(
         uint48 timestamp
-    ) internal  view returns (uint48) {
+    ) internal virtual view returns (uint48) {
         return (timestamp - SYSTEM_INITIALIZATION_TIME) /
             systemParameters.VALIDATOR_EPOCH_TIME();
     }
@@ -203,7 +203,7 @@ contract ValidatorRegistryBase is
         uint48 activationTime,
         uint48 deactivationTime,
         uint48 checkTimestamp
-    ) internal pure returns (bool) {
+    ) internal virtual pure returns (bool) {
         return activationTime != 0 &&
             activationTime <= checkTimestamp &&
             (deactivationTime == 0 || deactivationTime >= checkTimestamp);
