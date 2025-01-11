@@ -8,7 +8,7 @@ import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet
 import {IParameters} from "../interfaces/IParameters.sol";
 import {IValidatorRegistrySystem} from "../interfaces/IRegistry.sol";
 import {INodeRegistrationSystem} from "../interfaces/IValidators.sol";
-import {IConsensusMiddleware} from "../interfaces/IMiddleware.sol";
+import {IConsensusRestaking} from "../interfaces/IRestaking.sol";
 import {EnumerableMap} from "../lib/EnumerableMap.sol";
 import {OperatorMapWithTime} from "../lib/OperatorMapWithTime.sol";
 import {IValidatorNodeTypes} from "./IValidatorNodeTypes.sol";
@@ -40,7 +40,7 @@ contract ValidatorRegistryCore is
         );
 
         return
-            IConsensusMiddleware(operatorInfo.middleware).getProviderCollateral(
+            IConsensusRestaking(operatorInfo.middleware).getProviderCollateral(
                 nodeOperator,
                 collateralToken
             );
@@ -54,7 +54,7 @@ contract ValidatorRegistryCore is
                 address nodeOperator,
                 EnumerableMap.Operator memory operatorInfo
             ) = nodeOperatorRegistry.at(i);
-            totalAmount += IConsensusMiddleware(operatorInfo.middleware)
+            totalAmount += IConsensusRestaking(operatorInfo.middleware)
                 .getProviderCollateral(nodeOperator, collateralToken);
         }
         return totalAmount;

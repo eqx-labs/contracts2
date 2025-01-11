@@ -8,7 +8,7 @@ import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet
 import {IParameters} from "../interfaces/IParameters.sol";
 import {IValidatorRegistrySystem} from "../interfaces/IRegistry.sol";
 import {INodeRegistrationSystem} from "../interfaces/IValidators.sol";
-import {IConsensusMiddleware} from "../interfaces/IMiddleware.sol";
+import {IConsensusRestaking} from "../interfaces/IRestaking.sol";
 import {EnumerableMap} from "../lib/EnumerableMap.sol";
 import {OperatorMapWithTime} from "../lib/OperatorMapWithTime.sol";
 
@@ -156,7 +156,7 @@ contract ValidatorRegistryBase is
         (
             profile.collateralTokenList,
             profile.collateralAmountList
-        ) = IConsensusMiddleware(operatorInfo.middleware)
+        ) = IConsensusRestaking(operatorInfo.middleware)
             .getProviderCollateralTokens(validatorData.assignedOperatorAddress);
 
         uint256 totalCollateral = 0;

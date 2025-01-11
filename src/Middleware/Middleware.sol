@@ -10,7 +10,7 @@ import {TimeUtils} from "./TimeUtils.sol";
 import {StrategyManager} from "./StrategyManager.sol";
 import {OperatorManager} from "./OperatorManager.sol";
 import {IParameters} from "../interfaces/IParameters.sol";
-import {IConsensusMiddleware} from "../interfaces/IMiddleware.sol";
+import {IConsensusRestaking} from "../interfaces/IRestaking.sol";
 import {IValidatorRegistrySystem} from "../interfaces/IRegistry.sol";
 import {IStrategy} from "@eigenlayer/src/contracts/interfaces/IStrategy.sol"; 
 import {IServiceManager} from "@eigenlayer-middleware/src/interfaces/IServiceManager.sol";
@@ -21,7 +21,7 @@ import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyMan
 import {MapWithTimeData} from "../lib/MapWithTimeData.sol";
 
 contract ConsensusEigenLayerMiddleware is
-    IConsensusMiddleware,
+    IConsensusRestaking,
     IServiceManager,
     OwnableUpgradeable,
     UUPSUpgradeable
