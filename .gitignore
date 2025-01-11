@@ -10,7 +10,7 @@ out/
 
 node_modules/
 target/
-lib/
+library/
 
 # Docs
 docs/
