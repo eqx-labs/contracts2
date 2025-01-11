@@ -17,4 +17,11 @@ interface INodeRegistrationSystem {
 
     error InvalidNodeIdentity();
 
+
+    function fetchNodeByIdentityHash(
+        bytes20 nodeIdentityHash
+    ) external view returns (ValidatorNodeDetails memory);
+
+  
+
 }
