@@ -6,13 +6,13 @@ import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeab
 import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
 import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
-import {SecureMerkleTrie} from "./lib/trie/SecureMerkleTrie.sol";
-import {MerkleTrie} from "./lib/trie/MerkleTrie.sol";
-import {RLPReader} from "./lib/rlp/RLPReader.sol";
-import {RLPWriter} from "./lib/rlp/RLPWriter.sol";
-import {TransactionDecoder} from "./lib/TransactionDecoder.sol";
-import {ISlashing} from "./interfaces/ISlashing.sol";
-import {IParameters} from "./interfaces/IParameters.sol";
+import {SecureMerkleTrie} from "../lib/trie/SecureMerkleTrie.sol";
+import {MerkleTrie} from "../lib/trie/MerkleTrie.sol";
+import {RLPReader} from "../lib/rlp/RLPReader.sol";
+import {RLPWriter} from "../lib/rlp/RLPWriter.sol";
+import {TransactionDecoder} from "../lib/TransactionDecoder.sol";
+import {ISlashing} from "../interfaces/ISlashing.sol";
+import {IParameters} from "../interfaces/IParameters.sol";
 
 contract ValidatorSlashing is ISlashing, OwnableUpgradeable, UUPSUpgradeable {
     using RLPReader for bytes;

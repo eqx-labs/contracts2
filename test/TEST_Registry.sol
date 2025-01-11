@@ -6,12 +6,12 @@ import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeab
 import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
 import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import {IParameters} from "./interfaces/IParameters.sol";
-import {IValidatorRegistrySystem} from "./interfaces/IRegistry.sol";
-import {INodeRegistrationSystem} from "./interfaces/IValidators.sol";
-import {IConsensusMiddleware} from "./interfaces/IMiddleware.sol";
-import {OperatorMapWithTime} from "./lib/OperatorMapWithTime.sol";
-import {EnumerableMap} from "./lib/EnumerableMap.sol";
+import {IParameters} from "../interfaces/IParameters.sol";
+import {IValidatorRegistrySystem} from "../interfaces/IRegistry.sol";
+import {INodeRegistrationSystem} from "../interfaces/IValidators.sol";
+import {IConsensusMiddleware} from "../interfaces/IMiddleware.sol";
+import {OperatorMapWithTime} from "../lib/OperatorMapWithTime.sol";
+import {EnumerableMap} from "../lib/EnumerableMap.sol";
 
 contract ValidatorRegistryCore is
     IValidatorRegistrySystem,

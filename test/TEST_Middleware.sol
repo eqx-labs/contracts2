@@ -8,10 +8,14 @@ import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 
-import {MapWithTimeData} from "./lib/MapWithTimeData.sol";
-import {IParameters} from "./interfaces/IParameters.sol";
-import {IConsensusMiddleware} from "./interfaces/IMiddleware.sol";
-import {IValidatorRegistrySystem} from "./interfaces/IRegistry.sol";
+
+
+
+
+import {MapWithTimeData} from "../lib/MapWithTimeData.sol";
+import {IParameters} from "../interfaces/IParameters.sol";
+import {IConsensusMiddleware} from "../interfaces/IMiddleware.sol";
+import {IValidatorRegistrySystem} from "../interfaces/IRegistry.sol";
 
 import {IServiceManager} from "@eigenlayer-middleware/src/interfaces/IServiceManager.sol";
 import {IStrategyManager} from "@eigenlayer/src/contracts/interfaces/IStrategyManager.sol";

@@ -14,7 +14,7 @@ interface INodeRegistrationSystem {
     error SignatureVerificationFailed();
     error InvalidOperatorAssignment();
     error SecureRegistrationRequired();
-    error UnauthorizedAccessAttempt();
+
     error InvalidNodeIdentity();
 
     function fetchAllValidatorNodes() 
@@ -56,12 +56,9 @@ interface INodeRegistrationSystem {
         address assignedOperatorAddress
     ) external;
 
-    function updateNodeCapacity(
-        bytes20 nodeIdentityHash, 
-        uint32 gasCapacityLimit
-    ) external;
+    // function updateNodeCapacity(
+    //     bytes20 nodeIdentityHash, 
+    //     uint32 gasCapacityLimit
+    // ) external;
 
-    function computeNodeIdentityHash(
-        BLS12381.G1Point calldata nodePublicKey
-    ) external pure returns (bytes20);
 }
