@@ -12,10 +12,10 @@ import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeab
 
 
 
-import {MapWithTimeData} from "../lib/MapWithTimeData.sol";
-import {IParameters} from "../interfaces/IParameters.sol";
-import {IConsensusMiddleware} from "../interfaces/IMiddleware.sol";
-import {IValidatorRegistrySystem} from "../interfaces/IRegistry.sol";
+import {MapWithTimeData} from "./lib/MapWithTimeData.sol";
+import {IParameters} from "./interfaces/IParameters.sol";
+import {IConsensusMiddleware} from "./interfaces/IMiddleware.sol";
+import {IValidatorRegistrySystem} from "./interfaces/IRegistry.sol";
 
 import {IServiceManager} from "@eigenlayer-middleware/src/interfaces/IServiceManager.sol";
 import {IStrategyManager} from "@eigenlayer/src/contracts/interfaces/IStrategyManager.sol";

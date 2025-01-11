@@ -12,7 +12,6 @@ import {IConsensusMiddleware} from "../interfaces/IMiddleware.sol";
 import {EnumerableMap} from "../lib/EnumerableMap.sol";
 import {OperatorMapWithTime} from "../lib/OperatorMapWithTime.sol";
 
-
 contract ValidatorRegistryBase is
     IValidatorRegistrySystem,
     OwnableUpgradeable,
@@ -48,7 +47,6 @@ contract ValidatorRegistryBase is
         SYSTEM_INITIALIZATION_TIME = Time.timestamp();
     }
 
-  
     function _authorizeUpgrade(
         address newSystemImplementation
     ) internal override onlyOwner {}
@@ -73,7 +71,7 @@ contract ValidatorRegistryBase is
     function enrollValidatorNode(
         address nodeAddress,
         string calldata endpointUrl
-    ) external  virtual  onlyRegisteredProtocol {
+    ) external virtual onlyRegisteredProtocol {
         if (nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeAlreadyExists();
         }
@@ -89,7 +87,7 @@ contract ValidatorRegistryBase is
 
     function removeValidatorNode(
         address nodeAddress
-    ) external virtual  onlyRegisteredProtocol {
+    ) external virtual onlyRegisteredProtocol {
         if (!nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeNotFound();
         }
@@ -98,7 +96,7 @@ contract ValidatorRegistryBase is
 
     function suspendValidatorNode(
         address nodeAddress
-    ) external virtual  onlyRegisteredProtocol {
+    ) external virtual onlyRegisteredProtocol {
         if (!nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeNotFound();
         }
@@ -107,7 +105,7 @@ contract ValidatorRegistryBase is
 
     function reactivateValidatorNode(
         address nodeAddress
-    ) external  virtual onlyRegisteredProtocol {
+    ) external virtual onlyRegisteredProtocol {
         if (!nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeNotFound();
         }
@@ -116,13 +114,13 @@ contract ValidatorRegistryBase is
 
     function validateNodeRegistration(
         address nodeAddress
-    ) external virtual view   returns (bool) {
+    ) external view virtual returns (bool) {
         return nodeOperatorRegistry.contains(nodeAddress);
     }
 
     function fetchValidatorProfile(
         bytes20 validatorIdentityHash
-    ) external view   returns (ValidatorNodeProfile memory profile) {
+    ) external view returns (ValidatorNodeProfile memory profile) {
         if (validatorIdentityHash == bytes20(0)) {
             revert QueryValidationFailed();
         }
@@ -145,7 +143,13 @@ contract ValidatorRegistryBase is
         (uint48 activationTime, uint48 deactivationTime) = nodeOperatorRegistry
             .getTimes(validatorData.assignedOperatorAddress);
 
-        if (!checkNodeStatusAtTime(activationTime, deactivationTime, epochStartTime)) {
+        if (
+            !checkNodeStatusAtTime(
+                activationTime,
+                deactivationTime,
+                epochStartTime
+            )
+        ) {
             return profile;
         }
 
@@ -160,22 +164,22 @@ contract ValidatorRegistryBase is
             totalCollateral += profile.collateralAmountList[i];
         }
 
-        profile.operationalStatus = totalCollateral >= systemParameters.OPERATOR_COLLATERAL_MINIMUM();
+        profile.operationalStatus =
+            totalCollateral >= systemParameters.OPERATOR_COLLATERAL_MINIMUM();
 
         return profile;
     }
 
     function fetchValidatorProfileBatch(
         bytes20[] calldata validatorIdentityHashes
-    )
-        external
-        view
-         
-        returns (ValidatorNodeProfile[] memory profileList)
-    {
-        profileList = new ValidatorNodeProfile[](validatorIdentityHashes.length);
+    ) external view returns (ValidatorNodeProfile[] memory profileList) {
+        profileList = new ValidatorNodeProfile[](
+            validatorIdentityHashes.length
+        );
         for (uint256 i = 0; i < validatorIdentityHashes.length; ++i) {
-            profileList[i] = this.fetchValidatorProfile(validatorIdentityHashes[i]);
+            profileList[i] = this.fetchValidatorProfile(
+                validatorIdentityHashes[i]
+            );
         }
         return profileList;
     }
@@ -183,20 +187,22 @@ contract ValidatorRegistryBase is
     function validateNodeAuthorization(
         address nodeAddress,
         bytes20 validatorIdentityHash
-    ) external view   returns (bool) {
+    ) external view returns (bool) {
         if (nodeAddress == address(0) || validatorIdentityHash == bytes20(0)) {
             revert QueryValidationFailed();
         }
-        return validatorNodes
-            .fetchNodeByIdentityHash(validatorIdentityHash)
-            .assignedOperatorAddress == nodeAddress;
+        return
+            validatorNodes
+                .fetchNodeByIdentityHash(validatorIdentityHash)
+                .assignedOperatorAddress == nodeAddress;
     }
 
     // Internal helper functions
     function calculateEpochFromTimestamp(
         uint48 timestamp
-    ) internal virtual view returns (uint48) {
-        return (timestamp - SYSTEM_INITIALIZATION_TIME) /
+    ) internal view virtual returns (uint48) {
+        return
+            (timestamp - SYSTEM_INITIALIZATION_TIME) /
             systemParameters.VALIDATOR_EPOCH_TIME();
     }
 
@@ -204,8 +210,9 @@ contract ValidatorRegistryBase is
         uint48 activationTime,
         uint48 deactivationTime,
         uint48 checkTimestamp
-    ) internal virtual pure returns (bool) {
-        return activationTime != 0 &&
+    ) internal pure virtual returns (bool) {
+        return
+            activationTime != 0 &&
             activationTime <= checkTimestamp &&
             (deactivationTime == 0 || deactivationTime >= checkTimestamp);
     }

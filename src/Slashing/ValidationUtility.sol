@@ -4,7 +4,7 @@ pragma solidity >=0.8.0 <0.9.0;
 import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import {RLPReader} from "../lib/rlp/RLPReader.sol";
 import {TransactionDecoder} from "../lib/TransactionDecoder.sol";
-import {ISlashing} from "../interfaces/ISlashing.sol";
+
 import "./ValidationTypes.sol";
 
  contract ValidationUtility is  ValidationTypes {

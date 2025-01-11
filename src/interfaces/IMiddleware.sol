@@ -13,20 +13,7 @@ interface IConsensusMiddleware {
     error OperationForbidden();
 
 
-    function PROTOCOL_IDENTIFIER() external view returns (bytes32);
-
-
-    function getPeriodStartTime(
-        uint48 periodIndex
-    ) external view returns (uint48);
-
-
-    function getPeriodByTimestamp(
-        uint48 timestamp
-    ) external view returns (uint48);
-
-
-    function getActivePeriod() external view returns (uint48);
+  
 
 
     function getProviderCollateral(
@@ -40,9 +27,4 @@ interface IConsensusMiddleware {
     ) external view returns (address[] memory, uint256[] memory);
 
 
-    function getProviderCollateralAt(
-        address provider,
-        address tokenAddress,
-        uint48 timestamp
-    ) external view returns (uint256);
 }

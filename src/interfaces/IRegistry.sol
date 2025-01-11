@@ -46,21 +46,5 @@ interface IValidatorRegistrySystem {
         address nodeAddress
     ) external view returns (bool);
 
-    function fetchValidatorProfile(
-        bytes20 validatorIdentityHash
-    ) external view returns (ValidatorNodeProfile memory profile);
-
-    function fetchValidatorProfileBatch(
-        bytes20[] calldata validatorIdentityHashes
-    ) external view returns (ValidatorNodeProfile[] memory profileList);
-
-    function validateNodeAuthorization(
-        address nodeAddress, 
-        bytes20 validatorIdentityHash
-    ) external view returns (bool);
-
-    function listSupportedProtocols() 
-        external 
-        view 
-        returns (address[] memory protocolAddressList);
+  
 }

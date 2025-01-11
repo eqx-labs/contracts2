@@ -6,7 +6,7 @@ import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeab
 import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
 import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
 import {ValidationProcessor} from "./ValidationProcessor.sol";
-import {ISlashing} from "../interfaces/ISlashing.sol";
+
 import {IParameters} from "../interfaces/IParameters.sol";
 
 import {RLPReader} from "../lib/rlp/RLPReader.sol";
@@ -20,8 +20,8 @@ import {TransactionDecoder} from "../lib/TransactionDecoder.sol";
 contract ValidatorSlashingCore is
     OwnableUpgradeable,
     UUPSUpgradeable,
-    ValidationProcessor,
-    ISlashing
+    ValidationProcessor
+
 
 
     

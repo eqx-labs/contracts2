@@ -9,7 +9,7 @@ import {RLPReader} from "../lib/rlp/RLPReader.sol";
 import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
 import {RLPWriter} from "../lib/rlp/RLPWriter.sol";
 import {TransactionDecoder} from "../lib/TransactionDecoder.sol";
-import {ISlashing} from "../interfaces/ISlashing.sol";
+
 import {ValidationUtility} from "./ValidationUtility.sol";
 import {Shared} from "./Shared.sol";
 
