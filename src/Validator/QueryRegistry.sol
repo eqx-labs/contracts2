@@ -2,8 +2,8 @@
 pragma solidity >=0.8.0 <0.9.0;
 
 import "./BaseRegistry.sol";
-import {BLS12381} from "../lib/bls/BLS12381.sol";
-import {ValidatorsLib} from "../lib/ValidatorsLib.sol";
+import {BLS12381} from "../library/bls/BLS12381.sol";
+import {ValidatorsLib} from "../library/ValidatorsLib.sol";
 
 contract QueryRegistry is BaseRegistry {
     using BLS12381 for BLS12381.G1Point;

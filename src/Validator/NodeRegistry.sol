@@ -3,9 +3,9 @@ pragma solidity >=0.8.0 <0.9.0;
 
 import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
-import {BLS12381} from "../lib/bls/BLS12381.sol";
-import {BLSSignatureVerifier} from "../lib/bls/BLSSignatureVerifier.sol";
-import {ValidatorsLib} from "../lib/ValidatorsLib.sol";
+import {BLS12381} from "../library/bls/BLS12381.sol";
+import {BLSSignatureVerifier} from "../library/bls/BLSSignatureVerifier.sol";
+import {ValidatorsLib} from "../library/ValidatorsLib.sol";
 import {INodeRegistrationSystem} from "../interfaces/IValidators.sol";
 import {IParameters} from "../interfaces/IParameters.sol";
 import {EnrollmentRegistry} from "./EnrollmentRegistry.sol";

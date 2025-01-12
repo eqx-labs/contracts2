@@ -2,8 +2,8 @@
 pragma solidity >=0.8.0 <0.9.0;
 
 import {ValidatorRegistryTime} from "./ValidatorRegistryTime.sol";
-import {EnumerableMap} from "../lib/EnumerableMap.sol";
-import {OperatorMapWithTime} from "../lib/OperatorMapWithTime.sol";
+import {EnumerableMap} from "../library/EnumerableMap.sol";
+import {OperatorMapWithTime} from "../library/OperatorMapWithTime.sol";
 import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
 
 contract ValidatorRegistryOperations is ValidatorRegistryTime {

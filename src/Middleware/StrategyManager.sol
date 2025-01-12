@@ -6,7 +6,7 @@ import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
 import {IStrategy} from "@eigenlayer/src/contracts/interfaces/IStrategy.sol";
 import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyManagerStorage.sol";
 import {DelegationManagerStorage} from "@eigenlayer/src/contracts/core/DelegationManagerStorage.sol";
-import {MapWithTimeData} from "../lib/MapWithTimeData.sol";
+import {MapWithTimeData} from "../library/MapWithTimeData.sol";
 import {TimeUtils} from "./TimeUtils.sol";
 import {IParameters} from "../interfaces/IParameters.sol";
 

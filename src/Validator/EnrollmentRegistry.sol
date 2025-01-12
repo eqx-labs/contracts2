@@ -2,8 +2,8 @@
 pragma solidity >=0.8.0 <0.9.0;
 
 import "./BaseRegistry.sol";
-import {BLS12381} from "../lib/bls/BLS12381.sol";
-import {BLSSignatureVerifier} from "../lib/bls/BLSSignatureVerifier.sol";
+import {BLS12381} from "../library/bls/BLS12381.sol";
+import {BLSSignatureVerifier} from "../library/bls/BLSSignatureVerifier.sol";
 import {QueryRegistry} from "./QueryRegistry.sol";
 
 contract EnrollmentRegistry is BaseRegistry, BLSSignatureVerifier , QueryRegistry {

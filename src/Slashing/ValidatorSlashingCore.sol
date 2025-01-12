@@ -9,9 +9,9 @@ import {ValidationProcessor} from "./ValidationProcessor.sol";
 
 import {IParameters} from "../interfaces/IParameters.sol";
 
-import {RLPReader} from "../lib/rlp/RLPReader.sol";
-import {RLPWriter} from "../lib/rlp/RLPWriter.sol";
-import {TransactionDecoder} from "../lib/TransactionDecoder.sol";
+import {RLPReader} from "../library/rlp/RLPReader.sol";
+import {RLPWriter} from "../library/rlp/RLPWriter.sol";
+import {TransactionDecoder} from "../library/TransactionDecoder.sol";
 
 
 

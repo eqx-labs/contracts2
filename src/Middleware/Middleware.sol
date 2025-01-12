@@ -18,7 +18,7 @@ import {IAVSDirectory} from "@eigenlayer/src/contracts/interfaces/IAVSDirectory.
 import {ISignatureUtils} from "@eigenlayer/src/contracts/interfaces/ISignatureUtils.sol";
 import {DelegationManagerStorage} from "@eigenlayer/src/contracts/core/DelegationManagerStorage.sol";
 import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyManagerStorage.sol";
-import {MapWithTimeData} from "../lib/MapWithTimeData.sol";
+import {MapWithTimeData} from "../library/MapWithTimeData.sol";
 
 contract ConsensusEigenLayerMiddleware is
     IConsensusRestaking,

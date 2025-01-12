@@ -9,9 +9,9 @@ import {IParameters} from "../interfaces/IParameters.sol";
 import {IValidatorRegistrySystem} from "../interfaces/IRegistry.sol";
 import {INodeRegistrationSystem} from "../interfaces/IValidators.sol";
 import {IConsensusRestaking} from "../interfaces/IRestaking.sol";
-import {EnumerableMap} from "../lib/EnumerableMap.sol";
-import {OperatorMapWithTime} from "../lib/OperatorMapWithTime.sol";
-import {IValidatorNodeTypes} from "./IValidatorNodeTypes.sol";
+import {EnumerableMap} from "../library/EnumerableMap.sol";
+import {OperatorMapWithTime} from "../library/OperatorMapWithTime.sol";
+
 import {ValidatorRegistryBase} from "./ValidatorRegistryBase.sol";
 import {ValidatorRegistryTime} from "./ValidatorRegistryTime.sol";
 

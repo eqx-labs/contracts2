@@ -3,7 +3,7 @@ pragma solidity >=0.8.0 <0.9.0;
 
 import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
-import {ValidatorsLib} from "../lib/ValidatorsLib.sol";
+import {ValidatorsLib} from "../library/ValidatorsLib.sol";
 import {IParameters} from "../interfaces/IParameters.sol";
 import {INodeRegistrationSystem} from "../interfaces/IValidators.sol";
 
