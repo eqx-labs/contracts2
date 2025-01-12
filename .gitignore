@@ -11,6 +11,7 @@ out/
 node_modules/
 target/
 lib/
+!lib/forge-std/
 
 # Docs
 docs/
