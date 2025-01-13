@@ -2,41 +2,19 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+optimizer = true
+via_ir = true
+optimizer_runs = 200
+solc_version = "0.8.25"
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
 
+
 remappings = [
-  # Bolt remappings
-  "@relic/=lib/relic-sdk/packages/contracts",
-  "@symbiotic/=lib/core/src/",
-  "@eigenlayer/=lib/eigenlayer-contracts/",
-  "@eigenlayer-middleware/=lib/eigenlayer-middleware/",
   "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
   "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
   "@openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/",
-  "karak-onchain-sdk/=lib/karak-onchain-sdk/src",
-
-  # Symbiotic remappings contexts
-  "lib/core/:forge-std/=lib/core/lib/forge-std/src/",
-  "lib/core/:@openzeppelin/contracts/=lib/core/lib/openzeppelin-contracts/contracts/",
-  "lib/core/:@openzeppelin/contracts-upgradeable/=lib/core/lib/openzeppelin-contracts-upgradeable/contracts/",
-
-  # Eigenlayer remappings contexts
-  "lib/eigenlayer-contracts/:@openzeppelin-upgrades/=lib/eigenlayer-contracts/lib/openzeppelin-contracts-upgradeable/",
-  "lib/eigenlayer-contracts/:@openzeppelin/=lib/eigenlayer-contracts/lib/openzeppelin-contracts/",
-  "lib/eigenlayer-contracts/:@openzeppelin-v4.9.0/=lib/eigenlayer-contracts/lib/openzeppelin-contracts-v4.9.0/",
-  "lib/eigenlayer-contracts/:@openzeppelin-upgrades-v4.9.0/=lib/eigenlayer-contracts/lib/openzeppelin-contracts-upgradeable-v4.9.0/",
-  "lib/eigenlayer-contracts/:ds-test/=lib/eigenlayer-contracts/lib/ds-test/src/",
-  "lib/eigenlayer-contracts/:forge-std/=lib/eigenlayer-contracts/lib/forge-std/src/",
-  "lib/eigenlayer-contracts/lib/openzeppelin-contracts/:@openzeppelin/contracts/=lib/eigenlayer-contracts/lib/openzeppelin-contracts/contracts/",
-
-  # OpenZeppelin remappings contexts
-  "lib/openzeppelin-contracts/:@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
-
-  # Karak onchain sdk remappings contexts
-  "lib/karak-onchain-sdk/:forge-std/=lib/forge-std/src/",
-  "lib/karak-onchain-sdk/:@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
-  "lib/karak-onchain-sdk/:@openzeppelin-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
-  "lib/karak-onchain-sdk/:@chainlink/=lib/chainlink/contracts/"
-]
-
+    "@eigenlayer/=lib/eigenlayer-contracts/",
+  "@eigenlayer-middleware/=lib/eigenlayer-middleware/",
+  "forge-std/=lib/forge-std/src/"
+  ]

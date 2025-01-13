@@ -1,5 +1,6 @@
+
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.8.0 <0.9.0;
+pragma solidity 0.8.25;
 
 import {BLS12381} from "../library/bls/BLS12381.sol";
 
