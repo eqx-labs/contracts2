@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.8.0 <0.9.0;
+pragma solidity 0.8.25;
 
 import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
-import {EnumerableMap} from "@openzeppelin/contracts/utils/structs/EnumerableMap.sol";
+import {EnumerableMap as OEnumerableMap} from "@openzeppelin/contracts/utils/structs/EnumerableMap.sol";
 import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 
@@ -26,13 +26,13 @@ contract ConsensusEigenLayerMiddleware is
     OwnableUpgradeable,
     UUPSUpgradeable
 {
-    using EnumerableMap for EnumerableMap.AddressToUintMap;
-    using MapWithTimeData for EnumerableMap.AddressToUintMap;
+    using OEnumerableMap for OEnumerableMap.AddressToUintMap;
+    using MapWithTimeData for OEnumerableMap.AddressToUintMap;
 
     uint48 public START_TIMESTAMP;
     IParameters public parameters;
     IValidatorRegistrySystem public registry;
-    EnumerableMap.AddressToUintMap private strategies;
+    OEnumerableMap.AddressToUintMap private strategies;
     IAVSDirectory public AVS_DIRECTORY;
     DelegationManagerStorage public DELEGATION_MANAGER;
     StrategyManagerStorage public STRATEGY_MANAGER;
