@@ -11,10 +11,10 @@ solc_version = "0.8.25"
 
 
 remappings = [
-  "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+  "@openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
   "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
   "@openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/",
-    "@eigenlayer/=lib/eigenlayer-contracts/",
+  "@eigenlayer/=lib/eigenlayer-contracts/",
   "@eigenlayer-middleware/=lib/eigenlayer-middleware/",
   "forge-std/=lib/forge-std/src/"
   ]
