@@ -6,15 +6,16 @@ import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeab
 import {ValidatorsLib} from "../library/ValidatorsLib.sol";
 import {IParameters} from "../interfaces/IParameters.sol";
 import {INodeRegistrationSystem} from "../interfaces/IValidators.sol";
+import {NodeRegistry} from "./NodeRegistry.sol";
 
-contract BaseRegistry is OwnableUpgradeable, UUPSUpgradeable {
+contract BaseRegistry is OwnableUpgradeable, UUPSUpgradeable ,NodeRegistry {
     using ValidatorsLib for ValidatorsLib.ValidatorSet;
     
-    IParameters public protocolParameters;
-    ValidatorsLib.ValidatorSet internal NODES;
+  
+
     uint256[43] private __gap;
 
-    event ConsensusNodeRegistered(bytes32 indexed nodeIdentityHash);
+ 
 
     function initialize(
         address _owner,
@@ -28,17 +29,5 @@ contract BaseRegistry is OwnableUpgradeable, UUPSUpgradeable {
         address newImplementation
     ) internal override onlyOwner {}
 
-    function _getNodeInfo(
-        ValidatorsLib._Validator memory _node
-    ) internal view returns (INodeRegistrationSystem.ValidatorNodeDetails memory) {
-        return
-            INodeRegistrationSystem.ValidatorNodeDetails({
-                nodeIdentityHash: _node.pubkeyHash,
-                gasCapacityLimit: _node.maxCommittedGasLimit,
-                assignedOperatorAddress: NODES.getAuthorizedOperator(
-                    _node.pubkeyHash
-                ),
-                controllerAddress: NODES.getController(_node.pubkeyHash)
-            });
-    }
+ 
 }

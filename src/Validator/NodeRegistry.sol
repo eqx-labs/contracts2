@@ -12,12 +12,12 @@ import {EnrollmentRegistry} from "./EnrollmentRegistry.sol";
 
 
 contract NodeRegistry is 
-EnrollmentRegistry,
-INodeRegistrationSystem
+EnrollmentRegistry
 
 {
     using BLS12381 for BLS12381.G1Point;
     using ValidatorsLib for ValidatorsLib.ValidatorSet;
+      IParameters public protocolParameters;
 
 
     uint256 public validatorCount;
@@ -26,21 +26,7 @@ INodeRegistrationSystem
 
 
     // Query Functions
-    function fetchAllValidatorNodes()
-        public
-        view
-        returns (ValidatorNodeDetails[] memory)
-    {
-             ValidatorsLib._Validator[] memory _nodes = NODES.getAll();
-        ValidatorNodeDetails[] memory nodes = new ValidatorNodeDetails[](
-            _nodes.length
-        );
-        for (uint256 i = 0; i < _nodes.length; i++) {
-            nodes[i] = _getNodeInfo(_nodes[i]);
-        }
-        return nodes;
 
-    }
 
     function fetchNodeByPublicKey(
         BLS12381.G1Point calldata pubkey
@@ -48,12 +34,7 @@ INodeRegistrationSystem
         return fetchNodeByIdentityHash(computeNodeIdentityHash(pubkey));
     }
 
-    function fetchNodeByIdentityHash(
-        bytes20 nodeIdentityHash
-    ) public view returns (ValidatorNodeDetails memory) {
-        ValidatorsLib._Validator memory _node = NODES.get(nodeIdentityHash);
-        return _getNodeInfo(_node);
-    }
+
 
     // Enrollment Functions
     function enrollNodeWithoutVerification(

@@ -3,25 +3,15 @@ pragma solidity 0.8.25;
 
 import "./BaseRegistry.sol";
 import {BLS12381} from "../library/bls/BLS12381.sol";
-import {ValidatorsLib} from "../library/ValidatorsLib.sol";
 
-contract QueryRegistry is BaseRegistry {
+
+contract QueryRegistry  {
     using BLS12381 for BLS12381.G1Point;
-      using ValidatorsLib for ValidatorsLib.ValidatorSet;
+
       error UnauthorizedAccessAttempt();
 
 
-    function updateNodeCapacity(
-        bytes20 nodeIdentityHash,
-        uint32 maxGasCommitment
-    ) public {
-        address controller = NODES.getController(nodeIdentityHash);
-        if (msg.sender != controller) {
-            revert UnauthorizedAccessAttempt();
-        }
-
-        NODES.updateMaxCommittedGasLimit(nodeIdentityHash, maxGasCommitment);
-    }
+ 
 
     function computeNodeIdentityHash(
         BLS12381.G1Point memory pubkey
