@@ -9,12 +9,26 @@ import {EnrollmentRegistry} from "../../src/Validator/EnrollmentRegistry.sol";
 import {QueryRegistry} from "../../src/Validator/QueryRegistry.sol";
 
 contract MockEnrollmentRegistry is EnrollmentRegistry {
+    function getNodeInfo(
+        ValidatorsLib._Validator memory _node
+    ) public view returns (INodeRegistrationSystem.ValidatorNodeDetails memory) {
+        return _getNodeInfo(_node);
+    }
+
     function registerNode(
         bytes20 nodeIdentityHash,
         address operatorAddress,
         uint32 maxGasCommitment
     ) public {
         _registerNode(nodeIdentityHash, operatorAddress, maxGasCommitment);
+    }
+
+    function batchRegisterNodes(
+        bytes20[] memory keyHashes,
+        address operatorAddress,
+        uint32 maxGasCommitment
+    ) public {
+        _batchRegisterNodes(keyHashes, operatorAddress, maxGasCommitment);
     }
 }
 
