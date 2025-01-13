@@ -58,6 +58,7 @@ contract ValidatorRegistryCore is
         address newSystemImplementation
     ) internal override onlyOwner {}
 
+  //left
     function calculateEpochStartTime(
         uint48 epochNumber
     ) public view returns (uint48 startTimestamp) {

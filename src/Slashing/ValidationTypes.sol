@@ -2,12 +2,12 @@
 pragma solidity 0.8.25;
 
 interface ValidationTypes {
-     enum ValidationPhase {
+    enum ValidationPhase {
         Awaiting,
         Confirmed,
         Rejected
     }
-      struct ValidationRecord {
+    struct ValidationRecord {
         bytes32 attestationId;
         uint48 timestampInit;
         ValidationPhase phase;
@@ -18,11 +18,10 @@ interface ValidationTypes {
         MessageDetails[] authorizedMessages;
     }
 
-      struct ParticipantState {
+    struct ParticipantState {
         uint256 sequence;
         uint256 holdings;
     }
-
 
     struct AuthorizedMessagePacket {
         bytes payload;
@@ -44,7 +43,7 @@ interface ValidationTypes {
         uint256 chronograph;
         uint256 networkFee;
     }
-      
+
     struct ValidationEvidence {
         uint256 incorporationHeight;
         bytes precedingSegmentRLP;
@@ -53,7 +52,6 @@ interface ValidationTypes {
         bytes[] messageMerkleEvidence;
         uint256[] messagePositions;
     }
-
 
     error EmptyAuthorizationError();
     error InvalidBondAmountError();
@@ -74,15 +72,15 @@ interface ValidationTypes {
     error BondTransferFailedError();
     error InvalidEvidenceCountError();
     error ValidationTimedOutError();
-error InvalidSegmentHeightError();
+    error InvalidSegmentHeightError();
     error InvalidSequenceError();
     error ConsensusRootMissingError();
 
-
-
-    event ValidationInitiated(bytes32 indexed attestationId, address indexed validator, address indexed witnessAuthorizer);
+    event ValidationInitiated(
+        bytes32 indexed attestationId,
+        address indexed validator,
+        address indexed witnessAuthorizer
+    );
     event ValidationConfirmed(bytes32 indexed attestationId);
     event ValidationRejected(bytes32 indexed attestationId);
-
-
 }

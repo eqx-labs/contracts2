@@ -5,33 +5,24 @@ import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/Own
 import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
 import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
-import {IParameters} from "../interfaces/IParameters.sol";
 import {IValidatorRegistrySystem} from "../interfaces/IRegistry.sol";
 import {INodeRegistrationSystem} from "../interfaces/IValidators.sol";
 import {IConsensusRestaking} from "../interfaces/IRestaking.sol";
 import {EnumerableMap} from "../library/EnumerableMap.sol";
 import {OperatorMapWithTime} from "../library/OperatorMapWithTime.sol";
 
-import {ValidatorRegistryBase} from "./ValidatorRegistryBase.sol";
-import {ValidatorRegistryTime} from "./ValidatorRegistryTime.sol";
- 
 
 
 
-contract ValidatorRegistryCore is
-    ValidatorRegistryTime
-
-{
+contract ValidatorRegistryCore is IValidatorRegistrySystem {
     using EnumerableSet for EnumerableSet.AddressSet;
     using EnumerableMap for EnumerableMap.OperatorMap;
     using OperatorMapWithTime for EnumerableMap.OperatorMap;
-
+    //  error ValidatorNodeNotFound();
 
     EnumerableMap.OperatorMap private nodeOperatorRegistry;
 
     uint256[45] private __gap;
-
- 
 
     function fetchNodeCollateralAmount(
         address nodeOperator,
@@ -62,7 +53,6 @@ contract ValidatorRegistryCore is
         return totalAmount;
     }
 
-  
     function checkNodeOperationalStatus(
         address nodeAddress
     ) public view returns (bool) {
@@ -74,4 +64,19 @@ contract ValidatorRegistryCore is
             .getTimes(nodeAddress);
         return activationTime != 0 && deactivationTime == 0;
     }
+
+    function validateNodeRegistration(
+        address nodeAddress
+    ) external view  virtual override returns (bool) {}
+
+    function enrollValidatorNode(
+        address nodeAddress,
+        string calldata endpointUrl
+    ) external virtual override {}
+
+    function removeValidatorNode(address nodeAddress) external virtual override {}
+
+    function suspendValidatorNode(address nodeAddress) external virtual override {}
+
+    function reactivateValidatorNode (address nodeAddress) external virtual override {}
 }

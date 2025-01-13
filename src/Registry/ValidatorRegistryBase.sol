@@ -10,11 +10,12 @@ import {IValidatorRegistrySystem} from "../interfaces/IRegistry.sol";
 import {INodeRegistrationSystem} from "../interfaces/IValidators.sol";
 import {IConsensusRestaking} from "../interfaces/IRestaking.sol";
 import {EnumerableMap} from "../library/EnumerableMap.sol";
+import "./ValidatorRegistryCore.sol";
 import {OperatorMapWithTime} from "../library/OperatorMapWithTime.sol";
 
 contract ValidatorRegistryBase is
-    IValidatorRegistrySystem,
     OwnableUpgradeable,
+    ValidatorRegistryCore,
     UUPSUpgradeable
 {
     using EnumerableSet for EnumerableSet.AddressSet;
@@ -51,6 +52,12 @@ contract ValidatorRegistryBase is
         address newSystemImplementation
     ) internal override onlyOwner {}
 
+    function validateNodeRegistration(
+        address nodeAddress
+    ) public view override returns (bool) {
+        return nodeOperatorRegistry.contains(nodeAddress);
+    }
+
     function registerProtocol(address protocolContract) public onlyOwner {
         protocolRegistry.add(protocolContract);
     }
@@ -62,16 +69,24 @@ contract ValidatorRegistryBase is
     function listSupportedProtocols()
         public
         view
-        virtual
         returns (address[] memory protocolAddressList)
     {
         return protocolRegistry.values();
     }
 
+    function calculateEpochStartTime(
+        uint48 epochNumber
+    ) public view returns (uint48 startTimestamp) {
+        return
+            SYSTEM_INITIALIZATION_TIME +
+            epochNumber *
+            systemParameters.VALIDATOR_EPOCH_TIME();
+    }
+
     function enrollValidatorNode(
         address nodeAddress,
         string calldata endpointUrl
-    ) external virtual onlyRegisteredProtocol {
+    ) external override onlyRegisteredProtocol {
         if (nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeAlreadyExists();
         }
@@ -87,35 +102,32 @@ contract ValidatorRegistryBase is
 
     function removeValidatorNode(
         address nodeAddress
-    ) external virtual onlyRegisteredProtocol {
-        if (!nodeOperatorRegistry.contains(nodeAddress)) {
-            revert ValidatorNodeNotFound();
-        }
+    ) external override onlyRegisteredProtocol {
         nodeOperatorRegistry.remove(nodeAddress);
     }
 
     function suspendValidatorNode(
         address nodeAddress
-    ) external virtual onlyRegisteredProtocol {
-        if (!nodeOperatorRegistry.contains(nodeAddress)) {
-            revert ValidatorNodeNotFound();
-        }
+    ) external override onlyRegisteredProtocol {
         nodeOperatorRegistry.disable(nodeAddress);
     }
 
     function reactivateValidatorNode(
         address nodeAddress
-    ) external virtual onlyRegisteredProtocol {
-        if (!nodeOperatorRegistry.contains(nodeAddress)) {
-            revert ValidatorNodeNotFound();
-        }
+    ) external override onlyRegisteredProtocol {
         nodeOperatorRegistry.enable(nodeAddress);
     }
 
-    function validateNodeRegistration(
-        address nodeAddress
-    ) external view virtual returns (bool) {
-        return nodeOperatorRegistry.contains(nodeAddress);
+    function calculateEpochFromTimestamp(
+        uint48 timestamp
+    ) public view returns (uint48) {
+        return
+            (timestamp - SYSTEM_INITIALIZATION_TIME) /
+            systemParameters.VALIDATOR_EPOCH_TIME();
+    }
+
+    function fetchCurrentEpoch() public view returns (uint48 epochNumber) {
+        return calculateEpochFromTimestamp(Time.timestamp());
     }
 
     function fetchValidatorProfile(
@@ -198,19 +210,12 @@ contract ValidatorRegistryBase is
     }
 
     // Internal helper functions
-    function calculateEpochFromTimestamp(
-        uint48 timestamp
-    ) internal view virtual returns (uint48) {
-        return
-            (timestamp - SYSTEM_INITIALIZATION_TIME) /
-            systemParameters.VALIDATOR_EPOCH_TIME();
-    }
 
     function checkNodeStatusAtTime(
         uint48 activationTime,
         uint48 deactivationTime,
         uint48 checkTimestamp
-    ) internal pure virtual returns (bool) {
+    ) private pure returns (bool) {
         return
             activationTime != 0 &&
             activationTime <= checkTimestamp &&

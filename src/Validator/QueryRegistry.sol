@@ -11,8 +11,6 @@ contract QueryRegistry  {
       error UnauthorizedAccessAttempt();
 
 
- 
-
     function computeNodeIdentityHash(
         BLS12381.G1Point memory pubkey
     ) public pure returns (bytes20) {

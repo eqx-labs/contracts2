@@ -3,176 +3,59 @@ pragma solidity 0.8.25;
 
 import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
-import {SecureMerkleTrie} from "../library/trie/SecureMerkleTrie.sol";
-import {MerkleTrie} from "../library/trie/MerkleTrie.sol";
+
 import {RLPReader} from "../library/rlp/RLPReader.sol";
-import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
-import {RLPWriter} from "../library/rlp/RLPWriter.sol";
+import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 import {TransactionDecoder} from "../library/TransactionDecoder.sol";
-
 import {ValidationUtility} from "./ValidationUtility.sol";
-import {Shared} from "./Shared.sol";
+import {IParameters} from "../interfaces/IParameters.sol";
 
-contract ValidationProcessor is ValidationUtility, Shared {
-    using RLPReader for bytes;
-    using RLPReader for RLPReader.RLPItem;
-    using TransactionDecoder for bytes;
-    using EnumerableSet for EnumerableSet.Bytes32Set;
-
+contract ValidationProcessor is
+    OwnableUpgradeable,
+    UUPSUpgradeable,
+    ValidationUtility
+{
     using TransactionDecoder for TransactionDecoder.Transaction;
 
-  
-    function _verifyAndFinalize(
+    uint256[46] private __gap;
+
+    function initialize(
+        address _owner,
+        address _parameters
+    ) public initializer {
+        __Ownable_init(_owner);
+        validatorParams = IParameters(_parameters);
+    }
+
+    function _authorizeUpgrade(
+        address newImplementation
+    ) internal override onlyOwner {}
+
+    function concludeAwaitingValidation(
         bytes32 validationId,
-        bytes32 trustedPreviousSegmentHash,
         ValidationEvidence calldata evidence
-    ) internal {
-        if (!validationSetIDs.contains(validationId)) {
-            revert ValidationNotFoundError();
-        }
-
-        ValidationRecord storage record = validationRecords[validationId];
-
-        if (record.phase != ValidationPhase.Awaiting) {
-            revert ValidationAlreadySettledError();
-        }
-
+    ) public {
         if (
-            record.timestampInit + validatorParams.CHALLENGE_TIMEOUT_PERIOD() <
-            Time.timestamp()
+            validationRecords[validationId].targetEpoch <
+            _getCurrentEpoch() - validatorParams.CHAIN_HISTORY_LIMIT()
         ) {
-            revert ValidationTimedOutError();
+            revert SegmentTooAgedError();
         }
 
-        uint256 messageCount = record.authorizedMessages.length;
+        uint256 previousSegmentHeight = evidence.incorporationHeight - 1;
         if (
-            evidence.messageMerkleEvidence.length != messageCount ||
-            evidence.messagePositions.length != messageCount
+            previousSegmentHeight > block.number ||
+            previousSegmentHeight <
+            block.number - validatorParams.CHAIN_HISTORY_LIMIT()
         ) {
-            revert InvalidEvidenceCountError();
+            revert InvalidSegmentHeightError();
         }
 
-        bytes32 previousSegmentHash = keccak256(evidence.precedingSegmentRLP);
-        if (previousSegmentHash != trustedPreviousSegmentHash) {
-            revert InvalidSegmentDigestError();
-        }
-
-        ChainSegmentInfo memory previousSegment = _decodeSegmentHeaderRLP(
-            evidence.precedingSegmentRLP
+        bytes32 trustedPreviousSegmentHash = blockhash(
+            evidence.incorporationHeight
         );
-        ChainSegmentInfo memory incorporationSegment = _decodeSegmentHeaderRLP(
-            evidence.incorporationSegmentRLP
-        );
-
-        if (incorporationSegment.ancestorDigest != previousSegmentHash) {
-            revert InvalidAncestorDigestError();
-        }
-
-        (bool participantExists, bytes memory participantRLP) = SecureMerkleTrie
-            .get(
-                abi.encodePacked(record.protocolDestination),
-                evidence.participantMerkleEvidence,
-                previousSegment.worldStateDigest
-            );
-
-        if (!participantExists) {
-            revert ParticipantNotFoundError();
-        }
-
-        ParticipantState memory participant = _decodeParticipantRLP(
-            participantRLP
-        );
-
-        for (uint256 i = 0; i < messageCount; i++) {
-            MessageDetails memory message = record.authorizedMessages[i];
-
-            if (participant.sequence > message.sequence) {
-                _finalizeValidation(ValidationPhase.Confirmed, record);
-                return;
-            }
-
-            if (
-                participant.holdings <
-                incorporationSegment.networkFee * message.fuelLimit
-            ) {
-                _finalizeValidation(ValidationPhase.Confirmed, record);
-                return;
-            }
-
-            participant.holdings -=
-                incorporationSegment.networkFee *
-                message.fuelLimit;
-            participant.sequence++;
-
-            bytes memory messageLeaf = RLPWriter.writeUint(
-                evidence.messagePositions[i]
-            );
-
-            (bool messageExists, bytes memory messageRLP) = MerkleTrie.get(
-                messageLeaf,
-                evidence.messageMerkleEvidence[i],
-                incorporationSegment.messageTreeDigest
-            );
-
-            if (!messageExists) {
-                revert MessageNotFoundError();
-            }
-
-            if (message.messageDigest != keccak256(messageRLP)) {
-                revert InvalidMessageEvidenceError();
-            }
-        }
-
-        _finalizeValidation(ValidationPhase.Confirmed, record);
-    }
-
-    function _finalizeValidation(
-        ValidationPhase outcome,
-        ValidationRecord storage record
-    ) internal {
-        if (outcome == ValidationPhase.Confirmed) {
-            record.phase = ValidationPhase.Confirmed;
-            _distributeHalfDeposit(msg.sender);
-            _distributeHalfDeposit(record.witnessAuthorizer);
-            emit ValidationConfirmed(record.attestationId);
-        } else if (outcome == ValidationPhase.Rejected) {
-            record.phase = ValidationPhase.Rejected;
-            _distributeFullDeposit(record.validator);
-            emit ValidationRejected(record.attestationId);
-        }
-
-        delete validationRecords[record.attestationId];
-        validationSetIDs.remove(record.attestationId);
-    }
-
-    function _getEpochFromTimestamp(
-        uint256 _timestamp
-    ) internal view returns (uint256) {
-        return
-            (_timestamp - validatorParams.CONSENSUS_LAUNCH_TIMESTAMP()) /
-            validatorParams.VALIDATOR_EPOCH_TIME();
-    }
-
-    function _getCurrentEpoch() internal view returns (uint256) {
-        return _getEpochFromTimestamp(block.timestamp);
-    }
-
-    function _distributeHalfDeposit(address recipient) internal  {
-        (bool success, ) = payable(recipient).call{
-            value: validatorParams.DISPUTE_SECURITY_DEPOSIT() / 2
-        }("");
-        if (!success) {
-            revert BondTransferFailedError();
-        }
-    }
-
-    function _distributeFullDeposit(address recipient) internal   {
-        (bool success, ) = payable(recipient).call{
-            value: validatorParams.DISPUTE_SECURITY_DEPOSIT()
-        }("");
-        if (!success) {
-            revert BondTransferFailedError();
-        }
+        verifyAndFinalize(validationId, trustedPreviousSegmentHash, evidence);
     }
 
     function _getTimestampFromEpoch(
@@ -212,20 +95,11 @@ contract ValidationProcessor is ValidationUtility, Shared {
         return _getConsensusRootAt(latestSlot);
     }
 
-    function _decodeParticipantRLP(
-        bytes memory participantRLP
-    ) internal pure returns (ParticipantState memory participant) {
-        RLPReader.RLPItem[] memory participantFields = participantRLP
-            .toRLPItem()
-            .readList();
-        participant.sequence = participantFields[0].readUint256();
-        participant.holdings = participantFields[1].readUint256();
-    }
-
-         function _isWithinEIP4788Window(
+    function _isWithinEIP4788Window(
         uint256 _timestamp
     ) internal view returns (bool) {
-        return _getEpochFromTimestamp(_timestamp) <= _getCurrentEpoch() + validatorParams.BEACON_TIME_WINDOW();
+        return
+            _getEpochFromTimestamp(_timestamp) <=
+            _getCurrentEpoch() + validatorParams.BEACON_TIME_WINDOW();
     }
-
 }
