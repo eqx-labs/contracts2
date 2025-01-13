@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.25;
+pragma solidity >=0.8.0 <0.9.0;
 
 import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
@@ -9,7 +9,7 @@ import {IParameters} from "../interfaces/IParameters.sol";
 import {IValidatorRegistrySystem} from "../interfaces/IRegistry.sol";
 import {INodeRegistrationSystem} from "../interfaces/IValidators.sol";
 import {IConsensusRestaking} from "../interfaces/IRestaking.sol";
-import {EnumerableMap as OZEnumerableMap} from "../library/EnumerableMap.sol";
+import {EnumerableMap} from "../library/EnumerableMap.sol";
 import {OperatorMapWithTime} from "../library/OperatorMapWithTime.sol";
 
 contract ValidatorRegistryBase is
@@ -18,14 +18,14 @@ contract ValidatorRegistryBase is
     UUPSUpgradeable
 {
     using EnumerableSet for EnumerableSet.AddressSet;
-    using OZEnumerableMap for OZEnumerableMap.OperatorMap;
-    using OperatorMapWithTime for OZEnumerableMap.OperatorMap;
+    using EnumerableMap for EnumerableMap.OperatorMap;
+    using OperatorMapWithTime for EnumerableMap.OperatorMap;
 
     uint48 public SYSTEM_INITIALIZATION_TIME;
     IParameters public systemParameters;
     INodeRegistrationSystem public validatorNodes;
     EnumerableSet.AddressSet internal protocolRegistry;
-    OZEnumerableMap.OperatorMap private nodeOperatorRegistry;
+    EnumerableMap.OperatorMap private nodeOperatorRegistry;
 
     uint256[45] private __gap;
 
@@ -76,7 +76,7 @@ contract ValidatorRegistryBase is
             revert ValidatorNodeAlreadyExists();
         }
 
-        OZEnumerableMap.Operator memory nodeOperator = OZEnumerableMap.Operator(
+        EnumerableMap.Operator memory nodeOperator = EnumerableMap.Operator(
             endpointUrl,
             msg.sender,
             Time.timestamp()
@@ -132,7 +132,7 @@ contract ValidatorRegistryBase is
                 validatorIdentityHash
             );
 
-        OZEnumerableMap.Operator memory operatorInfo = nodeOperatorRegistry.get(
+        EnumerableMap.Operator memory operatorInfo = nodeOperatorRegistry.get(
             validatorData.assignedOperatorAddress
         );
 

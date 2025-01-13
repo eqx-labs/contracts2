@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.25;
+pragma solidity >=0.8.0 <0.9.0;
 
 import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
 import {EnumerableMap} from "@openzeppelin/contracts/utils/structs/EnumerableMap.sol";
@@ -20,7 +20,7 @@ import {DelegationManagerStorage} from "@eigenlayer/src/contracts/core/Delegatio
 import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyManagerStorage.sol";
 import {MapWithTimeData} from "../library/MapWithTimeData.sol";
 
-contract ConsensusEigenLayerRestaking is
+contract ConsensusEigenLayerMiddleware is
     IConsensusRestaking,
     IServiceManager,
     OwnableUpgradeable,

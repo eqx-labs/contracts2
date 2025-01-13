@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.25;
+pragma solidity >=0.8.0 <0.9.0;
 
 // Credits: Symbiotic contributors.
 // Ref: https://github.com/symbioticfi/cosmos-sdk/blob/c25b6d5f320eb8ea4189584fa04d28c47362c2a7/middleware/src/libraries/MapWithTimeData.sol
