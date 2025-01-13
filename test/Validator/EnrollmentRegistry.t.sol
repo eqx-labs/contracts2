@@ -22,18 +22,25 @@ contract EnrollmentRegistryTest is Test {
     uint32 public maxGasCommitment = 100;
     bytes20 public validatorNodeHash1 = bytes20(uint160(1000));
     bytes20 public validatorNodeHash2 = bytes20(uint160(2000));
-    address public validatorAddress1 = address(1);
-    address public validatorAddress2 = address(2);
+    address public operatorAddress = address(1);
 
-    function beforeEach() public {
+    function setUp() public {
         registry = new MockEnrollmentRegistry();
-        registry.registerNode(validatorNodeHash1, validatorAddress1, maxGasCommitment);
-        registry.registerNode(validatorNodeHash2, validatorAddress2, maxGasCommitment);
+        registry.registerNode(validatorNodeHash1, operatorAddress, maxGasCommitment);
+        registry.registerNode(validatorNodeHash2, operatorAddress, maxGasCommitment);
     }
 
     function testFetchValidatorNodes() public {
-        registry.fetchAllValidatorNodes();
-        // INodeRegistrationSystem.ValidatorNodeDetails[] memory _nodes = registry.fetchAllValidatorNodes();
-        // assertEq(_nodes.length, 2);
+        INodeRegistrationSystem.ValidatorNodeDetails[] memory _nodes = registry.fetchAllValidatorNodes();
+
+        assertEq(_nodes.length, 2);
+
+        assertEq(_nodes[0].nodeIdentityHash, validatorNodeHash1);
+        assertEq(_nodes[0].assignedOperatorAddress, operatorAddress);
+        assertEq(_nodes[0].gasCapacityLimit, maxGasCommitment);
+
+        assertEq(_nodes[1].nodeIdentityHash, validatorNodeHash2);
+        assertEq(_nodes[1].assignedOperatorAddress, operatorAddress);
+        assertEq(_nodes[1].gasCapacityLimit, maxGasCommitment);
     }
 }
