@@ -7,6 +7,7 @@ import "../src/interfaces/IParameters.sol";
 import "../src/interfaces/IValidators.sol";
 import "../src/interfaces/IRestaking.sol";
 
+
 contract MockParameters is IParameters {
     uint256 constant EPOCH_TIME = 1 days;
     uint256 constant MIN_COLLATERAL = 100 ether;

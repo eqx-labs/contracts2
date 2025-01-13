@@ -11,17 +11,11 @@ interface IValidatorRegistrySystem {
 
 
     struct ValidatorNodeProfile {
-
         bytes20 validatorIdentityHash;
-
         bool operationalStatus;
-
         address nodeManagerAddress;
-
         string serviceEndpointUrl;
-
         address[] collateralTokenList;
-
         uint256[] collateralAmountList;
     }
 
