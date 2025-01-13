@@ -19,15 +19,18 @@ contract MockEnrollmentRegistry is EnrollmentRegistry {
 
 contract EnrollmentRegistryTest is Test {
     MockEnrollmentRegistry public registry;
+    address public adminAddress = address(1);
+    address public operatorAddress = address(2);
     uint32 public maxGasCommitment = 100;
     bytes20 public validatorNodeHash1 = bytes20(uint160(1000));
     bytes20 public validatorNodeHash2 = bytes20(uint160(2000));
-    address public operatorAddress = address(1);
 
     function setUp() public {
+        vm.startPrank(adminAddress);
         registry = new MockEnrollmentRegistry();
         registry.registerNode(validatorNodeHash1, operatorAddress, maxGasCommitment);
         registry.registerNode(validatorNodeHash2, operatorAddress, maxGasCommitment);
+        vm.stopPrank();
     }
 
     function testFetchValidatorNodes() public {
@@ -38,9 +41,11 @@ contract EnrollmentRegistryTest is Test {
         assertEq(_nodes[0].nodeIdentityHash, validatorNodeHash1);
         assertEq(_nodes[0].assignedOperatorAddress, operatorAddress);
         assertEq(_nodes[0].gasCapacityLimit, maxGasCommitment);
+        assertEq(_nodes[0].controllerAddress, adminAddress);
 
         assertEq(_nodes[1].nodeIdentityHash, validatorNodeHash2);
         assertEq(_nodes[1].assignedOperatorAddress, operatorAddress);
         assertEq(_nodes[1].gasCapacityLimit, maxGasCommitment);
+        assertEq(_nodes[1].controllerAddress, adminAddress);
     }
 }
