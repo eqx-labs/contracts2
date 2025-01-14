@@ -55,9 +55,7 @@ library TransactionDecoder {
     /// @notice Decode a raw transaction into a transaction object
     /// @param raw The raw transaction bytes
     /// @return transaction The decoded transaction object
-    function decodeEnveloped(
-        bytes memory raw
-    ) internal pure returns (Transaction memory transaction) {
+    function decodeEnveloped(bytes memory raw) internal pure returns (Transaction memory transaction) {
         bytes1 prefix = raw[0];
 
         if (prefix >= 0x7F) {
@@ -76,9 +74,7 @@ library TransactionDecoder {
     /// @notice Recover the sender of a transaction
     /// @param transaction The transaction object
     /// @return sender The address of the sender
-    function recoverSender(
-        Transaction memory transaction
-    ) internal pure returns (address) {
+    function recoverSender(Transaction memory transaction) internal pure returns (address) {
         return ECDSA.recover(preimage(transaction), signature(transaction));
     }
 
@@ -86,9 +82,7 @@ library TransactionDecoder {
     /// @dev This is the hash of the transaction that is signed by the sender to obtain the signature
     /// @param transaction The transaction object
     /// @return preimg The preimage hash of the transaction
-    function preimage(
-        Transaction memory transaction
-    ) internal pure returns (bytes32 preimg) {
+    function preimage(Transaction memory transaction) internal pure returns (bytes32 preimg) {
         preimg = keccak256(unsigned(transaction));
     }
 
@@ -96,9 +90,7 @@ library TransactionDecoder {
     /// @dev This is the transaction object without the signature
     /// @param transaction The transaction object
     /// @return unsignedTx The unsigned transaction object
-    function unsigned(
-        Transaction memory transaction
-    ) internal pure returns (bytes memory unsignedTx) {
+    function unsigned(Transaction memory transaction) internal pure returns (bytes memory unsignedTx) {
         if (transaction.txType == TxType.Legacy) {
             unsignedTx = _unsignedLegacy(transaction);
         } else if (transaction.txType == TxType.Eip2930) {
@@ -115,9 +107,7 @@ library TransactionDecoder {
     /// @notice Return the hex-encoded signature of a transaction object
     /// @param transaction The transaction object
     /// @return sig The hex-encoded signature
-    function signature(
-        Transaction memory transaction
-    ) internal pure returns (bytes memory sig) {
+    function signature(Transaction memory transaction) internal pure returns (bytes memory sig) {
         if (transaction.sig.length == 0) {
             revert NoSignature();
         } else if (transaction.sig.length != 65) {
@@ -130,9 +120,7 @@ library TransactionDecoder {
     /// @notice Helper to decode a legacy (type 0) transaction
     /// @param raw The raw transaction bytes
     /// @return transaction The decoded transaction object
-    function _decodeLegacy(
-        bytes memory raw
-    ) private pure returns (Transaction memory transaction) {
+    function _decodeLegacy(bytes memory raw) private pure returns (Transaction memory transaction) {
         transaction.txType = TxType.Legacy;
 
         // Legacy transactions don't have a type prefix, so we can decode directly
@@ -180,9 +168,7 @@ library TransactionDecoder {
     /// @notice Helper to decode an EIP-2930 (type 1) transaction
     /// @param raw The raw transaction bytes
     /// @return transaction The decoded transaction object
-    function _decodeEip2930(
-        bytes memory raw
-    ) private pure returns (Transaction memory transaction) {
+    function _decodeEip2930(bytes memory raw) private pure returns (Transaction memory transaction) {
         transaction.txType = TxType.Eip2930;
 
         // Skip the first byte (transaction type)
@@ -223,9 +209,7 @@ library TransactionDecoder {
     /// @notice Helper to decode an EIP-1559 (type 2) transaction
     /// @param raw The raw transaction bytes
     /// @return transaction The decoded transaction object
-    function _decodeEip1559(
-        bytes memory raw
-    ) private pure returns (Transaction memory transaction) {
+    function _decodeEip1559(bytes memory raw) private pure returns (Transaction memory transaction) {
         transaction.txType = TxType.Eip1559;
 
         // Skip the first byte (transaction type)
@@ -267,9 +251,7 @@ library TransactionDecoder {
     /// @notice Helper to decode an EIP-4844 (type 3) transaction
     /// @param raw The raw transaction bytes
     /// @return transaction The decoded transaction object
-    function _decodeEip4844(
-        bytes memory raw
-    ) private pure returns (Transaction memory transaction) {
+    function _decodeEip4844(bytes memory raw) private pure returns (Transaction memory transaction) {
         transaction.txType = TxType.Eip4844;
 
         // Skip the first byte (transaction type)
@@ -319,9 +301,7 @@ library TransactionDecoder {
     /// @notice Helper to RLP-encode an unsigned legacy transaction
     /// @param transaction The transaction object
     /// @return unsignedTx The unsigned transaction bytes
-    function _unsignedLegacy(
-        Transaction memory transaction
-    ) private pure returns (bytes memory unsignedTx) {
+    function _unsignedLegacy(Transaction memory transaction) private pure returns (bytes memory unsignedTx) {
         uint64 chainId = 0;
         if (transaction.chainId != 0) {
             // A chainId was provided: if non-zero, we'll use EIP-155
@@ -363,9 +343,7 @@ library TransactionDecoder {
     /// @notice Helper to RLP-encode an unsigned EIP-2930 transaction
     /// @param transaction The transaction object
     /// @return unsignedTx The unsigned transaction bytes
-    function _unsignedEip2930(
-        Transaction memory transaction
-    ) private pure returns (bytes memory unsignedTx) {
+    function _unsignedEip2930(Transaction memory transaction) private pure returns (bytes memory unsignedTx) {
         bytes[] memory fields = new bytes[](8);
 
         fields[0] = RLPWriter.writeUint(transaction.chainId);
@@ -389,9 +367,7 @@ library TransactionDecoder {
     /// @notice Helper to RLP-encode an unsigned EIP-1559 transaction
     /// @param transaction The transaction object
     /// @return unsignedTx The unsigned transaction bytes
-    function _unsignedEip1559(
-        Transaction memory transaction
-    ) private pure returns (bytes memory unsignedTx) {
+    function _unsignedEip1559(Transaction memory transaction) private pure returns (bytes memory unsignedTx) {
         bytes[] memory fields = new bytes[](9);
 
         fields[0] = RLPWriter.writeUint(transaction.chainId);
@@ -416,9 +392,7 @@ library TransactionDecoder {
     /// @notice Helper to RLP-encode an unsigned EIP-4844 transaction
     /// @param transaction The transaction object
     /// @return unsignedTx The unsigned transaction bytes
-    function _unsignedEip4844(
-        Transaction memory transaction
-    ) private pure returns (bytes memory unsignedTx) {
+    function _unsignedEip4844(Transaction memory transaction) private pure returns (bytes memory unsignedTx) {
         bytes[] memory fields = new bytes[](11);
 
         fields[0] = RLPWriter.writeUint(transaction.chainId);

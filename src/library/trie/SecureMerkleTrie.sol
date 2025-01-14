@@ -30,12 +30,11 @@ library SecureMerkleTrie {
      * included proof is correctly constructed.
      * @return _verified `true` if the k/v pair exists in the trie, `false` otherwise.
      */
-    function verifyInclusionProof(
-        bytes memory _key,
-        bytes memory _value,
-        bytes memory _proof,
-        bytes32 _root
-    ) internal pure returns (bool _verified) {
+    function verifyInclusionProof(bytes memory _key, bytes memory _value, bytes memory _proof, bytes32 _root)
+        internal
+        pure
+        returns (bool _verified)
+    {
         bytes memory key = _getSecureKey(_key);
         return MerkleTrie.verifyInclusionProof(key, _value, _proof, _root);
     }
@@ -50,11 +49,11 @@ library SecureMerkleTrie {
      * included proof is correctly constructed.
      * @return _verified `true` if the key is not present in the trie, `false` otherwise.
      */
-    function verifyExclusionProof(
-        bytes memory _key,
-        bytes memory _proof,
-        bytes32 _root
-    ) internal pure returns (bool _verified) {
+    function verifyExclusionProof(bytes memory _key, bytes memory _proof, bytes32 _root)
+        internal
+        pure
+        returns (bool _verified)
+    {
         bytes memory key = _getSecureKey(_key);
         return MerkleTrie.verifyExclusionProof(key, _proof, _root);
     }
@@ -70,12 +69,11 @@ library SecureMerkleTrie {
      * included proof is correctly constructed.
      * @return _updatedRoot Root hash of the newly constructed trie.
      */
-    function update(
-        bytes memory _key,
-        bytes memory _value,
-        bytes memory _proof,
-        bytes32 _root
-    ) internal pure returns (bytes32 _updatedRoot) {
+    function update(bytes memory _key, bytes memory _value, bytes memory _proof, bytes32 _root)
+        internal
+        pure
+        returns (bytes32 _updatedRoot)
+    {
         bytes memory key = _getSecureKey(_key);
         return MerkleTrie.update(key, _value, _proof, _root);
     }
@@ -88,11 +86,11 @@ library SecureMerkleTrie {
      * @return _exists Whether or not the key exists.
      * @return _value Value of the key if it exists.
      */
-    function get(
-        bytes memory _key,
-        bytes memory _proof,
-        bytes32 _root
-    ) internal pure returns (bool _exists, bytes memory _value) {
+    function get(bytes memory _key, bytes memory _proof, bytes32 _root)
+        internal
+        pure
+        returns (bool _exists, bytes memory _value)
+    {
         bytes memory key = _getSecureKey(_key);
         return MerkleTrie.get(key, _proof, _root);
     }
@@ -103,10 +101,11 @@ library SecureMerkleTrie {
      * @param _value Value for the single node.
      * @return _updatedRoot Hash of the trie.
      */
-    function getSingleNodeRootHash(
-        bytes memory _key,
-        bytes memory _value
-    ) internal pure returns (bytes32 _updatedRoot) {
+    function getSingleNodeRootHash(bytes memory _key, bytes memory _value)
+        internal
+        pure
+        returns (bytes32 _updatedRoot)
+    {
         bytes memory key = _getSecureKey(_key);
         return MerkleTrie.getSingleNodeRootHash(key, _value);
     }
@@ -122,9 +121,7 @@ library SecureMerkleTrie {
      * @param _key Key to get a secure key from.
      * @return _secureKey Secure version of the key.
      */
-    function _getSecureKey(
-        bytes memory _key
-    ) private pure returns (bytes memory _secureKey) {
+    function _getSecureKey(bytes memory _key) private pure returns (bytes memory _secureKey) {
         return abi.encodePacked(keccak256(_key));
     }
 }

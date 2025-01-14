@@ -12,7 +12,7 @@ import {OperatorManager} from "./OperatorManager.sol";
 import {IParameters} from "../interfaces/IParameters.sol";
 import {IConsensusRestaking} from "../interfaces/IRestaking.sol";
 import {IValidatorRegistrySystem} from "../interfaces/IRegistry.sol";
-import {IStrategy} from "@eigenlayer/src/contracts/interfaces/IStrategy.sol"; 
+import {IStrategy} from "@eigenlayer/src/contracts/interfaces/IStrategy.sol";
 import {IServiceManager} from "@eigenlayer-middleware/src/interfaces/IServiceManager.sol";
 import {IAVSDirectory} from "@eigenlayer/src/contracts/interfaces/IAVSDirectory.sol";
 import {ISignatureUtils} from "@eigenlayer/src/contracts/interfaces/ISignatureUtils.sol";
@@ -20,12 +20,7 @@ import {DelegationManagerStorage} from "@eigenlayer/src/contracts/core/Delegatio
 import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyManagerStorage.sol";
 import {MapWithTimeData} from "../library/MapWithTimeData.sol";
 
-contract Restaking is
-    IConsensusRestaking,
-    IServiceManager,
-    OwnableUpgradeable,
-    UUPSUpgradeable
-{
+contract Restaking is IConsensusRestaking, IServiceManager, OwnableUpgradeable, UUPSUpgradeable {
     using OEnumerableMap for OEnumerableMap.AddressToUintMap;
     using MapWithTimeData for OEnumerableMap.AddressToUintMap;
 
@@ -99,23 +94,13 @@ contract Restaking is
         ISignatureUtils.SignatureWithSaltAndExpiry calldata providerSignature
     ) public {
         OperatorManager.enrollValidatorNode(
-            registry,
-            DELEGATION_MANAGER,
-            AVS_DIRECTORY,
-            msg.sender,
-            serviceEndpoint,
-            providerSignature
+            registry, DELEGATION_MANAGER, AVS_DIRECTORY, msg.sender, serviceEndpoint, providerSignature
         );
     }
 
     function removeValidatorNode() public {
-        OperatorManager.removeValidatorNode(
-            registry,
-            AVS_DIRECTORY,
-            msg.sender
-        );
+        OperatorManager.removeValidatorNode(registry, AVS_DIRECTORY, msg.sender);
     }
-
 
     function suspendValidatorNode() public {
         registry.suspendValidatorNode(msg.sender);
@@ -129,30 +114,19 @@ contract Restaking is
         return strategies.keys();
     }
 
-    function getProviderCollateral(
-        address provider,
-        address tokenAddress
-    ) public view returns (uint256) {
+    function getProviderCollateral(address provider, address tokenAddress) public view returns (uint256) {
         uint48 timestamp = Time.timestamp();
         return getProviderCollateralAt(provider, tokenAddress, timestamp);
     }
 
-    function getProviderCollateralTokens(
-        address provider
-    ) public view returns (address[] memory, uint256[] memory) {
+    function getProviderCollateralTokens(address provider) public view returns (address[] memory, uint256[] memory) {
         address[] memory collateralTokens = new address[](strategies.length());
         uint256[] memory amounts = new uint256[](strategies.length());
 
-        uint48 periodStartTs = getPeriodStartTime(
-            getPeriodByTimestamp(Time.timestamp())
-        );
+        uint48 periodStartTs = getPeriodStartTime(getPeriodByTimestamp(Time.timestamp()));
 
         for (uint256 i = 0; i < strategies.length(); ++i) {
-            (
-                address strategy,
-                uint48 enabledTime,
-                uint48 disabledTime
-            ) = strategies.atWithTimes(i);
+            (address strategy, uint48 enabledTime, uint48 disabledTime) = strategies.atWithTimes(i);
 
             if (!TimeUtils.wasEnabledAt(enabledTime, disabledTime, periodStartTs)) {
                 continue;
@@ -162,33 +136,24 @@ contract Restaking is
             address collateral = address(strategyImpl.underlyingToken());
             collateralTokens[i] = collateral;
 
-            uint256 shares = DELEGATION_MANAGER.operatorShares(
-                provider,
-                strategyImpl
-            );
+            uint256 shares = DELEGATION_MANAGER.operatorShares(provider, strategyImpl);
             amounts[i] = strategyImpl.sharesToUnderlyingView(shares);
         }
 
         return (collateralTokens, amounts);
     }
 
-    function getProviderCollateralAt(
-        address provider,
-        address tokenAddress,
-        uint48 timestamp
-    ) public view returns (uint256) {
+    function getProviderCollateralAt(address provider, address tokenAddress, uint48 timestamp)
+        public
+        view
+        returns (uint256)
+    {
         if (timestamp > Time.timestamp() || timestamp < START_TIMESTAMP) {
             revert MalformedRequest();
         }
 
         return StrategyManager.getProviderCollateralAt(
-            strategies,
-            DELEGATION_MANAGER,
-            provider,
-            tokenAddress,
-            timestamp,
-            START_TIMESTAMP,
-            parameters
+            strategies, DELEGATION_MANAGER, provider, tokenAddress, timestamp, START_TIMESTAMP, parameters
         );
     }
 
@@ -212,32 +177,19 @@ contract Restaking is
         AVS_DIRECTORY.deregisterOperatorFromAVS(operator);
     }
 
-    function getOperatorRestakedStrategies(
-        address operator
-    ) external view override returns (address[] memory) {
+    function getOperatorRestakedStrategies(address operator) external view override returns (address[] memory) {
         address[] memory restakedStrategies = new address[](strategies.length());
         uint256 count = 0;
-        uint48 periodStartTs = getPeriodStartTime(
-            getPeriodByTimestamp(Time.timestamp())
-        );
+        uint48 periodStartTs = getPeriodStartTime(getPeriodByTimestamp(Time.timestamp()));
 
         for (uint256 i = 0; i < strategies.length(); ++i) {
-            (
-                address strategy,
-                uint48 enabledTime,
-                uint48 disabledTime
-            ) = strategies.atWithTimes(i);
+            (address strategy, uint48 enabledTime, uint48 disabledTime) = strategies.atWithTimes(i);
 
             if (!TimeUtils.wasEnabledAt(enabledTime, disabledTime, periodStartTs)) {
                 continue;
             }
 
-            if (
-                DELEGATION_MANAGER.operatorShares(
-                    operator,
-                    IStrategy(strategy)
-                ) > 0
-            ) {
+            if (DELEGATION_MANAGER.operatorShares(operator, IStrategy(strategy)) > 0) {
                 restakedStrategies[count] = strategy;
                 count++;
             }
@@ -251,12 +203,7 @@ contract Restaking is
         return restakedStrategies;
     }
 
-    function getRestakeableStrategies()
-        external
-        view
-        override
-        returns (address[] memory)
-    {
+    function getRestakeableStrategies() external view override returns (address[] memory) {
         return strategies.keys();
     }
 
@@ -264,12 +211,9 @@ contract Restaking is
         return address(AVS_DIRECTORY);
     }
 
-    function updateAVSMetadataURI(
-        string calldata metadataURI
-    ) public onlyOwner {
+    function updateAVSMetadataURI(string calldata metadataURI) public onlyOwner {
         AVS_DIRECTORY.updateAVSMetadataURI(metadataURI);
     }
 
     // Optional: Add any additional helper functions or internal methods here
-
 }

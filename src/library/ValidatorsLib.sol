@@ -41,9 +41,7 @@ library ValidatorsLib {
     }
 
     /// @dev DANGER: this function copies all data into memory. This should be used off-chain.
-    function getAll(
-        ValidatorSet storage self
-    ) internal view returns (_Validator[] memory) {
+    function getAll(ValidatorSet storage self) internal view returns (_Validator[] memory) {
         return self._values;
     }
 
@@ -51,9 +49,7 @@ library ValidatorsLib {
         return self._indexes[pubkeyHash] != 0;
     }
 
-    function length(
-        ValidatorSet storage self
-    ) internal view returns (uint256) {
+    function length(ValidatorSet storage self) internal view returns (uint256) {
         return self._values.length;
     }
 
@@ -72,11 +68,9 @@ library ValidatorsLib {
         self._indexes[pubkeyHash] = uint32(self._values.length);
     }
 
-    function updateMaxCommittedGasLimit(
-        ValidatorSet storage self,
-        bytes20 pubkeyHash,
-        uint32 maxCommittedGasLimit
-    ) internal {
+    function updateMaxCommittedGasLimit(ValidatorSet storage self, bytes20 pubkeyHash, uint32 maxCommittedGasLimit)
+        internal
+    {
         uint32 index = self._indexes[pubkeyHash];
         if (index == 0) {
             revert ValidatorDoesNotExist(pubkeyHash);
@@ -97,10 +91,10 @@ library ValidatorsLib {
         return getOrInsert(self._controllers, controller);
     }
 
-    function getOrInsertAuthorizedOperator(
-        ValidatorSet storage self,
-        address authorizedOperator
-    ) internal returns (uint32) {
+    function getOrInsertAuthorizedOperator(ValidatorSet storage self, address authorizedOperator)
+        internal
+        returns (uint32)
+    {
         return getOrInsert(self._authorizedOperators, authorizedOperator);
     }
 

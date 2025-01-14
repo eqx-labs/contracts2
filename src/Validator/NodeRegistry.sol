@@ -10,38 +10,25 @@ import {INodeRegistrationSystem} from "../interfaces/IValidators.sol";
 import {IParameters} from "../interfaces/IParameters.sol";
 import {EnrollmentRegistry} from "./EnrollmentRegistry.sol";
 
-
-contract NodeRegistry is 
-EnrollmentRegistry
-
-{
+contract NodeRegistry is EnrollmentRegistry {
     using BLS12381 for BLS12381.G1Point;
     using ValidatorsLib for ValidatorsLib.ValidatorSet;
-      IParameters public protocolParameters;
 
+    IParameters public protocolParameters;
 
     uint256 public validatorCount;
     uint256[42] private __gap;
 
-
-
     // Query Functions
 
-
-    function fetchNodeByPublicKey(
-        BLS12381.G1Point calldata pubkey
-    ) public view returns (ValidatorNodeDetails memory) {
+    function fetchNodeByPublicKey(BLS12381.G1Point calldata pubkey) public view returns (ValidatorNodeDetails memory) {
         return fetchNodeByIdentityHash(computeNodeIdentityHash(pubkey));
     }
 
-
-
     // Enrollment Functions
-    function enrollNodeWithoutVerification(
-        bytes20 nodeIdentityHash,
-        uint32 maxGasCommitment,
-        address operatorAddress
-    ) public {
+    function enrollNodeWithoutVerification(bytes20 nodeIdentityHash, uint32 maxGasCommitment, address operatorAddress)
+        public
+    {
         if (!protocolParameters.SKIP_SIGNATURE_VALIDATION()) {
             revert SecureRegistrationRequired();
         }
@@ -56,22 +43,14 @@ EnrollmentRegistry
         address operatorAddress
     ) public {
         uint32 sequenceNumber = uint32(validatorCount + 1);
-        
-        bytes memory message = abi.encodePacked(
-            block.chainid,
-            msg.sender,
-            sequenceNumber
-        );
-        
+
+        bytes memory message = abi.encodePacked(block.chainid, msg.sender, sequenceNumber);
+
         if (!_verifySignature(message, signature, pubkey)) {
             revert SignatureVerificationFailed();
         }
 
-        _registerNode(
-            computeNodeIdentityHash(pubkey),
-            operatorAddress,
-            maxGasCommitment
-        );
+        _registerNode(computeNodeIdentityHash(pubkey), operatorAddress, maxGasCommitment);
     }
 
     function bulkEnrollNodesWithVerification(
@@ -81,18 +60,14 @@ EnrollmentRegistry
         address operatorAddress
     ) public {
         uint32 nextSequenceNumber = uint32(validatorCount + 1);
-        
+
         uint32[] memory sequenceNumbers = new uint32[](pubkeys.length);
         for (uint32 i = 0; i < pubkeys.length; i++) {
             sequenceNumbers[i] = nextSequenceNumber + i;
         }
 
-        bytes memory message = abi.encodePacked(
-            block.chainid,
-            msg.sender,
-            sequenceNumbers
-        );
-        
+        bytes memory message = abi.encodePacked(block.chainid, msg.sender, sequenceNumbers);
+
         BLS12381.G1Point memory aggregatedPubkey = _aggregatePubkeys(pubkeys);
 
         if (!_verifySignature(message, signature, aggregatedPubkey)) {
@@ -118,8 +93,4 @@ EnrollmentRegistry
 
         _batchRegisterNodes(keyHashes, operatorAddress, maxGasCommitment);
     }
-
-
-
-
 }

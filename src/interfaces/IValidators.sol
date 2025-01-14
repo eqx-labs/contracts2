@@ -1,4 +1,3 @@
-
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.25;
 
@@ -18,11 +17,5 @@ interface INodeRegistrationSystem {
 
     error InvalidNodeIdentity();
 
-
-    function fetchNodeByIdentityHash(
-        bytes20 nodeIdentityHash
-    ) external view returns (ValidatorNodeDetails memory);
-
-  
-
+    function fetchNodeByIdentityHash(bytes20 nodeIdentityHash) external view returns (ValidatorNodeDetails memory);
 }

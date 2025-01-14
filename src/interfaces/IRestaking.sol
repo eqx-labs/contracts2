@@ -11,12 +11,7 @@ interface IConsensusRestaking {
     error UnauthorizedProvider();
     error OperationForbidden();
 
-    function getProviderCollateral(
-        address provider,
-        address tokenAddress
-    ) external view returns (uint256);
+    function getProviderCollateral(address provider, address tokenAddress) external view returns (uint256);
 
-    function getProviderCollateralTokens(
-        address provider
-    ) external view returns (address[] memory, uint256[] memory);
+    function getProviderCollateralTokens(address provider) external view returns (address[] memory, uint256[] memory);
 }

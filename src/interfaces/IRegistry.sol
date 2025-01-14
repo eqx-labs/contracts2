@@ -9,7 +9,6 @@ interface IValidatorRegistrySystem {
 
     error ValidatorNodeOffline();
 
-
     struct ValidatorNodeProfile {
         bytes20 validatorIdentityHash;
         bool operationalStatus;
@@ -19,26 +18,13 @@ interface IValidatorRegistrySystem {
         uint256[] collateralAmountList;
     }
 
-    function enrollValidatorNode(
-        address nodeAddress, 
-        string calldata endpointUrl
-    ) external;
+    function enrollValidatorNode(address nodeAddress, string calldata endpointUrl) external;
 
-    function removeValidatorNode(
-        address nodeAddress
-    ) external;
+    function removeValidatorNode(address nodeAddress) external;
 
-    function suspendValidatorNode(
-        address nodeAddress
-    ) external;
+    function suspendValidatorNode(address nodeAddress) external;
 
-    function reactivateValidatorNode(
-        address nodeAddress
-    ) external;
+    function reactivateValidatorNode(address nodeAddress) external;
 
-    function validateNodeRegistration(
-        address nodeAddress
-    ) external view returns (bool);
-
-  
+    function validateNodeRegistration(address nodeAddress) external view returns (bool);
 }

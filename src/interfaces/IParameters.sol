@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.25;
 
-
 interface IParameters {
     function VALIDATOR_EPOCH_TIME() external view returns (uint48);
     function PENALTY_WINDOW_DURATION() external view returns (uint48);

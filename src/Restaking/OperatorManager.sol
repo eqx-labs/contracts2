@@ -32,11 +32,9 @@ library OperatorManager {
         registry.enrollValidatorNode(operator, serviceEndpoint);
     }
 
-    function removeValidatorNode(
-        IValidatorRegistrySystem registry,
-        IAVSDirectory avsDirectory,
-        address operator
-    ) internal {
+    function removeValidatorNode(IValidatorRegistrySystem registry, IAVSDirectory avsDirectory, address operator)
+        internal
+    {
         if (!registry.validateNodeRegistration(operator)) {
             revert ParticipantNotFound();
         }

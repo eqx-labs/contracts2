@@ -86,9 +86,7 @@ library BytesUtils {
         }
     }
 
-    function toBytes32PadLeft(
-        bytes memory _bytes
-    ) internal pure returns (bytes32) {
+    function toBytes32PadLeft(bytes memory _bytes) internal pure returns (bytes32) {
         unchecked {
             bytes32 ret;
             uint256 len = _bytes.length <= 32 ? _bytes.length : 32;
@@ -99,9 +97,7 @@ library BytesUtils {
         }
     }
 
-    function toBytes32(
-        bytes memory _bytes
-    ) internal pure returns (bytes32) {
+    function toBytes32(bytes memory _bytes) internal pure returns (bytes32) {
         unchecked {
             if (_bytes.length < 32) {
                 bytes32 ret;
@@ -115,9 +111,7 @@ library BytesUtils {
         }
     }
 
-    function toUint256(
-        bytes memory _bytes
-    ) internal pure returns (uint256) {
+    function toUint256(bytes memory _bytes) internal pure returns (uint256) {
         return uint256(toBytes32(_bytes));
     }
 
@@ -157,9 +151,7 @@ library BytesUtils {
         return tempAddress;
     }
 
-    function toNibbles(
-        bytes memory _bytes
-    ) internal pure returns (bytes memory) {
+    function toNibbles(bytes memory _bytes) internal pure returns (bytes memory) {
         unchecked {
             bytes memory nibbles = new bytes(_bytes.length * 2);
 
@@ -172,9 +164,7 @@ library BytesUtils {
         }
     }
 
-    function fromNibbles(
-        bytes memory _bytes
-    ) internal pure returns (bytes memory) {
+    function fromNibbles(bytes memory _bytes) internal pure returns (bytes memory) {
         unchecked {
             bytes memory ret = new bytes(_bytes.length / 2);
 

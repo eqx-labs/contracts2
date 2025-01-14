@@ -21,9 +21,7 @@ library RLPWriter {
      * @param _in The byte string to encode.
      * @return _out The RLP encoded string in bytes.
      */
-    function writeBytes(
-        bytes memory _in
-    ) internal pure returns (bytes memory _out) {
+    function writeBytes(bytes memory _in) internal pure returns (bytes memory _out) {
         bytes memory encoded;
 
         if (_in.length == 1 && uint8(_in[0]) < 128) {
@@ -40,9 +38,7 @@ library RLPWriter {
      * @param _in The list of RLP encoded byte strings.
      * @return _out The RLP encoded list of items in bytes.
      */
-    function writeList(
-        bytes[] memory _in
-    ) internal pure returns (bytes memory _out) {
+    function writeList(bytes[] memory _in) internal pure returns (bytes memory _out) {
         bytes memory list = _flatten(_in);
         return abi.encodePacked(_writeLength(list.length, 192), list);
     }
@@ -52,9 +48,7 @@ library RLPWriter {
      * @param _in The string to encode.
      * @return _out The RLP encoded string in bytes.
      */
-    function writeString(
-        string memory _in
-    ) internal pure returns (bytes memory _out) {
+    function writeString(string memory _in) internal pure returns (bytes memory _out) {
         return writeBytes(bytes(_in));
     }
 
@@ -63,9 +57,7 @@ library RLPWriter {
      * @param _in The address to encode.
      * @return _out The RLP encoded address in bytes.
      */
-    function writeAddress(
-        address _in
-    ) internal pure returns (bytes memory _out) {
+    function writeAddress(address _in) internal pure returns (bytes memory _out) {
         return writeBytes(abi.encodePacked(_in));
     }
 
@@ -74,9 +66,7 @@ library RLPWriter {
      * @param _in The uint256 to encode.
      * @return _out The RLP encoded uint256 in bytes.
      */
-    function writeUint(
-        uint256 _in
-    ) internal pure returns (bytes memory _out) {
+    function writeUint(uint256 _in) internal pure returns (bytes memory _out) {
         return writeBytes(_toBinary(_in));
     }
 
@@ -85,9 +75,7 @@ library RLPWriter {
      * @param _in The bool to encode.
      * @return _out The RLP encoded bool in bytes.
      */
-    function writeBool(
-        bool _in
-    ) internal pure returns (bytes memory _out) {
+    function writeBool(bool _in) internal pure returns (bytes memory _out) {
         bytes memory encoded = new bytes(1);
         encoded[0] = (_in ? bytes1(0x01) : bytes1(0x80));
         return encoded;
@@ -135,9 +123,7 @@ library RLPWriter {
      * @param _x The integer to encode.
      * @return _binary RLP encoded bytes.
      */
-    function _toBinary(
-        uint256 _x
-    ) private pure returns (bytes memory _binary) {
+    function _toBinary(uint256 _x) private pure returns (bytes memory _binary) {
         bytes memory b = abi.encodePacked(_x);
 
         uint256 i = 0;
@@ -189,9 +175,7 @@ library RLPWriter {
      * @param _list List of byte strings to flatten.
      * @return _flattened The flattened byte string.
      */
-    function _flatten(
-        bytes[] memory _list
-    ) private pure returns (bytes memory _flattened) {
+    function _flatten(bytes[] memory _list) private pure returns (bytes memory _flattened) {
         if (_list.length == 0) {
             return new bytes(0);
         }

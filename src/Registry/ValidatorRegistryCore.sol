@@ -11,9 +11,6 @@ import {IConsensusRestaking} from "../interfaces/IRestaking.sol";
 import {EnumerableMap} from "../library/EnumerableMap.sol";
 import {OperatorMapWithTime} from "../library/OperatorMapWithTime.sol";
 
-
-
-
 contract ValidatorRegistryCore is IValidatorRegistrySystem {
     using EnumerableSet for EnumerableSet.AddressSet;
     using EnumerableMap for EnumerableMap.OperatorMap;
@@ -24,59 +21,37 @@ contract ValidatorRegistryCore is IValidatorRegistrySystem {
 
     uint256[45] private __gap;
 
-    function fetchNodeCollateralAmount(
-        address nodeOperator,
-        address collateralToken
-    ) public view returns (uint256) {
-        EnumerableMap.Operator memory operatorInfo = nodeOperatorRegistry.get(
-            nodeOperator
-        );
+    function fetchNodeCollateralAmount(address nodeOperator, address collateralToken) public view returns (uint256) {
+        EnumerableMap.Operator memory operatorInfo = nodeOperatorRegistry.get(nodeOperator);
 
-        return
-            IConsensusRestaking(operatorInfo.middleware).getProviderCollateral(
-                nodeOperator,
-                collateralToken
-            );
+        return IConsensusRestaking(operatorInfo.middleware).getProviderCollateral(nodeOperator, collateralToken);
     }
 
-    function calculateTotalCollateral(
-        address collateralToken
-    ) public view returns (uint256 totalAmount) {
+    function calculateTotalCollateral(address collateralToken) public view returns (uint256 totalAmount) {
         for (uint256 i = 0; i < nodeOperatorRegistry.length(); ++i) {
-            (
-                address nodeOperator,
-                EnumerableMap.Operator memory operatorInfo
-            ) = nodeOperatorRegistry.at(i);
-            totalAmount += IConsensusRestaking(operatorInfo.middleware)
-                .getProviderCollateral(nodeOperator, collateralToken);
+            (address nodeOperator, EnumerableMap.Operator memory operatorInfo) = nodeOperatorRegistry.at(i);
+            totalAmount +=
+                IConsensusRestaking(operatorInfo.middleware).getProviderCollateral(nodeOperator, collateralToken);
         }
         return totalAmount;
     }
 
-    function checkNodeOperationalStatus(
-        address nodeAddress
-    ) public view returns (bool) {
+    function checkNodeOperationalStatus(address nodeAddress) public view returns (bool) {
         if (!nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeNotFound();
         }
 
-        (uint48 activationTime, uint48 deactivationTime) = nodeOperatorRegistry
-            .getTimes(nodeAddress);
+        (uint48 activationTime, uint48 deactivationTime) = nodeOperatorRegistry.getTimes(nodeAddress);
         return activationTime != 0 && deactivationTime == 0;
     }
 
-    function validateNodeRegistration(
-        address nodeAddress
-    ) external view  virtual override returns (bool) {}
+    function validateNodeRegistration(address nodeAddress) external view virtual override returns (bool) {}
 
-    function enrollValidatorNode(
-        address nodeAddress,
-        string calldata endpointUrl
-    ) external virtual override {}
+    function enrollValidatorNode(address nodeAddress, string calldata endpointUrl) external virtual override {}
 
     function removeValidatorNode(address nodeAddress) external virtual override {}
 
     function suspendValidatorNode(address nodeAddress) external virtual override {}
 
-    function reactivateValidatorNode (address nodeAddress) external virtual override {}
+    function reactivateValidatorNode(address nodeAddress) external virtual override {}
 }

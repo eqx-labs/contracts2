@@ -48,10 +48,11 @@ library OperatorMapWithTime {
         self.set(addr, operator);
     }
 
-    function atWithTimes(
-        EnumerableMap.OperatorMap storage self,
-        uint256 idx
-    ) internal view returns (address key, uint48 enabledTime, uint48 disabledTime) {
+    function atWithTimes(EnumerableMap.OperatorMap storage self, uint256 idx)
+        internal
+        view
+        returns (address key, uint48 enabledTime, uint48 disabledTime)
+    {
         EnumerableMap.Operator memory value;
         (key, value) = self.at(idx);
         uint256 timestamp = value.timestamp;
@@ -59,10 +60,11 @@ library OperatorMapWithTime {
         disabledTime = uint48(timestamp >> 48);
     }
 
-    function getTimes(
-        EnumerableMap.OperatorMap storage self,
-        address addr
-    ) internal view returns (uint48 enabledTime, uint48 disabledTime) {
+    function getTimes(EnumerableMap.OperatorMap storage self, address addr)
+        internal
+        view
+        returns (uint48 enabledTime, uint48 disabledTime)
+    {
         EnumerableMap.Operator memory value = self.get(addr);
         enabledTime = uint48(value.timestamp);
         disabledTime = uint48(value.timestamp >> 48);

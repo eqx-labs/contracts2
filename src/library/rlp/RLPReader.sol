@@ -47,9 +47,7 @@ library RLPReader {
      * @param _in Input bytes to convert.
      * @return Output memory reference.
      */
-    function toRLPItem(
-        bytes memory _in
-    ) internal pure returns (RLPItem memory) {
+    function toRLPItem(bytes memory _in) internal pure returns (RLPItem memory) {
         uint256 ptr;
         assembly {
             ptr := add(_in, 32)
@@ -63,9 +61,7 @@ library RLPReader {
      * @param _in RLP list value.
      * @return Decoded RLP list items.
      */
-    function readList(
-        RLPItem memory _in
-    ) internal pure returns (RLPItem[] memory) {
+    function readList(RLPItem memory _in) internal pure returns (RLPItem[] memory) {
         (uint256 listOffset,, RLPItemType itemType) = _decodeLength(_in);
 
         require(itemType == RLPItemType.LIST_ITEM, "Invalid RLP list value.");
@@ -103,9 +99,7 @@ library RLPReader {
      * @param _in RLP list value.
      * @return Decoded RLP list items.
      */
-    function readList(
-        bytes memory _in
-    ) internal pure returns (RLPItem[] memory) {
+    function readList(bytes memory _in) internal pure returns (RLPItem[] memory) {
         return readList(toRLPItem(_in));
     }
 
@@ -114,9 +108,7 @@ library RLPReader {
      * @param _in RLP bytes value.
      * @return Decoded bytes.
      */
-    function readBytes(
-        RLPItem memory _in
-    ) internal pure returns (bytes memory) {
+    function readBytes(RLPItem memory _in) internal pure returns (bytes memory) {
         (uint256 itemOffset, uint256 itemLength, RLPItemType itemType) = _decodeLength(_in);
 
         require(itemType == RLPItemType.DATA_ITEM, "Invalid RLP bytes value.");
@@ -129,9 +121,7 @@ library RLPReader {
      * @param _in RLP bytes value.
      * @return Decoded bytes.
      */
-    function readBytes(
-        bytes memory _in
-    ) internal pure returns (bytes memory) {
+    function readBytes(bytes memory _in) internal pure returns (bytes memory) {
         return readBytes(toRLPItem(_in));
     }
 
@@ -140,9 +130,7 @@ library RLPReader {
      * @param _in RLP string value.
      * @return Decoded string.
      */
-    function readString(
-        RLPItem memory _in
-    ) internal pure returns (string memory) {
+    function readString(RLPItem memory _in) internal pure returns (string memory) {
         return string(readBytes(_in));
     }
 
@@ -151,9 +139,7 @@ library RLPReader {
      * @param _in RLP string value.
      * @return Decoded string.
      */
-    function readString(
-        bytes memory _in
-    ) internal pure returns (string memory) {
+    function readString(bytes memory _in) internal pure returns (string memory) {
         return readString(toRLPItem(_in));
     }
 
@@ -162,9 +148,7 @@ library RLPReader {
      * @param _in RLP bytes32 value.
      * @return Decoded bytes32.
      */
-    function readBytes32(
-        RLPItem memory _in
-    ) internal pure returns (bytes32) {
+    function readBytes32(RLPItem memory _in) internal pure returns (bytes32) {
         require(_in.length <= 33, "Invalid RLP bytes32 value.");
 
         (uint256 itemOffset, uint256 itemLength, RLPItemType itemType) = _decodeLength(_in);
@@ -188,9 +172,7 @@ library RLPReader {
      * @param _in RLP bytes32 value.
      * @return Decoded bytes32.
      */
-    function readBytes32(
-        bytes memory _in
-    ) internal pure returns (bytes32) {
+    function readBytes32(bytes memory _in) internal pure returns (bytes32) {
         return readBytes32(toRLPItem(_in));
     }
 
@@ -199,9 +181,7 @@ library RLPReader {
      * @param _in RLP uint256 value.
      * @return Decoded uint256.
      */
-    function readUint256(
-        RLPItem memory _in
-    ) internal pure returns (uint256) {
+    function readUint256(RLPItem memory _in) internal pure returns (uint256) {
         return uint256(readBytes32(_in));
     }
 
@@ -210,9 +190,7 @@ library RLPReader {
      * @param _in RLP uint256 value.
      * @return Decoded uint256.
      */
-    function readUint256(
-        bytes memory _in
-    ) internal pure returns (uint256) {
+    function readUint256(bytes memory _in) internal pure returns (uint256) {
         return readUint256(toRLPItem(_in));
     }
 
@@ -221,9 +199,7 @@ library RLPReader {
      * @param _in RLP bool value.
      * @return Decoded bool.
      */
-    function readBool(
-        RLPItem memory _in
-    ) internal pure returns (bool) {
+    function readBool(RLPItem memory _in) internal pure returns (bool) {
         require(_in.length == 1, "Invalid RLP boolean value.");
 
         uint256 ptr = _in.ptr;
@@ -242,9 +218,7 @@ library RLPReader {
      * @param _in RLP bool value.
      * @return Decoded bool.
      */
-    function readBool(
-        bytes memory _in
-    ) internal pure returns (bool) {
+    function readBool(bytes memory _in) internal pure returns (bool) {
         return readBool(toRLPItem(_in));
     }
 
@@ -253,9 +227,7 @@ library RLPReader {
      * @param _in RLP address value.
      * @return Decoded address.
      */
-    function readAddress(
-        RLPItem memory _in
-    ) internal pure returns (address) {
+    function readAddress(RLPItem memory _in) internal pure returns (address) {
         if (_in.length == 1) {
             return address(0);
         }
@@ -270,9 +242,7 @@ library RLPReader {
      * @param _in RLP address value.
      * @return Decoded address.
      */
-    function readAddress(
-        bytes memory _in
-    ) internal pure returns (address) {
+    function readAddress(bytes memory _in) internal pure returns (address) {
         return readAddress(toRLPItem(_in));
     }
 
@@ -281,9 +251,7 @@ library RLPReader {
      * @param _in RLP item to read.
      * @return Raw RLP bytes.
      */
-    function readRawBytes(
-        RLPItem memory _in
-    ) internal pure returns (bytes memory) {
+    function readRawBytes(RLPItem memory _in) internal pure returns (bytes memory) {
         return _copy(_in);
     }
 
@@ -300,9 +268,7 @@ library RLPReader {
      * @return Length of the encoded data.
      * @return RLP item type (LIST_ITEM or DATA_ITEM).
      */
-    function _decodeLength(
-        RLPItem memory _in
-    ) private pure returns (uint256, uint256, RLPItemType) {
+    function _decodeLength(RLPItem memory _in) private pure returns (uint256, uint256, RLPItemType) {
         unchecked {
             require(_in.length > 0, "RLP item cannot be null.");
 
@@ -410,9 +376,7 @@ library RLPReader {
      * @param _in RLP item to copy.
      * @return Copied bytes.
      */
-    function _copy(
-        RLPItem memory _in
-    ) private pure returns (bytes memory) {
+    function _copy(RLPItem memory _in) private pure returns (bytes memory) {
         return _copy(_in.ptr, 0, _in.length);
     }
 }

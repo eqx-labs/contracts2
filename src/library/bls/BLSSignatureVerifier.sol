@@ -1,9 +1,7 @@
-
 // This library was copied from: https://github.com/NethermindEth/Taiko-Preconf-AVS/blob/caf9fbbde0dd84947af5a7b26610ffd38525d932/SmartContracts/src/avs/utils/BLSSignatureChecker.sol
 // (If/when a license will be added to the original library, it will be added here as well)
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.25;
-
 
 import {BLS12381} from "./BLS12381.sol";
 
@@ -22,11 +20,11 @@ contract BLSSignatureVerifier {
      * @param sig The BLS signature
      * @param pubkey The BLS public key of the expected signer
      */
-    function _verifySignature(
-        bytes memory message,
-        BLS12381.G2Point memory sig,
-        BLS12381.G1Point memory pubkey
-    ) internal view returns (bool) {
+    function _verifySignature(bytes memory message, BLS12381.G2Point memory sig, BLS12381.G1Point memory pubkey)
+        internal
+        view
+        returns (bool)
+    {
         // Hash the message bytes into a G2 point
         BLS12381.G2Point memory msgG2 = message.hashToCurveG2(dst());
 
@@ -39,9 +37,7 @@ contract BLSSignatureVerifier {
      * @param pubkeys The list of BLS public keys to aggregate
      * @return The aggregated BLS public key
      */
-    function _aggregatePubkeys(
-        BLS12381.G1Point[] calldata pubkeys
-    ) internal pure returns (BLS12381.G1Point memory) {
+    function _aggregatePubkeys(BLS12381.G1Point[] calldata pubkeys) internal pure returns (BLS12381.G1Point memory) {
         // TODO: implement + test.
 
         // Simply adding pubkeys will result in a rogue key vulnerability.

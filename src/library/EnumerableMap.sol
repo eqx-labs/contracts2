@@ -39,9 +39,7 @@ library EnumerableMap {
         return self._keys.contains(bytes32(uint256(uint160(key))));
     }
 
-    function length(
-        OperatorMap storage self
-    ) internal view returns (uint256) {
+    function length(OperatorMap storage self) internal view returns (uint256) {
         return self._keys.length();
     }
 
@@ -58,9 +56,7 @@ library EnumerableMap {
         return self._values[bytes32(uint256(uint160(key)))];
     }
 
-    function keys(
-        OperatorMap storage self
-    ) internal view returns (address[] memory) {
+    function keys(OperatorMap storage self) internal view returns (address[] memory) {
         address[] memory result = new address[](self._keys.length());
         for (uint256 i = 0; i < self._keys.length(); i++) {
             result[i] = address(uint160(uint256(self._keys.at(i))));

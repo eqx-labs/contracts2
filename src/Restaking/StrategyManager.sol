@@ -27,11 +27,7 @@ library StrategyManager {
             revert ParticipantExists();
         }
 
-        if (
-            !strategyManager.strategyIsWhitelistedForDeposit(
-                IStrategy(strategy)
-            )
-        ) {
+        if (!strategyManager.strategyIsWhitelistedForDeposit(IStrategy(strategy))) {
             revert StrategyNotAllowed();
         }
 
@@ -39,10 +35,7 @@ library StrategyManager {
         strategies.enable(strategy);
     }
 
-    function deregisterStrategy(
-        EnumerableMap.AddressToUintMap storage strategies,
-        address strategy
-    ) internal {
+    function deregisterStrategy(EnumerableMap.AddressToUintMap storage strategies, address strategy) internal {
         if (!strategies.contains(strategy)) {
             revert ParticipantNotFound();
         }
@@ -50,10 +43,7 @@ library StrategyManager {
         strategies.remove(strategy);
     }
 
-    function pauseStrategy(
-        EnumerableMap.AddressToUintMap storage strategies,
-        address strategy
-    ) internal {
+    function pauseStrategy(EnumerableMap.AddressToUintMap storage strategies, address strategy) internal {
         if (!strategies.contains(strategy)) {
             revert ParticipantNotFound();
         }
@@ -61,10 +51,7 @@ library StrategyManager {
         strategies.disable(strategy);
     }
 
-    function unpauseStrategy(
-        EnumerableMap.AddressToUintMap storage strategies,
-        address strategy
-    ) internal {
+    function unpauseStrategy(EnumerableMap.AddressToUintMap storage strategies, address strategy) internal {
         if (!strategies.contains(strategy)) {
             revert ParticipantNotFound();
         }
@@ -82,21 +69,13 @@ library StrategyManager {
         IParameters parameters
     ) internal view returns (uint256 amount) {
         uint48 periodStartTs = TimeUtils.getPeriodStartTime(
-            startTimestamp,
-            TimeUtils.getPeriodByTimestamp(timestamp, startTimestamp, parameters),
-            parameters
+            startTimestamp, TimeUtils.getPeriodByTimestamp(timestamp, startTimestamp, parameters), parameters
         );
 
         for (uint256 i = 0; i < strategies.length(); i++) {
-            (
-                address strategy,
-                uint48 enabledTime,
-                uint48 disabledTime
-            ) = strategies.atWithTimes(i);
+            (address strategy, uint48 enabledTime, uint48 disabledTime) = strategies.atWithTimes(i);
 
-            if (
-                tokenAddress != address(IStrategy(strategy).underlyingToken())
-            ) {
+            if (tokenAddress != address(IStrategy(strategy).underlyingToken())) {
                 continue;
             }
 
@@ -104,10 +83,7 @@ library StrategyManager {
                 continue;
             }
 
-            uint256 shares = delegationManager.operatorShares(
-                provider,
-                IStrategy(strategy)
-            );
+            uint256 shares = delegationManager.operatorShares(provider, IStrategy(strategy));
             amount += IStrategy(strategy).sharesToUnderlyingView(shares);
         }
 
