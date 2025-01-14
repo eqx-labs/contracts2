@@ -20,7 +20,7 @@ EnrollmentRegistry
       IParameters public protocolParameters;
 
 
-    uint256 public validatorCount;
+
     uint256[42] private __gap;
 
 
@@ -55,7 +55,7 @@ EnrollmentRegistry
         uint32 maxGasCommitment,
         address operatorAddress
     ) public {
-        uint32 sequenceNumber = uint32(validatorCount + 1);
+        uint32 sequenceNumber = uint32(NODES.length());
         
         bytes memory message = abi.encodePacked(
             block.chainid,
@@ -80,7 +80,7 @@ EnrollmentRegistry
         uint32 maxGasCommitment,
         address operatorAddress
     ) public {
-        uint32 nextSequenceNumber = uint32(validatorCount + 1);
+        uint32 nextSequenceNumber = uint32(NODES.length());
         
         uint32[] memory sequenceNumbers = new uint32[](pubkeys.length);
         for (uint32 i = 0; i < pubkeys.length; i++) {
