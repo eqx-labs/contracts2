@@ -20,7 +20,7 @@ import {DelegationManagerStorage} from "@eigenlayer/src/contracts/core/Delegatio
 import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyManagerStorage.sol";
 import {MapWithTimeData} from "../library/MapWithTimeData.sol";
 
-contract ConsensusEigenLayerMiddleware is
+contract Restaking is
     IConsensusRestaking,
     IServiceManager,
     OwnableUpgradeable,

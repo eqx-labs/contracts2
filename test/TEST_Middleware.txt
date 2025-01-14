@@ -211,6 +211,7 @@ contract ConsensusEigenLayerMiddleware is
     }
 
 
+//check
     function isStrategyEnabled(
         address strategy
     ) public view returns (bool) {
@@ -282,6 +283,7 @@ contract ConsensusEigenLayerMiddleware is
 
         strategies.remove(strategy);
     }
+
 
     function registerOperatorToAVS(
         address operator,
