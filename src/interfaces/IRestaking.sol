@@ -10,6 +10,11 @@ interface IConsensusRestaking {
     error NodeProviderNotActive();
     error UnauthorizedProvider();
     error OperationForbidden();
+    error AlreadyRegistered();
+    error StrategyNotAllowed();
+    error NotRegistered();
+    error NotOperator();
+    error InvalidQuery();
 
     function getProviderCollateral(
         address provider,
