@@ -42,6 +42,19 @@ contract ValidatorRegistryBase is
         address parametersContract,
         address validatorContract
     ) public initializer {
+          if (systemAdmin == address(0)) {
+        revert InvalidSystemAdminAddress();
+    }
+
+    // Check if parametersContract is a valid address
+    if (parametersContract == address(0)) {
+        revert InvalidParametersContractAddress();
+    }
+
+    // Check if validatorContract is a valid address
+    if (validatorContract == address(0)) {
+        revert InvalidValidatorContractAddress();
+    }
         __Ownable_init(systemAdmin);
         systemParameters = IParameters(parametersContract);
         validatorNodes = INodeRegistrationSystem(validatorContract);
@@ -55,14 +68,27 @@ contract ValidatorRegistryBase is
     function validateNodeRegistration(
         address nodeAddress
     ) public view override returns (bool) {
+
+          if (nodeAddress == address(0)) {
+        revert InvalidNodeAddress();
+    }
+
         return nodeOperatorRegistry.contains(nodeAddress);
     }
 
     function registerProtocol(address protocolContract) public onlyOwner {
+               if (protocolContract == address(0)) {
+        revert InvalidProtocolAddress();
+    }
         protocolRegistry.add(protocolContract);
     }
 
     function deregisterProtocol(address protocolContract) public onlyOwner {
+
+           if (protocolContract == address(0)) {
+        revert InvalidProtocolAddress();
+    }
+
         protocolRegistry.remove(protocolContract);
     }
 
@@ -87,6 +113,18 @@ contract ValidatorRegistryBase is
         address nodeAddress,
         string calldata endpointUrl
     ) external override onlyRegisteredProtocol {
+
+          if (nodeAddress == address(0)) {
+        revert InvalidNodeAddress();
+    }
+
+    // Check if endpointUrl is not empty
+    if (bytes(endpointUrl).length == 0) {
+        revert InvalidEndpointUrl();
+    }
+
+        //  nodeRegistry have all the list of validator nodeaddress 
+
         if (nodeOperatorRegistry.contains(nodeAddress)) {
             revert ValidatorNodeAlreadyExists();
         }
@@ -98,23 +136,40 @@ contract ValidatorRegistryBase is
         );
 
         nodeOperatorRegistry.set(nodeAddress, nodeOperator);
+
+
     }
 
     function removeValidatorNode(
         address nodeAddress
     ) external override onlyRegisteredProtocol {
+
+             if (nodeAddress == address(0)) {
+        revert InvalidNodeAddress();
+    }
+
         nodeOperatorRegistry.remove(nodeAddress);
     }
 
     function suspendValidatorNode(
         address nodeAddress
     ) external override onlyRegisteredProtocol {
+
+             if (nodeAddress == address(0)) {
+        revert InvalidNodeAddress();
+    }
+
         nodeOperatorRegistry.disable(nodeAddress);
     }
 
     function reactivateValidatorNode(
         address nodeAddress
     ) external override onlyRegisteredProtocol {
+             if (nodeAddress == address(0)) {
+        revert InvalidNodeAddress();
+    }
+
+
         nodeOperatorRegistry.enable(nodeAddress);
     }
 

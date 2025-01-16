@@ -6,6 +6,14 @@ interface IValidatorRegistrySystem {
     error ValidatorNodeAlreadyExists();
     error ValidatorNodeNotFound();
     error UnauthorizedProtocolAccess();
+    error InvalidNodeAddress();
+    error InvalidEndpointUrl();
+    error InvalidProtocolAddress();
+    error InvalidSystemAdminAddress();
+    error InvalidParametersContractAddress();
+    error InvalidValidatorContractAddress();
+
+
 
     error ValidatorNodeOffline();
 

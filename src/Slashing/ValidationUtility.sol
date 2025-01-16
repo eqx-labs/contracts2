@@ -315,6 +315,7 @@ contract ValidationUtility is ValidationTypes {
     function initiateValidation(
         AuthorizedMessagePacket[] calldata authorizations
     ) public payable {
+
         if (authorizations.length == 0) {
             revert EmptyAuthorizationError();
         }
@@ -324,6 +325,7 @@ contract ValidationUtility is ValidationTypes {
         }
 
         bytes32 validationId = computeValidationId(authorizations);
+        
         if (validationSetIDs.contains(validationId)) {
             revert DuplicateValidationError();
         }
