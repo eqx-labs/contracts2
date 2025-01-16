@@ -12,6 +12,9 @@ interface IValidatorRegistrySystem {
     error InvalidSystemAdminAddress();
     error InvalidParametersContractAddress();
     error InvalidValidatorContractAddress();
+    error InvalidCollateralTokenAddress();
+    error InvalidNodeOperatorAddress();
+    
 
 
 
