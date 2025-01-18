@@ -17,7 +17,7 @@ library OperatorMapWithTime {
     uint256 private constant DISABLED_TIME_MASK = 0xFFFFFFFFFFFFFFFFFFFFFFFF << 48;
 
     function add(EnumerableMap.OperatorMap storage self, address addr) internal {
-        if (!self.set(addr, EnumerableMap.Operator("", address(0), 0))) {
+        if (!self.set(addr, EnumerableMap.Operator("" ,"","", address(0), 0))) {
             revert AlreadyAdded();
         }
     }

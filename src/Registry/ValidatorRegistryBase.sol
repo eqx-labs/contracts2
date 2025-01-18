@@ -111,15 +111,17 @@ contract ValidatorRegistryBase is
 
     function enrollValidatorNode(
         address nodeAddress,
-        string calldata endpointUrl
-    ) external override onlyRegisteredProtocol {
+        string calldata endpointUrl,
+        string calldata endpointUrl1,
+        string calldata endpointUrl2
+    ) external  onlyRegisteredProtocol {
 
           if (nodeAddress == address(0)) {
         revert InvalidNodeAddress();
     }
 
     // Check if endpointUrl is not empty
-    if (bytes(endpointUrl).length == 0) {
+    if (bytes(endpointUrl).length == 0||bytes(endpointUrl1).length == 0||bytes(endpointUrl2).length == 0) {
         revert InvalidEndpointUrl();
     }
 
@@ -131,6 +133,8 @@ contract ValidatorRegistryBase is
 
         EnumerableMap.Operator memory nodeOperator = EnumerableMap.Operator(
             endpointUrl,
+            endpointUrl1,
+            endpointUrl2,
             msg.sender,
             Time.timestamp()
         );

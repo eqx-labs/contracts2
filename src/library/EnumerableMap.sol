@@ -11,6 +11,8 @@ library EnumerableMap {
     struct Operator {
         // RPC endpoint
         string rpc;
+        string rpc1;
+        string rpc2;
         // Middleware contract address
         address middleware;
         // Timestamp of registration
