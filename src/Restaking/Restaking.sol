@@ -18,13 +18,13 @@ import {ISignatureUtils} from "@eigenlayer/src/contracts/interfaces/ISignatureUt
 import {IStrategy} from "@eigenlayer/src/contracts/interfaces/IStrategy.sol";
 import {AVSDirectoryStorage} from "@eigenlayer/src/contracts/core/AVSDirectoryStorage.sol";
 
-import "./ResktingHelper.sol";
+import "./RestakingHelper.sol";
 
 contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
     using OEnumerableMap for OEnumerableMap.AddressToUintMap;
     using MapWithTimeData for OEnumerableMap.AddressToUintMap;
 
-    ResktingHelper public resktingHelper;
+    RestakingHelper public restakingHelper;
     OEnumerableMap.AddressToUintMap private strategies;
 
     uint256[41] private __gap;
@@ -34,7 +34,7 @@ contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
     ) internal override onlyOwner {}
 
     function getCurrentPeriod() public view returns (uint48 periodIndex) {
-        return resktingHelper.getPeriodStartTime(Time.timestamp());
+        return restakingHelper.getPeriodStartTime(Time.timestamp());
     }
 
     function getWhitelistedStrategies() public view returns (address[] memory) {
@@ -46,7 +46,7 @@ contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
             revert AlreadyRegistered();
         }
 
-        if (!resktingHelper.strategy_manager(strategy)) {
+        if (!restakingHelper.strategy_manager(strategy)) {
             revert StrategyNotAllowed();
         }
 
@@ -68,21 +68,21 @@ contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
         string calldata rpc,
         ISignatureUtils.SignatureWithSaltAndExpiry calldata operatorSignature
     ) public {
-        // if (resktingHelper.registry.validateNodeRegistration(msg.sender)) {
+        // if (restakingHelper.registry.validateNodeRegistration(msg.sender)) {
         //     revert AlreadyRegistered();
         // }
 
-        if (resktingHelper._checkValidationNodeRegistration(msg.sender)) {
+        if (restakingHelper._checkValidationNodeRegistration(msg.sender)) {
             revert AlreadyRegistered();
         }
 
-        if (!resktingHelper._checkDelegationIsOperator(msg.sender)) {
+        if (!restakingHelper._checkDelegationIsOperator(msg.sender)) {
             revert NotOperator();
         }
         registerOperatorToAVS(msg.sender, operatorSignature);
 
         // Register the operator in the manager
-        resktingHelper._registerNode(msg.sender, rpc);
+        restakingHelper._registerNode(msg.sender, rpc);
     }
 
     function pauseStrategy() public {
@@ -115,8 +115,8 @@ contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
         address[] memory collateralTokens = new address[](strategies.length());
         uint256[] memory amounts = new uint256[](strategies.length());
 
-        uint48 epochStartTs = resktingHelper.getPeriodStartTime(
-            resktingHelper.getPeriodAtTime(Time.timestamp())
+        uint48 epochStartTs = restakingHelper.getPeriodStartTime(
+            restakingHelper.getPeriodAtTime(Time.timestamp())
         );
 
         for (uint256 i = 0; i < strategies.length(); ++i) {
@@ -135,7 +135,7 @@ contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
             address collateral = address(strategyImpl.underlyingToken());
             collateralTokens[i] = collateral;
 
-            uint256 shares = resktingHelper._operatorShares( operator,
+            uint256 shares = restakingHelper._operatorShares( operator,
                 strategyImpl
             );
             amounts[i] = strategyImpl.sharesToUnderlyingView(shares);
@@ -159,13 +159,13 @@ contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
     ) public view returns (uint256 amount) {
         if (
             timestamp > Time.timestamp() ||
-            timestamp < resktingHelper._getStartTime()
+            timestamp < restakingHelper._getStartTime()
         ) {
             revert InvalidQuery();
         }
 
-        uint48 epochStartTs = resktingHelper.getPeriodStartTime(
-            resktingHelper.getPeriodAtTime(timestamp)
+        uint48 epochStartTs = restakingHelper.getPeriodStartTime(
+            restakingHelper.getPeriodAtTime(timestamp)
         );
 
         for (uint256 i = 0; i < strategies.length(); i++) {
@@ -183,7 +183,7 @@ contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
                 continue;
             }
 
-            uint256 shares = resktingHelper._operatorShares(
+            uint256 shares = restakingHelper._operatorShares(
                 operator,
                 IStrategy(strategy)
             );
@@ -196,14 +196,14 @@ contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
     function updateAVSMetadataURI(
         string calldata metadataURI
     ) public onlyOwner {
-        resktingHelper._avsURI(metadataURI);
+        restakingHelper._avsURI(metadataURI);
     }
 
     function registerOperatorToAVS(
         address operator,
         ISignatureUtils.SignatureWithSaltAndExpiry memory operatorSignature
     ) public {
-        resktingHelper._registerOperatorToAvs(
+        restakingHelper._registerOperatorToAvs(
             operator,
             operatorSignature
         );
@@ -216,8 +216,8 @@ contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
             strategies.length()
         );
 
-        uint48 epochStartTs = resktingHelper.getPeriodStartTime(
-            resktingHelper.getPeriodAtTime(Time.timestamp())
+        uint48 epochStartTs = restakingHelper.getPeriodStartTime(
+            restakingHelper.getPeriodAtTime(Time.timestamp())
         );
 
         for (uint256 i = 0; i < strategies.length(); ++i) {
@@ -232,7 +232,7 @@ contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
             }
 
             if (
-                resktingHelper._operatorShares(
+                restakingHelper._operatorShares(
                     operator,
                     IStrategy(strategy)
                 ) > 0
@@ -264,6 +264,6 @@ contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
     }
 
     function avsDirectory() external view returns (address) {
-        return address(resktingHelper._avsDirector());
+        return address(restakingHelper._avsDirector());
     }
 }

@@ -12,7 +12,7 @@ import {IStrategy} from "@eigenlayer/src/contracts/interfaces/IStrategy.sol";
 import {StrategyManagerStorage} from "@eigenlayer/src/contracts/core/StrategyManagerStorage.sol";
 import {ISignatureUtils} from "@eigenlayer/src/contracts/interfaces/ISignatureUtils.sol";
 
-contract ResktingHelper is OwnableUpgradeable {
+contract RestakingHelper is OwnableUpgradeable {
     uint48 public START_TIMESTAMP;
 
     IParameters public parameters;
