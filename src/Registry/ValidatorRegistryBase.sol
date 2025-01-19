@@ -21,6 +21,7 @@ contract ValidatorRegistryBase is
     using EnumerableSet for EnumerableSet.AddressSet;
     using EnumerableMap for EnumerableMap.OperatorMap;
     using OperatorMapWithTime for EnumerableMap.OperatorMap;
+    
 
     uint48 public SYSTEM_INITIALIZATION_TIME;
     IParameters public systemParameters;
