@@ -71,8 +71,8 @@ contract RestakingHelper is OwnableUpgradeable {
         return DELEGATION_MANAGER.isOperator(Node);
     }
 
-    function _registerNode(address Node, string calldata rpc) public {
-        registry.enrollValidatorNode(Node, rpc);
+    function _registerNode(address Node, string calldata rpc,string calldata rpc1,string calldata rpc2) public {
+        registry.enrollOperatorNode(Node, rpc,rpc1,rpc2);
     }
 
     function _operatorShares(
@@ -100,15 +100,15 @@ contract RestakingHelper is OwnableUpgradeable {
 
         deregisterOperatorFromAVS(msg.sender);
 
-        registry.removeValidatorNode(msg.sender);
+        registry.removeOperatorNode(msg.sender);
     }
 
     function pauseOperator() public {
-        registry.suspendValidatorNode(msg.sender);
+        registry.suspendOperatorNode(msg.sender);
     }
 
     function unpauseOperator() public {
-        registry.reactivateValidatorNode(msg.sender);
+        registry.reactivateOperatorNode(msg.sender);
     }
 
     function _avsURI(string calldata metadataURI) public {

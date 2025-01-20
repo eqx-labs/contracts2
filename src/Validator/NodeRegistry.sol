@@ -49,7 +49,9 @@ EnrollmentRegistry
         _registerNode(nodeIdentityHash, operatorAddress, maxGasCommitment);
     }
 
-    function enrollNodeWithVerification(
+    
+
+    function enrollNodeWithVerification( 
         BLS12381.G1Point calldata pubkey,
         BLS12381.G2Point calldata signature,
         uint32 maxGasCommitment,

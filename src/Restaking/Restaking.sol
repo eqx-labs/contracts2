@@ -63,9 +63,12 @@ contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
 
         strategies.remove(strategy);
     }
-
-    function registerOperator(
+  
+  
+      function registerOperator(
         string calldata rpc,
+         string calldata rpc1,
+          string calldata rpc2,
         ISignatureUtils.SignatureWithSaltAndExpiry calldata operatorSignature
     ) public {
         // if (restakingHelper.registry.validateNodeRegistration(msg.sender)) {
@@ -82,7 +85,7 @@ contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
         registerOperatorToAVS(msg.sender, operatorSignature);
 
         // Register the operator in the manager
-        restakingHelper._registerNode(msg.sender, rpc);
+        restakingHelper._registerNode(msg.sender, rpc,rpc1,rpc2);
     }
 
     function pauseStrategy() public {

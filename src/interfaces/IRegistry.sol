@@ -30,20 +30,23 @@ interface IValidatorRegistrySystem {
         uint256[] collateralAmountList;
     }
 
-    function enrollValidatorNode(
+    function enrollOperatorNode(
         address nodeAddress, 
-        string calldata endpointUrl
+        string calldata endpointUrl,
+        string calldata endpointUrl1,
+        string calldata endpointUrl2
+
     ) external;
 
-    function removeValidatorNode(
+    function removeOperatorNode(
         address nodeAddress
     ) external;
 
-    function suspendValidatorNode(
+    function suspendOperatorNode(
         address nodeAddress
     ) external;
 
-    function reactivateValidatorNode(
+    function reactivateOperatorNode(
         address nodeAddress
     ) external;
 

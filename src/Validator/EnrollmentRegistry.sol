@@ -12,15 +12,16 @@ contract EnrollmentRegistry is  BLSSignatureVerifier , QueryRegistry,INodeRegist
     using BLS12381 for BLS12381.G1Point;
      using ValidatorsLib for ValidatorsLib.ValidatorSet;
         ValidatorsLib.ValidatorSet internal NODES;
+        event ConsensusNodeRegistered(bytes32 indexed nodeIdentityHash);
 
-   event ConsensusNodeRegistered(bytes32 indexed nodeIdentityHash);
-
+    
     function fetchAllValidatorNodes()
         public
         view
         returns (ValidatorNodeDetails[] memory)
     {
-             ValidatorsLib._Validator[] memory _nodes = NODES.getAll();
+        
+        ValidatorsLib._Validator[] memory _nodes = NODES.getAll();
         ValidatorNodeDetails[] memory nodes = new ValidatorNodeDetails[](
             _nodes.length
         );
@@ -30,6 +31,7 @@ contract EnrollmentRegistry is  BLSSignatureVerifier , QueryRegistry,INodeRegist
         return nodes;
 
     }
+
    function updateNodeCapacity(
         bytes20 nodeIdentityHash,
         uint32 maxGasCommitment
