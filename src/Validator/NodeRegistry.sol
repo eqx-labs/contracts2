@@ -53,21 +53,21 @@ EnrollmentRegistry
 
     function enrollNodeWithVerification( 
         BLS12381.G1Point calldata pubkey,
-        BLS12381.G2Point calldata signature,
+        // BLS12381.G2Point calldata signature,
         uint32 maxGasCommitment,
         address operatorAddress
     ) public {
-        uint32 sequenceNumber = uint32(NODES.length());
+        // uint32 sequenceNumber = uint32(NODES.length());
         
-        bytes memory message = abi.encodePacked(
-            block.chainid,
-            msg.sender,
-            sequenceNumber
-        );
+        // bytes memory message = abi.encodePacked(
+        //     block.chainid,
+        //     msg.sender,
+        //     sequenceNumber
+        // );
         
-        if (!_verifySignature(message, signature, pubkey)) {
-            revert SignatureVerificationFailed();
-        }
+        // if (!_verifySignature(message, signature, pubkey)) {
+        //     revert SignatureVerificationFailed();
+        // }
 
         _registerNode(
             computeNodeIdentityHash(pubkey),
@@ -78,28 +78,28 @@ EnrollmentRegistry
 
     function bulkEnrollNodesWithVerification(
         BLS12381.G1Point[] calldata pubkeys,
-        BLS12381.G2Point calldata signature,
+        // BLS12381.G2Point calldata signature,
         uint32 maxGasCommitment,
         address operatorAddress
     ) public {
-        uint32 nextSequenceNumber = uint32(NODES.length());
+        // uint32 nextSequenceNumber = uint32(NODES.length());
         
-        uint32[] memory sequenceNumbers = new uint32[](pubkeys.length);
-        for (uint32 i = 0; i < pubkeys.length; i++) {
-            sequenceNumbers[i] = nextSequenceNumber + i;
-        }
+        // uint32[] memory sequenceNumbers = new uint32[](pubkeys.length);
+        // for (uint32 i = 0; i < pubkeys.length; i++) {
+        //     sequenceNumbers[i] = nextSequenceNumber + i;
+        // }
 
-        bytes memory message = abi.encodePacked(
-            block.chainid,
-            msg.sender,
-            sequenceNumbers
-        );
+        // bytes memory message = abi.encodePacked(
+        //     block.chainid,
+        //     msg.sender,
+        //     sequenceNumbers
+        // );
         
-        BLS12381.G1Point memory aggregatedPubkey = _aggregatePubkeys(pubkeys);
+        // BLS12381.G1Point memory aggregatedPubkey = _aggregatePubkeys(pubkeys);
 
-        if (!_verifySignature(message, signature, aggregatedPubkey)) {
-            revert SignatureVerificationFailed();
-        }
+        // if (!_verifySignature(message, signature, aggregatedPubkey)) {
+        //     revert SignatureVerificationFailed();
+        // }
 
         bytes20[] memory keyHashes = new bytes20[](pubkeys.length);
         for (uint256 i = 0; i < pubkeys.length; i++) {
