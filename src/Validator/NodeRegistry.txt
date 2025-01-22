@@ -1,0 +1,34 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.25;
+
+import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
+import {BLS12381} from "../library/bls/BLS12381.sol";
+import {BLSSignatureVerifier} from "../library/bls/BLSSignatureVerifier.sol";
+import {ValidatorsLib} from "../library/ValidatorsLib.sol";
+import {INodeRegistrationSystem} from "../interfaces/IValidators.sol";
+import {IParameters} from "../interfaces/IParameters.sol";
+import {EnrollmentRegistry} from "./EnrollmentRegistry.sol";
+
+
+contract NodeRegistry is 
+EnrollmentRegistry
+
+{
+    using BLS12381 for BLS12381.G1Point;
+    using ValidatorsLib for ValidatorsLib.ValidatorSet;
+    
+
+
+
+    uint256[42] private __gap;
+
+
+
+    // Query Functions
+
+
+  
+
+
+}

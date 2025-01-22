@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.25;
+
+import "./BaseRegistry.sol";
+import {BLS12381} from "../library/bls/BLS12381.sol";
+import {BLSSignatureVerifier} from "../library/bls/BLSSignatureVerifier.sol";
+import {QueryRegistry} from "./QueryRegistry.sol";
+import {INodeRegistrationSystem} from "../interfaces/IValidators.sol";
+import {ValidatorsLib} from "../library/ValidatorsLib.sol";
+
+contract EnrollmentRegistry is  BLSSignatureVerifier , QueryRegistry,INodeRegistrationSystem {
+    using BLS12381 for BLS12381.G1Point;
+  
+       
+
+
+
+}
+
