@@ -1,11 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.25;
 
+import {BLS12381} from "../library/bls/BLS12381.sol";
 /// @title ValidatorsLib
 /// @notice A library for managing a set of validators along with their information
 library ValidatorsLib {
     error ValidatorAlreadyExists(bytes20 pubkeyHash);
     error ValidatorDoesNotExist(bytes20 pubkeyHash);
+      using BLS12381 for BLS12381.G1Point;
 
     struct _AddressSet {
         address[] _values;
@@ -16,6 +18,8 @@ library ValidatorsLib {
     /// @dev The internal representation of a validator in the set.
     /// This takes only 1 slot in tightly packed storage.
     struct _Validator {
+        BLS12381.G1Point  pubkey;
+        string  rpcs;
         bytes20 pubkeyHash;
         uint32 maxCommittedGasLimit;
         uint32 controllerIndex;
@@ -57,8 +61,10 @@ library ValidatorsLib {
         return self._values.length;
     }
 
-    function insert(
+    function insert( 
         ValidatorSet storage self,
+         BLS12381.G1Point calldata pubkey,
+        string calldata rpcs,
         bytes20 pubkeyHash,
         uint32 maxCommittedGasLimit,
         uint32 controllerIndex,
@@ -68,7 +74,7 @@ library ValidatorsLib {
             revert ValidatorAlreadyExists(pubkeyHash);
         }
 
-        self._values.push(_Validator(pubkeyHash, maxCommittedGasLimit, controllerIndex, authorizedOperatorIndex));
+        self._values.push(_Validator(pubkey,rpcs,pubkeyHash, maxCommittedGasLimit, controllerIndex, authorizedOperatorIndex));
         self._indexes[pubkeyHash] = uint32(self._values.length);
     }
 

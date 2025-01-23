@@ -8,7 +8,7 @@ import {IParameters} from "./interfaces/IParameters.sol";
 import {INodeRegistrationSystem} from "./interfaces/IValidators.sol";
 import {BLS12381} from "./library/bls/BLS12381.sol";
 
-contract BaseRegistry is
+contract Validator is
     OwnableUpgradeable,
     UUPSUpgradeable,
     INodeRegistrationSystem
@@ -17,9 +17,9 @@ contract BaseRegistry is
     using BLS12381 for BLS12381.G1Point;
     using ValidatorsLib for ValidatorsLib.ValidatorSet;
     ValidatorsLib.ValidatorSet internal NODES;
-  IParameters public protocolParameters;
-  
-  error UnauthorizedAccessAttempt();
+    IParameters public protocolParameters;
+
+    error UnauthorizedAccessAttempt();
     event ConsensusNodeRegistered(bytes32 indexed nodeIdentityHash);
 
     uint256[43] private __gap;
@@ -89,6 +89,8 @@ contract BaseRegistry is
     }
 
     function _registerNode(
+        BLS12381.G1Point calldata pubkey,
+        string calldata rpc,
         bytes20 nodeIdentityHash,
         address operatorAddress,
         uint32 maxGasCommitment
@@ -101,6 +103,8 @@ contract BaseRegistry is
         }
 
         NODES.insert(
+            pubkey,
+            rpc,
             nodeIdentityHash,
             maxGasCommitment,
             NODES.getOrInsertController(msg.sender),
@@ -110,6 +114,8 @@ contract BaseRegistry is
     }
 
     function _batchRegisterNodes(
+        BLS12381.G1Point[] calldata pubkeys,
+        string[] calldata rpcs,
         bytes20[] memory keyHashes,
         address operatorAddress,
         uint32 maxGasCommitment
@@ -130,6 +136,8 @@ contract BaseRegistry is
             }
 
             NODES.insert(
+                pubkeys[i],
+                rpcs[i],
                 nodeIdentityHash,
                 maxGasCommitment,
                 controllerIndex,
@@ -146,24 +154,27 @@ contract BaseRegistry is
     }
 
     // Enrollment Functions
-    function enrollValidatorWithoutVerification(
-        bytes20 nodeIdentityHash,
-        uint32 maxGasCommitment,
-        address operatorAddress
-    ) public {
-        if (!protocolParameters.SKIP_SIGNATURE_VALIDATION()) {
-            revert SecureRegistrationRequired();
-        }
+    // function enrollValidatorWithoutVerification(
+    //     bytes20 nodeIdentityHash,
+    //     uint32 maxGasCommitment,
+    //     address operatorAddress
+    // ) public {
+    //     if (!protocolParameters.SKIP_SIGNATURE_VALIDATION()) {
+    //         revert SecureRegistrationRequired();
+    //     }
 
-        _registerNode(nodeIdentityHash, operatorAddress, maxGasCommitment);
-    }
+    //     _registerNode(nodeIdentityHash, operatorAddress, maxGasCommitment);
+    // }
 
     function enrollValidatorWithVerification(
         BLS12381.G1Point calldata pubkey,
+        string calldata rpc,
         uint32 maxGasCommitment,
         address operatorAddress
     ) public {
         _registerNode(
+            pubkey,
+            rpc,
             computeNodeIdentityHash(pubkey),
             operatorAddress,
             maxGasCommitment
@@ -172,6 +183,7 @@ contract BaseRegistry is
 
     function bulkEnrollValidatorsWithVerification(
         BLS12381.G1Point[] calldata pubkeys,
+        string[] calldata rpcs,
         uint32 maxGasCommitment,
         address operatorAddress
     ) public {
@@ -180,20 +192,26 @@ contract BaseRegistry is
             keyHashes[i] = computeNodeIdentityHash(pubkeys[i]);
         }
 
-        _batchRegisterNodes(keyHashes, operatorAddress, maxGasCommitment);
+        _batchRegisterNodes(
+            pubkeys,
+            rpcs,
+            keyHashes,
+            operatorAddress,
+            maxGasCommitment
+        );
     }
 
-    function bulkEnrollValidatorsWithoutVerification(
-        bytes20[] calldata keyHashes,
-        uint32 maxGasCommitment,
-        address operatorAddress
-    ) public {
-        if (!protocolParameters.SKIP_SIGNATURE_VALIDATION()) {
-            revert SecureRegistrationRequired();
-        }
+    // function bulkEnrollValidatorsWithoutVerification(
+    //     bytes20[] calldata keyHashes,
+    //     uint32 maxGasCommitment,
+    //     address operatorAddress
+    // ) public {
+    //     if (!protocolParameters.SKIP_SIGNATURE_VALIDATION()) {
+    //         revert SecureRegistrationRequired();
+    //     }
 
-        _batchRegisterNodes(keyHashes, operatorAddress, maxGasCommitment);
-    }
+    //     _batchRegisterNodes(keyHashes, operatorAddress, maxGasCommitment);
+    // }
 
     function computeNodeIdentityHash(
         BLS12381.G1Point memory pubkey
