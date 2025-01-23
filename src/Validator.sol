@@ -63,7 +63,7 @@ contract BaseRegistry is
         NODES.updateMaxCommittedGasLimit(nodeIdentityHash, maxGasCommitment);
     }
 
-    function fetchNodeByIdentityHash(
+    function fetchValidatorByIdentityHash(
         bytes20 nodeIdentityHash
     ) public view returns (ValidatorNodeDetails memory) {
         ValidatorsLib._Validator memory _node = NODES.get(nodeIdentityHash);
@@ -139,14 +139,14 @@ contract BaseRegistry is
         }
     }
 
-    function fetchNodeByPublicKey(
+    function fetchValidatorByPublicKey(
         BLS12381.G1Point calldata pubkey
     ) public view returns (ValidatorNodeDetails memory) {
-        return fetchNodeByIdentityHash(computeNodeIdentityHash(pubkey));
+        return fetchValidatorByIdentityHash(computeNodeIdentityHash(pubkey));
     }
 
     // Enrollment Functions
-    function enrollNodeWithoutVerification(
+    function enrollValidatorWithoutVerification(
         bytes20 nodeIdentityHash,
         uint32 maxGasCommitment,
         address operatorAddress
@@ -158,7 +158,7 @@ contract BaseRegistry is
         _registerNode(nodeIdentityHash, operatorAddress, maxGasCommitment);
     }
 
-    function enrollNodeWithVerification(
+    function enrollValidatorWithVerification(
         BLS12381.G1Point calldata pubkey,
         uint32 maxGasCommitment,
         address operatorAddress
@@ -170,7 +170,7 @@ contract BaseRegistry is
         );
     }
 
-    function bulkEnrollNodesWithVerification(
+    function bulkEnrollValidatorsWithVerification(
         BLS12381.G1Point[] calldata pubkeys,
         uint32 maxGasCommitment,
         address operatorAddress
@@ -183,7 +183,7 @@ contract BaseRegistry is
         _batchRegisterNodes(keyHashes, operatorAddress, maxGasCommitment);
     }
 
-    function bulkEnrollNodesWithoutVerification(
+    function bulkEnrollValidatorsWithoutVerification(
         bytes20[] calldata keyHashes,
         uint32 maxGasCommitment,
         address operatorAddress

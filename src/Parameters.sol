@@ -8,7 +8,7 @@ import {UUPSUpgradeable} from "@openzeppelin/contracts/proxy/utils/UUPSUpgradeab
 
 contract Parameters is OwnableUpgradeable, UUPSUpgradeable {
 
-    address internal constant CONSENSUS_BEACON_ROOT_ADDRESS = 0x000F3df6D732807Ef1319fB7B8bB8522d0Beac02;
+
 
 
     uint256 internal constant BEACON_TIME_WINDOW = 8191;

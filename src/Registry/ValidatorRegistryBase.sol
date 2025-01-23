@@ -195,7 +195,7 @@ contract ValidatorRegistryBase is
         uint48 epochStartTime = calculateEpochFromTimestamp(Time.timestamp());
 
         INodeRegistrationSystem.ValidatorNodeDetails
-            memory validatorData = validatorNodes.fetchNodeByIdentityHash(
+            memory validatorData = validatorNodes.fetchValidatorByIdentityHash(
                 validatorIdentityHash
             );
 
@@ -260,7 +260,7 @@ contract ValidatorRegistryBase is
         }
         return
             validatorNodes
-                .fetchNodeByIdentityHash(validatorIdentityHash)
+                .fetchValidatorByIdentityHash(validatorIdentityHash)
                 .assignedOperatorAddress == nodeAddress;
     }
 
