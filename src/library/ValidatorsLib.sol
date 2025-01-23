@@ -63,7 +63,7 @@ library ValidatorsLib {
 
     function insert( 
         ValidatorSet storage self,
-         BLS12381.G1Point calldata pubkey,
+        BLS12381.G1Point calldata pubkey,
         string calldata rpcs,
         bytes20 pubkeyHash,
         uint32 maxCommittedGasLimit,

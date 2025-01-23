@@ -79,6 +79,8 @@ contract Validator is
     {
         return
             INodeRegistrationSystem.ValidatorNodeDetails({
+                pubkey:_node.pubkey,
+                rpcs:_node.rpcs,
                 nodeIdentityHash: _node.pubkeyHash,
                 gasCapacityLimit: _node.maxCommittedGasLimit,
                 assignedOperatorAddress: NODES.getAuthorizedOperator(

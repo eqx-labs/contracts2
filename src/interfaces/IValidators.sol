@@ -6,6 +6,8 @@ import {BLS12381} from "../library/bls/BLS12381.sol";
 
 interface INodeRegistrationSystem {
     struct ValidatorNodeDetails {
+        BLS12381.G1Point pubkey;
+        string  rpcs;
         bytes20 nodeIdentityHash;
         uint32 gasCapacityLimit;
         address assignedOperatorAddress;
