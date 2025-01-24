@@ -26,7 +26,7 @@ contract ValidatorRegistryBase is
     IParameters public systemParameters;
     INodeRegistrationSystem public validatorNodes;
     EnumerableSet.AddressSet internal protocolRegistry;
-    EnumerableMap.OperatorMap private nodeOperatorRegistry;
+    // EnumerableMap.OperatorMap private nodeOperatorRegistry;
 
     uint256[45] private __gap;
 

@@ -20,7 +20,7 @@ contract ValidatorRegistryCore is IValidatorRegistrySystem {
     using OperatorMapWithTime for EnumerableMap.OperatorMap;
     //  error ValidatorNodeNotFound();
 
-    EnumerableMap.OperatorMap private nodeOperatorRegistry;
+    EnumerableMap.OperatorMap internal nodeOperatorRegistry;
 
     uint256[45] private __gap;
 
