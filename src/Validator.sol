@@ -8,6 +8,7 @@ import {IParameters} from "./interfaces/IParameters.sol";
 import {INodeRegistrationSystem} from "./interfaces/IValidators.sol";
 import {BLS12381} from "./library/bls/BLS12381.sol";
 
+
 contract Validator is
     OwnableUpgradeable,
     UUPSUpgradeable,
@@ -24,17 +25,19 @@ contract Validator is
 
     uint256[43] private __gap;
 
-    function initialize(
-        address _owner,
-        address _parameters
-    ) public initializer {
+    function initialize(address _owner, address _parameters)
+        public
+        initializer
+    {
         __Ownable_init(_owner);
         protocolParameters = IParameters(_parameters);
     }
 
-    function _authorizeUpgrade(
-        address newImplementation
-    ) internal override onlyOwner {}
+    function _authorizeUpgrade(address newImplementation)
+        internal
+        override
+        onlyOwner
+    {}
 
     function fetchAllValidatorNodes()
         public
@@ -63,24 +66,24 @@ contract Validator is
         NODES.updateMaxCommittedGasLimit(nodeIdentityHash, maxGasCommitment);
     }
 
-    function fetchValidatorByIdentityHash(
-        bytes20 nodeIdentityHash
-    ) public view returns (ValidatorNodeDetails memory) {
+    function fetchValidatorByIdentityHash(bytes20 nodeIdentityHash)
+        public
+        view
+        returns (ValidatorNodeDetails memory)
+    {
         ValidatorsLib._Validator memory _node = NODES.get(nodeIdentityHash);
         return _getNodeInfo(_node);
     }
 
-    function _getNodeInfo(
-        ValidatorsLib._Validator memory _node
-    )
+    function _getNodeInfo(ValidatorsLib._Validator memory _node)
         internal
         view
         returns (INodeRegistrationSystem.ValidatorNodeDetails memory)
     {
         return
             INodeRegistrationSystem.ValidatorNodeDetails({
-                pubkey:_node.pubkey,
-                rpcs:_node.rpcs,
+                pubkey: _node.pubkey,
+                rpcs: _node.rpcs,
                 nodeIdentityHash: _node.pubkeyHash,
                 gasCapacityLimit: _node.maxCommittedGasLimit,
                 assignedOperatorAddress: NODES.getAuthorizedOperator(
@@ -91,8 +94,8 @@ contract Validator is
     }
 
     function _registerNode(
-        BLS12381.G1Point calldata pubkey,
-        string calldata rpc,
+        BLS12381.G1Point memory pubkey,
+        string memory rpc,
         bytes20 nodeIdentityHash,
         address operatorAddress,
         uint32 maxGasCommitment
@@ -116,8 +119,8 @@ contract Validator is
     }
 
     function _batchRegisterNodes(
-        BLS12381.G1Point[] calldata pubkeys,
-        string[] calldata rpcs,
+        BLS12381.G1Point[] memory pubkeys,
+        string[] memory rpcs,
         bytes20[] memory keyHashes,
         address operatorAddress,
         uint32 maxGasCommitment
@@ -137,6 +140,10 @@ contract Validator is
                 revert INodeRegistrationSystem.InvalidNodeIdentity();
             }
 
+
+            //    console.log(pubkeys[i]);
+            //   ,nodeIdentityHash,maxGasCommitment,controllerIndex,operatorAddress);
+
             NODES.insert(
                 pubkeys[i],
                 rpcs[i],
@@ -149,9 +156,11 @@ contract Validator is
         }
     }
 
-    function fetchValidatorByPublicKey(
-        BLS12381.G1Point calldata pubkey
-    ) public view returns (ValidatorNodeDetails memory) {
+    function fetchValidatorByPublicKey(BLS12381.G1Point calldata pubkey)
+        public
+        view
+        returns (ValidatorNodeDetails memory)
+    {
         return fetchValidatorByIdentityHash(computeNodeIdentityHash(pubkey));
     }
 
@@ -184,11 +193,12 @@ contract Validator is
     }
 
     function bulkEnrollValidatorsWithVerification(
-        BLS12381.G1Point[] calldata pubkeys,
-        string[] calldata rpcs,
+        BLS12381.G1Point[] memory pubkeys,
+        string[] memory rpcs,
         uint32 maxGasCommitment,
         address operatorAddress
     ) public {
+
         bytes20[] memory keyHashes = new bytes20[](pubkeys.length);
         for (uint256 i = 0; i < pubkeys.length; i++) {
             keyHashes[i] = computeNodeIdentityHash(pubkeys[i]);
@@ -215,9 +225,11 @@ contract Validator is
     //     _batchRegisterNodes(keyHashes, operatorAddress, maxGasCommitment);
     // }
 
-    function computeNodeIdentityHash(
-        BLS12381.G1Point memory pubkey
-    ) public pure returns (bytes20) {
+    function computeNodeIdentityHash(BLS12381.G1Point memory pubkey)
+        public
+        pure
+        returns (bytes20)
+    {
         uint256[2] memory compressed = pubkey.compress();
         bytes32 fullHash = keccak256(abi.encodePacked(compressed));
         return bytes20(uint160(uint256(fullHash)));

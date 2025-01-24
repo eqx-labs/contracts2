@@ -63,16 +63,16 @@ library ValidatorsLib {
 
     function insert( 
         ValidatorSet storage self,
-        BLS12381.G1Point calldata pubkey,
-        string calldata rpcs,
+         BLS12381.G1Point memory pubkey,
+        string memory rpcs,
         bytes20 pubkeyHash,
         uint32 maxCommittedGasLimit,
         uint32 controllerIndex,
         uint32 authorizedOperatorIndex
     ) internal {
-        if (self._indexes[pubkeyHash] != 0) {
-            revert ValidatorAlreadyExists(pubkeyHash);
-        }
+        // if (self._indexes[pubkeyHash] != 0) {
+        //     revert ValidatorAlreadyExists(pubkeyHash);
+        // }
 
         self._values.push(_Validator(pubkey,rpcs,pubkeyHash, maxCommittedGasLimit, controllerIndex, authorizedOperatorIndex));
         self._indexes[pubkeyHash] = uint32(self._values.length);

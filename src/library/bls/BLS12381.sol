@@ -132,9 +132,9 @@ library BLS12381 {
         // Second MSB is left to be 0 since we are assuming that no infinity points are involved
 
         // Set the third MSF If point.y is lexicographically larger than the y in negated point
-        if (_greaterThan(point.y, point.negate().y)) {
-            r[0] = r[0] | (1 << 125);
-        }
+        // if (_greaterThan(point.y, point.negate().y)) {
+        //     r[0] = r[0] | (1 << 125);
+        // }
 
         return r;
     }
