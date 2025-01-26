@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.25;
 
-import {IValidatorRegistrySystem} from "../interfaces/IRegistry.sol";
+// import {IValidatorRegistrySystem} from "../interfaces/IRegistry.sol";
 import {IParameters} from "../interfaces/IParameters.sol";
 import {Time} from "@openzeppelin/contracts/utils/types/Time.sol";
 import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
@@ -16,7 +16,7 @@ contract RestakingHelper is OwnableUpgradeable {
     uint48 public START_TIMESTAMP;
 
     IParameters public parameters;
-    IValidatorRegistrySystem public registry;
+    // IValidatorRegistrySystem public registry;
     DelegationManagerStorage public DELEGATION_MANAGER;
     IAVSDirectory public AVS_DIRECTORY;
 
@@ -29,14 +29,13 @@ contract RestakingHelper is OwnableUpgradeable {
     function initialize(
         address _owner,
         address _parameters,
-        address _registry,
         address _eigenlayerAVSDirectory,
         address _eigenlayerDelegationManager,
         address _eigenlayerStrategyManager
     ) public initializer {
         __Ownable_init(_owner);
         parameters = IParameters(_parameters);
-        registry = IValidatorRegistrySystem(_registry);
+        // registry = IValidatorRegistrySystem(_registry);
         START_TIMESTAMP = Time.timestamp();
 
         AVS_DIRECTORY = IAVSDirectory(_eigenlayerAVSDirectory);
@@ -59,11 +58,6 @@ contract RestakingHelper is OwnableUpgradeable {
             );
     }
 
-    function _checkValidationNodeRegistration(
-        address Node
-    ) public view returns (bool) {
-        return registry.validateNodeRegistration(Node);
-    }
 
     function _checkDelegationIsOperator(
         address Node
@@ -71,9 +65,6 @@ contract RestakingHelper is OwnableUpgradeable {
         return DELEGATION_MANAGER.isOperator(Node);
     }
 
-    function _registerNode(address Node, string calldata rpc,string calldata rpc1,string calldata rpc2) public {
-        registry.enrollOperatorNode(Node, rpc,rpc1,rpc2);
-    }
 
     function _operatorShares(
         address operator,
@@ -93,23 +84,7 @@ contract RestakingHelper is OwnableUpgradeable {
         return START_TIMESTAMP + epoch * parameters.VALIDATOR_EPOCH_TIME();
     }
 
-    function deregisterOperator() public {
-        if (!registry.validateNodeRegistration(msg.sender)) {
-            revert NotRegistered();
-        }
-
-        deregisterOperatorFromAVS(msg.sender);
-
-        registry.removeOperatorNode(msg.sender);
-    }
-
-    function pauseOperator() public {
-        registry.suspendOperatorNode(msg.sender);
-    }
-
-    function unpauseOperator() public {
-        registry.reactivateOperatorNode(msg.sender);
-    }
+ 
 
     function _avsURI(string calldata metadataURI) public {
         AVS_DIRECTORY.updateAVSMetadataURI(metadataURI);

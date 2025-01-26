@@ -86,9 +86,7 @@ contract Validator is
                 rpcs: _node.rpcs,
                 nodeIdentityHash: _node.pubkeyHash,
                 gasCapacityLimit: _node.maxCommittedGasLimit,
-                assignedOperatorAddress: NODES.getAuthorizedOperator(
-                    _node.pubkeyHash
-                ),
+             
                 controllerAddress: NODES.getController(_node.pubkeyHash)
             });
     }
@@ -112,8 +110,7 @@ contract Validator is
             rpc,
             nodeIdentityHash,
             maxGasCommitment,
-            NODES.getOrInsertController(msg.sender),
-            NODES.getOrInsertAuthorizedOperator(operatorAddress)
+            NODES.getOrInsertController(msg.sender)
         );
         emit ConsensusNodeRegistered(nodeIdentityHash);
     }
@@ -122,16 +119,10 @@ contract Validator is
         BLS12381.G1Point[] memory pubkeys,
         string[] memory rpcs,
         bytes20[] memory keyHashes,
-        address operatorAddress,
         uint32 maxGasCommitment
     ) internal {
-        if (operatorAddress == address(0)) {
-            revert INodeRegistrationSystem.InvalidOperatorAssignment();
-        }
-
-        uint32 operatorIndex = NODES.getOrInsertAuthorizedOperator(
-            operatorAddress
-        );
+     
+   
         uint32 controllerIndex = NODES.getOrInsertController(msg.sender);
 
         for (uint32 i; i < keyHashes.length; i++) {
@@ -141,16 +132,12 @@ contract Validator is
             }
 
 
-            //    console.log(pubkeys[i]);
-            //   ,nodeIdentityHash,maxGasCommitment,controllerIndex,operatorAddress);
-
             NODES.insert(
                 pubkeys[i],
                 rpcs[i],
                 nodeIdentityHash,
                 maxGasCommitment,
-                controllerIndex,
-                operatorIndex
+                controllerIndex
             );
             emit ConsensusNodeRegistered(nodeIdentityHash);
         }
@@ -164,18 +151,7 @@ contract Validator is
         return fetchValidatorByIdentityHash(computeNodeIdentityHash(pubkey));
     }
 
-    // Enrollment Functions
-    // function enrollValidatorWithoutVerification(
-    //     bytes20 nodeIdentityHash,
-    //     uint32 maxGasCommitment,
-    //     address operatorAddress
-    // ) public {
-    //     if (!protocolParameters.SKIP_SIGNATURE_VALIDATION()) {
-    //         revert SecureRegistrationRequired();
-    //     }
-
-    //     _registerNode(nodeIdentityHash, operatorAddress, maxGasCommitment);
-    // }
+ 
 
     function enrollValidatorWithVerification(
         BLS12381.G1Point calldata pubkey,
@@ -195,8 +171,7 @@ contract Validator is
     function bulkEnrollValidatorsWithVerification(
         BLS12381.G1Point[] memory pubkeys,
         string[] memory rpcs,
-        uint32 maxGasCommitment,
-        address operatorAddress
+        uint32 maxGasCommitment
     ) public {
 
         bytes20[] memory keyHashes = new bytes20[](pubkeys.length);
@@ -208,22 +183,10 @@ contract Validator is
             pubkeys,
             rpcs,
             keyHashes,
-            operatorAddress,
             maxGasCommitment
         );
     }
 
-    // function bulkEnrollValidatorsWithoutVerification(
-    //     bytes20[] calldata keyHashes,
-    //     uint32 maxGasCommitment,
-    //     address operatorAddress
-    // ) public {
-    //     if (!protocolParameters.SKIP_SIGNATURE_VALIDATION()) {
-    //         revert SecureRegistrationRequired();
-    //     }
-
-    //     _batchRegisterNodes(keyHashes, operatorAddress, maxGasCommitment);
-    // }
 
     function computeNodeIdentityHash(BLS12381.G1Point memory pubkey)
         public

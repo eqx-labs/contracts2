@@ -23,7 +23,6 @@ library ValidatorsLib {
         bytes20 pubkeyHash;
         uint32 maxCommittedGasLimit;
         uint32 controllerIndex;
-        uint32 authorizedOperatorIndex;
     }
 
     struct ValidatorSet {
@@ -67,14 +66,11 @@ library ValidatorsLib {
         string memory rpcs,
         bytes20 pubkeyHash,
         uint32 maxCommittedGasLimit,
-        uint32 controllerIndex,
-        uint32 authorizedOperatorIndex
+        uint32 controllerIndex
     ) internal {
-        // if (self._indexes[pubkeyHash] != 0) {
-        //     revert ValidatorAlreadyExists(pubkeyHash);
-        // }
+    
 
-        self._values.push(_Validator(pubkey,rpcs,pubkeyHash, maxCommittedGasLimit, controllerIndex, authorizedOperatorIndex));
+        self._values.push(_Validator(pubkey,rpcs,pubkeyHash, maxCommittedGasLimit, controllerIndex));
         self._indexes[pubkeyHash] = uint32(self._values.length);
     }
 
@@ -95,20 +91,12 @@ library ValidatorsLib {
         return at(self._controllers, get(self, pubkeyHash).controllerIndex);
     }
 
-    function getAuthorizedOperator(ValidatorSet storage self, bytes20 pubkeyHash) internal view returns (address) {
-        return at(self._authorizedOperators, get(self, pubkeyHash).authorizedOperatorIndex);
-    }
+ 
 
     function getOrInsertController(ValidatorSet storage self, address controller) internal returns (uint32) {
         return getOrInsert(self._controllers, controller);
     }
 
-    function getOrInsertAuthorizedOperator(
-        ValidatorSet storage self,
-        address authorizedOperator
-    ) internal returns (uint32) {
-        return getOrInsert(self._authorizedOperators, authorizedOperator);
-    }
 
     // ================ ADDRESS SET HELPERS ================
 

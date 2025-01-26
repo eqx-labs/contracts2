@@ -71,21 +71,14 @@ contract Restaking is IConsensusRestaking, UUPSUpgradeable, OwnableUpgradeable {
           string calldata rpc2,
         ISignatureUtils.SignatureWithSaltAndExpiry calldata operatorSignature
     ) public {
-        // if (restakingHelper.registry.validateNodeRegistration(msg.sender)) {
-        //     revert AlreadyRegistered();
-        // }
-
-        if (restakingHelper._checkValidationNodeRegistration(msg.sender)) {
-            revert AlreadyRegistered();
-        }
+   
 
         if (!restakingHelper._checkDelegationIsOperator(msg.sender)) {
             revert NotOperator();
         }
         registerOperatorToAVS(msg.sender, operatorSignature);
 
-        // Register the operator in the manager
-        restakingHelper._registerNode(msg.sender, rpc,rpc1,rpc2);
+
     }
 
     function pauseStrategy() public {

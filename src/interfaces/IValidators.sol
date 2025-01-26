@@ -10,7 +10,6 @@ interface INodeRegistrationSystem {
         string  rpcs;
         bytes20 nodeIdentityHash;
         uint32 gasCapacityLimit;
-        address assignedOperatorAddress;
         address controllerAddress;
     }
 
