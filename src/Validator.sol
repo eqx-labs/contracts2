@@ -120,7 +120,7 @@ contract Validator is
 
     function _batchRegisterNodes(
         BLS12381.G1Point[] memory pubkeys,
-        string memory rpcs,
+        string[] memory rpcs,
         bytes20[] memory keyHashes,
         address operatorAddress,
         uint32 maxGasCommitment
@@ -146,7 +146,7 @@ contract Validator is
 
             NODES.insert(
                 pubkeys[i],
-                rpcs,
+                rpcs[i],
                 nodeIdentityHash,
                 maxGasCommitment,
                 controllerIndex,
@@ -194,7 +194,7 @@ contract Validator is
 
     function bulkEnrollValidatorsWithVerification(
         BLS12381.G1Point[] memory pubkeys,
-        string memory rpcs,
+        string[] memory rpcs,
         uint32 maxGasCommitment,
         address operatorAddress
     ) public {
